@@ -2,10 +2,9 @@
   "name": "namaste-react-learning",
   "version": "1.0.0",
   "description": "This is Namaste-React By Akshay Saini",
-  "main": "index.js",
   "scripts": {
-    "start": "parcel \"src/index.html\"",
-    "build": "parcel build \"src/index.html\"",
+    "start": "parcel \"index.html\"",
+    "build": "parcel build \"index.html\"",
     "test": "jest"
   },
   "repository": {
