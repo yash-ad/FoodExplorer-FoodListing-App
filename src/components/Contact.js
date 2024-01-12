@@ -13,9 +13,9 @@ return(
     </div>
     <div id="contact-right">
     <label className="name-label">Name</label>
-    <input type="text" placeholder="John Doe"/>
+    <input type="text" placeholder="Eg:Yash Dandnaik"/>
     <label className="email-label">Email</label>
-    <input type="email" placeholder="johndoe@gmail.com"/>
+    <input type="email" placeholder="abc@gmail.com"/>
     <label>Tell Us More</label>
     <textarea placeholder="Message" cols="20" rows="10"></textarea>
     <button>Send Message</button>

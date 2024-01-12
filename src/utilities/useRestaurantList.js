@@ -22,7 +22,7 @@ const fetchData = async () => {
     const json = await data.json();
 
     // Setting the state variables with restaurant data
-    setlistOfRestaurants(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
  
 };
 
