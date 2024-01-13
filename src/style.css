@@ -1390,6 +1390,7 @@ height: 450px;
   padding: 0 10vw;
   display: flex;
   position: relative;
+  margin-top: 8vw;
 }
 #contact img {
 object-fit: cover;
@@ -1437,7 +1438,7 @@ object-fit: cover;
     flex-direction: column;
     width: 50%;
     display: flex;
-    margin-top: -20px;
+    margin-top: -4vw;
     margin-right: 50px;
   }
 
@@ -1452,32 +1453,32 @@ object-fit: cover;
     width: 100%;
 }
 #contact-right .name-label{
-  margin-top: 10vw;
+  margin-top: 6vw;
   font-size: 1.7vw;
   font-weight: 600;
 }
 
 #contact-right .email-label{
-  margin-top: 1.5vw;
+  margin-top: 1.2vw;
   font-size: 1.7vw;
   font-weight: 600;
 }
 
 #contact-right label {
-    margin-top: 2vw;
+    margin-top: 1.2vw;
     font-size: 1.7vw;
     font-weight: 600;
 }
 
 #contact-right input {
-  margin-top: 0.5vw;
+  margin-top: 0.7vw;
   padding: 1vw 0.75vw 1vw 1.5vw;
   font-size: 1vw;
 }
 
 #contact-right textarea {
-    margin-top: 0.6vw;
-    padding: 0.5vw 0.75vw 1vw 1.5vw;
+    margin-top: 0.4vw;
+    padding: 0.4vw 0.70vw 1vw 1vw;
     font-size: 1vw;
 }
 #contact button {

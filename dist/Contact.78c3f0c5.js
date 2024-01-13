@@ -666,7 +666,7 @@ const Contact = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                             type: "text",
-                            placeholder: "John Doe"
+                            placeholder: "Eg:Yash Dandnaik"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
                             lineNumber: 16,
@@ -682,7 +682,7 @@ const Contact = ()=>{
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                             type: "email",
-                            placeholder: "johndoe@gmail.com"
+                            placeholder: "abc@gmail.com"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
                             lineNumber: 18,

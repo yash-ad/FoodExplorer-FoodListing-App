@@ -1608,6 +1608,7 @@ img, video {
   align-items: center;
   min-width: 100%;
   min-height: 100vh;
+  margin-top: 8vw;
   padding: 0 10vw;
   display: flex;
   position: relative;
@@ -1659,7 +1660,7 @@ img, video {
 #contact-right {
   flex-direction: column;
   width: 50%;
-  margin-top: -20px;
+  margin-top: -4vw;
   margin-right: 50px;
   display: flex;
 }
@@ -1671,32 +1672,26 @@ img, video {
 }
 
 #contact-right .name-label {
-  margin-top: 10vw;
+  margin-top: 6vw;
   font-size: 1.7vw;
   font-weight: 600;
 }
 
-#contact-right .email-label {
-  margin-top: 1.5vw;
-  font-size: 1.7vw;
-  font-weight: 600;
-}
-
-#contact-right label {
-  margin-top: 2vw;
+#contact-right .email-label, #contact-right label {
+  margin-top: 1.2vw;
   font-size: 1.7vw;
   font-weight: 600;
 }
 
 #contact-right input {
-  margin-top: .5vw;
+  margin-top: .7vw;
   padding: 1vw .75vw 1vw 1.5vw;
   font-size: 1vw;
 }
 
 #contact-right textarea {
-  margin-top: .6vw;
-  padding: .5vw .75vw 1vw 1.5vw;
+  margin-top: .4vw;
+  padding: .4vw .7vw 1vw 1vw;
   font-size: 1vw;
 }
 
