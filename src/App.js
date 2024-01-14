@@ -14,11 +14,16 @@ import CartStore from "./components/CartStore";
 import EmptyCart from "./components/EmptyCart";
 import User from "./components/User";
 import Shimmer from "./components/Shimmer";
+import NetworkStatus from "./components/NetworkStatus";
+import useOnlineStatus from "./utilities/useOnlineStatus";
+
 
 
 // Define the layout of the entire application
 const AppLayout = () => {
   const[userName,setUserName] = useState();
+  const appNetworkStatus = useOnlineStatus();
+
 
   //For-Authentication
 useEffect(()=>{
@@ -36,9 +41,16 @@ setUserName(data.Name)
     {/* //React-context */}
     <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
     <div className="App-container">
+      {appNetworkStatus ? (
+
+        //Wrapped into the React fragment syntax
+        <>
       <Header />
       <Outlet />
       <Footer />
+      </>
+      ) :(<NetworkStatus/>
+      )}
     </div>
     </UserContext.Provider>
     </Provider>
