@@ -43,7 +43,6 @@ console.log('After dispatch:', items);
                    This is useful when you want to pass specific arguments to your event handler. */}
                  {/* //This `onClick={}` attribute specifies  the `handleAddItem` function that should be called , when the user clicks on an `ADD` Button. */}
                   <button onClick={()=> handleAddItem(item)} 
-
                   // <button onClick={handleAddItem(item)} 
                   //In this case, the handleAddItem function is not being used as an event handler for the onClick event. 
                   // Instead, it is being immediately invoked (called) when the component renders.
@@ -51,10 +50,10 @@ console.log('After dispatch:', items);
                   // This means that handleAddItem will be called with the argument item as soon as the component renders, not when the button is clicked.
                   // If you want to pass arguments to the handleAddItem function when the button is clicked, 
                   // you should use an arrow function or a function reference without invoking it immediately. 
-    
-                  id="addBtn"><span class="material-symbols-outlined">
-add_shopping_cart
-</span></button>
+                  id="addBtn">
+                  <span class="material-symbols-outlined">
+add_shopping_cart</span>
+</button>
                 </div>
               </div>
             ))}

@@ -37162,8 +37162,8 @@ const ItemsList = ({ items })=>{
                                     children: "add_shopping_cart"
                                 }, void 0, false, {
                                     fileName: "src/components/ItemsList.js",
-                                    lineNumber: 55,
-                                    columnNumber: 31
+                                    lineNumber: 54,
+                                    columnNumber: 19
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
@@ -41255,25 +41255,21 @@ $parcel$ReactRefreshHelpers$3f27.prelude(module);
 
 try {
 // Component
+// import {useDispatch} from "react-redux"
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRedux = require("react-redux");
 var _config = require("../utilities/config");
-var _cartSlice = require("../utilities/cartSlice");
-var _s = $RefreshSig$();
+// import { removeItem } from "../utilities/cartSlice";
 const CartList = ({ items })=>{
-    _s();
     //It uses `dispatch` function , its a hook called `useDispatch()`from `react-redux` to send an action to the Redux store Here the store in our app is `appStore`.
-    const dispatch = (0, _reactRedux.useDispatch)();
+    // const dispatch = useDispatch();
     // The function is defined called as `handleRemoveItem` is responsible for dispatching an action it calls a reducer function called `removeItem` with the `itemId` parameter as a payload. 
-    const handleRemoveItem = (itemId)=>{
-        console.log("Before dispatch:", items); // Log the state before dispatch
-        dispatch((0, _cartSlice.removeItem)({
-            id: itemId
-        }));
-        console.log("After dispatch:", items); // Log the state after dispatch
-    };
+    // const handleRemoveItem = (itemId) => {
+    //   console.log('Before dispatch:', items); // Log the state before dispatch
+    //   dispatch(removeItem({ id: itemId }));
+    //   console.log('After dispatch:', items); // Log the state after dispatch
+    // };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: items?.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41328,51 +41324,6 @@ const CartList = ({ items })=>{
                             fileName: "src/components/CartList.js",
                             lineNumber: 29,
                             columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "cart-menu-crossButton",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "buttons",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    onClick: ()=>handleRemoveItem(item.card.info.id),
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            xmlns: "http://www.w3.org/2000/svg",
-                                            height: "16",
-                                            width: "12",
-                                            viewBox: "0 0 384 512",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                fill: "#5a5d6c",
-                                                d: "M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-                                            }, void 0, false, {
-                                                fileName: "src/components/CartList.js",
-                                                lineNumber: 37,
-                                                columnNumber: 110
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/CartList.js",
-                                            lineNumber: 37,
-                                            columnNumber: 25
-                                        }, undefined)
-                                    }, void 0, false, {
-                                        fileName: "src/components/CartList.js",
-                                        lineNumber: 37,
-                                        columnNumber: 19
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/CartList.js",
-                                    lineNumber: 36,
-                                    columnNumber: 17
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/CartList.js",
-                                lineNumber: 33,
-                                columnNumber: 10
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/CartList.js",
-                            lineNumber: 32,
-                            columnNumber: 10
                         }, undefined)
                     ]
                 }, item.card.info.id, true, {
@@ -41391,11 +41342,6 @@ const CartList = ({ items })=>{
         columnNumber: 5
     }, undefined);
 };
-_s(CartList, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function() {
-    return [
-        (0, _reactRedux.useDispatch)
-    ];
-});
 _c = CartList;
 exports.default = CartList;
 var _c;
@@ -41406,7 +41352,7 @@ $RefreshReg$(_c, "CartList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g24Wj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g24Wj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4fcb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
