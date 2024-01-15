@@ -2976,11 +2976,16 @@ var _user = require("./components/User");
 var _userDefault = parcelHelpers.interopDefault(_user);
 var _shimmer = require("./components/Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _networkStatus = require("./components/NetworkStatus");
+var _networkStatusDefault = parcelHelpers.interopDefault(_networkStatus);
+var _useOnlineStatus = require("./utilities/useOnlineStatus");
+var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
 var _s = $RefreshSig$();
 // Define the layout of the entire application
 const AppLayout = ()=>{
     _s();
     const [userName, setUserName] = (0, _react.useState)();
+    const appNetworkStatus = (0, _useOnlineStatusDefault.default)();
     //For-Authentication
     (0, _react.useEffect)(()=>{
         const data = {
@@ -2998,40 +3003,51 @@ const AppLayout = ()=>{
             },
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "App-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 39,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 40,
-                        columnNumber: 7
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 41,
-                        columnNumber: 7
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                children: appNetworkStatus ? //Wrapped into the React fragment syntax
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 49,
+                            columnNumber: 7
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 50,
+                            columnNumber: 7
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                            fileName: "src/App.js",
+                            lineNumber: 51,
+                            columnNumber: 7
+                        }, undefined)
+                    ]
+                }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 54,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 38,
+                lineNumber: 43,
                 columnNumber: 5
             }, undefined)
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 37,
+            lineNumber: 42,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 35,
+        lineNumber: 40,
         columnNumber: 1
     }, undefined));
 };
-_s(AppLayout, "/COTElnnSK58Efnm/37XXA8OD2c=");
+_s(AppLayout, "hE5Uv3/gkbAijC3OisFs1rB5dA8=", false, function() {
+    return [
+        (0, _useOnlineStatusDefault.default)
+    ];
+});
 _c = AppLayout;
 //In React, the lazy function is used to dynamically import a component. 
 const About = /*#__PURE__*/ (0, _react.lazy)(()=>require("e9c452bf08808b49"));
@@ -3046,12 +3062,12 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 59,
+            lineNumber: 74,
             columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 60,
+            lineNumber: 75,
             columnNumber: 19
         }, undefined),
         children: [
@@ -3059,7 +3075,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 62,
+                    lineNumber: 77,
                     columnNumber: 29
                 }, undefined)
             },
@@ -3067,7 +3083,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantInfoDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 63,
+                    lineNumber: 78,
                     columnNumber: 47
                 }, undefined)
             },
@@ -3077,17 +3093,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 65,
+                        lineNumber: 80,
                         columnNumber: 54
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(About, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 65,
+                        lineNumber: 80,
                         columnNumber: 66
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 65,
+                    lineNumber: 80,
                     columnNumber: 34
                 }, undefined)
             },
@@ -3096,17 +3112,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 66,
+                        lineNumber: 81,
                         columnNumber: 55
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Contact, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 66,
+                        lineNumber: 81,
                         columnNumber: 67
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 66,
+                    lineNumber: 81,
                     columnNumber: 35
                 }, undefined)
             },
@@ -3114,7 +3130,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartStoreDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 67,
+                    lineNumber: 82,
                     columnNumber: 33
                 }, undefined)
             },
@@ -3122,7 +3138,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _emptyCartDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 68,
+                    lineNumber: 83,
                     columnNumber: 29
                 }, undefined)
             },
@@ -3131,17 +3147,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 69,
+                        lineNumber: 84,
                         columnNumber: 53
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 69,
+                        lineNumber: 84,
                         columnNumber: 65
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 69,
+                    lineNumber: 84,
                     columnNumber: 33
                 }, undefined)
             }
@@ -3155,7 +3171,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 78,
+    lineNumber: 93,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
@@ -3169,7 +3185,7 @@ $RefreshReg$(_c3, "User");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/RestaurantInfo":"l2Zp9","./utilities/UserContext":"3DxXm","react-redux":"62sf7","./utilities/appStore":"mxqQc","./components/CartStore":"4bpuY","./components/EmptyCart":"g24Wj","./components/User":"4iQHT","./components/Shimmer":"g6ZGj","e9c452bf08808b49":"6jcNq","5e1a65b7e57df9f9":"5TZGn","c93eaf4405d362a8":"anljH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/RestaurantInfo":"l2Zp9","./utilities/UserContext":"3DxXm","react-redux":"62sf7","./utilities/appStore":"mxqQc","./components/CartStore":"4bpuY","./components/EmptyCart":"g24Wj","./components/User":"4iQHT","./components/Shimmer":"g6ZGj","e9c452bf08808b49":"6jcNq","5e1a65b7e57df9f9":"5TZGn","c93eaf4405d362a8":"anljH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/NetworkStatus":"fg9LP","./utilities/useOnlineStatus":"boI62"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -35952,45 +35968,55 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _networkerrorimagePng = require("/src/assets/Images/networkerrorimage.png");
+var _networkerrorimagePngDefault = parcelHelpers.interopDefault(_networkerrorimagePng);
 const NetworkStatus = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        class: "nDVxx",
+        className: "nDVxx",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            class: "_3vspF",
+            className: "_3vspF",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                class: "hFjjz",
+                className: "hFjjz",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "_3Ognu",
-                        children: "Connection Error"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _networkerrorimagePngDefault.default),
+                        alt: "Network Error"
                     }, void 0, false, {
                         fileName: "src/components/NetworkStatus.js",
                         lineNumber: 8,
-                        columnNumber: 1
+                        columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        class: "_1CN4Y",
-                        children: "Please check your internet connection and try again."
+                        className: "_3Ognu",
+                        children: "Connection Error"
                     }, void 0, false, {
                         fileName: "src/components/NetworkStatus.js",
                         lineNumber: 9,
-                        columnNumber: 1
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "_1CN4Y",
+                        children: "Please check your internet connection and try again."
+                    }, void 0, false, {
+                        fileName: "src/components/NetworkStatus.js",
+                        lineNumber: 10,
+                        columnNumber: 11
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/NetworkStatus.js",
                 lineNumber: 7,
-                columnNumber: 1
+                columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/NetworkStatus.js",
             lineNumber: 6,
-            columnNumber: 1
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/NetworkStatus.js",
         lineNumber: 5,
-        columnNumber: 1
+        columnNumber: 5
     }, undefined);
 };
 _c = NetworkStatus;
@@ -36003,7 +36029,45 @@ $RefreshReg$(_c, "NetworkStatus");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/assets/Images/networkerrorimage.png":"c21PL"}],"c21PL":[function(require,module,exports) {
+module.exports = require("dd0c5b56d5d72d21").getBundleURL("aXMci") + "networkerrorimage.aecf35e7.png" + "?" + Date.now();
+
+},{"dd0c5b56d5d72d21":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41526,41 +41590,6 @@ module.exports = function(loader, type) {
         });
     };
 };
-
-},{}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
 
 },{}],"5TZGn":[function(require,module,exports) {
 module.exports = require("1d7cbb87e72a4f84")(require("560c4fdb29cce04a").getBundleURL("aXMci") + "Contact.78c3f0c5.js" + "?" + Date.now()).catch((err)=>{

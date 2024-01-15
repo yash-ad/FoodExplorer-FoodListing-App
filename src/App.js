@@ -41,7 +41,8 @@ setUserName(data.Name)
     {/* //React-context */}
     <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
     <div className="App-container">
-      {appNetworkStatus ? (
+      {appNetworkStatus ?
+       (
 
         //Wrapped into the React fragment syntax
         <>
@@ -49,8 +50,10 @@ setUserName(data.Name)
       <Outlet />
       <Footer />
       </>
-      ) :(<NetworkStatus/>
-      )}
+      ) : (
+      <NetworkStatus/>
+      )
+      }
     </div>
     </UserContext.Provider>
     </Provider>
