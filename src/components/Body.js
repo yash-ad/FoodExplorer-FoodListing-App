@@ -88,6 +88,7 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
         >
           Top Rated Restaurants
         </button>
+
         <button
           className="finder-btns"
           onClick={() => {

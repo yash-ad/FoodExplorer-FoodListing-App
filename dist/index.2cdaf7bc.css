@@ -1206,9 +1206,9 @@ img, video {
 }
 
 .login-box {
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  background-color: #0000;
+  -webkit-backdrop-filter: blur(35px);
+  backdrop-filter: blur(35px);
+  background-color: #fc8019;
   border: 1px solid #fff3;
   border-radius: 1vw;
   flex-direction: column;
@@ -1534,6 +1534,11 @@ img, video {
   box-shadow: 0 1px 3px #0000001f;
 }
 
+.display-veg-only {
+  place-content: center space-between;
+  display: flex;
+}
+
 .promo-status {
   z-index: 1;
   text-transform: uppercase;
@@ -1542,11 +1547,21 @@ img, video {
   border-color: #1e2023 #0000;
   border-radius: .3rem;
   max-width: 40%;
-  margin-top: 15px;
-  margin-left: 30px;
+  margin-top: 19px;
+  margin-left: 20px;
   padding: 9px 9px 5px;
   font-size: 13px;
   font-weight: bold;
+  position: absolute;
+}
+
+.green-trademark {
+  z-index: 5;
+  outline: none;
+  width: 24px;
+  height: 24px;
+  margin-top: 36px;
+  margin-left: 262px;
   position: absolute;
 }
 

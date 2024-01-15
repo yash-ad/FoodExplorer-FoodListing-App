@@ -35379,7 +35379,7 @@ const Body = ()=>{
                         children: "Pure Veg"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 91,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -35397,23 +35397,23 @@ const Body = ()=>{
                             restaurantData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 113,
+                            lineNumber: 114,
                             columnNumber: 3
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                             restaurantData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 115,
+                            lineNumber: 116,
                             columnNumber: 9
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 106,
+                        lineNumber: 107,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 103,
+                lineNumber: 104,
                 columnNumber: 6
             }, undefined)
         ]
@@ -35664,14 +35664,30 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _displayVegLogo = require("./DisplayVegLogo");
+var _displayVegLogoDefault = parcelHelpers.interopDefault(_displayVegLogo);
 const DisplayPromoted = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "promo-status",
-        children: "Promoted"
-    }, void 0, false, {
+        className: "display-veg-only",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "promo-status",
+                children: "Promoted"
+            }, void 0, false, {
+                fileName: "src/components/DisplayPromoted.js",
+                lineNumber: 6,
+                columnNumber: 1
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _displayVegLogoDefault.default), {}, void 0, false, {
+                fileName: "src/components/DisplayPromoted.js",
+                lineNumber: 7,
+                columnNumber: 1
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/DisplayPromoted.js",
-        lineNumber: 3,
-        columnNumber: 1
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = DisplayPromoted;
@@ -35684,7 +35700,83 @@ $RefreshReg$(_c, "DisplayPromoted");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./DisplayVegLogo":"6RbAz"}],"6RbAz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3dec = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3dec.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _purevegLogoOnePng = require("/src/assets/Images/pureveg-logo-one.png");
+var _purevegLogoOnePngDefault = parcelHelpers.interopDefault(_purevegLogoOnePng);
+const DisplayVegLogo = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "green-trademark",
+            src: (0, _purevegLogoOnePngDefault.default)
+        }, void 0, false, {
+            fileName: "src/components/DisplayVegLogo.js",
+            lineNumber: 6,
+            columnNumber: 1
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/DisplayVegLogo.js",
+        lineNumber: 5,
+        columnNumber: 1
+    }, undefined);
+};
+_c = DisplayVegLogo;
+exports.default = DisplayVegLogo;
+var _c;
+$RefreshReg$(_c, "DisplayVegLogo");
+
+  $parcel$ReactRefreshHelpers$3dec.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","/src/assets/Images/pureveg-logo-one.png":"lxBe9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lxBe9":[function(require,module,exports) {
+module.exports = require("4d32cec8e11c3388").getBundleURL("aXMci") + "pureveg-logo-one.4f949672.png" + "?" + Date.now();
+
+},{"4d32cec8e11c3388":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"g6ZGj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36032,42 +36124,7 @@ $RefreshReg$(_c, "NetworkStatus");
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/assets/Images/networkerrorimage.png":"c21PL"}],"c21PL":[function(require,module,exports) {
 module.exports = require("dd0c5b56d5d72d21").getBundleURL("aXMci") + "networkerrorimage.aecf35e7.png" + "?" + Date.now();
 
-},{"dd0c5b56d5d72d21":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"8pPOA":[function(require,module,exports) {
+},{"dd0c5b56d5d72d21":"lgJ39"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

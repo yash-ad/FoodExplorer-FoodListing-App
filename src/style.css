@@ -948,8 +948,8 @@ margin-top: 7vw;
 
 
 .login-box{
-  background-color: transparent;
-  backdrop-filter: blur(15px);
+  background-color: #fc8019;
+  backdrop-filter: blur(35px);
   border-radius: 1vw;
   flex-direction: column;
   justify-content: center;
@@ -1317,10 +1317,12 @@ padding-bottom: 250px;
   font-weight: 600;
   outline: none;
 }
-
+.display-veg-only{
+display: flex;
+justify-content: space-between;
+align-content: center;
+}
 .promo-status {
-  /* left: -8px;
-  top: 0; */
   position: absolute;
   z-index: 1;
   font-size: 13px;
@@ -1331,10 +1333,21 @@ padding-bottom: 250px;
   background-color: rgb(58, 60, 65);
   color: rgb(255, 255, 255);
   border-color: rgb(30, 32, 35) transparent;
-  margin-top: 15px;
-  margin-left: 30px;
+  margin-top: 19px;
+  margin-left: 20px;
   border-radius: 0.3rem;
 }
+
+.green-trademark{
+  position: absolute;
+  z-index: 5;
+  margin-top: 36px;
+ margin-left: 262px;
+ height: 24px;
+ width: 24px;
+  outline: none;
+}
+
 .about {
   min-width: 100%;
   min-height: 100%;
