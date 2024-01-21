@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import UserContext from "../utilities/UserContext";
 
 
@@ -6,6 +6,8 @@ import UserContext from "../utilities/UserContext";
 const User = ()=> {
 
 const {loggedInUser,setUserName} = useContext(UserContext);
+
+
 return(
 <div className="user-container">
 <div className="login-box">

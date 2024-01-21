@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 // Defining the Header component
 const Header = () => {
   // Using the useState hook to manage the state of the toggle button
-  const [toggleButton, setToggleButton] = useState('Login');
+  const [toggleButton] = useState('Login');
 
   //Introduced `useContext` hook:-
 // const data = useContext(UserContext);
@@ -22,6 +22,8 @@ const cartItems = useSelector((store)=> store.cart.items)
 // after executing this line of code, cartItems will hold the value of store.cart.items, and it will automatically re-render the component whenever the items property in the cart slice changes.
 // console.log(cartItems);
 
+  // Calculate the total number of items in the cart
+  const cartLength = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     // JSX representing the structure of the Header component
@@ -45,31 +47,18 @@ const cartItems = useSelector((store)=> store.cart.items)
           <h2>
           Cart  
  <i class="ri-shopping-cart-2-fill"></i>
-          <span>
-          { cartItems.length }
-          </span>
+ <span>{`${cartLength}`}</span>
           </h2>
           </Link>
           </li>
 
-          <li ><Link className="user" to="/user">
+          <li className="user" >
           <i class="ri-user-3-fill"></i>
           {/* <svg xmlns="http://www.w3.org/2000/svg" height="20" width="25" viewBox="0 0 448 512"><path fill="#5a5d6c" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg> */}
           <span className="user-text">{loggedInUser}</span>
-          </Link>
           </li>
 
-          {/* Toggle button for login/logout functionality */}
-          <button
-            className="toggleBtn"
-            onClick={() => {
-              // Toggling the button text between 'Login' and 'Logout'
-              toggleButton === 'Login' ?
-                setToggleButton('Logout') : setToggleButton('Login')
-            }}
-          >
-            {toggleButton}
-          </button>
+<Link to="/user"><button className="toggleBtn">{toggleButton}</button></Link>
         </ul>
       </div>
     </div>

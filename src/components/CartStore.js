@@ -4,36 +4,40 @@ import { useDispatch } from "react-redux";
 import { clearCart } from "../utilities/cartSlice";
 import EmptyCart from "./EmptyCart";
 
-const CartStore = ()=> {
+const CartStore = () => {
+  // To read from the cart-store, We need to subscribe to the store using Selector.
+  const cartItems = useSelector((store) => store.cart.items);
 
-//To read from the cart-store,We need to subscribing to the store. using Selector.
-const cartItems = useSelector((store)=> store.cart.items);
+  const dispatch = useDispatch();
 
-const dispatch = useDispatch();
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
 
-const handleClearCart = ()=>{
-dispatch(clearCart());
-}
-return (
+  return (
     <div className="cart-container">
-    <div className="cart-items">
-{cartItems.length === 0 ? <EmptyCart/> :
-<CartList items={cartItems}/>}
- <div className="total-price-quantity">
-  
- </div>
-  {cartItems.length > 0 ? 
-  <button className="clear-cart-button rounded" onClick={handleClearCart}>Clear Cart
-<span id="trash-bin" class="material-symbols-outlined">delete
-</span>
-</button>
-  : null
-        }
+      <div className="cart-items">
+        {cartItems.length === 0 ? (
+          <EmptyCart />
+        ) : (
+          <div>
+            <CartList items={cartItems} />
+            <div className="total-price-quantity">
+              {/* Add content related to total price and quantity */}
+            </div>
+            <button className="clear-cart-button rounded" onClick={handleClearCart}>
+              Clear Cart
+              <span id="trash-bin" className="material-symbols-outlined">
+                delete
+              </span>
+            </button>
+          </div>
+        )}
+      </div>
     </div>
-
-</div>
- )
+  );
 };
 
-
 export default CartStore;
+
+

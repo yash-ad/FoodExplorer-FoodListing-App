@@ -27394,7 +27394,7 @@ var _s = $RefreshSig$();
 const Header = ()=>{
     _s();
     // Using the useState hook to manage the state of the toggle button
-    const [toggleButton, setToggleButton] = (0, _react.useState)("Login");
+    const [toggleButton] = (0, _react.useState)("Login");
     //Introduced `useContext` hook:-
     // const data = useContext(UserContext);
     const { loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
@@ -27403,6 +27403,8 @@ const Header = ()=>{
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     // after executing this line of code, cartItems will hold the value of store.cart.items, and it will automatically re-render the component whenever the items property in the cart slice changes.
     // console.log(cartItems);
+    // Calculate the total number of items in the cart
+    const cartLength = cartItems.reduce((total, item)=>total + item.quantity, 0);
     return(// JSX representing the structure of the Header component
     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header shadow-lg",
@@ -27417,17 +27419,17 @@ const Header = ()=>{
                         src: (0, _config.LOGO_URL)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 32,
+                        lineNumber: 34,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 31,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 29,
+                lineNumber: 31,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27440,12 +27442,12 @@ const Header = ()=>{
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 41,
+                                lineNumber: 43,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 41,
+                            lineNumber: 43,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27454,12 +27456,12 @@ const Header = ()=>{
                                 children: "About Us"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 42,
+                                lineNumber: 44,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 42,
+                            lineNumber: 44,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27468,12 +27470,12 @@ const Header = ()=>{
                                 children: "Contact Us"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 43,
+                                lineNumber: 45,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 43,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27487,94 +27489,90 @@ const Header = ()=>{
                                             class: "ri-shopping-cart-2-fill"
                                         }, void 0, false, {
                                             fileName: "src/components/Header.js",
-                                            lineNumber: 47,
+                                            lineNumber: 49,
                                             columnNumber: 2
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            children: cartItems.length
+                                            children: `${cartLength}`
                                         }, void 0, false, {
                                             fileName: "src/components/Header.js",
-                                            lineNumber: 48,
-                                            columnNumber: 11
+                                            lineNumber: 50,
+                                            columnNumber: 2
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 45,
+                                    lineNumber: 47,
                                     columnNumber: 11
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 44,
+                                lineNumber: 46,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 44,
+                            lineNumber: 46,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                className: "user",
-                                to: "/user",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "ri-user-3-fill"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Header.js",
-                                        lineNumber: 56,
-                                        columnNumber: 11
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        className: "user-text",
-                                        children: loggedInUser
-                                    }, void 0, false, {
-                                        fileName: "src/components/Header.js",
-                                        lineNumber: 58,
-                                        columnNumber: 11
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 55,
-                                columnNumber: 16
-                            }, undefined)
-                        }, void 0, false, {
+                            className: "user",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                    class: "ri-user-3-fill"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 56,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "user-text",
+                                    children: loggedInUser
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 58,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
                             fileName: "src/components/Header.js",
                             lineNumber: 55,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "toggleBtn",
-                            onClick: ()=>{
-                                // Toggling the button text between 'Login' and 'Logout'
-                                toggleButton === "Login" ? setToggleButton("Logout") : setToggleButton("Login");
-                            },
-                            children: toggleButton
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/user",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "toggleBtn",
+                                children: toggleButton
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 61,
+                                columnNumber: 18
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 63,
-                            columnNumber: 11
+                            lineNumber: 61,
+                            columnNumber: 1
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 39,
+                    lineNumber: 41,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 38,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 28,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined));
 };
-_s(Header, "5gVoifLcdE/lKSyctAE4uOHVfK4=", false, function() {
+_s(Header, "B+rrH0PI8+0NrYNIXd+ZWepaGH8=", false, function() {
     return [
         (0, _reactRedux.useSelector)
     ];
@@ -37186,31 +37184,28 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRedux = require("react-redux");
 var _config = require("../utilities/config");
 var _cartSlice = require("../utilities/cartSlice");
-var _react = require("react");
 var _s = $RefreshSig$();
 const ItemsList = (props)=>{
     _s();
     const { items } = props;
     const dispatch = (0, _reactRedux.useDispatch)();
     // Maintain a separate count for each item
-    const [itemCounts, setItemCounts] = (0, _react.useState)({});
+    // const [itemCounts, setItemCounts] = useState({});
     const handleAddItem = (item)=>{
-        const updatedCounts = {
-            ...itemCounts
-        };
-        updatedCounts[item.card.info.id] = (updatedCounts[item.card.info.id] || 0) + 1;
-        setItemCounts(updatedCounts);
+        // const updatedCounts = { ...itemCounts };
+        // updatedCounts[item.card.info.id] = (updatedCounts[item.card.info.id] || 0) + 1;
+        // setItemCounts(updatedCounts);
         dispatch((0, _cartSlice.addItem)(item));
     };
-    const handleRemoveItem = (item)=>{
-        if (itemCounts[item.card.info.id] === 0 || !itemCounts[item.card.info.id]) return;
-        const updatedCounts = {
-            ...itemCounts
-        };
-        updatedCounts[item.card.info.id] = updatedCounts[item.card.info.id] - 1;
-        setItemCounts(updatedCounts);
-        dispatch((0, _cartSlice.removeItem)(item));
-    };
+    // const handleRemoveItem = (item) => {
+    //   if (itemCounts[item.card.info.id] === 0 || !itemCounts[item.card.info.id]) {
+    //     return;
+    //   }
+    //   const updatedCounts = { ...itemCounts };
+    //   updatedCounts[item.card.info.id] = updatedCounts[item.card.info.id] - 1;
+    //   setItemCounts(updatedCounts);
+    //   dispatch(removeItem(item));
+    // };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: items?.map((item)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "menu-card",
@@ -37262,27 +37257,16 @@ const ItemsList = (props)=>{
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                        onClick: ()=>handleRemoveItem(item),
-                                        children: "-"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ItemsList.js",
-                                        lineNumber: 46,
-                                        columnNumber: 15
-                                    }, undefined),
-                                    itemCounts[item.card.info.id] === 0 ? "ADD" : itemCounts[item.card.info.id],
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                        onClick: ()=>handleAddItem(item),
-                                        id: "addBtn",
-                                        children: "+"
-                                    }, void 0, false, {
-                                        fileName: "src/components/ItemsList.js",
-                                        lineNumber: 48,
-                                        columnNumber: 15
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    onClick: ()=>handleAddItem(item),
+                                    id: "addBtn",
+                                    children: "Add"
+                                }, void 0, false, {
+                                    fileName: "src/components/ItemsList.js",
+                                    lineNumber: 48,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
                                 lineNumber: 45,
                                 columnNumber: 13
@@ -37305,7 +37289,7 @@ const ItemsList = (props)=>{
         columnNumber: 5
     }, undefined);
 };
-_s(ItemsList, "3n1p6wd5k0P5WH2ccTIq5xV1sBU=", false, function() {
+_s(ItemsList, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function() {
     return [
         (0, _reactRedux.useDispatch)
     ];
@@ -37320,12 +37304,14 @@ $RefreshReg$(_c, "ItemsList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react":"21dqq"}],"cc8Uj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cc8Uj":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);
 parcelHelpers.export(exports, "clearCart", ()=>clearCart);
 parcelHelpers.export(exports, "removeItem", ()=>removeItem);
+parcelHelpers.export(exports, "incrementQty", ()=>incrementQty);
+parcelHelpers.export(exports, "decrementQty", ()=>decrementQty);
 var _toolkit = require("@reduxjs/toolkit");
 //Context of Redux slice:-
 const cartSlice = (0, _toolkit.createSlice)({
@@ -37336,14 +37322,31 @@ const cartSlice = (0, _toolkit.createSlice)({
     },
     reducers: {
         addItem: (state, action)=>{
-            const addToCart = action.payload;
-            state.items.push(addToCart);
+            const newItem = action.payload;
+            const existingItem = state.items.find((item)=>item.card.info.id === newItem.card.info.id);
+            if (existingItem) // If the item is already in the cart, update its quantity
+            existingItem.quantity += 1;
+            else // If the item is not in the cart, add it with quantity 1
+            state.items.push({
+                ...newItem,
+                quantity: 1
+            });
         },
-        removeItem: (state, actions)=>{
-            const itemId = actions.payload;
-            // console.log('Removing item with id:', itemId);
-            state.items.splice(state.items.indexOf(itemId), 1);
+        removeItem: (state, action)=>{
+            state.items.filter((item)=>item.id !== action.payload.id);
         //  console.log('Updated state:', current(state.items));
+        },
+        incrementQty: (state, action)=>{
+            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {
+                    ...item,
+                    qty: item.qty + 1
+                } : item);
+        },
+        decrementQty: (state, action)=>{
+            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {
+                    ...item,
+                    qty: item.qty - 1
+                } : item);
         },
         clearCart: (state)=>{
             state.items.length = 0 //[for an empty array]
@@ -37351,7 +37354,7 @@ const cartSlice = (0, _toolkit.createSlice)({
         }
     }
 });
-const { addItem, clearCart, removeItem } = cartSlice.actions;
+const { addItem, clearCart, removeItem, incrementQty, decrementQty } = cartSlice.actions;
 exports.default = cartSlice.reducer; /// We can write in this way as well:-
  // export const addItem = cartSlice.actions.addItem;
  // export const clearCart = cartSlice.actions.clearCart;
@@ -41281,7 +41284,7 @@ var _emptyCartDefault = parcelHelpers.interopDefault(_emptyCart);
 var _s = $RefreshSig$();
 const CartStore = ()=>{
     _s();
-    //To read from the cart-store,We need to subscribing to the store. using Selector.
+    // To read from the cart-store, We need to subscribe to the store using Selector.
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     const dispatch = (0, _reactRedux.useDispatch)();
     const handleClearCart = ()=>{
@@ -41291,50 +41294,56 @@ const CartStore = ()=>{
         className: "cart-container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "cart-items",
-            children: [
-                cartItems.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _emptyCartDefault.default), {}, void 0, false, {
-                    fileName: "src/components/CartStore.js",
-                    lineNumber: 20,
-                    columnNumber: 27
-                }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartListDefault.default), {
-                    items: cartItems
-                }, void 0, false, {
-                    fileName: "src/components/CartStore.js",
-                    lineNumber: 21,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "total-price-quantity"
-                }, void 0, false, {
-                    fileName: "src/components/CartStore.js",
-                    lineNumber: 22,
-                    columnNumber: 2
-                }, undefined),
-                cartItems.length > 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    className: "clear-cart-button rounded",
-                    onClick: handleClearCart,
-                    children: [
-                        "Clear Cart",
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            id: "trash-bin",
-                            class: "material-symbols-outlined",
-                            children: "delete"
-                        }, void 0, false, {
-                            fileName: "src/components/CartStore.js",
-                            lineNumber: 27,
-                            columnNumber: 1
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/CartStore.js",
-                    lineNumber: 26,
-                    columnNumber: 3
-                }, undefined) : null
-            ]
-        }, void 0, true, {
+            children: cartItems.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _emptyCartDefault.default), {}, void 0, false, {
+                fileName: "src/components/CartStore.js",
+                lineNumber: 21,
+                columnNumber: 11
+            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartListDefault.default), {
+                        items: cartItems
+                    }, void 0, false, {
+                        fileName: "src/components/CartStore.js",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "total-price-quantity"
+                    }, void 0, false, {
+                        fileName: "src/components/CartStore.js",
+                        lineNumber: 25,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "clear-cart-button rounded",
+                        onClick: handleClearCart,
+                        children: [
+                            "Clear Cart",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "trash-bin",
+                                className: "material-symbols-outlined",
+                                children: "delete"
+                            }, void 0, false, {
+                                fileName: "src/components/CartStore.js",
+                                lineNumber: 30,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CartStore.js",
+                        lineNumber: 28,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/CartStore.js",
+                lineNumber: 23,
+                columnNumber: 11
+            }, undefined)
+        }, void 0, false, {
             fileName: "src/components/CartStore.js",
             lineNumber: 19,
-            columnNumber: 5
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/CartStore.js",
@@ -41365,25 +41374,39 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$3f27.prelude(module);
 
 try {
-// Component
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRedux = require("react-redux");
 var _config = require("../utilities/config");
 var _cartSlice = require("../utilities/cartSlice");
+var _react = require("react");
 var _s = $RefreshSig$();
 const CartList = ({ items })=>{
     _s();
-    //It uses `dispatch` function , its a hook called `useDispatch()`from `react-redux` to send an action to the Redux store Here the store in our app is `appStore`.
+    const [itemCounts, setItemCounts] = (0, _react.useState)({});
     const dispatch = (0, _reactRedux.useDispatch)();
-    // The function is defined called as `handleRemoveItem` is responsible for dispatching an action it calls a reducer function called `removeItem` with the `itemId` parameter as a payload. 
-    const handleRemoveItem = (itemId)=>{
-        console.log("Before dispatch:", items); // Log the state before dispatch
-        dispatch((0, _cartSlice.removeItem)({
-            id: itemId
-        }));
-        console.log("After dispatch:", items); // Log the state after dispatch
+    const handleLessItem = (item)=>{
+        setItemCounts((prevCounts)=>{
+            const updatedCounts = {
+                ...prevCounts
+            };
+            if (updatedCounts[item.card.info.id] > 0) {
+                updatedCounts[item.card.info.id] -= 1;
+                dispatch((0, _cartSlice.removeItem)(item));
+            }
+            return updatedCounts;
+        });
+    };
+    const handleAddItem = (item)=>{
+        setItemCounts((prevCounts)=>{
+            const updatedCounts = {
+                ...prevCounts
+            };
+            updatedCounts[item.card.info.id] = (updatedCounts[item.card.info.id] || 0) + 1;
+            dispatch((0, _cartSlice.addItem)(item));
+            return updatedCounts;
+        });
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41398,14 +41421,14 @@ const CartList = ({ items })=>{
                                     children: item.card.info.name
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 23,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: item.card.info.description
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 24,
+                                    lineNumber: 37,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -41416,13 +41439,13 @@ const CartList = ({ items })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 25,
+                                    lineNumber: 38,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CartList.js",
-                            lineNumber: 22,
+                            lineNumber: 35,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41433,7 +41456,7 @@ const CartList = ({ items })=>{
                                     alt: "Item"
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 30,
+                                    lineNumber: 43,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41441,43 +41464,38 @@ const CartList = ({ items })=>{
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                         children: [
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                                onClick: ()=>handleLessItem(item),
                                                 children: "-"
                                             }, void 0, false, {
                                                 fileName: "src/components/CartList.js",
-                                                lineNumber: 33,
+                                                lineNumber: 46,
                                                 columnNumber: 19
                                             }, undefined),
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                                children: "Add"
-                                            }, void 0, false, {
-                                                fileName: "src/components/CartList.js",
-                                                lineNumber: 34,
-                                                columnNumber: 19
-                                            }, undefined),
+                                            itemCounts[item.card.info.id] === 0 ? "Add" : itemCounts[item.card.info.id],
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                                 onClick: ()=>handleAddItem(item),
                                                 id: "addBtn",
                                                 children: "+"
                                             }, void 0, false, {
                                                 fileName: "src/components/CartList.js",
-                                                lineNumber: 35,
+                                                lineNumber: 48,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/CartList.js",
-                                        lineNumber: 32,
-                                        columnNumber: 19
+                                        lineNumber: 45,
+                                        columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 31,
+                                    lineNumber: 44,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CartList.js",
-                            lineNumber: 29,
+                            lineNumber: 42,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41485,64 +41503,45 @@ const CartList = ({ items })=>{
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "buttons",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    onClick: ()=>handleRemoveItem(item.card.info.id),
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                            xmlns: "http://www.w3.org/2000/svg",
-                                            height: "16",
-                                            width: "12",
-                                            viewBox: "0 0 384 512",
-                                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                                fill: "#5a5d6c",
-                                                d: "M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"
-                                            }, void 0, false, {
-                                                fileName: "src/components/CartList.js",
-                                                lineNumber: 43,
-                                                columnNumber: 110
-                                            }, undefined)
-                                        }, void 0, false, {
-                                            fileName: "src/components/CartList.js",
-                                            lineNumber: 43,
-                                            columnNumber: 25
-                                        }, undefined)
-                                    }, void 0, false, {
+                                    onClick: ()=>dispatch((0, _cartSlice.removeItem)(item)),
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                                         fileName: "src/components/CartList.js",
-                                        lineNumber: 43,
+                                        lineNumber: 55,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 42,
+                                    lineNumber: 54,
                                     columnNumber: 17
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/CartList.js",
-                                lineNumber: 41,
-                                columnNumber: 10
+                                lineNumber: 53,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/CartList.js",
-                            lineNumber: 40,
-                            columnNumber: 11
+                            lineNumber: 52,
+                            columnNumber: 13
                         }, undefined)
                     ]
                 }, item.card.info.id, true, {
                     fileName: "src/components/CartList.js",
-                    lineNumber: 21,
+                    lineNumber: 34,
                     columnNumber: 11
                 }, undefined))
         }, void 0, false, {
             fileName: "src/components/CartList.js",
-            lineNumber: 19,
+            lineNumber: 32,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/CartList.js",
-        lineNumber: 18,
+        lineNumber: 31,
         columnNumber: 5
     }, undefined);
 };
-_s(CartList, "rgTLoBID190wEKCp9+G8W6F7A5M=", false, function() {
+_s(CartList, "4Haas+omh1iCI+VAAQsmihM+cbg=", false, function() {
     return [
         (0, _reactRedux.useDispatch)
     ];
@@ -41557,7 +41556,7 @@ $RefreshReg$(_c, "CartList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utilities/config":"di7hi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-redux":"62sf7","../utilities/cartSlice":"cc8Uj"}],"g24Wj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g24Wj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4fcb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -41653,12 +41652,12 @@ const User = ()=>{
                     children: "Login"
                 }, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 12,
+                    lineNumber: 14,
                     columnNumber: 1
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 14,
+                    lineNumber: 16,
                     columnNumber: 1
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -41668,17 +41667,17 @@ const User = ()=>{
                     onChange: (event)=>setUserName(event.target.value)
                 }, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 15,
+                    lineNumber: 17,
                     columnNumber: 1
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 19,
+                    lineNumber: 21,
                     columnNumber: 1
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 23,
+                    lineNumber: 25,
                     columnNumber: 1
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41687,23 +41686,23 @@ const User = ()=>{
                         children: "Continue with Username"
                     }, void 0, false, {
                         fileName: "src/components/User.js",
-                        lineNumber: 24,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/User.js",
-                    lineNumber: 24,
+                    lineNumber: 26,
                     columnNumber: 1
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/User.js",
-            lineNumber: 11,
+            lineNumber: 13,
             columnNumber: 1
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/User.js",
-        lineNumber: 10,
+        lineNumber: 12,
         columnNumber: 1
     }, undefined);
 };
