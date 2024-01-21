@@ -9,18 +9,19 @@ const {loggedInUser,setUserName} = useContext(UserContext);
 return(
 <div className="user-container">
 <div className="login-box">
-<label>Username</label>
+<h1>Login</h1>
+{/* <label>Username</label> */}
 <br></br>
 <input  type="text"
-            placeholder="username"
+            placeholder="Username"
             value={loggedInUser}
             onChange={(event)=> setUserName(event.target.value)}/>
 <br></br>
-<label>Password</label>
+{/* <label>Password</label>
 <br></br>
-<input placeholder="password" type="password"/>
+<input placeholder="password" type="password"/> */}
 <br></br>
-<button>Sign in</button>
+<button><i class="ri-user-3-fill">Continue with Username</i></button>
 </div>
 </div> 
 )

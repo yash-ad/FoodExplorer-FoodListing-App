@@ -5,7 +5,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif,okra;
+  font-family: Helvetica, sans-serif,okra;
   box-sizing: border-box;
   text-decoration: none;
     scroll-behavior: smooth;
@@ -864,23 +864,29 @@ max-height: 150px;
 min-height: 100px;
 border-radius: 10px;
 }
-
-.menu-right button{
-padding: 9px 24px;
+.quantity{
+  display: flex;
+  background-color: #fff;
+  }
+  
+.menu-right div{
+  display: flex;
+  gap: 25;
+padding: 8px 23px;
 background-color: #fff;
 color: #60B246;
 outline: none;
 border: 0.1px solid #d4d4d4;
 border-radius: 10px;
-cursor: pointer;
 font-weight:bolder;
 z-index: 1;
 margin-top: -25px;
 }
 
-.menu-right button:hover{
-box-shadow: 0 1px 5px #bab9b9;
-}
+ .menu-right button{
+  cursor: pointer;
+ }
+
 
 .bottom-menu{
   /* background-color: #F1F1F6; */
@@ -934,7 +940,7 @@ margin-top: 7vw;
 
 .user-container{
   /* background-color: rgb(255, 255, 255); */
-  background: url('https://c0.wallpaperflare.com/preview/338/480/905/food-and-drink-pizza-pizzas.jpg');
+  background: url('https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png');
   background-size: cover;
   background-position: center;
   justify-content: center;
@@ -948,8 +954,8 @@ margin-top: 7vw;
 
 
 .login-box{
-  background-color: #fc8019;
-  backdrop-filter: blur(35px);
+  background-color:transparent;
+  backdrop-filter: blur(5px);
   border-radius: 1vw;
   flex-direction: column;
   justify-content: center;
@@ -957,60 +963,68 @@ margin-top: 7vw;
   height: 70vh;
   display: flex;
   margin-top: 6vw;
-  border: 1px solid rgba(255, 255, 255, .2)
+  color: rgb(52, 52, 52);
+  border: 1px solid rgba(255, 255, 255, .2);
+  font-family: sans-serif;
 }
 
 .login-box h1 {
   text-align: center;
-  color: #fff;
+  color: #ffffff;
   margin-top: 1.5vw;
   padding-bottom: 3vw;
   font-size: 3vw;
 }
 
 .login-box label {
-  color: #f9f9f9;
+  color: #efefef;
   width: 80%;
   margin: 0 auto;
+  font-size: 1.5vw;
 }
 .login-box input {
-  border: none;
+  border: 1px solid rgb(186, 186, 186);
   border-radius: 3px;
   width: 80%;
   margin: 0 auto;
   padding: 1vw;
-  font-family: gilroy;
+  font-family: sans-serif;
   font-size: 1.3vw;
-}
-.login-box label {
-  color: #f9f9f9;
-  width: 80%;
-  margin: 0 auto;
+  color: #000;
 }
 
-.login-box input {
-  border: none;
+
+/* .login-box label {
+  color: #f9f9f9;
+  width: 80%;
+  margin: 0 auto;
+} */
+
+/* .login-box input {
+  border: 1px solid rgb(186, 186, 186);
   border-radius: 3px;
   width: 80%;
   margin: 0 auto;
   padding: 1vw;
   font-family: gilroy;
   font-size: 1.3vw;
-}
+} */
 
 .login-box button {
   cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  width: 80%;
+  background-color:rgb(255, 255, 255);;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 5px;
+  width: 60%;
   margin: 2vw auto;
   padding: 1vw;
-  font-family: gilroy;
+  font-family: sans-serif;
   font-size: 1.3vw;
+  
 }
-
+.login-box button:hover{
+color: orangered;
+}
 .cart-items{
 
   margin-left: 250px;
@@ -1109,6 +1123,19 @@ box-shadow: 0 1px 5px #bab9b9;
      
       }
 
+      .cart-button{
+        display: flex;
+        gap: 15;      
+              padding: 8px 23px;
+              background-color: #fff;
+              color: #60B246;
+              outline: none;
+              border: 0.1px solid #d4d4d4;
+              border-radius: 10px;
+              font-weight:bolder;
+              margin-top: -20px;
+              font-size: 1.2vw; 
+      }
       .cart-menu-crossButton{
         display: flex;
        justify-content: space-between;
@@ -1117,18 +1144,28 @@ box-shadow: 0 1px 5px #bab9b9;
        margin-right: -50px;
       }
 
-  .cart-menu-right button{
-    padding: 9px 24px;
-    background-color: #fff;
-    color: #60B246;
-    outline: none;
-    border: 0.1px solid #d4d4d4;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight:bolder;
-    margin-top: -20px;
+
+   
+    /* .cart-menu-right .quantity-btn{
+      display: flex;
+      gap: 15;      
+      padding: 9px 24px;
+      background-color: #fff;
+      color: #60B246;
+      outline: none;
+      border: 0.1px solid #d4d4d4;
+      border-radius: 10px;
+      font-weight:bolder;
+      margin-top: -20px;
+      font-size: 1.2vw;
+    } */
+    .quantity-btn .addBtn{
+      cursor: pointer;
     }
-      
+    .quantity-btn .lessBtn{
+      cursor: pointer;
+    }
+ 
       .cart-menu-right img{
       max-width: 130px;
       min-width: 130px;
@@ -1138,7 +1175,7 @@ box-shadow: 0 1px 5px #bab9b9;
      
       }
       
-      .cart-menu-right button{
+      /* .cart-menu-right button{
       padding: 5px 20px;
       background-color: #fff;
       color: #60B246;
@@ -1151,11 +1188,11 @@ box-shadow: 0 1px 5px #bab9b9;
       margin-top: -20px;
       margin-bottom: 5px;
      
-      }
+      } */
       
-      .cart-menu-right button:hover{
+      /* .cart-menu-right button:hover{
       box-shadow: 0 1px 5px #bab9b9;
-      }
+      } */
 
   
 
@@ -1460,8 +1497,9 @@ object-fit: cover;
     font-weight: 600;
 } */
 #contact-right input {
+  color: #fff;
     padding: 1vw 0.85vw 1vw 1.8vw;
-    font-size: 1vw;
+    font-size: 2vw;
     width: 100%;
 }
 #contact-right .name-label{
@@ -1496,7 +1534,7 @@ object-fit: cover;
 #contact button {
   color: #fff;
   cursor: pointer;
-  background-color: #000;
+  background-color: #000000 ;
   border: 1.6px solid #0000;
   margin-top: 1.5vw;
   padding: 1vw 0;
@@ -1505,4 +1543,13 @@ object-fit: cover;
   width: 50%;
   margin-bottom: 1vw;
   margin-left: 95px;
+}
+
+.total-price-quantity{
+  background-color: #fff;
+    border-bottom: 1px solid #d3d3d3;
+    width: 100%;
+    padding: 2vw 5vw;
+    display: flex;
+ justify-content: center;
 }

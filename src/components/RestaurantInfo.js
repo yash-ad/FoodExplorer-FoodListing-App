@@ -17,6 +17,7 @@ const RestaurantInfo = () => {
    const [resNewInfo, setResNewInfo] = useState(null);
    const [resCategory,setResCategory] = useState(null);
   const [showIndex,setShowIndex] = useState(null);
+  const [searchText,setSearchText] = useState('');
 
 
 
@@ -35,16 +36,16 @@ const fetchInfo =  async () => {
   try {
     const data =  await fetch(REST_INFO_API_URL + resId);
     const json = await data.json();
-    
+    console.log(json);
     //Setting state variables with fetched data
     setResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
-    
+
     setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
-    
+
     setResInfo(json?.data?.cards[0]?.card?.card?.info);
 
     setResCategory(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((category)=>category.card?.card?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"));
-   
+
   } catch (error) {
     console.error("Error fetching restaurant information:", error);
   }
@@ -64,7 +65,29 @@ const fetchInfo =  async () => {
   
 //To find the Item categories from Swiggys API and stored in the variable.
 const categories = resCategory;
-// console.log(categories);
+// console.log("categories",categories);
+
+
+//Defined a function to handle only for browse search menu.It can be invoked or called whenever the function is needed.
+const handleBrowseSearch = () => {
+  if (!searchText) {
+    setShowIndex(null);
+    return;
+  }
+
+  // Filter categories browse on search text.
+  let filteredCategories = categories.filter((category) =>
+    category.card?.card?.title.toLowerCase().includes(searchText.toLowerCase())
+  );
+
+  // If there are matching categories, show the first one; otherwise, hide all accordions
+  if (filteredCategories.length > 0) {
+    setShowIndex(categories.indexOf(filteredCategories[0]));
+  } else {
+    setShowIndex(null);
+  }
+};
+
 
   // Rendering the JSX structure
   return (
@@ -105,7 +128,36 @@ const categories = resCategory;
             </button>
           </div>
         </div>
+       
+        <div className="mid-menu-search">
+        <div className="search-container">
+        <div className="search-bar">
+  <input className="input-bar"
+  autoComplete="off"
+  name="hidden"
+  type="text"
+  placeholder="Search within title"
+  id="searchInp"
+value={searchText}
+onChange={(event)=>{
+setSearchText(event.target.value);
+handleBrowseSearch();
+}}
+  onKeyDown={(event) => {
+    if (event.key === 'Enter') {
+     handleBrowseSearch() // You can keep this for users who prefer to press Enter.
+}}}
+/>
 
+<div className="button-container">
+            <button data-testid="clickSearchButton" id="searchBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" height="23" width="23" viewBox="0 0 448 512">
+            <path fill="#fc9a01" d="M416 0C400 0 288 32 288 176V288c0 35.3 28.7 64 64 64h32V480c0 17.7 14.3 32 32 32s32-14.3 32-32V352 240 32c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7V480c0 17.7 14.3 32 32 32s32-14.3 32-32V255.6c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16V150.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8V16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+        </div>
 
 {/*  Main-Menu Categories Accordions added with the component*/}
  {/* Introduced Controlled and uncontrolled Components  In this code , The parent is controlling over on child component*/}

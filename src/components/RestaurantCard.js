@@ -7,7 +7,7 @@ const RestaurantCard = (props) => {
   // Destructuring the props to get the restaurantData object
   const { restaurantData } = props;
   
-  
+ 
 
   // Destructuring values from the restaurantData object
   const { name, cloudinaryImageId, avgRating, costForTwo, areaName, cuisines, locality } = restaurantData?.info;

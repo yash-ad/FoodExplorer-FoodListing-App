@@ -23,11 +23,13 @@ const fetchData = async () => {
 
     // Setting the state variables with restaurant data
     setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
  
 };
 
 
 return listOfRestaurants;
+
    
 };
 

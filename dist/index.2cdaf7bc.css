@@ -281,10 +281,6 @@ img, video {
   display: block;
 }
 
-.inline {
-  display: inline;
-}
-
 .list-item {
   display: list-item;
 }
@@ -347,7 +343,7 @@ img, video {
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif, okra;
+  font-family: Helvetica, sans-serif, okra;
   text-decoration: none;
 }
 
@@ -1134,21 +1130,27 @@ img, video {
   max-height: 150px;
 }
 
-.menu-right button {
+.quantity {
+  background-color: #fff;
+  display: flex;
+}
+
+.menu-right div {
   color: #60b246;
-  cursor: pointer;
   z-index: 1;
   background-color: #fff;
   border: .1px solid #d4d4d4;
   border-radius: 10px;
   outline: none;
+  gap: 25px;
   margin-top: -25px;
-  padding: 9px 24px;
+  padding: 8px 23px;
   font-weight: bolder;
+  display: flex;
 }
 
-.menu-right button:hover {
-  box-shadow: 0 1px 5px #bab9b9;
+.menu-right button {
+  cursor: pointer;
 }
 
 .bottom-menu {
@@ -1195,7 +1197,7 @@ img, video {
 }
 
 .user-container {
-  background: url("https://c0.wallpaperflare.com/preview/338/480/905/food-and-drink-pizza-pizzas.jpg") center / cover;
+  background: url("https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png") center / cover;
   justify-content: center;
   align-items: center;
   gap: 10vw;
@@ -1206,9 +1208,10 @@ img, video {
 }
 
 .login-box {
-  -webkit-backdrop-filter: blur(35px);
-  backdrop-filter: blur(35px);
-  background-color: #fc8019;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: #343434;
+  background-color: #0000;
   border: 1px solid #fff3;
   border-radius: 1vw;
   flex-direction: column;
@@ -1216,6 +1219,7 @@ img, video {
   width: 30vw;
   height: 70vh;
   margin-top: 6vw;
+  font-family: sans-serif;
   display: flex;
 }
 
@@ -1228,32 +1232,37 @@ img, video {
 }
 
 .login-box label {
-  color: #f9f9f9;
+  color: #efefef;
   width: 80%;
   margin: 0 auto;
+  font-size: 1.5vw;
 }
 
 .login-box input {
-  border: none;
+  color: #000;
+  border: 1px solid #bababa;
   border-radius: 3px;
   width: 80%;
   margin: 0 auto;
   padding: 1vw;
-  font-family: gilroy;
+  font-family: sans-serif;
   font-size: 1.3vw;
 }
 
 .login-box button {
   cursor: pointer;
-  color: #fff;
-  background-color: #000;
-  border: none;
-  border-radius: 3px;
-  width: 80%;
+  background-color: #fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  width: 60%;
   margin: 2vw auto;
   padding: 1vw;
-  font-family: gilroy;
+  font-family: sans-serif;
   font-size: 1.3vw;
+}
+
+.login-box button:hover {
+  color: #ff4500;
 }
 
 .cart-items {
@@ -1343,6 +1352,20 @@ img, video {
   display: flex;
 }
 
+.cart-button {
+  color: #60b246;
+  background-color: #fff;
+  border: .1px solid #d4d4d4;
+  border-radius: 10px;
+  outline: none;
+  gap: 15px;
+  margin-top: -20px;
+  padding: 8px 23px;
+  font-size: 1.2vw;
+  font-weight: bolder;
+  display: flex;
+}
+
 .cart-menu-crossButton {
   justify-content: space-between;
   margin-top: -10px;
@@ -1350,16 +1373,8 @@ img, video {
   display: flex;
 }
 
-.cart-menu-right button {
-  color: #60b246;
+.quantity-btn .addBtn, .quantity-btn .lessBtn {
   cursor: pointer;
-  background-color: #fff;
-  border: .1px solid #d4d4d4;
-  border-radius: 10px;
-  outline: none;
-  margin-top: -20px;
-  padding: 9px 24px;
-  font-weight: bolder;
 }
 
 .cart-menu-right img {
@@ -1368,24 +1383,6 @@ img, video {
   max-width: 130px;
   min-height: 100px;
   max-height: 130px;
-}
-
-.cart-menu-right button {
-  color: #60b246;
-  cursor: pointer;
-  z-index: 1;
-  background-color: #fff;
-  border: .5px solid #d4d4d4;
-  border-radius: 10px;
-  outline: none;
-  margin-top: -20px;
-  margin-bottom: 5px;
-  padding: 5px 20px;
-  font-weight: bolder;
-}
-
-.cart-menu-right button:hover {
-  box-shadow: 0 1px 5px #bab9b9;
 }
 
 .empty-cart-container {
@@ -1679,9 +1676,10 @@ img, video {
 }
 
 #contact-right input {
+  color: #fff;
   width: 100%;
   padding: 1vw .85vw 1vw 1.8vw;
-  font-size: 1vw;
+  font-size: 2vw;
 }
 
 #contact-right .name-label {
@@ -1720,6 +1718,15 @@ img, video {
   padding: 1vw 0;
   font-size: 1.3vw;
   transition: all .3s;
+}
+
+.total-price-quantity {
+  background-color: #fff;
+  border-bottom: 1px solid #d3d3d3;
+  justify-content: center;
+  width: 100%;
+  padding: 2vw 5vw;
+  display: flex;
 }
 
 .hover\:ring-offset-zinc-900:hover {

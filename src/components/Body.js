@@ -98,6 +98,16 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
         >
           Pure Veg
         </button>
+
+        <button
+className="finder-btns"
+onClick={() => {
+  const fastestDeliveryTime = listOfRestaurants.filter((res) => res.info.sla.deliveryTime <= 20);
+  setFilterRestaurants(fastestDeliveryTime);
+}}
+>
+Fastest Delivery
+</button>
       </div>
 
      {/* Displaying Restaurant Cards */}
@@ -125,3 +135,5 @@ So I used that for label "Promoted" using higher order components */}
 };
 
 export default Body;
+
+

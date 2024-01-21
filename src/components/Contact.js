@@ -5,7 +5,7 @@ const Contact = ()=>{
 return(
 <div className="contact-page">
     <div id="contact">
-    <img src="https://c1.wallpaperflare.com/preview/877/7/816/writing-pad-vegetables-table-tray.jpg" alt=""/>
+    <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt=""/>
     <div id="overlay"></div>
     <div id="contact-left">
     <h1>Reach out to us</h1>
