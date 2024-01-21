@@ -51,9 +51,9 @@ const CartList = ({ items }) => {
             <div className="cart-menu-crossButton">
               <div className="buttons">
                 <button onClick={() => dispatch(removeItem({ id: item.card.info.id }))}>
-                  <span>
-                    {/* Your SVG or icon for remove */}
-                  </span>
+                <span class="material-symbols-outlined">
+close
+</span>
                 </button>
               </div>
             </div>

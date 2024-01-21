@@ -41496,10 +41496,13 @@ const CartList = ({ items })=>{
                                     onClick: ()=>dispatch((0, _cartSlice.removeItem)({
                                             id: item.card.info.id
                                         })),
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        class: "material-symbols-outlined",
+                                        children: "close"
+                                    }, void 0, false, {
                                         fileName: "src/components/CartList.js",
                                         lineNumber: 54,
-                                        columnNumber: 19
+                                        columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
