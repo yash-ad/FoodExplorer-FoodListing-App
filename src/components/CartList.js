@@ -1,6 +1,7 @@
+// CartList component
 import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
-import { addItem, removeItem } from "../utilities/cartSlice";
+import { addItem, removeItem, decrementQty } from "../utilities/cartSlice";
 import { useState } from "react";
 
 const CartList = ({ items }) => {
@@ -8,14 +9,12 @@ const CartList = ({ items }) => {
   const dispatch = useDispatch();
 
   const handleLessItem = (item) => {
-    setItemCounts((prevCounts) => {
+    setItemCounts((prevCounts)=>{
       const updatedCounts = { ...prevCounts };
-      if (updatedCounts[item.card.info.id] > 0) {
-        updatedCounts[item.card.info.id] -= 1;
-        dispatch(removeItem(item));
-      }
+      updatedCounts[item.card.info.id] = updatedCounts[item.card.info.id] - 1;
+      dispatch(decrementQty({ id: item.card.info.id }));
       return updatedCounts;
-    });
+    })
   };
 
   const handleAddItem = (item) => {
@@ -51,7 +50,7 @@ const CartList = ({ items }) => {
             </div>
             <div className="cart-menu-crossButton">
               <div className="buttons">
-                <button onClick={() => dispatch(removeItem(item))}>
+                <button onClick={() => dispatch(removeItem({ id: item.card.info.id }))}>
                   <span>
                     {/* Your SVG or icon for remove */}
                   </span>

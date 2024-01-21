@@ -37305,17 +37305,15 @@ $RefreshReg$(_c, "ItemsList");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cc8Uj":[function(require,module,exports) {
+// cartSlice.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "addItem", ()=>addItem);
-parcelHelpers.export(exports, "clearCart", ()=>clearCart);
 parcelHelpers.export(exports, "removeItem", ()=>removeItem);
-parcelHelpers.export(exports, "incrementQty", ()=>incrementQty);
 parcelHelpers.export(exports, "decrementQty", ()=>decrementQty);
+parcelHelpers.export(exports, "clearCart", ()=>clearCart);
 var _toolkit = require("@reduxjs/toolkit");
-//Context of Redux slice:-
 const cartSlice = (0, _toolkit.createSlice)({
-    //We added `name` to the slice.
     name: "cart",
     initialState: {
         items: []
@@ -37324,29 +37322,20 @@ const cartSlice = (0, _toolkit.createSlice)({
         addItem: (state, action)=>{
             const newItem = action.payload;
             const existingItem = state.items.find((item)=>item.card.info.id === newItem.card.info.id);
-            if (existingItem) // If the item is already in the cart, update its quantity
-            existingItem.quantity += 1;
-            else // If the item is not in the cart, add it with quantity 1
-            state.items.push({
+            if (existingItem) existingItem.quantity += 1;
+            else state.items.push({
                 ...newItem,
                 quantity: 1
             });
         },
         removeItem: (state, action)=>{
-            state.items.filter((item)=>item.id !== action.payload.id);
-        //  console.log('Updated state:', current(state.items));
-        },
-        incrementQty: (state, action)=>{
-            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {
-                    ...item,
-                    qty: item.qty + 1
-                } : item);
+            const itemIdToRemove = action.payload.id;
+            state.items = state.items.filter((item)=>item.card.info.id !== itemIdToRemove);
         },
         decrementQty: (state, action)=>{
-            state.cart = state.cart.map((item)=>item.id === action.payload.id ? {
-                    ...item,
-                    qty: item.qty - 1
-                } : item);
+            const itemIdToDecrement = action.payload.id;
+            const itemToDecrement = state.items.find((item)=>item.card.info.id === itemIdToDecrement);
+            if (itemToDecrement && itemToDecrement.quantity > 1) itemToDecrement.quantity -= 1;
         },
         clearCart: (state)=>{
             state.items.length = 0 //[for an empty array]
@@ -37354,7 +37343,7 @@ const cartSlice = (0, _toolkit.createSlice)({
         }
     }
 });
-const { addItem, clearCart, removeItem, incrementQty, decrementQty } = cartSlice.actions;
+const { addItem, removeItem, decrementQty, clearCart } = cartSlice.actions;
 exports.default = cartSlice.reducer; /// We can write in this way as well:-
  // export const addItem = cartSlice.actions.addItem;
  // export const clearCart = cartSlice.actions.clearCart;
@@ -41374,6 +41363,7 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$3f27.prelude(module);
 
 try {
+// CartList component
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
@@ -41391,10 +41381,10 @@ const CartList = ({ items })=>{
             const updatedCounts = {
                 ...prevCounts
             };
-            if (updatedCounts[item.card.info.id] > 0) {
-                updatedCounts[item.card.info.id] -= 1;
-                dispatch((0, _cartSlice.removeItem)(item));
-            }
+            updatedCounts[item.card.info.id] = updatedCounts[item.card.info.id] - 1;
+            dispatch((0, _cartSlice.decrementQty)({
+                id: item.card.info.id
+            }));
             return updatedCounts;
         });
     };
@@ -41421,14 +41411,14 @@ const CartList = ({ items })=>{
                                     children: item.card.info.name
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 36,
+                                    lineNumber: 35,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: item.card.info.description
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 37,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -41439,13 +41429,13 @@ const CartList = ({ items })=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 38,
+                                    lineNumber: 37,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CartList.js",
-                            lineNumber: 35,
+                            lineNumber: 34,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41456,7 +41446,7 @@ const CartList = ({ items })=>{
                                     alt: "Item"
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 43,
+                                    lineNumber: 42,
                                     columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41468,7 +41458,7 @@ const CartList = ({ items })=>{
                                                 children: "-"
                                             }, void 0, false, {
                                                 fileName: "src/components/CartList.js",
-                                                lineNumber: 46,
+                                                lineNumber: 45,
                                                 columnNumber: 19
                                             }, undefined),
                                             itemCounts[item.card.info.id] === 0 ? "Add" : itemCounts[item.card.info.id],
@@ -41478,24 +41468,24 @@ const CartList = ({ items })=>{
                                                 children: "+"
                                             }, void 0, false, {
                                                 fileName: "src/components/CartList.js",
-                                                lineNumber: 48,
+                                                lineNumber: 47,
                                                 columnNumber: 19
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/CartList.js",
-                                        lineNumber: 45,
+                                        lineNumber: 44,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 44,
+                                    lineNumber: 43,
                                     columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CartList.js",
-                            lineNumber: 42,
+                            lineNumber: 41,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41503,41 +41493,43 @@ const CartList = ({ items })=>{
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 className: "buttons",
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                    onClick: ()=>dispatch((0, _cartSlice.removeItem)(item)),
+                                    onClick: ()=>dispatch((0, _cartSlice.removeItem)({
+                                            id: item.card.info.id
+                                        })),
                                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {}, void 0, false, {
                                         fileName: "src/components/CartList.js",
-                                        lineNumber: 55,
+                                        lineNumber: 54,
                                         columnNumber: 19
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/CartList.js",
-                                    lineNumber: 54,
+                                    lineNumber: 53,
                                     columnNumber: 17
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/CartList.js",
-                                lineNumber: 53,
+                                lineNumber: 52,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/CartList.js",
-                            lineNumber: 52,
+                            lineNumber: 51,
                             columnNumber: 13
                         }, undefined)
                     ]
                 }, item.card.info.id, true, {
                     fileName: "src/components/CartList.js",
-                    lineNumber: 34,
+                    lineNumber: 33,
                     columnNumber: 11
                 }, undefined))
         }, void 0, false, {
             fileName: "src/components/CartList.js",
-            lineNumber: 32,
+            lineNumber: 31,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/CartList.js",
-        lineNumber: 31,
+        lineNumber: 30,
         columnNumber: 5
     }, undefined);
 };
