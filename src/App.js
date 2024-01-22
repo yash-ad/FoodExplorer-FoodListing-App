@@ -68,7 +68,7 @@ const appRouter = createBrowserRouter([
       { path: "/contact", element: <Suspense fallback={<Shimmer />}><Contact /></Suspense> },
       { path: "/cart", element: <CartStore /> },
       { path: "/empty-cart", element: <EmptyCart /> },
-      { path: "/user", element: <Suspense fallback={<Shimmer />}><UserLazy /></Suspense> },
+      { path: "/user", element: <UserLazy /> },
     ],
   },
 ]);

@@ -3147,18 +3147,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             },
             {
                 path: "/user",
-                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
-                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 71,
-                        columnNumber: 53
-                    }, void 0),
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(UserLazy, {}, void 0, false, {
-                        fileName: "src/App.js",
-                        lineNumber: 71,
-                        columnNumber: 66
-                    }, undefined)
-                }, void 0, false, {
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(UserLazy, {}, void 0, false, {
                     fileName: "src/App.js",
                     lineNumber: 71,
                     columnNumber: 33
@@ -41943,7 +41932,7 @@ const Body = ()=>{
                             const fastestDeliveryTime = listOfRestaurants.filter((res)=>res.info.sla.deliveryTime <= 20);
                             setFilterRestaurants(fastestDeliveryTime);
                         },
-                        children: "Fastest Delivery"
+                        children: "Fast Delivery"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
                         lineNumber: 102,

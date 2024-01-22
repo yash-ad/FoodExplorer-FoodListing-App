@@ -106,7 +106,7 @@ onClick={() => {
   setFilterRestaurants(fastestDeliveryTime);
 }}
 >
-Fastest Delivery
+Fast Delivery
 </button>
       </div>
 
