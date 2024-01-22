@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
 import { addItem } from "../utilities/cartSlice";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const ItemsList = (props) => {
@@ -15,8 +17,8 @@ const ItemsList = (props) => {
     // const updatedCounts = { ...itemCounts };
     // updatedCounts[item.card.info.id] = (updatedCounts[item.card.info.id] || 0) + 1;
     // setItemCounts(updatedCounts);
-
     dispatch(addItem(item));
+   toast.success(`Added ${item.card.info.name}`);
   };
 
   // const handleRemoveItem = (item) => {

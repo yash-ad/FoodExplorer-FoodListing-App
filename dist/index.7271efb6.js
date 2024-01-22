@@ -2950,30 +2950,30 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _client = require("react-dom/client");
-var _clientDefault = parcelHelpers.interopDefault(_client);
+var _reactDom = require("react-dom");
+var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _reactRouterDom = require("react-router-dom");
+var _reactRedux = require("react-redux");
+var _reactToastify = require("react-toastify");
+var _reactToastifyCss = require("react-toastify/dist/ReactToastify.css");
 var _header = require("./components/Header");
 var _headerDefault = parcelHelpers.interopDefault(_header);
 var _body = require("./components/Body");
 var _bodyDefault = parcelHelpers.interopDefault(_body);
 var _footer = require("./components/Footer");
 var _footerDefault = parcelHelpers.interopDefault(_footer);
-var _reactRouterDom = require("react-router-dom");
 var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _restaurantInfo = require("./components/RestaurantInfo");
 var _restaurantInfoDefault = parcelHelpers.interopDefault(_restaurantInfo);
 var _userContext = require("./utilities/UserContext");
 var _userContextDefault = parcelHelpers.interopDefault(_userContext);
-var _reactRedux = require("react-redux");
 var _appStore = require("./utilities/appStore");
 var _appStoreDefault = parcelHelpers.interopDefault(_appStore);
 var _cartStore = require("./components/CartStore");
 var _cartStoreDefault = parcelHelpers.interopDefault(_cartStore);
 var _emptyCart = require("./components/EmptyCart");
 var _emptyCartDefault = parcelHelpers.interopDefault(_emptyCart);
-var _user = require("./components/User");
-var _userDefault = parcelHelpers.interopDefault(_user);
 var _shimmer = require("./components/Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
 var _networkStatus = require("./components/NetworkStatus");
@@ -2986,88 +2986,92 @@ const AppLayout = ()=>{
     _s();
     const [userName, setUserName] = (0, _react.useState)();
     const appNetworkStatus = (0, _useOnlineStatusDefault.default)();
-    //For-Authentication
+    // For Authentication
     (0, _react.useEffect)(()=>{
         const data = {
             Name: ""
         };
         setUserName(data.Name);
     }, []);
-    return(// React-redux
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
         store: (0, _appStoreDefault.default),
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userContextDefault.default).Provider, {
             value: {
                 loggedInUser: userName,
                 setUserName
             },
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "App-container",
-                children: appNetworkStatus ? //Wrapped into the React fragment syntax
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 49,
-                            columnNumber: 7
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 50,
-                            columnNumber: 7
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
-                            fileName: "src/App.js",
-                            lineNumber: 51,
-                            columnNumber: 7
-                        }, undefined)
-                    ]
-                }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactToastify.ToastContainer), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 54,
-                    columnNumber: 7
+                    lineNumber: 37,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "App-container",
+                    children: appNetworkStatus ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 41,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 42,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
+                                fileName: "src/App.js",
+                                lineNumber: 43,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 46,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 38,
+                    columnNumber: 9
                 }, undefined)
-            }, void 0, false, {
-                fileName: "src/App.js",
-                lineNumber: 43,
-                columnNumber: 5
-            }, undefined)
-        }, void 0, false, {
+            ]
+        }, void 0, true, {
             fileName: "src/App.js",
-            lineNumber: 42,
-            columnNumber: 5
+            lineNumber: 36,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.js",
-        lineNumber: 40,
-        columnNumber: 1
-    }, undefined));
+        lineNumber: 35,
+        columnNumber: 5
+    }, undefined);
 };
-_s(AppLayout, "hE5Uv3/gkbAijC3OisFs1rB5dA8=", false, function() {
+_s(AppLayout, "RkKhF4G2LMQVt6ktzwd2IaLJLZ4=", false, function() {
     return [
         (0, _useOnlineStatusDefault.default)
     ];
 });
 _c = AppLayout;
-//In React, the lazy function is used to dynamically import a component. 
 const About = /*#__PURE__*/ (0, _react.lazy)(()=>require("e9c452bf08808b49"));
 _c1 = About;
 const Contact = /*#__PURE__*/ (0, _react.lazy)(()=>require("5e1a65b7e57df9f9"));
 _c2 = Contact;
-const User = /*#__PURE__*/ (0, _react.lazy)(()=>require("c93eaf4405d362a8"));
-_c3 = (0, _userDefault.default);
+const UserLazy = /*#__PURE__*/ (0, _react.lazy)(()=>require("c93eaf4405d362a8"));
+_c3 = UserLazy;
 // Create a router for the application using react-router-dom
 const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     {
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 74,
+            lineNumber: 62,
             columnNumber: 14
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 75,
+            lineNumber: 63,
             columnNumber: 19
         }, undefined),
         children: [
@@ -3075,7 +3079,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 77,
+                    lineNumber: 65,
                     columnNumber: 29
                 }, undefined)
             },
@@ -3083,27 +3087,26 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/restaurants/:resId",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantInfoDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 78,
+                    lineNumber: 66,
                     columnNumber: 47
                 }, undefined)
             },
-            //<Suspense> is a React component that is used for handling components with asynchronous behavior, such as lazy-loaded components or data fetching.
             {
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 80,
+                        lineNumber: 67,
                         columnNumber: 54
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(About, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 80,
-                        columnNumber: 66
+                        lineNumber: 67,
+                        columnNumber: 67
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 80,
+                    lineNumber: 67,
                     columnNumber: 34
                 }, undefined)
             },
@@ -3112,34 +3115,34 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 81,
-                        columnNumber: 55
+                        lineNumber: 68,
+                        columnNumber: 56
                     }, void 0),
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Contact, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 81,
-                        columnNumber: 67
+                        lineNumber: 68,
+                        columnNumber: 69
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 81,
-                    columnNumber: 35
+                    lineNumber: 68,
+                    columnNumber: 36
                 }, undefined)
             },
             {
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartStoreDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 82,
+                    lineNumber: 69,
                     columnNumber: 33
                 }, undefined)
             },
             {
-                path: "/",
+                path: "/empty-cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _emptyCartDefault.default), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 83,
-                    columnNumber: 29
+                    lineNumber: 70,
+                    columnNumber: 39
                 }, undefined)
             },
             {
@@ -3147,17 +3150,17 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
                     fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 84,
+                        lineNumber: 71,
                         columnNumber: 53
                     }, void 0),
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userDefault.default), {}, void 0, false, {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(UserLazy, {}, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 84,
-                        columnNumber: 65
+                        lineNumber: 71,
+                        columnNumber: 66
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 84,
+                    lineNumber: 71,
                     columnNumber: 33
                 }, undefined)
             }
@@ -3165,27 +3168,27 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
     }
 ]);
 // Create a root for rendering the application
-const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
+const root = (0, _reactDomDefault.default).createRoot(document.getElementById("root"));
 // Render the application inside the RouterProvider
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterProvider), {
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 93,
+    lineNumber: 80,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
 $RefreshReg$(_c, "AppLayout");
 $RefreshReg$(_c1, "About");
 $RefreshReg$(_c2, "Contact");
-$RefreshReg$(_c3, "User");
+$RefreshReg$(_c3, "UserLazy");
 
   $parcel$ReactRefreshHelpers$f00f.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/RestaurantInfo":"l2Zp9","./utilities/UserContext":"3DxXm","react-redux":"62sf7","./utilities/appStore":"mxqQc","./components/CartStore":"4bpuY","./components/EmptyCart":"g24Wj","./components/User":"4iQHT","./components/Shimmer":"g6ZGj","e9c452bf08808b49":"6jcNq","5e1a65b7e57df9f9":"5TZGn","c93eaf4405d362a8":"anljH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/NetworkStatus":"fg9LP","./utilities/useOnlineStatus":"boI62"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./components/Header":"hsJbF","./components/Footer":"8pPOA","react-router-dom":"9xmpe","./components/Error":"kvula","./components/RestaurantInfo":"l2Zp9","./utilities/UserContext":"3DxXm","react-redux":"62sf7","./utilities/appStore":"mxqQc","./components/CartStore":"4bpuY","./components/EmptyCart":"g24Wj","./components/Shimmer":"g6ZGj","e9c452bf08808b49":"6jcNq","5e1a65b7e57df9f9":"5TZGn","c93eaf4405d362a8":"8bpBh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/NetworkStatus":"fg9LP","./utilities/useOnlineStatus":"boI62","react-toastify":"kSvyQ","react-dom":"j6uA9","./components/Body":"8yaV8","react-toastify/dist/ReactToastify.css":"gJP2Y"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -5890,28 +5893,1659 @@ module.exports = require("a569817e6ea559f6");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"lOjBx":[function(require,module,exports) {
-"use strict";
-var m = require("aaccff5d309d9239");
-var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-exports.createRoot = function(c, o) {
-    i.usingClientEntryPoint = true;
-    try {
-        return m.createRoot(c, o);
-    } finally{
-        i.usingClientEntryPoint = false;
-    }
+},{}],"hsJbF":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bfed.prelude(module);
+
+try {
+// Importing necessary dependencies and configuration
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _config = require("../utilities/config");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+var _userContext = require("../utilities/UserContext");
+var _userContextDefault = parcelHelpers.interopDefault(_userContext);
+var _reactRedux = require("react-redux");
+var _s = $RefreshSig$();
+// Defining the Header component
+const Header = ()=>{
+    _s();
+    // Using the useState hook to manage the state of the toggle button
+    const [toggleButton] = (0, _react.useState)("Login");
+    //Introduced `useContext` hook:-
+    // const data = useContext(UserContext);
+    const { loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
+    // console.log(loggedInUser);
+    //Introduced `useSelector` hook to subscribing to the store using Selector.
+    const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
+    // after executing this line of code, cartItems will hold the value of store.cart.items, and it will automatically re-render the component whenever the items property in the cart slice changes.
+    // console.log(cartItems);
+    // Calculate the total number of items in the cart
+    const cartLength = cartItems.reduce((total, item)=>total + item.quantity, 0);
+    return(// JSX representing the structure of the Header component
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "header shadow-lg",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "logo-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        className: "logo",
+                        alt: "foodapplogo",
+                        src: (0, _config.LOGO_URL)
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 34,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 33,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "nav-items",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/",
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 43,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 43,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/about",
+                                children: "About Us"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 44,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 44,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/contact",
+                                children: "Contact Us"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 45,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 45,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                className: "cart",
+                                to: "/cart",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    children: [
+                                        "Cart",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                            class: "ri-shopping-cart-2-fill"
+                                        }, void 0, false, {
+                                            fileName: "src/components/Header.js",
+                                            lineNumber: 49,
+                                            columnNumber: 2
+                                        }, undefined),
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            children: `${cartLength}`
+                                        }, void 0, false, {
+                                            fileName: "src/components/Header.js",
+                                            lineNumber: 50,
+                                            columnNumber: 2
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 47,
+                                    columnNumber: 11
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 46,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 46,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            className: "user",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                    class: "ri-user-3-fill"
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 56,
+                                    columnNumber: 11
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                    className: "user-text",
+                                    children: loggedInUser
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 58,
+                                    columnNumber: 11
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 55,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/user",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "toggleBtn",
+                                children: toggleButton
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 61,
+                                columnNumber: 18
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 61,
+                            columnNumber: 1
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Header.js",
+                    lineNumber: 41,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Header.js",
+                lineNumber: 40,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Header.js",
+        lineNumber: 30,
+        columnNumber: 5
+    }, undefined));
 };
-exports.hydrateRoot = function(c, h, o) {
-    i.usingClientEntryPoint = true;
-    try {
-        return m.hydrateRoot(c, h, o);
-    } finally{
-        i.usingClientEntryPoint = false;
-    }
+_s(Header, "B+rrH0PI8+0NrYNIXd+ZWepaGH8=", false, function() {
+    return [
+        (0, _reactRedux.useSelector)
+    ];
+});
+_c = Header;
+// Exporting the Header component to make it available for other parts of the application
+exports.default = Header;
+var _c;
+$RefreshReg$(_c, "Header");
+
+  $parcel$ReactRefreshHelpers$bfed.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","react":"21dqq","react-router-dom":"9xmpe","../utilities/UserContext":"3DxXm","react-redux":"62sf7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"di7hi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
+parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
+parcelHelpers.export(exports, "API_URL", ()=>API_URL);
+parcelHelpers.export(exports, "REST_INFO_API_URL", ()=>REST_INFO_API_URL);
+parcelHelpers.export(exports, "IMG_URL", ()=>IMG_URL);
+parcelHelpers.export(exports, "CORS_URL", ()=>CORS_URL);
+const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const LOGO_URL = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-app-icon-food-explorer-design-template-8ae900e41ccbc0a2e1b48a85d239e389_screen.jpg?ts=1585237320";
+const API_URL = "https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D18.4833358%26lng%3D73.812767%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING";
+const REST_INFO_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4833358&lng=73.812767&restaurantId=";
+const IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
+const CORS_URL = "https://corsproxy.org/?";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
 };
 
-},{"aaccff5d309d9239":"j6uA9"}],"j6uA9":[function(require,module,exports) {
+},{}],"9xmpe":[function(require,module,exports) {
+/**
+ * React Router DOM v6.20.0
+ *
+ * Copyright (c) Remix Software Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.md file in the root directory of this source tree.
+ *
+ * @license MIT
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AbortedDeferredError", ()=>(0, _reactRouter.AbortedDeferredError));
+parcelHelpers.export(exports, "Await", ()=>(0, _reactRouter.Await));
+parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
+parcelHelpers.export(exports, "Navigate", ()=>(0, _reactRouter.Navigate));
+parcelHelpers.export(exports, "NavigationType", ()=>(0, _reactRouter.NavigationType));
+parcelHelpers.export(exports, "Outlet", ()=>(0, _reactRouter.Outlet));
+parcelHelpers.export(exports, "Route", ()=>(0, _reactRouter.Route));
+parcelHelpers.export(exports, "Router", ()=>(0, _reactRouter.Router));
+parcelHelpers.export(exports, "Routes", ()=>(0, _reactRouter.Routes));
+parcelHelpers.export(exports, "UNSAFE_DataRouterContext", ()=>(0, _reactRouter.UNSAFE_DataRouterContext));
+parcelHelpers.export(exports, "UNSAFE_DataRouterStateContext", ()=>(0, _reactRouter.UNSAFE_DataRouterStateContext));
+parcelHelpers.export(exports, "UNSAFE_LocationContext", ()=>(0, _reactRouter.UNSAFE_LocationContext));
+parcelHelpers.export(exports, "UNSAFE_NavigationContext", ()=>(0, _reactRouter.UNSAFE_NavigationContext));
+parcelHelpers.export(exports, "UNSAFE_RouteContext", ()=>(0, _reactRouter.UNSAFE_RouteContext));
+parcelHelpers.export(exports, "UNSAFE_useRouteId", ()=>(0, _reactRouter.UNSAFE_useRouteId));
+parcelHelpers.export(exports, "createMemoryRouter", ()=>(0, _reactRouter.createMemoryRouter));
+parcelHelpers.export(exports, "createPath", ()=>(0, _reactRouter.createPath));
+parcelHelpers.export(exports, "createRoutesFromChildren", ()=>(0, _reactRouter.createRoutesFromChildren));
+parcelHelpers.export(exports, "createRoutesFromElements", ()=>(0, _reactRouter.createRoutesFromElements));
+parcelHelpers.export(exports, "defer", ()=>(0, _reactRouter.defer));
+parcelHelpers.export(exports, "generatePath", ()=>(0, _reactRouter.generatePath));
+parcelHelpers.export(exports, "isRouteErrorResponse", ()=>(0, _reactRouter.isRouteErrorResponse));
+parcelHelpers.export(exports, "json", ()=>(0, _reactRouter.json));
+parcelHelpers.export(exports, "matchPath", ()=>(0, _reactRouter.matchPath));
+parcelHelpers.export(exports, "matchRoutes", ()=>(0, _reactRouter.matchRoutes));
+parcelHelpers.export(exports, "parsePath", ()=>(0, _reactRouter.parsePath));
+parcelHelpers.export(exports, "redirect", ()=>(0, _reactRouter.redirect));
+parcelHelpers.export(exports, "redirectDocument", ()=>(0, _reactRouter.redirectDocument));
+parcelHelpers.export(exports, "renderMatches", ()=>(0, _reactRouter.renderMatches));
+parcelHelpers.export(exports, "resolvePath", ()=>(0, _reactRouter.resolvePath));
+parcelHelpers.export(exports, "useActionData", ()=>(0, _reactRouter.useActionData));
+parcelHelpers.export(exports, "useAsyncError", ()=>(0, _reactRouter.useAsyncError));
+parcelHelpers.export(exports, "useAsyncValue", ()=>(0, _reactRouter.useAsyncValue));
+parcelHelpers.export(exports, "useBlocker", ()=>(0, _reactRouter.useBlocker));
+parcelHelpers.export(exports, "useHref", ()=>(0, _reactRouter.useHref));
+parcelHelpers.export(exports, "useInRouterContext", ()=>(0, _reactRouter.useInRouterContext));
+parcelHelpers.export(exports, "useLoaderData", ()=>(0, _reactRouter.useLoaderData));
+parcelHelpers.export(exports, "useLocation", ()=>(0, _reactRouter.useLocation));
+parcelHelpers.export(exports, "useMatch", ()=>(0, _reactRouter.useMatch));
+parcelHelpers.export(exports, "useMatches", ()=>(0, _reactRouter.useMatches));
+parcelHelpers.export(exports, "useNavigate", ()=>(0, _reactRouter.useNavigate));
+parcelHelpers.export(exports, "useNavigation", ()=>(0, _reactRouter.useNavigation));
+parcelHelpers.export(exports, "useNavigationType", ()=>(0, _reactRouter.useNavigationType));
+parcelHelpers.export(exports, "useOutlet", ()=>(0, _reactRouter.useOutlet));
+parcelHelpers.export(exports, "useOutletContext", ()=>(0, _reactRouter.useOutletContext));
+parcelHelpers.export(exports, "useParams", ()=>(0, _reactRouter.useParams));
+parcelHelpers.export(exports, "useResolvedPath", ()=>(0, _reactRouter.useResolvedPath));
+parcelHelpers.export(exports, "useRevalidator", ()=>(0, _reactRouter.useRevalidator));
+parcelHelpers.export(exports, "useRouteError", ()=>(0, _reactRouter.useRouteError));
+parcelHelpers.export(exports, "useRouteLoaderData", ()=>(0, _reactRouter.useRouteLoaderData));
+parcelHelpers.export(exports, "useRoutes", ()=>(0, _reactRouter.useRoutes));
+//#endregion
+parcelHelpers.export(exports, "BrowserRouter", ()=>BrowserRouter);
+parcelHelpers.export(exports, "Form", ()=>Form);
+parcelHelpers.export(exports, "HashRouter", ()=>HashRouter);
+parcelHelpers.export(exports, "Link", ()=>Link);
+parcelHelpers.export(exports, "NavLink", ()=>NavLink);
+parcelHelpers.export(exports, "RouterProvider", ()=>RouterProvider);
+parcelHelpers.export(exports, "ScrollRestoration", ()=>ScrollRestoration);
+parcelHelpers.export(exports, "UNSAFE_FetchersContext", ()=>FetchersContext);
+parcelHelpers.export(exports, "UNSAFE_ViewTransitionContext", ()=>ViewTransitionContext);
+parcelHelpers.export(exports, "UNSAFE_useScrollRestoration", ()=>useScrollRestoration);
+parcelHelpers.export(exports, "createBrowserRouter", ()=>createBrowserRouter);
+parcelHelpers.export(exports, "createHashRouter", ()=>createHashRouter);
+parcelHelpers.export(exports, "createSearchParams", ()=>createSearchParams);
+parcelHelpers.export(exports, "unstable_HistoryRouter", ()=>HistoryRouter);
+parcelHelpers.export(exports, "unstable_usePrompt", ()=>usePrompt);
+parcelHelpers.export(exports, "unstable_useViewTransitionState", ()=>useViewTransitionState);
+parcelHelpers.export(exports, "useBeforeUnload", ()=>useBeforeUnload);
+parcelHelpers.export(exports, "useFetcher", ()=>useFetcher);
+parcelHelpers.export(exports, "useFetchers", ()=>useFetchers);
+parcelHelpers.export(exports, "useFormAction", ()=>useFormAction);
+parcelHelpers.export(exports, "useLinkClickHandler", ()=>useLinkClickHandler);
+parcelHelpers.export(exports, "useSearchParams", ()=>useSearchParams);
+parcelHelpers.export(exports, "useSubmit", ()=>useSubmit);
+var _react = require("react");
+var _reactDom = require("react-dom");
+var _reactRouter = require("react-router");
+var _router = require("@remix-run/router");
+function _extends() {
+    _extends = Object.assign ? Object.assign.bind() : function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+const defaultMethod = "get";
+const defaultEncType = "application/x-www-form-urlencoded";
+function isHtmlElement(object) {
+    return object != null && typeof object.tagName === "string";
+}
+function isButtonElement(object) {
+    return isHtmlElement(object) && object.tagName.toLowerCase() === "button";
+}
+function isFormElement(object) {
+    return isHtmlElement(object) && object.tagName.toLowerCase() === "form";
+}
+function isInputElement(object) {
+    return isHtmlElement(object) && object.tagName.toLowerCase() === "input";
+}
+function isModifiedEvent(event) {
+    return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+}
+function shouldProcessLinkClick(event, target) {
+    return event.button === 0 && // Ignore everything but left clicks
+    (!target || target === "_self") && // Let browser handle "target=_blank" etc.
+    !isModifiedEvent(event) // Ignore clicks with modifier keys
+    ;
+}
+/**
+ * Creates a URLSearchParams object using the given initializer.
+ *
+ * This is identical to `new URLSearchParams(init)` except it also
+ * supports arrays as values in the object form of the initializer
+ * instead of just strings. This is convenient when you need multiple
+ * values for a given key, but don't want to use an array initializer.
+ *
+ * For example, instead of:
+ *
+ *   let searchParams = new URLSearchParams([
+ *     ['sort', 'name'],
+ *     ['sort', 'price']
+ *   ]);
+ *
+ * you can do:
+ *
+ *   let searchParams = createSearchParams({
+ *     sort: ['name', 'price']
+ *   });
+ */ function createSearchParams(init) {
+    if (init === void 0) init = "";
+    return new URLSearchParams(typeof init === "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce((memo, key)=>{
+        let value = init[key];
+        return memo.concat(Array.isArray(value) ? value.map((v)=>[
+                key,
+                v
+            ]) : [
+            [
+                key,
+                value
+            ]
+        ]);
+    }, []));
+}
+function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
+    let searchParams = createSearchParams(locationSearch);
+    if (defaultSearchParams) // Use `defaultSearchParams.forEach(...)` here instead of iterating of
+    // `defaultSearchParams.keys()` to work-around a bug in Firefox related to
+    // web extensions. Relevant Bugzilla tickets:
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=1414602
+    // https://bugzilla.mozilla.org/show_bug.cgi?id=1023984
+    defaultSearchParams.forEach((_, key)=>{
+        if (!searchParams.has(key)) defaultSearchParams.getAll(key).forEach((value)=>{
+            searchParams.append(key, value);
+        });
+    });
+    return searchParams;
+}
+// One-time check for submitter support
+let _formDataSupportsSubmitter = null;
+function isFormDataSubmitterSupported() {
+    if (_formDataSupportsSubmitter === null) try {
+        new FormData(document.createElement("form"), // @ts-expect-error if FormData supports the submitter parameter, this will throw
+        0);
+        _formDataSupportsSubmitter = false;
+    } catch (e) {
+        _formDataSupportsSubmitter = true;
+    }
+    return _formDataSupportsSubmitter;
+}
+const supportedFormEncTypes = new Set([
+    "application/x-www-form-urlencoded",
+    "multipart/form-data",
+    "text/plain"
+]);
+function getFormEncType(encType) {
+    if (encType != null && !supportedFormEncTypes.has(encType)) {
+        (0, _router.UNSAFE_warning)(false, '"' + encType + '" is not a valid `encType` for `<Form>`/`<fetcher.Form>` ' + ('and will default to "' + defaultEncType + '"'));
+        return null;
+    }
+    return encType;
+}
+function getFormSubmissionInfo(target, basename) {
+    let method;
+    let action;
+    let encType;
+    let formData;
+    let body;
+    if (isFormElement(target)) {
+        // When grabbing the action from the element, it will have had the basename
+        // prefixed to ensure non-JS scenarios work, so strip it since we'll
+        // re-prefix in the router
+        let attr = target.getAttribute("action");
+        action = attr ? (0, _router.stripBasename)(attr, basename) : null;
+        method = target.getAttribute("method") || defaultMethod;
+        encType = getFormEncType(target.getAttribute("enctype")) || defaultEncType;
+        formData = new FormData(target);
+    } else if (isButtonElement(target) || isInputElement(target) && (target.type === "submit" || target.type === "image")) {
+        let form = target.form;
+        if (form == null) throw new Error('Cannot submit a <button> or <input type="submit"> without a <form>');
+        // <button>/<input type="submit"> may override attributes of <form>
+        // When grabbing the action from the element, it will have had the basename
+        // prefixed to ensure non-JS scenarios work, so strip it since we'll
+        // re-prefix in the router
+        let attr = target.getAttribute("formaction") || form.getAttribute("action");
+        action = attr ? (0, _router.stripBasename)(attr, basename) : null;
+        method = target.getAttribute("formmethod") || form.getAttribute("method") || defaultMethod;
+        encType = getFormEncType(target.getAttribute("formenctype")) || getFormEncType(form.getAttribute("enctype")) || defaultEncType;
+        // Build a FormData object populated from a form and submitter
+        formData = new FormData(form, target);
+        // If this browser doesn't support the `FormData(el, submitter)` format,
+        // then tack on the submitter value at the end.  This is a lightweight
+        // solution that is not 100% spec compliant.  For complete support in older
+        // browsers, consider using the `formdata-submitter-polyfill` package
+        if (!isFormDataSubmitterSupported()) {
+            let { name, type, value } = target;
+            if (type === "image") {
+                let prefix = name ? name + "." : "";
+                formData.append(prefix + "x", "0");
+                formData.append(prefix + "y", "0");
+            } else if (name) formData.append(name, value);
+        }
+    } else if (isHtmlElement(target)) throw new Error('Cannot submit element that is not <form>, <button>, or <input type="submit|image">');
+    else {
+        method = defaultMethod;
+        action = null;
+        encType = defaultEncType;
+        body = target;
+    }
+    // Send body for <Form encType="text/plain" so we encode it into text
+    if (formData && encType === "text/plain") {
+        body = formData;
+        formData = undefined;
+    }
+    return {
+        action,
+        method: method.toLowerCase(),
+        encType,
+        formData,
+        body
+    };
+}
+const _excluded = [
+    "onClick",
+    "relative",
+    "reloadDocument",
+    "replace",
+    "state",
+    "target",
+    "to",
+    "preventScrollReset",
+    "unstable_viewTransition"
+], _excluded2 = [
+    "aria-current",
+    "caseSensitive",
+    "className",
+    "end",
+    "style",
+    "to",
+    "unstable_viewTransition",
+    "children"
+], _excluded3 = [
+    "fetcherKey",
+    "navigate",
+    "reloadDocument",
+    "replace",
+    "state",
+    "method",
+    "action",
+    "onSubmit",
+    "relative",
+    "preventScrollReset",
+    "unstable_viewTransition"
+];
+function createBrowserRouter(routes, opts) {
+    return (0, _router.createRouter)({
+        basename: opts == null ? void 0 : opts.basename,
+        future: _extends({}, opts == null ? void 0 : opts.future, {
+            v7_prependBasename: true
+        }),
+        history: (0, _router.createBrowserHistory)({
+            window: opts == null ? void 0 : opts.window
+        }),
+        hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
+        routes,
+        mapRouteProperties: (0, _reactRouter.UNSAFE_mapRouteProperties),
+        window: opts == null ? void 0 : opts.window
+    }).initialize();
+}
+function createHashRouter(routes, opts) {
+    return (0, _router.createRouter)({
+        basename: opts == null ? void 0 : opts.basename,
+        future: _extends({}, opts == null ? void 0 : opts.future, {
+            v7_prependBasename: true
+        }),
+        history: (0, _router.createHashHistory)({
+            window: opts == null ? void 0 : opts.window
+        }),
+        hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
+        routes,
+        mapRouteProperties: (0, _reactRouter.UNSAFE_mapRouteProperties),
+        window: opts == null ? void 0 : opts.window
+    }).initialize();
+}
+function parseHydrationData() {
+    var _window;
+    let state = (_window = window) == null ? void 0 : _window.__staticRouterHydrationData;
+    if (state && state.errors) state = _extends({}, state, {
+        errors: deserializeErrors(state.errors)
+    });
+    return state;
+}
+function deserializeErrors(errors) {
+    if (!errors) return null;
+    let entries = Object.entries(errors);
+    let serialized = {};
+    for (let [key, val] of entries){
+        // Hey you!  If you change this, please change the corresponding logic in
+        // serializeErrors in react-router-dom/server.tsx :)
+        if (val && val.__type === "RouteErrorResponse") serialized[key] = new (0, _router.UNSAFE_ErrorResponseImpl)(val.status, val.statusText, val.data, val.internal === true);
+        else if (val && val.__type === "Error") {
+            // Attempt to reconstruct the right type of Error (i.e., ReferenceError)
+            if (val.__subType) {
+                let ErrorConstructor = window[val.__subType];
+                if (typeof ErrorConstructor === "function") try {
+                    // @ts-expect-error
+                    let error = new ErrorConstructor(val.message);
+                    // Wipe away the client-side stack trace.  Nothing to fill it in with
+                    // because we don't serialize SSR stack traces for security reasons
+                    error.stack = "";
+                    serialized[key] = error;
+                } catch (e) {
+                // no-op - fall through and create a normal Error
+                }
+            }
+            if (serialized[key] == null) {
+                let error = new Error(val.message);
+                // Wipe away the client-side stack trace.  Nothing to fill it in with
+                // because we don't serialize SSR stack traces for security reasons
+                error.stack = "";
+                serialized[key] = error;
+            }
+        } else serialized[key] = val;
+    }
+    return serialized;
+}
+const ViewTransitionContext = /*#__PURE__*/ _react.createContext({
+    isTransitioning: false
+});
+ViewTransitionContext.displayName = "ViewTransition";
+const FetchersContext = /*#__PURE__*/ _react.createContext(new Map());
+FetchersContext.displayName = "Fetchers";
+//#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region Components
+////////////////////////////////////////////////////////////////////////////////
+/**
+  Webpack + React 17 fails to compile on any of the following because webpack
+  complains that `startTransition` doesn't exist in `React`:
+  * import { startTransition } from "react"
+  * import * as React from from "react";
+    "startTransition" in React ? React.startTransition(() => setState()) : setState()
+  * import * as React from from "react";
+    "startTransition" in React ? React["startTransition"](() => setState()) : setState()
+
+  Moving it to a constant such as the following solves the Webpack/React 17 issue:
+  * import * as React from from "react";
+    const START_TRANSITION = "startTransition";
+    START_TRANSITION in React ? React[START_TRANSITION](() => setState()) : setState()
+
+  However, that introduces webpack/terser minification issues in production builds
+  in React 18 where minification/obfuscation ends up removing the call of
+  React.startTransition entirely from the first half of the ternary.  Grabbing
+  this exported reference once up front resolves that issue.
+
+  See https://github.com/remix-run/react-router/issues/10579
+*/ const START_TRANSITION = "startTransition";
+const startTransitionImpl = _react[START_TRANSITION];
+const FLUSH_SYNC = "flushSync";
+const flushSyncImpl = _reactDom[FLUSH_SYNC];
+function startTransitionSafe(cb) {
+    if (startTransitionImpl) startTransitionImpl(cb);
+    else cb();
+}
+function flushSyncSafe(cb) {
+    if (flushSyncImpl) flushSyncImpl(cb);
+    else cb();
+}
+class Deferred {
+    constructor(){
+        this.status = "pending";
+        this.promise = new Promise((resolve, reject)=>{
+            this.resolve = (value)=>{
+                if (this.status === "pending") {
+                    this.status = "resolved";
+                    resolve(value);
+                }
+            };
+            this.reject = (reason)=>{
+                if (this.status === "pending") {
+                    this.status = "rejected";
+                    reject(reason);
+                }
+            };
+        });
+    }
+}
+/**
+ * Given a Remix Router instance, render the appropriate UI
+ */ function RouterProvider(_ref) {
+    let { fallbackElement, router, future } = _ref;
+    let [state, setStateImpl] = _react.useState(router.state);
+    let [pendingState, setPendingState] = _react.useState();
+    let [vtContext, setVtContext] = _react.useState({
+        isTransitioning: false
+    });
+    let [renderDfd, setRenderDfd] = _react.useState();
+    let [transition, setTransition] = _react.useState();
+    let [interruption, setInterruption] = _react.useState();
+    let fetcherData = _react.useRef(new Map());
+    let { v7_startTransition } = future || {};
+    let optInStartTransition = _react.useCallback((cb)=>{
+        if (v7_startTransition) startTransitionSafe(cb);
+        else cb();
+    }, [
+        v7_startTransition
+    ]);
+    let setState = _react.useCallback((newState, _ref2)=>{
+        let { deletedFetchers, unstable_flushSync: flushSync, unstable_viewTransitionOpts: viewTransitionOpts } = _ref2;
+        deletedFetchers.forEach((key)=>fetcherData.current.delete(key));
+        newState.fetchers.forEach((fetcher, key)=>{
+            if (fetcher.data !== undefined) fetcherData.current.set(key, fetcher.data);
+        });
+        let isViewTransitionUnavailable = router.window == null || typeof router.window.document.startViewTransition !== "function";
+        // If this isn't a view transition or it's not available in this browser,
+        // just update and be done with it
+        if (!viewTransitionOpts || isViewTransitionUnavailable) {
+            if (flushSync) flushSyncSafe(()=>setStateImpl(newState));
+            else optInStartTransition(()=>setStateImpl(newState));
+            return;
+        }
+        // flushSync + startViewTransition
+        if (flushSync) {
+            // Flush through the context to mark DOM elements as transition=ing
+            flushSyncSafe(()=>{
+                // Cancel any pending transitions
+                if (transition) {
+                    renderDfd && renderDfd.resolve();
+                    transition.skipTransition();
+                }
+                setVtContext({
+                    isTransitioning: true,
+                    flushSync: true,
+                    currentLocation: viewTransitionOpts.currentLocation,
+                    nextLocation: viewTransitionOpts.nextLocation
+                });
+            });
+            // Update the DOM
+            let t = router.window.document.startViewTransition(()=>{
+                flushSyncSafe(()=>setStateImpl(newState));
+            });
+            // Clean up after the animation completes
+            t.finished.finally(()=>{
+                flushSyncSafe(()=>{
+                    setRenderDfd(undefined);
+                    setTransition(undefined);
+                    setPendingState(undefined);
+                    setVtContext({
+                        isTransitioning: false
+                    });
+                });
+            });
+            flushSyncSafe(()=>setTransition(t));
+            return;
+        }
+        // startTransition + startViewTransition
+        if (transition) {
+            // Interrupting an in-progress transition, cancel and let everything flush
+            // out, and then kick off a new transition from the interruption state
+            renderDfd && renderDfd.resolve();
+            transition.skipTransition();
+            setInterruption({
+                state: newState,
+                currentLocation: viewTransitionOpts.currentLocation,
+                nextLocation: viewTransitionOpts.nextLocation
+            });
+        } else {
+            // Completed navigation update with opted-in view transitions, let 'er rip
+            setPendingState(newState);
+            setVtContext({
+                isTransitioning: true,
+                flushSync: false,
+                currentLocation: viewTransitionOpts.currentLocation,
+                nextLocation: viewTransitionOpts.nextLocation
+            });
+        }
+    }, [
+        router.window,
+        transition,
+        renderDfd,
+        fetcherData,
+        optInStartTransition
+    ]);
+    // Need to use a layout effect here so we are subscribed early enough to
+    // pick up on any render-driven redirects/navigations (useEffect/<Navigate>)
+    _react.useLayoutEffect(()=>router.subscribe(setState), [
+        router,
+        setState
+    ]);
+    // When we start a view transition, create a Deferred we can use for the
+    // eventual "completed" render
+    _react.useEffect(()=>{
+        if (vtContext.isTransitioning && !vtContext.flushSync) setRenderDfd(new Deferred());
+    }, [
+        vtContext
+    ]);
+    // Once the deferred is created, kick off startViewTransition() to update the
+    // DOM and then wait on the Deferred to resolve (indicating the DOM update has
+    // happened)
+    _react.useEffect(()=>{
+        if (renderDfd && pendingState && router.window) {
+            let newState = pendingState;
+            let renderPromise = renderDfd.promise;
+            let transition = router.window.document.startViewTransition(async ()=>{
+                optInStartTransition(()=>setStateImpl(newState));
+                await renderPromise;
+            });
+            transition.finished.finally(()=>{
+                setRenderDfd(undefined);
+                setTransition(undefined);
+                setPendingState(undefined);
+                setVtContext({
+                    isTransitioning: false
+                });
+            });
+            setTransition(transition);
+        }
+    }, [
+        optInStartTransition,
+        pendingState,
+        renderDfd,
+        router.window
+    ]);
+    // When the new location finally renders and is committed to the DOM, this
+    // effect will run to resolve the transition
+    _react.useEffect(()=>{
+        if (renderDfd && pendingState && state.location.key === pendingState.location.key) renderDfd.resolve();
+    }, [
+        renderDfd,
+        transition,
+        state.location,
+        pendingState
+    ]);
+    // If we get interrupted with a new navigation during a transition, we skip
+    // the active transition, let it cleanup, then kick it off again here
+    _react.useEffect(()=>{
+        if (!vtContext.isTransitioning && interruption) {
+            setPendingState(interruption.state);
+            setVtContext({
+                isTransitioning: true,
+                flushSync: false,
+                currentLocation: interruption.currentLocation,
+                nextLocation: interruption.nextLocation
+            });
+            setInterruption(undefined);
+        }
+    }, [
+        vtContext.isTransitioning,
+        interruption
+    ]);
+    let navigator = _react.useMemo(()=>{
+        return {
+            createHref: router.createHref,
+            encodeLocation: router.encodeLocation,
+            go: (n)=>router.navigate(n),
+            push: (to, state, opts)=>router.navigate(to, {
+                    state,
+                    preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
+                }),
+            replace: (to, state, opts)=>router.navigate(to, {
+                    replace: true,
+                    state,
+                    preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
+                })
+        };
+    }, [
+        router
+    ]);
+    let basename = router.basename || "/";
+    let dataRouterContext = _react.useMemo(()=>({
+            router,
+            navigator,
+            static: false,
+            basename
+        }), [
+        router,
+        navigator,
+        basename
+    ]);
+    // The fragment and {null} here are important!  We need them to keep React 18's
+    // useId happy when we are server-rendering since we may have a <script> here
+    // containing the hydrated server-side staticContext (from StaticRouterProvider).
+    // useId relies on the component tree structure to generate deterministic id's
+    // so we need to ensure it remains the same on the client even though
+    // we don't need the <script> tag
+    return /*#__PURE__*/ _react.createElement(_react.Fragment, null, /*#__PURE__*/ _react.createElement((0, _reactRouter.UNSAFE_DataRouterContext).Provider, {
+        value: dataRouterContext
+    }, /*#__PURE__*/ _react.createElement((0, _reactRouter.UNSAFE_DataRouterStateContext).Provider, {
+        value: state
+    }, /*#__PURE__*/ _react.createElement(FetchersContext.Provider, {
+        value: fetcherData.current
+    }, /*#__PURE__*/ _react.createElement(ViewTransitionContext.Provider, {
+        value: vtContext
+    }, /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
+        basename: basename,
+        location: state.location,
+        navigationType: state.historyAction,
+        navigator: navigator
+    }, state.initialized ? /*#__PURE__*/ _react.createElement(DataRoutes, {
+        routes: router.routes,
+        state: state
+    }) : fallbackElement))))), null);
+}
+function DataRoutes(_ref3) {
+    let { routes, state } = _ref3;
+    return (0, _reactRouter.UNSAFE_useRoutesImpl)(routes, undefined, state);
+}
+/**
+ * A `<Router>` for use in web browsers. Provides the cleanest URLs.
+ */ function BrowserRouter(_ref4) {
+    let { basename, children, future, window: window1 } = _ref4;
+    let historyRef = _react.useRef();
+    if (historyRef.current == null) historyRef.current = (0, _router.createBrowserHistory)({
+        window: window1,
+        v5Compat: true
+    });
+    let history = historyRef.current;
+    let [state, setStateImpl] = _react.useState({
+        action: history.action,
+        location: history.location
+    });
+    let { v7_startTransition } = future || {};
+    let setState = _react.useCallback((newState)=>{
+        v7_startTransition && startTransitionImpl ? startTransitionImpl(()=>setStateImpl(newState)) : setStateImpl(newState);
+    }, [
+        setStateImpl,
+        v7_startTransition
+    ]);
+    _react.useLayoutEffect(()=>history.listen(setState), [
+        history,
+        setState
+    ]);
+    return /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
+        basename: basename,
+        children: children,
+        location: state.location,
+        navigationType: state.action,
+        navigator: history
+    });
+}
+/**
+ * A `<Router>` for use in web browsers. Stores the location in the hash
+ * portion of the URL so it is not sent to the server.
+ */ function HashRouter(_ref5) {
+    let { basename, children, future, window: window1 } = _ref5;
+    let historyRef = _react.useRef();
+    if (historyRef.current == null) historyRef.current = (0, _router.createHashHistory)({
+        window: window1,
+        v5Compat: true
+    });
+    let history = historyRef.current;
+    let [state, setStateImpl] = _react.useState({
+        action: history.action,
+        location: history.location
+    });
+    let { v7_startTransition } = future || {};
+    let setState = _react.useCallback((newState)=>{
+        v7_startTransition && startTransitionImpl ? startTransitionImpl(()=>setStateImpl(newState)) : setStateImpl(newState);
+    }, [
+        setStateImpl,
+        v7_startTransition
+    ]);
+    _react.useLayoutEffect(()=>history.listen(setState), [
+        history,
+        setState
+    ]);
+    return /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
+        basename: basename,
+        children: children,
+        location: state.location,
+        navigationType: state.action,
+        navigator: history
+    });
+}
+/**
+ * A `<Router>` that accepts a pre-instantiated history object. It's important
+ * to note that using your own history object is highly discouraged and may add
+ * two versions of the history library to your bundles unless you use the same
+ * version of the history library that React Router uses internally.
+ */ function HistoryRouter(_ref6) {
+    let { basename, children, future, history } = _ref6;
+    let [state, setStateImpl] = _react.useState({
+        action: history.action,
+        location: history.location
+    });
+    let { v7_startTransition } = future || {};
+    let setState = _react.useCallback((newState)=>{
+        v7_startTransition && startTransitionImpl ? startTransitionImpl(()=>setStateImpl(newState)) : setStateImpl(newState);
+    }, [
+        setStateImpl,
+        v7_startTransition
+    ]);
+    _react.useLayoutEffect(()=>history.listen(setState), [
+        history,
+        setState
+    ]);
+    return /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
+        basename: basename,
+        children: children,
+        location: state.location,
+        navigationType: state.action,
+        navigator: history
+    });
+}
+HistoryRouter.displayName = "unstable_HistoryRouter";
+const isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
+const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
+/**
+ * The public API for rendering a history-aware `<a>`.
+ */ const Link = /*#__PURE__*/ _react.forwardRef(function LinkWithRef(_ref7, ref) {
+    let { onClick, relative, reloadDocument, replace, state, target, to, preventScrollReset, unstable_viewTransition } = _ref7, rest = _objectWithoutPropertiesLoose(_ref7, _excluded);
+    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
+    // Rendered into <a href> for absolute URLs
+    let absoluteHref;
+    let isExternal = false;
+    if (typeof to === "string" && ABSOLUTE_URL_REGEX.test(to)) {
+        // Render the absolute href server- and client-side
+        absoluteHref = to;
+        // Only check for external origins client-side
+        if (isBrowser) try {
+            let currentUrl = new URL(window.location.href);
+            let targetUrl = to.startsWith("//") ? new URL(currentUrl.protocol + to) : new URL(to);
+            let path = (0, _router.stripBasename)(targetUrl.pathname, basename);
+            if (targetUrl.origin === currentUrl.origin && path != null) // Strip the protocol/origin/basename for same-origin absolute URLs
+            to = path + targetUrl.search + targetUrl.hash;
+            else isExternal = true;
+        } catch (e) {
+            // We can't do external URL detection without a valid URL
+            (0, _router.UNSAFE_warning)(false, '<Link to="' + to + '"> contains an invalid URL which will probably break ' + "when clicked - please update to a valid URL path.");
+        }
+    }
+    // Rendered into <a href> for relative URLs
+    let href = (0, _reactRouter.useHref)(to, {
+        relative
+    });
+    let internalOnClick = useLinkClickHandler(to, {
+        replace,
+        state,
+        target,
+        preventScrollReset,
+        relative,
+        unstable_viewTransition
+    });
+    function handleClick(event) {
+        if (onClick) onClick(event);
+        if (!event.defaultPrevented) internalOnClick(event);
+    }
+    return(/*#__PURE__*/ // eslint-disable-next-line jsx-a11y/anchor-has-content
+    _react.createElement("a", _extends({}, rest, {
+        href: absoluteHref || href,
+        onClick: isExternal || reloadDocument ? onClick : handleClick,
+        ref: ref,
+        target: target
+    })));
+});
+Link.displayName = "Link";
+/**
+ * A `<Link>` wrapper that knows if it's "active" or not.
+ */ const NavLink = /*#__PURE__*/ _react.forwardRef(function NavLinkWithRef(_ref8, ref) {
+    let { "aria-current": ariaCurrentProp = "page", caseSensitive = false, className: classNameProp = "", end = false, style: styleProp, to, unstable_viewTransition, children } = _ref8, rest = _objectWithoutPropertiesLoose(_ref8, _excluded2);
+    let path = (0, _reactRouter.useResolvedPath)(to, {
+        relative: rest.relative
+    });
+    let location = (0, _reactRouter.useLocation)();
+    let routerState = _react.useContext((0, _reactRouter.UNSAFE_DataRouterStateContext));
+    let { navigator } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
+    let isTransitioning = routerState != null && // Conditional usage is OK here because the usage of a data router is static
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useViewTransitionState(path) && unstable_viewTransition === true;
+    let toPathname = navigator.encodeLocation ? navigator.encodeLocation(path).pathname : path.pathname;
+    let locationPathname = location.pathname;
+    let nextLocationPathname = routerState && routerState.navigation && routerState.navigation.location ? routerState.navigation.location.pathname : null;
+    if (!caseSensitive) {
+        locationPathname = locationPathname.toLowerCase();
+        nextLocationPathname = nextLocationPathname ? nextLocationPathname.toLowerCase() : null;
+        toPathname = toPathname.toLowerCase();
+    }
+    // If the `to` has a trailing slash, look at that exact spot.  Otherwise,
+    // we're looking for a slash _after_ what's in `to`.  For example:
+    //
+    // <NavLink to="/users"> and <NavLink to="/users/">
+    // both want to look for a / at index 6 to match URL `/users/matt`
+    const endSlashPosition = toPathname !== "/" && toPathname.endsWith("/") ? toPathname.length - 1 : toPathname.length;
+    let isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(endSlashPosition) === "/";
+    let isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
+    let renderProps = {
+        isActive,
+        isPending,
+        isTransitioning
+    };
+    let ariaCurrent = isActive ? ariaCurrentProp : undefined;
+    let className;
+    if (typeof classNameProp === "function") className = classNameProp(renderProps);
+    else // If the className prop is not a function, we use a default `active`
+    // class for <NavLink />s that are active. In v5 `active` was the default
+    // value for `activeClassName`, but we are removing that API and can still
+    // use the old default behavior for a cleaner upgrade path and keep the
+    // simple styling rules working as they currently do.
+    className = [
+        classNameProp,
+        isActive ? "active" : null,
+        isPending ? "pending" : null,
+        isTransitioning ? "transitioning" : null
+    ].filter(Boolean).join(" ");
+    let style = typeof styleProp === "function" ? styleProp(renderProps) : styleProp;
+    return /*#__PURE__*/ _react.createElement(Link, _extends({}, rest, {
+        "aria-current": ariaCurrent,
+        className: className,
+        ref: ref,
+        style: style,
+        to: to,
+        unstable_viewTransition: unstable_viewTransition
+    }), typeof children === "function" ? children(renderProps) : children);
+});
+NavLink.displayName = "NavLink";
+/**
+ * A `@remix-run/router`-aware `<form>`. It behaves like a normal form except
+ * that the interaction with the server is with `fetch` instead of new document
+ * requests, allowing components to add nicer UX to the page as the form is
+ * submitted and returns with data.
+ */ const Form = /*#__PURE__*/ _react.forwardRef((_ref9, forwardedRef)=>{
+    let { fetcherKey, navigate, reloadDocument, replace, state, method = defaultMethod, action, onSubmit, relative, preventScrollReset, unstable_viewTransition } = _ref9, props = _objectWithoutPropertiesLoose(_ref9, _excluded3);
+    let submit = useSubmit();
+    let formAction = useFormAction(action, {
+        relative
+    });
+    let formMethod = method.toLowerCase() === "get" ? "get" : "post";
+    let submitHandler = (event)=>{
+        onSubmit && onSubmit(event);
+        if (event.defaultPrevented) return;
+        event.preventDefault();
+        let submitter = event.nativeEvent.submitter;
+        let submitMethod = (submitter == null ? void 0 : submitter.getAttribute("formmethod")) || method;
+        submit(submitter || event.currentTarget, {
+            fetcherKey,
+            method: submitMethod,
+            navigate,
+            replace,
+            state,
+            relative,
+            preventScrollReset,
+            unstable_viewTransition
+        });
+    };
+    return /*#__PURE__*/ _react.createElement("form", _extends({
+        ref: forwardedRef,
+        method: formMethod,
+        action: formAction,
+        onSubmit: reloadDocument ? onSubmit : submitHandler
+    }, props));
+});
+Form.displayName = "Form";
+/**
+ * This component will emulate the browser's scroll restoration on location
+ * changes.
+ */ function ScrollRestoration(_ref10) {
+    let { getKey, storageKey } = _ref10;
+    useScrollRestoration({
+        getKey,
+        storageKey
+    });
+    return null;
+}
+ScrollRestoration.displayName = "ScrollRestoration";
+//#endregion
+////////////////////////////////////////////////////////////////////////////////
+//#region Hooks
+////////////////////////////////////////////////////////////////////////////////
+var DataRouterHook;
+(function(DataRouterHook) {
+    DataRouterHook["UseScrollRestoration"] = "useScrollRestoration";
+    DataRouterHook["UseSubmit"] = "useSubmit";
+    DataRouterHook["UseSubmitFetcher"] = "useSubmitFetcher";
+    DataRouterHook["UseFetcher"] = "useFetcher";
+    DataRouterHook["useViewTransitionState"] = "useViewTransitionState";
+})(DataRouterHook || (DataRouterHook = {}));
+var DataRouterStateHook;
+(function(DataRouterStateHook) {
+    DataRouterStateHook["UseFetcher"] = "useFetcher";
+    DataRouterStateHook["UseFetchers"] = "useFetchers";
+    DataRouterStateHook["UseScrollRestoration"] = "useScrollRestoration";
+})(DataRouterStateHook || (DataRouterStateHook = {}));
+// Internal hooks
+function getDataRouterConsoleError(hookName) {
+    return hookName + " must be used within a data router.  See https://reactrouter.com/routers/picking-a-router.";
+}
+function useDataRouterContext(hookName) {
+    let ctx = _react.useContext((0, _reactRouter.UNSAFE_DataRouterContext));
+    !ctx && (0, _router.UNSAFE_invariant)(false, getDataRouterConsoleError(hookName));
+    return ctx;
+}
+function useDataRouterState(hookName) {
+    let state = _react.useContext((0, _reactRouter.UNSAFE_DataRouterStateContext));
+    !state && (0, _router.UNSAFE_invariant)(false, getDataRouterConsoleError(hookName));
+    return state;
+}
+// External hooks
+/**
+ * Handles the click behavior for router `<Link>` components. This is useful if
+ * you need to create custom `<Link>` components with the same click behavior we
+ * use in our exported `<Link>`.
+ */ function useLinkClickHandler(to, _temp) {
+    let { target, replace: replaceProp, state, preventScrollReset, relative, unstable_viewTransition } = _temp === void 0 ? {} : _temp;
+    let navigate = (0, _reactRouter.useNavigate)();
+    let location = (0, _reactRouter.useLocation)();
+    let path = (0, _reactRouter.useResolvedPath)(to, {
+        relative
+    });
+    return _react.useCallback((event)=>{
+        if (shouldProcessLinkClick(event, target)) {
+            event.preventDefault();
+            // If the URL hasn't changed, a regular <a> will do a replace instead of
+            // a push, so do the same here unless the replace prop is explicitly set
+            let replace = replaceProp !== undefined ? replaceProp : (0, _reactRouter.createPath)(location) === (0, _reactRouter.createPath)(path);
+            navigate(to, {
+                replace,
+                state,
+                preventScrollReset,
+                relative,
+                unstable_viewTransition
+            });
+        }
+    }, [
+        location,
+        navigate,
+        path,
+        replaceProp,
+        state,
+        target,
+        to,
+        preventScrollReset,
+        relative,
+        unstable_viewTransition
+    ]);
+}
+/**
+ * A convenient wrapper for reading and writing search parameters via the
+ * URLSearchParams interface.
+ */ function useSearchParams(defaultInit) {
+    (0, _router.UNSAFE_warning)(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params\n\nIf you're unsure how to load polyfills, we recommend you check out https://polyfill.io/v3/ which provides some recommendations about how to load polyfills only for users that need them, instead of for every user.");
+    let defaultSearchParamsRef = _react.useRef(createSearchParams(defaultInit));
+    let hasSetSearchParamsRef = _react.useRef(false);
+    let location = (0, _reactRouter.useLocation)();
+    let searchParams = _react.useMemo(()=>// Only merge in the defaults if we haven't yet called setSearchParams.
+        // Once we call that we want those to take precedence, otherwise you can't
+        // remove a param with setSearchParams({}) if it has an initial value
+        getSearchParamsForLocation(location.search, hasSetSearchParamsRef.current ? null : defaultSearchParamsRef.current), [
+        location.search
+    ]);
+    let navigate = (0, _reactRouter.useNavigate)();
+    let setSearchParams = _react.useCallback((nextInit, navigateOptions)=>{
+        const newSearchParams = createSearchParams(typeof nextInit === "function" ? nextInit(searchParams) : nextInit);
+        hasSetSearchParamsRef.current = true;
+        navigate("?" + newSearchParams, navigateOptions);
+    }, [
+        navigate,
+        searchParams
+    ]);
+    return [
+        searchParams,
+        setSearchParams
+    ];
+}
+function validateClientSideSubmission() {
+    if (typeof document === "undefined") throw new Error("You are calling submit during the server render. Try calling submit within a `useEffect` or callback instead.");
+}
+let fetcherId = 0;
+let getUniqueFetcherId = ()=>"__" + String(++fetcherId) + "__";
+/**
+ * Returns a function that may be used to programmatically submit a form (or
+ * some arbitrary data) to the server.
+ */ function useSubmit() {
+    let { router } = useDataRouterContext(DataRouterHook.UseSubmit);
+    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
+    let currentRouteId = (0, _reactRouter.UNSAFE_useRouteId)();
+    return _react.useCallback(function(target, options) {
+        if (options === void 0) options = {};
+        validateClientSideSubmission();
+        let { action, method, encType, formData, body } = getFormSubmissionInfo(target, basename);
+        if (options.navigate === false) {
+            let key = options.fetcherKey || getUniqueFetcherId();
+            router.fetch(key, currentRouteId, options.action || action, {
+                preventScrollReset: options.preventScrollReset,
+                formData,
+                body,
+                formMethod: options.method || method,
+                formEncType: options.encType || encType,
+                unstable_flushSync: options.unstable_flushSync
+            });
+        } else router.navigate(options.action || action, {
+            preventScrollReset: options.preventScrollReset,
+            formData,
+            body,
+            formMethod: options.method || method,
+            formEncType: options.encType || encType,
+            replace: options.replace,
+            state: options.state,
+            fromRouteId: currentRouteId,
+            unstable_flushSync: options.unstable_flushSync,
+            unstable_viewTransition: options.unstable_viewTransition
+        });
+    }, [
+        router,
+        basename,
+        currentRouteId
+    ]);
+}
+// v7: Eventually we should deprecate this entirely in favor of using the
+// router method directly?
+function useFormAction(action, _temp2) {
+    let { relative } = _temp2 === void 0 ? {} : _temp2;
+    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
+    let routeContext = _react.useContext((0, _reactRouter.UNSAFE_RouteContext));
+    !routeContext && (0, _router.UNSAFE_invariant)(false, "useFormAction must be used inside a RouteContext");
+    let [match] = routeContext.matches.slice(-1);
+    // Shallow clone path so we can modify it below, otherwise we modify the
+    // object referenced by useMemo inside useResolvedPath
+    let path = _extends({}, (0, _reactRouter.useResolvedPath)(action ? action : ".", {
+        relative
+    }));
+    // If no action was specified, browsers will persist current search params
+    // when determining the path, so match that behavior
+    // https://github.com/remix-run/remix/issues/927
+    let location = (0, _reactRouter.useLocation)();
+    if (action == null) {
+        // Safe to write to this directly here since if action was undefined, we
+        // would have called useResolvedPath(".") which will never include a search
+        path.search = location.search;
+        // When grabbing search params from the URL, remove any included ?index param
+        // since it might not apply to our contextual route.  We add it back based
+        // on match.route.index below
+        let params = new URLSearchParams(path.search);
+        if (params.has("index") && params.get("index") === "") {
+            params.delete("index");
+            path.search = params.toString() ? "?" + params.toString() : "";
+        }
+    }
+    if ((!action || action === ".") && match.route.index) path.search = path.search ? path.search.replace(/^\?/, "?index&") : "?index";
+    // If we're operating within a basename, prepend it to the pathname prior
+    // to creating the form action.  If this is a root navigation, then just use
+    // the raw basename which allows the basename to have full control over the
+    // presence of a trailing slash on root actions
+    if (basename !== "/") path.pathname = path.pathname === "/" ? basename : (0, _router.joinPaths)([
+        basename,
+        path.pathname
+    ]);
+    return (0, _reactRouter.createPath)(path);
+}
+// TODO: (v7) Change the useFetcher generic default from `any` to `unknown`
+/**
+ * Interacts with route loaders and actions without causing a navigation. Great
+ * for any interaction that stays on the same page.
+ */ function useFetcher(_temp3) {
+    var _route$matches;
+    let { key } = _temp3 === void 0 ? {} : _temp3;
+    let { router } = useDataRouterContext(DataRouterHook.UseFetcher);
+    let state = useDataRouterState(DataRouterStateHook.UseFetcher);
+    let fetcherData = _react.useContext(FetchersContext);
+    let route = _react.useContext((0, _reactRouter.UNSAFE_RouteContext));
+    let routeId = (_route$matches = route.matches[route.matches.length - 1]) == null ? void 0 : _route$matches.route.id;
+    !fetcherData && (0, _router.UNSAFE_invariant)(false, "useFetcher must be used inside a FetchersContext");
+    !route && (0, _router.UNSAFE_invariant)(false, "useFetcher must be used inside a RouteContext");
+    !(routeId != null) && (0, _router.UNSAFE_invariant)(false, 'useFetcher can only be used on routes that contain a unique "id"');
+    // Fetcher key handling
+    let [fetcherKey, setFetcherKey] = _react.useState(key || "");
+    if (key && key !== fetcherKey) setFetcherKey(key);
+    else if (!fetcherKey) setFetcherKey(getUniqueFetcherId());
+    // Registration/cleanup
+    _react.useEffect(()=>{
+        router.getFetcher(fetcherKey);
+        return ()=>{
+            // Tell the router we've unmounted - if v7_fetcherPersist is enabled this
+            // will not delete immediately but instead queue up a delete after the
+            // fetcher returns to an `idle` state
+            router.deleteFetcher(fetcherKey);
+        };
+    }, [
+        router,
+        fetcherKey
+    ]);
+    // Fetcher additions
+    let load = _react.useCallback((href, opts)=>{
+        !routeId && (0, _router.UNSAFE_invariant)(false, "No routeId available for fetcher.load()");
+        router.fetch(fetcherKey, routeId, href, opts);
+    }, [
+        fetcherKey,
+        routeId,
+        router
+    ]);
+    let submitImpl = useSubmit();
+    let submit = _react.useCallback((target, opts)=>{
+        submitImpl(target, _extends({}, opts, {
+            navigate: false,
+            fetcherKey
+        }));
+    }, [
+        fetcherKey,
+        submitImpl
+    ]);
+    let FetcherForm = _react.useMemo(()=>{
+        let FetcherForm = /*#__PURE__*/ _react.forwardRef((props, ref)=>{
+            return /*#__PURE__*/ _react.createElement(Form, _extends({}, props, {
+                navigate: false,
+                fetcherKey: fetcherKey,
+                ref: ref
+            }));
+        });
+        FetcherForm.displayName = "fetcher.Form";
+        return FetcherForm;
+    }, [
+        fetcherKey
+    ]);
+    // Exposed FetcherWithComponents
+    let fetcher = state.fetchers.get(fetcherKey) || (0, _router.IDLE_FETCHER);
+    let data = fetcherData.get(fetcherKey);
+    let fetcherWithComponents = _react.useMemo(()=>_extends({
+            Form: FetcherForm,
+            submit,
+            load
+        }, fetcher, {
+            data
+        }), [
+        FetcherForm,
+        submit,
+        load,
+        fetcher,
+        data
+    ]);
+    return fetcherWithComponents;
+}
+/**
+ * Provides all fetchers currently on the page. Useful for layouts and parent
+ * routes that need to provide pending/optimistic UI regarding the fetch.
+ */ function useFetchers() {
+    let state = useDataRouterState(DataRouterStateHook.UseFetchers);
+    return Array.from(state.fetchers.entries()).map((_ref11)=>{
+        let [key, fetcher] = _ref11;
+        return _extends({}, fetcher, {
+            key
+        });
+    });
+}
+const SCROLL_RESTORATION_STORAGE_KEY = "react-router-scroll-positions";
+let savedScrollPositions = {};
+/**
+ * When rendered inside a RouterProvider, will restore scroll positions on navigations
+ */ function useScrollRestoration(_temp4) {
+    let { getKey, storageKey } = _temp4 === void 0 ? {} : _temp4;
+    let { router } = useDataRouterContext(DataRouterHook.UseScrollRestoration);
+    let { restoreScrollPosition, preventScrollReset } = useDataRouterState(DataRouterStateHook.UseScrollRestoration);
+    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
+    let location = (0, _reactRouter.useLocation)();
+    let matches = (0, _reactRouter.useMatches)();
+    let navigation = (0, _reactRouter.useNavigation)();
+    // Trigger manual scroll restoration while we're active
+    _react.useEffect(()=>{
+        window.history.scrollRestoration = "manual";
+        return ()=>{
+            window.history.scrollRestoration = "auto";
+        };
+    }, []);
+    // Save positions on pagehide
+    usePageHide(_react.useCallback(()=>{
+        if (navigation.state === "idle") {
+            let key = (getKey ? getKey(location, matches) : null) || location.key;
+            savedScrollPositions[key] = window.scrollY;
+        }
+        try {
+            sessionStorage.setItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY, JSON.stringify(savedScrollPositions));
+        } catch (error) {
+            (0, _router.UNSAFE_warning)(false, "Failed to save scroll positions in sessionStorage, <ScrollRestoration /> will not work properly (" + error + ").");
+        }
+        window.history.scrollRestoration = "auto";
+    }, [
+        storageKey,
+        getKey,
+        navigation.state,
+        location,
+        matches
+    ]));
+    // Read in any saved scroll locations
+    if (typeof document !== "undefined") {
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        _react.useLayoutEffect(()=>{
+            try {
+                let sessionPositions = sessionStorage.getItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY);
+                if (sessionPositions) savedScrollPositions = JSON.parse(sessionPositions);
+            } catch (e) {
+            // no-op, use default empty object
+            }
+        }, [
+            storageKey
+        ]);
+        // Enable scroll restoration in the router
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        _react.useLayoutEffect(()=>{
+            let getKeyWithoutBasename = getKey && basename !== "/" ? (location, matches)=>getKey(_extends({}, location, {
+                    pathname: (0, _router.stripBasename)(location.pathname, basename) || location.pathname
+                }), matches) : getKey;
+            let disableScrollRestoration = router == null ? void 0 : router.enableScrollRestoration(savedScrollPositions, ()=>window.scrollY, getKeyWithoutBasename);
+            return ()=>disableScrollRestoration && disableScrollRestoration();
+        }, [
+            router,
+            basename,
+            getKey
+        ]);
+        // Restore scrolling when state.restoreScrollPosition changes
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        _react.useLayoutEffect(()=>{
+            // Explicit false means don't do anything (used for submissions)
+            if (restoreScrollPosition === false) return;
+            // been here before, scroll to it
+            if (typeof restoreScrollPosition === "number") {
+                window.scrollTo(0, restoreScrollPosition);
+                return;
+            }
+            // try to scroll to the hash
+            if (location.hash) {
+                let el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+                if (el) {
+                    el.scrollIntoView();
+                    return;
+                }
+            }
+            // Don't reset if this navigation opted out
+            if (preventScrollReset === true) return;
+            // otherwise go to the top on new locations
+            window.scrollTo(0, 0);
+        }, [
+            location,
+            restoreScrollPosition,
+            preventScrollReset
+        ]);
+    }
+}
+/**
+ * Setup a callback to be fired on the window's `beforeunload` event. This is
+ * useful for saving some data to `window.localStorage` just before the page
+ * refreshes.
+ *
+ * Note: The `callback` argument should be a function created with
+ * `React.useCallback()`.
+ */ function useBeforeUnload(callback, options) {
+    let { capture } = options || {};
+    _react.useEffect(()=>{
+        let opts = capture != null ? {
+            capture
+        } : undefined;
+        window.addEventListener("beforeunload", callback, opts);
+        return ()=>{
+            window.removeEventListener("beforeunload", callback, opts);
+        };
+    }, [
+        callback,
+        capture
+    ]);
+}
+/**
+ * Setup a callback to be fired on the window's `pagehide` event. This is
+ * useful for saving some data to `window.localStorage` just before the page
+ * refreshes.  This event is better supported than beforeunload across browsers.
+ *
+ * Note: The `callback` argument should be a function created with
+ * `React.useCallback()`.
+ */ function usePageHide(callback, options) {
+    let { capture } = options || {};
+    _react.useEffect(()=>{
+        let opts = capture != null ? {
+            capture
+        } : undefined;
+        window.addEventListener("pagehide", callback, opts);
+        return ()=>{
+            window.removeEventListener("pagehide", callback, opts);
+        };
+    }, [
+        callback,
+        capture
+    ]);
+}
+/**
+ * Wrapper around useBlocker to show a window.confirm prompt to users instead
+ * of building a custom UI with useBlocker.
+ *
+ * Warning: This has *a lot of rough edges* and behaves very differently (and
+ * very incorrectly in some cases) across browsers if user click addition
+ * back/forward navigations while the confirm is open.  Use at your own risk.
+ */ function usePrompt(_ref12) {
+    let { when, message } = _ref12;
+    let blocker = (0, _reactRouter.useBlocker)(when);
+    _react.useEffect(()=>{
+        if (blocker.state === "blocked") {
+            let proceed = window.confirm(message);
+            if (proceed) // This timeout is needed to avoid a weird "race" on POP navigations
+            // between the `window.history` revert navigation and the result of
+            // `window.confirm`
+            setTimeout(blocker.proceed, 0);
+            else blocker.reset();
+        }
+    }, [
+        blocker,
+        message
+    ]);
+    _react.useEffect(()=>{
+        if (blocker.state === "blocked" && !when) blocker.reset();
+    }, [
+        blocker,
+        when
+    ]);
+}
+/**
+ * Return a boolean indicating if there is an active view transition to the
+ * given href.  You can use this value to render CSS classes or viewTransitionName
+ * styles onto your elements
+ *
+ * @param href The destination href
+ * @param [opts.relative] Relative routing type ("route" | "path")
+ */ function useViewTransitionState(to, opts) {
+    if (opts === void 0) opts = {};
+    let vtContext = _react.useContext(ViewTransitionContext);
+    !(vtContext != null) && (0, _router.UNSAFE_invariant)(false, "`unstable_useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?");
+    let { basename } = useDataRouterContext(DataRouterHook.useViewTransitionState);
+    let path = (0, _reactRouter.useResolvedPath)(to, {
+        relative: opts.relative
+    });
+    if (!vtContext.isTransitioning) return false;
+    let currentPath = (0, _router.stripBasename)(vtContext.currentLocation.pathname, basename) || vtContext.currentLocation.pathname;
+    let nextPath = (0, _router.stripBasename)(vtContext.nextLocation.pathname, basename) || vtContext.nextLocation.pathname;
+    // Transition is active if we're going to or coming from the indicated
+    // destination.  This ensures that other PUSH navigations that reverse
+    // an indicated transition apply.  I.e., on the list view you have:
+    //
+    //   <NavLink to="/details/1" unstable_viewTransition>
+    //
+    // If you click the breadcrumb back to the list view:
+    //
+    //   <NavLink to="/list" unstable_viewTransition>
+    //
+    // We should apply the transition because it's indicated as active going
+    // from /list -> /details/1 and therefore should be active on the reverse
+    // (even though this isn't strictly a POP reverse)
+    return (0, _router.matchPath)(path.pathname, nextPath) != null || (0, _router.matchPath)(path.pathname, currentPath) != null;
+}
+
+},{"react":"21dqq","react-dom":"j6uA9","react-router":"dbWyW","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -27372,1659 +29006,7 @@ module.exports = require("ef03b89c8fe2794e");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"hsJbF":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bfed = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bfed.prelude(module);
-
-try {
-// Importing necessary dependencies and configuration
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("../utilities/config");
-var _react = require("react");
-var _reactRouterDom = require("react-router-dom");
-var _userContext = require("../utilities/UserContext");
-var _userContextDefault = parcelHelpers.interopDefault(_userContext);
-var _reactRedux = require("react-redux");
-var _s = $RefreshSig$();
-// Defining the Header component
-const Header = ()=>{
-    _s();
-    // Using the useState hook to manage the state of the toggle button
-    const [toggleButton] = (0, _react.useState)("Login");
-    //Introduced `useContext` hook:-
-    // const data = useContext(UserContext);
-    const { loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
-    // console.log(loggedInUser);
-    //Introduced `useSelector` hook to subscribing to the store using Selector.
-    const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    // after executing this line of code, cartItems will hold the value of store.cart.items, and it will automatically re-render the component whenever the items property in the cart slice changes.
-    // console.log(cartItems);
-    // Calculate the total number of items in the cart
-    const cartLength = cartItems.reduce((total, item)=>total + item.quantity, 0);
-    return(// JSX representing the structure of the Header component
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "header shadow-lg",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "logo-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    to: "/",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "logo",
-                        alt: "foodapplogo",
-                        src: (0, _config.LOGO_URL)
-                    }, void 0, false, {
-                        fileName: "src/components/Header.js",
-                        lineNumber: 34,
-                        columnNumber: 11
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/Header.js",
-                    lineNumber: 33,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 31,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "nav-items",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/",
-                                children: "Home"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 43,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 43,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/about",
-                                children: "About Us"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 44,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 44,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                to: "/contact",
-                                children: "Contact Us"
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 45,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 45,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                className: "cart",
-                                to: "/cart",
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    children: [
-                                        "Cart",
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                            class: "ri-shopping-cart-2-fill"
-                                        }, void 0, false, {
-                                            fileName: "src/components/Header.js",
-                                            lineNumber: 49,
-                                            columnNumber: 2
-                                        }, undefined),
-                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                            children: `${cartLength}`
-                                        }, void 0, false, {
-                                            fileName: "src/components/Header.js",
-                                            lineNumber: 50,
-                                            columnNumber: 2
-                                        }, undefined)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "src/components/Header.js",
-                                    lineNumber: 47,
-                                    columnNumber: 11
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 46,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 46,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            className: "user",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    class: "ri-user-3-fill"
-                                }, void 0, false, {
-                                    fileName: "src/components/Header.js",
-                                    lineNumber: 56,
-                                    columnNumber: 11
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                    className: "user-text",
-                                    children: loggedInUser
-                                }, void 0, false, {
-                                    fileName: "src/components/Header.js",
-                                    lineNumber: 58,
-                                    columnNumber: 11
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 55,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/user",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "toggleBtn",
-                                children: toggleButton
-                            }, void 0, false, {
-                                fileName: "src/components/Header.js",
-                                lineNumber: 61,
-                                columnNumber: 18
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 61,
-                            columnNumber: 1
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Header.js",
-                    lineNumber: 41,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Header.js",
-                lineNumber: 40,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Header.js",
-        lineNumber: 30,
-        columnNumber: 5
-    }, undefined));
-};
-_s(Header, "B+rrH0PI8+0NrYNIXd+ZWepaGH8=", false, function() {
-    return [
-        (0, _reactRedux.useSelector)
-    ];
-});
-_c = Header;
-// Exporting the Header component to make it available for other parts of the application
-exports.default = Header;
-var _c;
-$RefreshReg$(_c, "Header");
-
-  $parcel$ReactRefreshHelpers$bfed.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","react":"21dqq","react-router-dom":"9xmpe","../utilities/UserContext":"3DxXm","react-redux":"62sf7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"di7hi":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
-parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
-parcelHelpers.export(exports, "API_URL", ()=>API_URL);
-parcelHelpers.export(exports, "REST_INFO_API_URL", ()=>REST_INFO_API_URL);
-parcelHelpers.export(exports, "IMG_URL", ()=>IMG_URL);
-parcelHelpers.export(exports, "CORS_URL", ()=>CORS_URL);
-const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const LOGO_URL = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-app-icon-food-explorer-design-template-8ae900e41ccbc0a2e1b48a85d239e389_screen.jpg?ts=1585237320";
-const API_URL = "https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D18.4833358%26lng%3D73.812767%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING";
-const REST_INFO_API_URL = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4833358&lng=73.812767&restaurantId=";
-const IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
-const CORS_URL = "https://corsproxy.org/?";
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"9xmpe":[function(require,module,exports) {
-/**
- * React Router DOM v6.20.0
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "AbortedDeferredError", ()=>(0, _reactRouter.AbortedDeferredError));
-parcelHelpers.export(exports, "Await", ()=>(0, _reactRouter.Await));
-parcelHelpers.export(exports, "MemoryRouter", ()=>(0, _reactRouter.MemoryRouter));
-parcelHelpers.export(exports, "Navigate", ()=>(0, _reactRouter.Navigate));
-parcelHelpers.export(exports, "NavigationType", ()=>(0, _reactRouter.NavigationType));
-parcelHelpers.export(exports, "Outlet", ()=>(0, _reactRouter.Outlet));
-parcelHelpers.export(exports, "Route", ()=>(0, _reactRouter.Route));
-parcelHelpers.export(exports, "Router", ()=>(0, _reactRouter.Router));
-parcelHelpers.export(exports, "Routes", ()=>(0, _reactRouter.Routes));
-parcelHelpers.export(exports, "UNSAFE_DataRouterContext", ()=>(0, _reactRouter.UNSAFE_DataRouterContext));
-parcelHelpers.export(exports, "UNSAFE_DataRouterStateContext", ()=>(0, _reactRouter.UNSAFE_DataRouterStateContext));
-parcelHelpers.export(exports, "UNSAFE_LocationContext", ()=>(0, _reactRouter.UNSAFE_LocationContext));
-parcelHelpers.export(exports, "UNSAFE_NavigationContext", ()=>(0, _reactRouter.UNSAFE_NavigationContext));
-parcelHelpers.export(exports, "UNSAFE_RouteContext", ()=>(0, _reactRouter.UNSAFE_RouteContext));
-parcelHelpers.export(exports, "UNSAFE_useRouteId", ()=>(0, _reactRouter.UNSAFE_useRouteId));
-parcelHelpers.export(exports, "createMemoryRouter", ()=>(0, _reactRouter.createMemoryRouter));
-parcelHelpers.export(exports, "createPath", ()=>(0, _reactRouter.createPath));
-parcelHelpers.export(exports, "createRoutesFromChildren", ()=>(0, _reactRouter.createRoutesFromChildren));
-parcelHelpers.export(exports, "createRoutesFromElements", ()=>(0, _reactRouter.createRoutesFromElements));
-parcelHelpers.export(exports, "defer", ()=>(0, _reactRouter.defer));
-parcelHelpers.export(exports, "generatePath", ()=>(0, _reactRouter.generatePath));
-parcelHelpers.export(exports, "isRouteErrorResponse", ()=>(0, _reactRouter.isRouteErrorResponse));
-parcelHelpers.export(exports, "json", ()=>(0, _reactRouter.json));
-parcelHelpers.export(exports, "matchPath", ()=>(0, _reactRouter.matchPath));
-parcelHelpers.export(exports, "matchRoutes", ()=>(0, _reactRouter.matchRoutes));
-parcelHelpers.export(exports, "parsePath", ()=>(0, _reactRouter.parsePath));
-parcelHelpers.export(exports, "redirect", ()=>(0, _reactRouter.redirect));
-parcelHelpers.export(exports, "redirectDocument", ()=>(0, _reactRouter.redirectDocument));
-parcelHelpers.export(exports, "renderMatches", ()=>(0, _reactRouter.renderMatches));
-parcelHelpers.export(exports, "resolvePath", ()=>(0, _reactRouter.resolvePath));
-parcelHelpers.export(exports, "useActionData", ()=>(0, _reactRouter.useActionData));
-parcelHelpers.export(exports, "useAsyncError", ()=>(0, _reactRouter.useAsyncError));
-parcelHelpers.export(exports, "useAsyncValue", ()=>(0, _reactRouter.useAsyncValue));
-parcelHelpers.export(exports, "useBlocker", ()=>(0, _reactRouter.useBlocker));
-parcelHelpers.export(exports, "useHref", ()=>(0, _reactRouter.useHref));
-parcelHelpers.export(exports, "useInRouterContext", ()=>(0, _reactRouter.useInRouterContext));
-parcelHelpers.export(exports, "useLoaderData", ()=>(0, _reactRouter.useLoaderData));
-parcelHelpers.export(exports, "useLocation", ()=>(0, _reactRouter.useLocation));
-parcelHelpers.export(exports, "useMatch", ()=>(0, _reactRouter.useMatch));
-parcelHelpers.export(exports, "useMatches", ()=>(0, _reactRouter.useMatches));
-parcelHelpers.export(exports, "useNavigate", ()=>(0, _reactRouter.useNavigate));
-parcelHelpers.export(exports, "useNavigation", ()=>(0, _reactRouter.useNavigation));
-parcelHelpers.export(exports, "useNavigationType", ()=>(0, _reactRouter.useNavigationType));
-parcelHelpers.export(exports, "useOutlet", ()=>(0, _reactRouter.useOutlet));
-parcelHelpers.export(exports, "useOutletContext", ()=>(0, _reactRouter.useOutletContext));
-parcelHelpers.export(exports, "useParams", ()=>(0, _reactRouter.useParams));
-parcelHelpers.export(exports, "useResolvedPath", ()=>(0, _reactRouter.useResolvedPath));
-parcelHelpers.export(exports, "useRevalidator", ()=>(0, _reactRouter.useRevalidator));
-parcelHelpers.export(exports, "useRouteError", ()=>(0, _reactRouter.useRouteError));
-parcelHelpers.export(exports, "useRouteLoaderData", ()=>(0, _reactRouter.useRouteLoaderData));
-parcelHelpers.export(exports, "useRoutes", ()=>(0, _reactRouter.useRoutes));
-//#endregion
-parcelHelpers.export(exports, "BrowserRouter", ()=>BrowserRouter);
-parcelHelpers.export(exports, "Form", ()=>Form);
-parcelHelpers.export(exports, "HashRouter", ()=>HashRouter);
-parcelHelpers.export(exports, "Link", ()=>Link);
-parcelHelpers.export(exports, "NavLink", ()=>NavLink);
-parcelHelpers.export(exports, "RouterProvider", ()=>RouterProvider);
-parcelHelpers.export(exports, "ScrollRestoration", ()=>ScrollRestoration);
-parcelHelpers.export(exports, "UNSAFE_FetchersContext", ()=>FetchersContext);
-parcelHelpers.export(exports, "UNSAFE_ViewTransitionContext", ()=>ViewTransitionContext);
-parcelHelpers.export(exports, "UNSAFE_useScrollRestoration", ()=>useScrollRestoration);
-parcelHelpers.export(exports, "createBrowserRouter", ()=>createBrowserRouter);
-parcelHelpers.export(exports, "createHashRouter", ()=>createHashRouter);
-parcelHelpers.export(exports, "createSearchParams", ()=>createSearchParams);
-parcelHelpers.export(exports, "unstable_HistoryRouter", ()=>HistoryRouter);
-parcelHelpers.export(exports, "unstable_usePrompt", ()=>usePrompt);
-parcelHelpers.export(exports, "unstable_useViewTransitionState", ()=>useViewTransitionState);
-parcelHelpers.export(exports, "useBeforeUnload", ()=>useBeforeUnload);
-parcelHelpers.export(exports, "useFetcher", ()=>useFetcher);
-parcelHelpers.export(exports, "useFetchers", ()=>useFetchers);
-parcelHelpers.export(exports, "useFormAction", ()=>useFormAction);
-parcelHelpers.export(exports, "useLinkClickHandler", ()=>useLinkClickHandler);
-parcelHelpers.export(exports, "useSearchParams", ()=>useSearchParams);
-parcelHelpers.export(exports, "useSubmit", ()=>useSubmit);
-var _react = require("react");
-var _reactDom = require("react-dom");
-var _reactRouter = require("react-router");
-var _router = require("@remix-run/router");
-function _extends() {
-    _extends = Object.assign ? Object.assign.bind() : function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {};
-    var target = {};
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-const defaultMethod = "get";
-const defaultEncType = "application/x-www-form-urlencoded";
-function isHtmlElement(object) {
-    return object != null && typeof object.tagName === "string";
-}
-function isButtonElement(object) {
-    return isHtmlElement(object) && object.tagName.toLowerCase() === "button";
-}
-function isFormElement(object) {
-    return isHtmlElement(object) && object.tagName.toLowerCase() === "form";
-}
-function isInputElement(object) {
-    return isHtmlElement(object) && object.tagName.toLowerCase() === "input";
-}
-function isModifiedEvent(event) {
-    return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
-}
-function shouldProcessLinkClick(event, target) {
-    return event.button === 0 && // Ignore everything but left clicks
-    (!target || target === "_self") && // Let browser handle "target=_blank" etc.
-    !isModifiedEvent(event) // Ignore clicks with modifier keys
-    ;
-}
-/**
- * Creates a URLSearchParams object using the given initializer.
- *
- * This is identical to `new URLSearchParams(init)` except it also
- * supports arrays as values in the object form of the initializer
- * instead of just strings. This is convenient when you need multiple
- * values for a given key, but don't want to use an array initializer.
- *
- * For example, instead of:
- *
- *   let searchParams = new URLSearchParams([
- *     ['sort', 'name'],
- *     ['sort', 'price']
- *   ]);
- *
- * you can do:
- *
- *   let searchParams = createSearchParams({
- *     sort: ['name', 'price']
- *   });
- */ function createSearchParams(init) {
-    if (init === void 0) init = "";
-    return new URLSearchParams(typeof init === "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce((memo, key)=>{
-        let value = init[key];
-        return memo.concat(Array.isArray(value) ? value.map((v)=>[
-                key,
-                v
-            ]) : [
-            [
-                key,
-                value
-            ]
-        ]);
-    }, []));
-}
-function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
-    let searchParams = createSearchParams(locationSearch);
-    if (defaultSearchParams) // Use `defaultSearchParams.forEach(...)` here instead of iterating of
-    // `defaultSearchParams.keys()` to work-around a bug in Firefox related to
-    // web extensions. Relevant Bugzilla tickets:
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=1414602
-    // https://bugzilla.mozilla.org/show_bug.cgi?id=1023984
-    defaultSearchParams.forEach((_, key)=>{
-        if (!searchParams.has(key)) defaultSearchParams.getAll(key).forEach((value)=>{
-            searchParams.append(key, value);
-        });
-    });
-    return searchParams;
-}
-// One-time check for submitter support
-let _formDataSupportsSubmitter = null;
-function isFormDataSubmitterSupported() {
-    if (_formDataSupportsSubmitter === null) try {
-        new FormData(document.createElement("form"), // @ts-expect-error if FormData supports the submitter parameter, this will throw
-        0);
-        _formDataSupportsSubmitter = false;
-    } catch (e) {
-        _formDataSupportsSubmitter = true;
-    }
-    return _formDataSupportsSubmitter;
-}
-const supportedFormEncTypes = new Set([
-    "application/x-www-form-urlencoded",
-    "multipart/form-data",
-    "text/plain"
-]);
-function getFormEncType(encType) {
-    if (encType != null && !supportedFormEncTypes.has(encType)) {
-        (0, _router.UNSAFE_warning)(false, '"' + encType + '" is not a valid `encType` for `<Form>`/`<fetcher.Form>` ' + ('and will default to "' + defaultEncType + '"'));
-        return null;
-    }
-    return encType;
-}
-function getFormSubmissionInfo(target, basename) {
-    let method;
-    let action;
-    let encType;
-    let formData;
-    let body;
-    if (isFormElement(target)) {
-        // When grabbing the action from the element, it will have had the basename
-        // prefixed to ensure non-JS scenarios work, so strip it since we'll
-        // re-prefix in the router
-        let attr = target.getAttribute("action");
-        action = attr ? (0, _router.stripBasename)(attr, basename) : null;
-        method = target.getAttribute("method") || defaultMethod;
-        encType = getFormEncType(target.getAttribute("enctype")) || defaultEncType;
-        formData = new FormData(target);
-    } else if (isButtonElement(target) || isInputElement(target) && (target.type === "submit" || target.type === "image")) {
-        let form = target.form;
-        if (form == null) throw new Error('Cannot submit a <button> or <input type="submit"> without a <form>');
-        // <button>/<input type="submit"> may override attributes of <form>
-        // When grabbing the action from the element, it will have had the basename
-        // prefixed to ensure non-JS scenarios work, so strip it since we'll
-        // re-prefix in the router
-        let attr = target.getAttribute("formaction") || form.getAttribute("action");
-        action = attr ? (0, _router.stripBasename)(attr, basename) : null;
-        method = target.getAttribute("formmethod") || form.getAttribute("method") || defaultMethod;
-        encType = getFormEncType(target.getAttribute("formenctype")) || getFormEncType(form.getAttribute("enctype")) || defaultEncType;
-        // Build a FormData object populated from a form and submitter
-        formData = new FormData(form, target);
-        // If this browser doesn't support the `FormData(el, submitter)` format,
-        // then tack on the submitter value at the end.  This is a lightweight
-        // solution that is not 100% spec compliant.  For complete support in older
-        // browsers, consider using the `formdata-submitter-polyfill` package
-        if (!isFormDataSubmitterSupported()) {
-            let { name, type, value } = target;
-            if (type === "image") {
-                let prefix = name ? name + "." : "";
-                formData.append(prefix + "x", "0");
-                formData.append(prefix + "y", "0");
-            } else if (name) formData.append(name, value);
-        }
-    } else if (isHtmlElement(target)) throw new Error('Cannot submit element that is not <form>, <button>, or <input type="submit|image">');
-    else {
-        method = defaultMethod;
-        action = null;
-        encType = defaultEncType;
-        body = target;
-    }
-    // Send body for <Form encType="text/plain" so we encode it into text
-    if (formData && encType === "text/plain") {
-        body = formData;
-        formData = undefined;
-    }
-    return {
-        action,
-        method: method.toLowerCase(),
-        encType,
-        formData,
-        body
-    };
-}
-const _excluded = [
-    "onClick",
-    "relative",
-    "reloadDocument",
-    "replace",
-    "state",
-    "target",
-    "to",
-    "preventScrollReset",
-    "unstable_viewTransition"
-], _excluded2 = [
-    "aria-current",
-    "caseSensitive",
-    "className",
-    "end",
-    "style",
-    "to",
-    "unstable_viewTransition",
-    "children"
-], _excluded3 = [
-    "fetcherKey",
-    "navigate",
-    "reloadDocument",
-    "replace",
-    "state",
-    "method",
-    "action",
-    "onSubmit",
-    "relative",
-    "preventScrollReset",
-    "unstable_viewTransition"
-];
-function createBrowserRouter(routes, opts) {
-    return (0, _router.createRouter)({
-        basename: opts == null ? void 0 : opts.basename,
-        future: _extends({}, opts == null ? void 0 : opts.future, {
-            v7_prependBasename: true
-        }),
-        history: (0, _router.createBrowserHistory)({
-            window: opts == null ? void 0 : opts.window
-        }),
-        hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
-        routes,
-        mapRouteProperties: (0, _reactRouter.UNSAFE_mapRouteProperties),
-        window: opts == null ? void 0 : opts.window
-    }).initialize();
-}
-function createHashRouter(routes, opts) {
-    return (0, _router.createRouter)({
-        basename: opts == null ? void 0 : opts.basename,
-        future: _extends({}, opts == null ? void 0 : opts.future, {
-            v7_prependBasename: true
-        }),
-        history: (0, _router.createHashHistory)({
-            window: opts == null ? void 0 : opts.window
-        }),
-        hydrationData: (opts == null ? void 0 : opts.hydrationData) || parseHydrationData(),
-        routes,
-        mapRouteProperties: (0, _reactRouter.UNSAFE_mapRouteProperties),
-        window: opts == null ? void 0 : opts.window
-    }).initialize();
-}
-function parseHydrationData() {
-    var _window;
-    let state = (_window = window) == null ? void 0 : _window.__staticRouterHydrationData;
-    if (state && state.errors) state = _extends({}, state, {
-        errors: deserializeErrors(state.errors)
-    });
-    return state;
-}
-function deserializeErrors(errors) {
-    if (!errors) return null;
-    let entries = Object.entries(errors);
-    let serialized = {};
-    for (let [key, val] of entries){
-        // Hey you!  If you change this, please change the corresponding logic in
-        // serializeErrors in react-router-dom/server.tsx :)
-        if (val && val.__type === "RouteErrorResponse") serialized[key] = new (0, _router.UNSAFE_ErrorResponseImpl)(val.status, val.statusText, val.data, val.internal === true);
-        else if (val && val.__type === "Error") {
-            // Attempt to reconstruct the right type of Error (i.e., ReferenceError)
-            if (val.__subType) {
-                let ErrorConstructor = window[val.__subType];
-                if (typeof ErrorConstructor === "function") try {
-                    // @ts-expect-error
-                    let error = new ErrorConstructor(val.message);
-                    // Wipe away the client-side stack trace.  Nothing to fill it in with
-                    // because we don't serialize SSR stack traces for security reasons
-                    error.stack = "";
-                    serialized[key] = error;
-                } catch (e) {
-                // no-op - fall through and create a normal Error
-                }
-            }
-            if (serialized[key] == null) {
-                let error = new Error(val.message);
-                // Wipe away the client-side stack trace.  Nothing to fill it in with
-                // because we don't serialize SSR stack traces for security reasons
-                error.stack = "";
-                serialized[key] = error;
-            }
-        } else serialized[key] = val;
-    }
-    return serialized;
-}
-const ViewTransitionContext = /*#__PURE__*/ _react.createContext({
-    isTransitioning: false
-});
-ViewTransitionContext.displayName = "ViewTransition";
-const FetchersContext = /*#__PURE__*/ _react.createContext(new Map());
-FetchersContext.displayName = "Fetchers";
-//#endregion
-////////////////////////////////////////////////////////////////////////////////
-//#region Components
-////////////////////////////////////////////////////////////////////////////////
-/**
-  Webpack + React 17 fails to compile on any of the following because webpack
-  complains that `startTransition` doesn't exist in `React`:
-  * import { startTransition } from "react"
-  * import * as React from from "react";
-    "startTransition" in React ? React.startTransition(() => setState()) : setState()
-  * import * as React from from "react";
-    "startTransition" in React ? React["startTransition"](() => setState()) : setState()
-
-  Moving it to a constant such as the following solves the Webpack/React 17 issue:
-  * import * as React from from "react";
-    const START_TRANSITION = "startTransition";
-    START_TRANSITION in React ? React[START_TRANSITION](() => setState()) : setState()
-
-  However, that introduces webpack/terser minification issues in production builds
-  in React 18 where minification/obfuscation ends up removing the call of
-  React.startTransition entirely from the first half of the ternary.  Grabbing
-  this exported reference once up front resolves that issue.
-
-  See https://github.com/remix-run/react-router/issues/10579
-*/ const START_TRANSITION = "startTransition";
-const startTransitionImpl = _react[START_TRANSITION];
-const FLUSH_SYNC = "flushSync";
-const flushSyncImpl = _reactDom[FLUSH_SYNC];
-function startTransitionSafe(cb) {
-    if (startTransitionImpl) startTransitionImpl(cb);
-    else cb();
-}
-function flushSyncSafe(cb) {
-    if (flushSyncImpl) flushSyncImpl(cb);
-    else cb();
-}
-class Deferred {
-    constructor(){
-        this.status = "pending";
-        this.promise = new Promise((resolve, reject)=>{
-            this.resolve = (value)=>{
-                if (this.status === "pending") {
-                    this.status = "resolved";
-                    resolve(value);
-                }
-            };
-            this.reject = (reason)=>{
-                if (this.status === "pending") {
-                    this.status = "rejected";
-                    reject(reason);
-                }
-            };
-        });
-    }
-}
-/**
- * Given a Remix Router instance, render the appropriate UI
- */ function RouterProvider(_ref) {
-    let { fallbackElement, router, future } = _ref;
-    let [state, setStateImpl] = _react.useState(router.state);
-    let [pendingState, setPendingState] = _react.useState();
-    let [vtContext, setVtContext] = _react.useState({
-        isTransitioning: false
-    });
-    let [renderDfd, setRenderDfd] = _react.useState();
-    let [transition, setTransition] = _react.useState();
-    let [interruption, setInterruption] = _react.useState();
-    let fetcherData = _react.useRef(new Map());
-    let { v7_startTransition } = future || {};
-    let optInStartTransition = _react.useCallback((cb)=>{
-        if (v7_startTransition) startTransitionSafe(cb);
-        else cb();
-    }, [
-        v7_startTransition
-    ]);
-    let setState = _react.useCallback((newState, _ref2)=>{
-        let { deletedFetchers, unstable_flushSync: flushSync, unstable_viewTransitionOpts: viewTransitionOpts } = _ref2;
-        deletedFetchers.forEach((key)=>fetcherData.current.delete(key));
-        newState.fetchers.forEach((fetcher, key)=>{
-            if (fetcher.data !== undefined) fetcherData.current.set(key, fetcher.data);
-        });
-        let isViewTransitionUnavailable = router.window == null || typeof router.window.document.startViewTransition !== "function";
-        // If this isn't a view transition or it's not available in this browser,
-        // just update and be done with it
-        if (!viewTransitionOpts || isViewTransitionUnavailable) {
-            if (flushSync) flushSyncSafe(()=>setStateImpl(newState));
-            else optInStartTransition(()=>setStateImpl(newState));
-            return;
-        }
-        // flushSync + startViewTransition
-        if (flushSync) {
-            // Flush through the context to mark DOM elements as transition=ing
-            flushSyncSafe(()=>{
-                // Cancel any pending transitions
-                if (transition) {
-                    renderDfd && renderDfd.resolve();
-                    transition.skipTransition();
-                }
-                setVtContext({
-                    isTransitioning: true,
-                    flushSync: true,
-                    currentLocation: viewTransitionOpts.currentLocation,
-                    nextLocation: viewTransitionOpts.nextLocation
-                });
-            });
-            // Update the DOM
-            let t = router.window.document.startViewTransition(()=>{
-                flushSyncSafe(()=>setStateImpl(newState));
-            });
-            // Clean up after the animation completes
-            t.finished.finally(()=>{
-                flushSyncSafe(()=>{
-                    setRenderDfd(undefined);
-                    setTransition(undefined);
-                    setPendingState(undefined);
-                    setVtContext({
-                        isTransitioning: false
-                    });
-                });
-            });
-            flushSyncSafe(()=>setTransition(t));
-            return;
-        }
-        // startTransition + startViewTransition
-        if (transition) {
-            // Interrupting an in-progress transition, cancel and let everything flush
-            // out, and then kick off a new transition from the interruption state
-            renderDfd && renderDfd.resolve();
-            transition.skipTransition();
-            setInterruption({
-                state: newState,
-                currentLocation: viewTransitionOpts.currentLocation,
-                nextLocation: viewTransitionOpts.nextLocation
-            });
-        } else {
-            // Completed navigation update with opted-in view transitions, let 'er rip
-            setPendingState(newState);
-            setVtContext({
-                isTransitioning: true,
-                flushSync: false,
-                currentLocation: viewTransitionOpts.currentLocation,
-                nextLocation: viewTransitionOpts.nextLocation
-            });
-        }
-    }, [
-        router.window,
-        transition,
-        renderDfd,
-        fetcherData,
-        optInStartTransition
-    ]);
-    // Need to use a layout effect here so we are subscribed early enough to
-    // pick up on any render-driven redirects/navigations (useEffect/<Navigate>)
-    _react.useLayoutEffect(()=>router.subscribe(setState), [
-        router,
-        setState
-    ]);
-    // When we start a view transition, create a Deferred we can use for the
-    // eventual "completed" render
-    _react.useEffect(()=>{
-        if (vtContext.isTransitioning && !vtContext.flushSync) setRenderDfd(new Deferred());
-    }, [
-        vtContext
-    ]);
-    // Once the deferred is created, kick off startViewTransition() to update the
-    // DOM and then wait on the Deferred to resolve (indicating the DOM update has
-    // happened)
-    _react.useEffect(()=>{
-        if (renderDfd && pendingState && router.window) {
-            let newState = pendingState;
-            let renderPromise = renderDfd.promise;
-            let transition = router.window.document.startViewTransition(async ()=>{
-                optInStartTransition(()=>setStateImpl(newState));
-                await renderPromise;
-            });
-            transition.finished.finally(()=>{
-                setRenderDfd(undefined);
-                setTransition(undefined);
-                setPendingState(undefined);
-                setVtContext({
-                    isTransitioning: false
-                });
-            });
-            setTransition(transition);
-        }
-    }, [
-        optInStartTransition,
-        pendingState,
-        renderDfd,
-        router.window
-    ]);
-    // When the new location finally renders and is committed to the DOM, this
-    // effect will run to resolve the transition
-    _react.useEffect(()=>{
-        if (renderDfd && pendingState && state.location.key === pendingState.location.key) renderDfd.resolve();
-    }, [
-        renderDfd,
-        transition,
-        state.location,
-        pendingState
-    ]);
-    // If we get interrupted with a new navigation during a transition, we skip
-    // the active transition, let it cleanup, then kick it off again here
-    _react.useEffect(()=>{
-        if (!vtContext.isTransitioning && interruption) {
-            setPendingState(interruption.state);
-            setVtContext({
-                isTransitioning: true,
-                flushSync: false,
-                currentLocation: interruption.currentLocation,
-                nextLocation: interruption.nextLocation
-            });
-            setInterruption(undefined);
-        }
-    }, [
-        vtContext.isTransitioning,
-        interruption
-    ]);
-    let navigator = _react.useMemo(()=>{
-        return {
-            createHref: router.createHref,
-            encodeLocation: router.encodeLocation,
-            go: (n)=>router.navigate(n),
-            push: (to, state, opts)=>router.navigate(to, {
-                    state,
-                    preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
-                }),
-            replace: (to, state, opts)=>router.navigate(to, {
-                    replace: true,
-                    state,
-                    preventScrollReset: opts == null ? void 0 : opts.preventScrollReset
-                })
-        };
-    }, [
-        router
-    ]);
-    let basename = router.basename || "/";
-    let dataRouterContext = _react.useMemo(()=>({
-            router,
-            navigator,
-            static: false,
-            basename
-        }), [
-        router,
-        navigator,
-        basename
-    ]);
-    // The fragment and {null} here are important!  We need them to keep React 18's
-    // useId happy when we are server-rendering since we may have a <script> here
-    // containing the hydrated server-side staticContext (from StaticRouterProvider).
-    // useId relies on the component tree structure to generate deterministic id's
-    // so we need to ensure it remains the same on the client even though
-    // we don't need the <script> tag
-    return /*#__PURE__*/ _react.createElement(_react.Fragment, null, /*#__PURE__*/ _react.createElement((0, _reactRouter.UNSAFE_DataRouterContext).Provider, {
-        value: dataRouterContext
-    }, /*#__PURE__*/ _react.createElement((0, _reactRouter.UNSAFE_DataRouterStateContext).Provider, {
-        value: state
-    }, /*#__PURE__*/ _react.createElement(FetchersContext.Provider, {
-        value: fetcherData.current
-    }, /*#__PURE__*/ _react.createElement(ViewTransitionContext.Provider, {
-        value: vtContext
-    }, /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
-        basename: basename,
-        location: state.location,
-        navigationType: state.historyAction,
-        navigator: navigator
-    }, state.initialized ? /*#__PURE__*/ _react.createElement(DataRoutes, {
-        routes: router.routes,
-        state: state
-    }) : fallbackElement))))), null);
-}
-function DataRoutes(_ref3) {
-    let { routes, state } = _ref3;
-    return (0, _reactRouter.UNSAFE_useRoutesImpl)(routes, undefined, state);
-}
-/**
- * A `<Router>` for use in web browsers. Provides the cleanest URLs.
- */ function BrowserRouter(_ref4) {
-    let { basename, children, future, window: window1 } = _ref4;
-    let historyRef = _react.useRef();
-    if (historyRef.current == null) historyRef.current = (0, _router.createBrowserHistory)({
-        window: window1,
-        v5Compat: true
-    });
-    let history = historyRef.current;
-    let [state, setStateImpl] = _react.useState({
-        action: history.action,
-        location: history.location
-    });
-    let { v7_startTransition } = future || {};
-    let setState = _react.useCallback((newState)=>{
-        v7_startTransition && startTransitionImpl ? startTransitionImpl(()=>setStateImpl(newState)) : setStateImpl(newState);
-    }, [
-        setStateImpl,
-        v7_startTransition
-    ]);
-    _react.useLayoutEffect(()=>history.listen(setState), [
-        history,
-        setState
-    ]);
-    return /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
-        basename: basename,
-        children: children,
-        location: state.location,
-        navigationType: state.action,
-        navigator: history
-    });
-}
-/**
- * A `<Router>` for use in web browsers. Stores the location in the hash
- * portion of the URL so it is not sent to the server.
- */ function HashRouter(_ref5) {
-    let { basename, children, future, window: window1 } = _ref5;
-    let historyRef = _react.useRef();
-    if (historyRef.current == null) historyRef.current = (0, _router.createHashHistory)({
-        window: window1,
-        v5Compat: true
-    });
-    let history = historyRef.current;
-    let [state, setStateImpl] = _react.useState({
-        action: history.action,
-        location: history.location
-    });
-    let { v7_startTransition } = future || {};
-    let setState = _react.useCallback((newState)=>{
-        v7_startTransition && startTransitionImpl ? startTransitionImpl(()=>setStateImpl(newState)) : setStateImpl(newState);
-    }, [
-        setStateImpl,
-        v7_startTransition
-    ]);
-    _react.useLayoutEffect(()=>history.listen(setState), [
-        history,
-        setState
-    ]);
-    return /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
-        basename: basename,
-        children: children,
-        location: state.location,
-        navigationType: state.action,
-        navigator: history
-    });
-}
-/**
- * A `<Router>` that accepts a pre-instantiated history object. It's important
- * to note that using your own history object is highly discouraged and may add
- * two versions of the history library to your bundles unless you use the same
- * version of the history library that React Router uses internally.
- */ function HistoryRouter(_ref6) {
-    let { basename, children, future, history } = _ref6;
-    let [state, setStateImpl] = _react.useState({
-        action: history.action,
-        location: history.location
-    });
-    let { v7_startTransition } = future || {};
-    let setState = _react.useCallback((newState)=>{
-        v7_startTransition && startTransitionImpl ? startTransitionImpl(()=>setStateImpl(newState)) : setStateImpl(newState);
-    }, [
-        setStateImpl,
-        v7_startTransition
-    ]);
-    _react.useLayoutEffect(()=>history.listen(setState), [
-        history,
-        setState
-    ]);
-    return /*#__PURE__*/ _react.createElement((0, _reactRouter.Router), {
-        basename: basename,
-        children: children,
-        location: state.location,
-        navigationType: state.action,
-        navigator: history
-    });
-}
-HistoryRouter.displayName = "unstable_HistoryRouter";
-const isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
-const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
-/**
- * The public API for rendering a history-aware `<a>`.
- */ const Link = /*#__PURE__*/ _react.forwardRef(function LinkWithRef(_ref7, ref) {
-    let { onClick, relative, reloadDocument, replace, state, target, to, preventScrollReset, unstable_viewTransition } = _ref7, rest = _objectWithoutPropertiesLoose(_ref7, _excluded);
-    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
-    // Rendered into <a href> for absolute URLs
-    let absoluteHref;
-    let isExternal = false;
-    if (typeof to === "string" && ABSOLUTE_URL_REGEX.test(to)) {
-        // Render the absolute href server- and client-side
-        absoluteHref = to;
-        // Only check for external origins client-side
-        if (isBrowser) try {
-            let currentUrl = new URL(window.location.href);
-            let targetUrl = to.startsWith("//") ? new URL(currentUrl.protocol + to) : new URL(to);
-            let path = (0, _router.stripBasename)(targetUrl.pathname, basename);
-            if (targetUrl.origin === currentUrl.origin && path != null) // Strip the protocol/origin/basename for same-origin absolute URLs
-            to = path + targetUrl.search + targetUrl.hash;
-            else isExternal = true;
-        } catch (e) {
-            // We can't do external URL detection without a valid URL
-            (0, _router.UNSAFE_warning)(false, '<Link to="' + to + '"> contains an invalid URL which will probably break ' + "when clicked - please update to a valid URL path.");
-        }
-    }
-    // Rendered into <a href> for relative URLs
-    let href = (0, _reactRouter.useHref)(to, {
-        relative
-    });
-    let internalOnClick = useLinkClickHandler(to, {
-        replace,
-        state,
-        target,
-        preventScrollReset,
-        relative,
-        unstable_viewTransition
-    });
-    function handleClick(event) {
-        if (onClick) onClick(event);
-        if (!event.defaultPrevented) internalOnClick(event);
-    }
-    return(/*#__PURE__*/ // eslint-disable-next-line jsx-a11y/anchor-has-content
-    _react.createElement("a", _extends({}, rest, {
-        href: absoluteHref || href,
-        onClick: isExternal || reloadDocument ? onClick : handleClick,
-        ref: ref,
-        target: target
-    })));
-});
-Link.displayName = "Link";
-/**
- * A `<Link>` wrapper that knows if it's "active" or not.
- */ const NavLink = /*#__PURE__*/ _react.forwardRef(function NavLinkWithRef(_ref8, ref) {
-    let { "aria-current": ariaCurrentProp = "page", caseSensitive = false, className: classNameProp = "", end = false, style: styleProp, to, unstable_viewTransition, children } = _ref8, rest = _objectWithoutPropertiesLoose(_ref8, _excluded2);
-    let path = (0, _reactRouter.useResolvedPath)(to, {
-        relative: rest.relative
-    });
-    let location = (0, _reactRouter.useLocation)();
-    let routerState = _react.useContext((0, _reactRouter.UNSAFE_DataRouterStateContext));
-    let { navigator } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
-    let isTransitioning = routerState != null && // Conditional usage is OK here because the usage of a data router is static
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useViewTransitionState(path) && unstable_viewTransition === true;
-    let toPathname = navigator.encodeLocation ? navigator.encodeLocation(path).pathname : path.pathname;
-    let locationPathname = location.pathname;
-    let nextLocationPathname = routerState && routerState.navigation && routerState.navigation.location ? routerState.navigation.location.pathname : null;
-    if (!caseSensitive) {
-        locationPathname = locationPathname.toLowerCase();
-        nextLocationPathname = nextLocationPathname ? nextLocationPathname.toLowerCase() : null;
-        toPathname = toPathname.toLowerCase();
-    }
-    // If the `to` has a trailing slash, look at that exact spot.  Otherwise,
-    // we're looking for a slash _after_ what's in `to`.  For example:
-    //
-    // <NavLink to="/users"> and <NavLink to="/users/">
-    // both want to look for a / at index 6 to match URL `/users/matt`
-    const endSlashPosition = toPathname !== "/" && toPathname.endsWith("/") ? toPathname.length - 1 : toPathname.length;
-    let isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(endSlashPosition) === "/";
-    let isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
-    let renderProps = {
-        isActive,
-        isPending,
-        isTransitioning
-    };
-    let ariaCurrent = isActive ? ariaCurrentProp : undefined;
-    let className;
-    if (typeof classNameProp === "function") className = classNameProp(renderProps);
-    else // If the className prop is not a function, we use a default `active`
-    // class for <NavLink />s that are active. In v5 `active` was the default
-    // value for `activeClassName`, but we are removing that API and can still
-    // use the old default behavior for a cleaner upgrade path and keep the
-    // simple styling rules working as they currently do.
-    className = [
-        classNameProp,
-        isActive ? "active" : null,
-        isPending ? "pending" : null,
-        isTransitioning ? "transitioning" : null
-    ].filter(Boolean).join(" ");
-    let style = typeof styleProp === "function" ? styleProp(renderProps) : styleProp;
-    return /*#__PURE__*/ _react.createElement(Link, _extends({}, rest, {
-        "aria-current": ariaCurrent,
-        className: className,
-        ref: ref,
-        style: style,
-        to: to,
-        unstable_viewTransition: unstable_viewTransition
-    }), typeof children === "function" ? children(renderProps) : children);
-});
-NavLink.displayName = "NavLink";
-/**
- * A `@remix-run/router`-aware `<form>`. It behaves like a normal form except
- * that the interaction with the server is with `fetch` instead of new document
- * requests, allowing components to add nicer UX to the page as the form is
- * submitted and returns with data.
- */ const Form = /*#__PURE__*/ _react.forwardRef((_ref9, forwardedRef)=>{
-    let { fetcherKey, navigate, reloadDocument, replace, state, method = defaultMethod, action, onSubmit, relative, preventScrollReset, unstable_viewTransition } = _ref9, props = _objectWithoutPropertiesLoose(_ref9, _excluded3);
-    let submit = useSubmit();
-    let formAction = useFormAction(action, {
-        relative
-    });
-    let formMethod = method.toLowerCase() === "get" ? "get" : "post";
-    let submitHandler = (event)=>{
-        onSubmit && onSubmit(event);
-        if (event.defaultPrevented) return;
-        event.preventDefault();
-        let submitter = event.nativeEvent.submitter;
-        let submitMethod = (submitter == null ? void 0 : submitter.getAttribute("formmethod")) || method;
-        submit(submitter || event.currentTarget, {
-            fetcherKey,
-            method: submitMethod,
-            navigate,
-            replace,
-            state,
-            relative,
-            preventScrollReset,
-            unstable_viewTransition
-        });
-    };
-    return /*#__PURE__*/ _react.createElement("form", _extends({
-        ref: forwardedRef,
-        method: formMethod,
-        action: formAction,
-        onSubmit: reloadDocument ? onSubmit : submitHandler
-    }, props));
-});
-Form.displayName = "Form";
-/**
- * This component will emulate the browser's scroll restoration on location
- * changes.
- */ function ScrollRestoration(_ref10) {
-    let { getKey, storageKey } = _ref10;
-    useScrollRestoration({
-        getKey,
-        storageKey
-    });
-    return null;
-}
-ScrollRestoration.displayName = "ScrollRestoration";
-//#endregion
-////////////////////////////////////////////////////////////////////////////////
-//#region Hooks
-////////////////////////////////////////////////////////////////////////////////
-var DataRouterHook;
-(function(DataRouterHook) {
-    DataRouterHook["UseScrollRestoration"] = "useScrollRestoration";
-    DataRouterHook["UseSubmit"] = "useSubmit";
-    DataRouterHook["UseSubmitFetcher"] = "useSubmitFetcher";
-    DataRouterHook["UseFetcher"] = "useFetcher";
-    DataRouterHook["useViewTransitionState"] = "useViewTransitionState";
-})(DataRouterHook || (DataRouterHook = {}));
-var DataRouterStateHook;
-(function(DataRouterStateHook) {
-    DataRouterStateHook["UseFetcher"] = "useFetcher";
-    DataRouterStateHook["UseFetchers"] = "useFetchers";
-    DataRouterStateHook["UseScrollRestoration"] = "useScrollRestoration";
-})(DataRouterStateHook || (DataRouterStateHook = {}));
-// Internal hooks
-function getDataRouterConsoleError(hookName) {
-    return hookName + " must be used within a data router.  See https://reactrouter.com/routers/picking-a-router.";
-}
-function useDataRouterContext(hookName) {
-    let ctx = _react.useContext((0, _reactRouter.UNSAFE_DataRouterContext));
-    !ctx && (0, _router.UNSAFE_invariant)(false, getDataRouterConsoleError(hookName));
-    return ctx;
-}
-function useDataRouterState(hookName) {
-    let state = _react.useContext((0, _reactRouter.UNSAFE_DataRouterStateContext));
-    !state && (0, _router.UNSAFE_invariant)(false, getDataRouterConsoleError(hookName));
-    return state;
-}
-// External hooks
-/**
- * Handles the click behavior for router `<Link>` components. This is useful if
- * you need to create custom `<Link>` components with the same click behavior we
- * use in our exported `<Link>`.
- */ function useLinkClickHandler(to, _temp) {
-    let { target, replace: replaceProp, state, preventScrollReset, relative, unstable_viewTransition } = _temp === void 0 ? {} : _temp;
-    let navigate = (0, _reactRouter.useNavigate)();
-    let location = (0, _reactRouter.useLocation)();
-    let path = (0, _reactRouter.useResolvedPath)(to, {
-        relative
-    });
-    return _react.useCallback((event)=>{
-        if (shouldProcessLinkClick(event, target)) {
-            event.preventDefault();
-            // If the URL hasn't changed, a regular <a> will do a replace instead of
-            // a push, so do the same here unless the replace prop is explicitly set
-            let replace = replaceProp !== undefined ? replaceProp : (0, _reactRouter.createPath)(location) === (0, _reactRouter.createPath)(path);
-            navigate(to, {
-                replace,
-                state,
-                preventScrollReset,
-                relative,
-                unstable_viewTransition
-            });
-        }
-    }, [
-        location,
-        navigate,
-        path,
-        replaceProp,
-        state,
-        target,
-        to,
-        preventScrollReset,
-        relative,
-        unstable_viewTransition
-    ]);
-}
-/**
- * A convenient wrapper for reading and writing search parameters via the
- * URLSearchParams interface.
- */ function useSearchParams(defaultInit) {
-    (0, _router.UNSAFE_warning)(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not support the URLSearchParams API. If you need to support Internet Explorer 11, we recommend you load a polyfill such as https://github.com/ungap/url-search-params\n\nIf you're unsure how to load polyfills, we recommend you check out https://polyfill.io/v3/ which provides some recommendations about how to load polyfills only for users that need them, instead of for every user.");
-    let defaultSearchParamsRef = _react.useRef(createSearchParams(defaultInit));
-    let hasSetSearchParamsRef = _react.useRef(false);
-    let location = (0, _reactRouter.useLocation)();
-    let searchParams = _react.useMemo(()=>// Only merge in the defaults if we haven't yet called setSearchParams.
-        // Once we call that we want those to take precedence, otherwise you can't
-        // remove a param with setSearchParams({}) if it has an initial value
-        getSearchParamsForLocation(location.search, hasSetSearchParamsRef.current ? null : defaultSearchParamsRef.current), [
-        location.search
-    ]);
-    let navigate = (0, _reactRouter.useNavigate)();
-    let setSearchParams = _react.useCallback((nextInit, navigateOptions)=>{
-        const newSearchParams = createSearchParams(typeof nextInit === "function" ? nextInit(searchParams) : nextInit);
-        hasSetSearchParamsRef.current = true;
-        navigate("?" + newSearchParams, navigateOptions);
-    }, [
-        navigate,
-        searchParams
-    ]);
-    return [
-        searchParams,
-        setSearchParams
-    ];
-}
-function validateClientSideSubmission() {
-    if (typeof document === "undefined") throw new Error("You are calling submit during the server render. Try calling submit within a `useEffect` or callback instead.");
-}
-let fetcherId = 0;
-let getUniqueFetcherId = ()=>"__" + String(++fetcherId) + "__";
-/**
- * Returns a function that may be used to programmatically submit a form (or
- * some arbitrary data) to the server.
- */ function useSubmit() {
-    let { router } = useDataRouterContext(DataRouterHook.UseSubmit);
-    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
-    let currentRouteId = (0, _reactRouter.UNSAFE_useRouteId)();
-    return _react.useCallback(function(target, options) {
-        if (options === void 0) options = {};
-        validateClientSideSubmission();
-        let { action, method, encType, formData, body } = getFormSubmissionInfo(target, basename);
-        if (options.navigate === false) {
-            let key = options.fetcherKey || getUniqueFetcherId();
-            router.fetch(key, currentRouteId, options.action || action, {
-                preventScrollReset: options.preventScrollReset,
-                formData,
-                body,
-                formMethod: options.method || method,
-                formEncType: options.encType || encType,
-                unstable_flushSync: options.unstable_flushSync
-            });
-        } else router.navigate(options.action || action, {
-            preventScrollReset: options.preventScrollReset,
-            formData,
-            body,
-            formMethod: options.method || method,
-            formEncType: options.encType || encType,
-            replace: options.replace,
-            state: options.state,
-            fromRouteId: currentRouteId,
-            unstable_flushSync: options.unstable_flushSync,
-            unstable_viewTransition: options.unstable_viewTransition
-        });
-    }, [
-        router,
-        basename,
-        currentRouteId
-    ]);
-}
-// v7: Eventually we should deprecate this entirely in favor of using the
-// router method directly?
-function useFormAction(action, _temp2) {
-    let { relative } = _temp2 === void 0 ? {} : _temp2;
-    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
-    let routeContext = _react.useContext((0, _reactRouter.UNSAFE_RouteContext));
-    !routeContext && (0, _router.UNSAFE_invariant)(false, "useFormAction must be used inside a RouteContext");
-    let [match] = routeContext.matches.slice(-1);
-    // Shallow clone path so we can modify it below, otherwise we modify the
-    // object referenced by useMemo inside useResolvedPath
-    let path = _extends({}, (0, _reactRouter.useResolvedPath)(action ? action : ".", {
-        relative
-    }));
-    // If no action was specified, browsers will persist current search params
-    // when determining the path, so match that behavior
-    // https://github.com/remix-run/remix/issues/927
-    let location = (0, _reactRouter.useLocation)();
-    if (action == null) {
-        // Safe to write to this directly here since if action was undefined, we
-        // would have called useResolvedPath(".") which will never include a search
-        path.search = location.search;
-        // When grabbing search params from the URL, remove any included ?index param
-        // since it might not apply to our contextual route.  We add it back based
-        // on match.route.index below
-        let params = new URLSearchParams(path.search);
-        if (params.has("index") && params.get("index") === "") {
-            params.delete("index");
-            path.search = params.toString() ? "?" + params.toString() : "";
-        }
-    }
-    if ((!action || action === ".") && match.route.index) path.search = path.search ? path.search.replace(/^\?/, "?index&") : "?index";
-    // If we're operating within a basename, prepend it to the pathname prior
-    // to creating the form action.  If this is a root navigation, then just use
-    // the raw basename which allows the basename to have full control over the
-    // presence of a trailing slash on root actions
-    if (basename !== "/") path.pathname = path.pathname === "/" ? basename : (0, _router.joinPaths)([
-        basename,
-        path.pathname
-    ]);
-    return (0, _reactRouter.createPath)(path);
-}
-// TODO: (v7) Change the useFetcher generic default from `any` to `unknown`
-/**
- * Interacts with route loaders and actions without causing a navigation. Great
- * for any interaction that stays on the same page.
- */ function useFetcher(_temp3) {
-    var _route$matches;
-    let { key } = _temp3 === void 0 ? {} : _temp3;
-    let { router } = useDataRouterContext(DataRouterHook.UseFetcher);
-    let state = useDataRouterState(DataRouterStateHook.UseFetcher);
-    let fetcherData = _react.useContext(FetchersContext);
-    let route = _react.useContext((0, _reactRouter.UNSAFE_RouteContext));
-    let routeId = (_route$matches = route.matches[route.matches.length - 1]) == null ? void 0 : _route$matches.route.id;
-    !fetcherData && (0, _router.UNSAFE_invariant)(false, "useFetcher must be used inside a FetchersContext");
-    !route && (0, _router.UNSAFE_invariant)(false, "useFetcher must be used inside a RouteContext");
-    !(routeId != null) && (0, _router.UNSAFE_invariant)(false, 'useFetcher can only be used on routes that contain a unique "id"');
-    // Fetcher key handling
-    let [fetcherKey, setFetcherKey] = _react.useState(key || "");
-    if (key && key !== fetcherKey) setFetcherKey(key);
-    else if (!fetcherKey) setFetcherKey(getUniqueFetcherId());
-    // Registration/cleanup
-    _react.useEffect(()=>{
-        router.getFetcher(fetcherKey);
-        return ()=>{
-            // Tell the router we've unmounted - if v7_fetcherPersist is enabled this
-            // will not delete immediately but instead queue up a delete after the
-            // fetcher returns to an `idle` state
-            router.deleteFetcher(fetcherKey);
-        };
-    }, [
-        router,
-        fetcherKey
-    ]);
-    // Fetcher additions
-    let load = _react.useCallback((href, opts)=>{
-        !routeId && (0, _router.UNSAFE_invariant)(false, "No routeId available for fetcher.load()");
-        router.fetch(fetcherKey, routeId, href, opts);
-    }, [
-        fetcherKey,
-        routeId,
-        router
-    ]);
-    let submitImpl = useSubmit();
-    let submit = _react.useCallback((target, opts)=>{
-        submitImpl(target, _extends({}, opts, {
-            navigate: false,
-            fetcherKey
-        }));
-    }, [
-        fetcherKey,
-        submitImpl
-    ]);
-    let FetcherForm = _react.useMemo(()=>{
-        let FetcherForm = /*#__PURE__*/ _react.forwardRef((props, ref)=>{
-            return /*#__PURE__*/ _react.createElement(Form, _extends({}, props, {
-                navigate: false,
-                fetcherKey: fetcherKey,
-                ref: ref
-            }));
-        });
-        FetcherForm.displayName = "fetcher.Form";
-        return FetcherForm;
-    }, [
-        fetcherKey
-    ]);
-    // Exposed FetcherWithComponents
-    let fetcher = state.fetchers.get(fetcherKey) || (0, _router.IDLE_FETCHER);
-    let data = fetcherData.get(fetcherKey);
-    let fetcherWithComponents = _react.useMemo(()=>_extends({
-            Form: FetcherForm,
-            submit,
-            load
-        }, fetcher, {
-            data
-        }), [
-        FetcherForm,
-        submit,
-        load,
-        fetcher,
-        data
-    ]);
-    return fetcherWithComponents;
-}
-/**
- * Provides all fetchers currently on the page. Useful for layouts and parent
- * routes that need to provide pending/optimistic UI regarding the fetch.
- */ function useFetchers() {
-    let state = useDataRouterState(DataRouterStateHook.UseFetchers);
-    return Array.from(state.fetchers.entries()).map((_ref11)=>{
-        let [key, fetcher] = _ref11;
-        return _extends({}, fetcher, {
-            key
-        });
-    });
-}
-const SCROLL_RESTORATION_STORAGE_KEY = "react-router-scroll-positions";
-let savedScrollPositions = {};
-/**
- * When rendered inside a RouterProvider, will restore scroll positions on navigations
- */ function useScrollRestoration(_temp4) {
-    let { getKey, storageKey } = _temp4 === void 0 ? {} : _temp4;
-    let { router } = useDataRouterContext(DataRouterHook.UseScrollRestoration);
-    let { restoreScrollPosition, preventScrollReset } = useDataRouterState(DataRouterStateHook.UseScrollRestoration);
-    let { basename } = _react.useContext((0, _reactRouter.UNSAFE_NavigationContext));
-    let location = (0, _reactRouter.useLocation)();
-    let matches = (0, _reactRouter.useMatches)();
-    let navigation = (0, _reactRouter.useNavigation)();
-    // Trigger manual scroll restoration while we're active
-    _react.useEffect(()=>{
-        window.history.scrollRestoration = "manual";
-        return ()=>{
-            window.history.scrollRestoration = "auto";
-        };
-    }, []);
-    // Save positions on pagehide
-    usePageHide(_react.useCallback(()=>{
-        if (navigation.state === "idle") {
-            let key = (getKey ? getKey(location, matches) : null) || location.key;
-            savedScrollPositions[key] = window.scrollY;
-        }
-        try {
-            sessionStorage.setItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY, JSON.stringify(savedScrollPositions));
-        } catch (error) {
-            (0, _router.UNSAFE_warning)(false, "Failed to save scroll positions in sessionStorage, <ScrollRestoration /> will not work properly (" + error + ").");
-        }
-        window.history.scrollRestoration = "auto";
-    }, [
-        storageKey,
-        getKey,
-        navigation.state,
-        location,
-        matches
-    ]));
-    // Read in any saved scroll locations
-    if (typeof document !== "undefined") {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        _react.useLayoutEffect(()=>{
-            try {
-                let sessionPositions = sessionStorage.getItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY);
-                if (sessionPositions) savedScrollPositions = JSON.parse(sessionPositions);
-            } catch (e) {
-            // no-op, use default empty object
-            }
-        }, [
-            storageKey
-        ]);
-        // Enable scroll restoration in the router
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        _react.useLayoutEffect(()=>{
-            let getKeyWithoutBasename = getKey && basename !== "/" ? (location, matches)=>getKey(_extends({}, location, {
-                    pathname: (0, _router.stripBasename)(location.pathname, basename) || location.pathname
-                }), matches) : getKey;
-            let disableScrollRestoration = router == null ? void 0 : router.enableScrollRestoration(savedScrollPositions, ()=>window.scrollY, getKeyWithoutBasename);
-            return ()=>disableScrollRestoration && disableScrollRestoration();
-        }, [
-            router,
-            basename,
-            getKey
-        ]);
-        // Restore scrolling when state.restoreScrollPosition changes
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        _react.useLayoutEffect(()=>{
-            // Explicit false means don't do anything (used for submissions)
-            if (restoreScrollPosition === false) return;
-            // been here before, scroll to it
-            if (typeof restoreScrollPosition === "number") {
-                window.scrollTo(0, restoreScrollPosition);
-                return;
-            }
-            // try to scroll to the hash
-            if (location.hash) {
-                let el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-                if (el) {
-                    el.scrollIntoView();
-                    return;
-                }
-            }
-            // Don't reset if this navigation opted out
-            if (preventScrollReset === true) return;
-            // otherwise go to the top on new locations
-            window.scrollTo(0, 0);
-        }, [
-            location,
-            restoreScrollPosition,
-            preventScrollReset
-        ]);
-    }
-}
-/**
- * Setup a callback to be fired on the window's `beforeunload` event. This is
- * useful for saving some data to `window.localStorage` just before the page
- * refreshes.
- *
- * Note: The `callback` argument should be a function created with
- * `React.useCallback()`.
- */ function useBeforeUnload(callback, options) {
-    let { capture } = options || {};
-    _react.useEffect(()=>{
-        let opts = capture != null ? {
-            capture
-        } : undefined;
-        window.addEventListener("beforeunload", callback, opts);
-        return ()=>{
-            window.removeEventListener("beforeunload", callback, opts);
-        };
-    }, [
-        callback,
-        capture
-    ]);
-}
-/**
- * Setup a callback to be fired on the window's `pagehide` event. This is
- * useful for saving some data to `window.localStorage` just before the page
- * refreshes.  This event is better supported than beforeunload across browsers.
- *
- * Note: The `callback` argument should be a function created with
- * `React.useCallback()`.
- */ function usePageHide(callback, options) {
-    let { capture } = options || {};
-    _react.useEffect(()=>{
-        let opts = capture != null ? {
-            capture
-        } : undefined;
-        window.addEventListener("pagehide", callback, opts);
-        return ()=>{
-            window.removeEventListener("pagehide", callback, opts);
-        };
-    }, [
-        callback,
-        capture
-    ]);
-}
-/**
- * Wrapper around useBlocker to show a window.confirm prompt to users instead
- * of building a custom UI with useBlocker.
- *
- * Warning: This has *a lot of rough edges* and behaves very differently (and
- * very incorrectly in some cases) across browsers if user click addition
- * back/forward navigations while the confirm is open.  Use at your own risk.
- */ function usePrompt(_ref12) {
-    let { when, message } = _ref12;
-    let blocker = (0, _reactRouter.useBlocker)(when);
-    _react.useEffect(()=>{
-        if (blocker.state === "blocked") {
-            let proceed = window.confirm(message);
-            if (proceed) // This timeout is needed to avoid a weird "race" on POP navigations
-            // between the `window.history` revert navigation and the result of
-            // `window.confirm`
-            setTimeout(blocker.proceed, 0);
-            else blocker.reset();
-        }
-    }, [
-        blocker,
-        message
-    ]);
-    _react.useEffect(()=>{
-        if (blocker.state === "blocked" && !when) blocker.reset();
-    }, [
-        blocker,
-        when
-    ]);
-}
-/**
- * Return a boolean indicating if there is an active view transition to the
- * given href.  You can use this value to render CSS classes or viewTransitionName
- * styles onto your elements
- *
- * @param href The destination href
- * @param [opts.relative] Relative routing type ("route" | "path")
- */ function useViewTransitionState(to, opts) {
-    if (opts === void 0) opts = {};
-    let vtContext = _react.useContext(ViewTransitionContext);
-    !(vtContext != null) && (0, _router.UNSAFE_invariant)(false, "`unstable_useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?");
-    let { basename } = useDataRouterContext(DataRouterHook.useViewTransitionState);
-    let path = (0, _reactRouter.useResolvedPath)(to, {
-        relative: opts.relative
-    });
-    if (!vtContext.isTransitioning) return false;
-    let currentPath = (0, _router.stripBasename)(vtContext.currentLocation.pathname, basename) || vtContext.currentLocation.pathname;
-    let nextPath = (0, _router.stripBasename)(vtContext.nextLocation.pathname, basename) || vtContext.nextLocation.pathname;
-    // Transition is active if we're going to or coming from the indicated
-    // destination.  This ensures that other PUSH navigations that reverse
-    // an indicated transition apply.  I.e., on the list view you have:
-    //
-    //   <NavLink to="/details/1" unstable_viewTransition>
-    //
-    // If you click the breadcrumb back to the list view:
-    //
-    //   <NavLink to="/list" unstable_viewTransition>
-    //
-    // We should apply the transition because it's indicated as active going
-    // from /list -> /details/1 and therefore should be active on the reverse
-    // (even though this isn't strictly a POP reverse)
-    return (0, _router.matchPath)(path.pathname, nextPath) != null || (0, _router.matchPath)(path.pathname, currentPath) != null;
-}
-
-},{"react":"21dqq","react-dom":"j6uA9","react-router":"dbWyW","@remix-run/router":"5ncDG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dbWyW":[function(require,module,exports) {
+},{}],"dbWyW":[function(require,module,exports) {
 /**
  * React Router v6.20.0
  *
@@ -35207,935 +35189,7 @@ module.exports = require("374a059340689e89");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"8b38fc6c74f16e20":"21dqq"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
-var _restaurantCard = require("./RestaurantCard");
-var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _useRestaurantList = require("../utilities/useRestaurantList");
-var _useRestaurantListDefault = parcelHelpers.interopDefault(_useRestaurantList);
-var _useOnlineStatus = require("../utilities/useOnlineStatus");
-var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
-var _networkStatus = require("./NetworkStatus");
-var _networkStatusDefault = parcelHelpers.interopDefault(_networkStatus);
-var _s = $RefreshSig$();
-const Body = ()=>{
-    _s();
-    const [filterRestaurants, setFilterRestaurants] = (0, _react.useState)([]);
-    const [searchText, setSearchText] = (0, _react.useState)("");
-    const listOfRestaurants = (0, _useRestaurantListDefault.default)();
-    const onlineStatus = (0, _useOnlineStatusDefault.default)();
-    //This is a higher order component that we passed in the RestaurantCard which returns a new component.
-    const RestaurantPromotedLabel = (0, _restaurantCard.withPromotedLabel)((0, _restaurantCardDefault.default));
-    (0, _react.useEffect)(()=>{
-        setFilterRestaurants(listOfRestaurants);
-    }, [
-        listOfRestaurants
-    ]);
-    const handleSearch = ()=>{
-        let filterSearch = listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()) || res.info.cuisines.includes(searchText));
-        if (filterSearch.length === 0) ;
-        else setFilterRestaurants(filterSearch);
-    };
-    if (!onlineStatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 39,
-        columnNumber: 12
-    }, undefined);
-    if (!filterRestaurants?.length) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 43,
-        columnNumber: 12
-    }, undefined);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "body",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "description",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 50,
-                        columnNumber: 5
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: "Explore the finest food and drinks in the city of PUNE"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 51,
-                        columnNumber: 7
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 49,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "search-bar",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                            className: "input-bar",
-                            autocomplete: "false",
-                            name: "hidden",
-                            type: "text",
-                            placeholder: "Satisfy your hunger now !",
-                            id: "searchInp",
-                            value: searchText,
-                            onChange: (event)=>{
-                                setSearchText(event.target.value);
-                                handleSearch(); // Trigger the search on every change.
-                            },
-                            onKeyDown: (event)=>{
-                                if (event.key === "Enter") handleSearch(); // You can keep this for users who prefer to press Enter.
-                            }
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 55,
-                            columnNumber: 3
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "button-container",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                "data-testid": "clickSearchButton",
-                                id: "searchBtn",
-                                onClick: handleSearch,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    height: "16",
-                                    width: "16",
-                                    viewBox: "0 0 512 512",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
-                                        fill: "#fc9a01",
-                                        d: "M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Body.js",
-                                        lineNumber: 74,
-                                        columnNumber: 17
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 73,
-                                    columnNumber: 15
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 72,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 71,
-                            columnNumber: 1
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 54,
-                    columnNumber: 9
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 53,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter-Buttons rounded-lg hover:ring-offset-zinc-900 ",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "finder-btns",
-                        onClick: ()=>{
-                            const filteredLists = listOfRestaurants.filter((res)=>res.info.avgRating > 4);
-                            setFilterRestaurants(filteredLists);
-                        },
-                        children: "Top Rated Restaurants"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 82,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "finder-btns",
-                        onClick: ()=>{
-                            const findVegRestaurants = listOfRestaurants.filter((res)=>res.info.veg === true);
-                            setFilterRestaurants(findVegRestaurants);
-                        },
-                        children: "Pure Veg"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 92,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "finder-btns",
-                        onClick: ()=>{
-                            const fastestDeliveryTime = listOfRestaurants.filter((res)=>res.info.sla.deliveryTime <= 20);
-                            setFilterRestaurants(fastestDeliveryTime);
-                        },
-                        children: "Fastest Delivery"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 102,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 81,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restaurant-container",
-                children: filterRestaurants?.map((restaurant)=>// Linking each restaurant card to its details page
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                        to: "/restaurants/" + restaurant.info.id,
-                        children: restaurant.info.veg ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantPromotedLabel, {
-                            restaurantData: restaurant
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 124,
-                            columnNumber: 3
-                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
-                            restaurantData: restaurant
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 126,
-                            columnNumber: 9
-                        }, undefined)
-                    }, restaurant.info.id, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 117,
-                        columnNumber: 11
-                    }, undefined))
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 114,
-                columnNumber: 6
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Body.js",
-        lineNumber: 48,
-        columnNumber: 5
-    }, undefined);
-};
-_s(Body, "tWF16JyOoEcJ2RCkLT+/mRGROq4=", false, function() {
-    return [
-        (0, _useRestaurantListDefault.default),
-        (0, _useOnlineStatusDefault.default)
-    ];
-});
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe","./RestaurantCard":"bMboU","./Shimmer":"g6ZGj","../utilities/useRestaurantList":"8zILp","../utilities/useOnlineStatus":"boI62","./NetworkStatus":"fg9LP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ffb1.prelude(module);
-
-try {
-// Importing necessary dependencies
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "withPromotedLabel", ()=>withPromotedLabel);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("../utilities/config");
-var _displayPromoted = require("./DisplayPromoted");
-var _displayPromotedDefault = parcelHelpers.interopDefault(_displayPromoted);
-// Defining the RestaurantCard component
-const RestaurantCard = (props)=>{
-    // Destructuring the props to get the restaurantData object
-    const { restaurantData } = props;
-    // Destructuring values from the restaurantData object
-    const { name, cloudinaryImageId, avgRating, costForTwo, areaName, cuisines, locality } = restaurantData?.info;
-    const { slaString } = restaurantData?.info.sla;
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restaurant-list",
-        "data-testid": "restaurantList",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "place",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "list-item",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "item-content",
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "top-image",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "res-img",
-                                alt: "Res-image",
-                                src: (0, _config.CDN_URL) + cloudinaryImageId
-                            }, void 0, false, {
-                                fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 23,
-                                columnNumber: 15
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 21,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "place-name-div",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "name",
-                                    children: name
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 26,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "food-list",
-                                    children: cuisines.slice(0, 4).join(" , ")
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 31,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 25,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "info-div",
-                            children: [
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "ratings",
-                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                        children: [
-                                            " ",
-                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                                className: "ri-star-fill"
-                                            }, void 0, false, {
-                                                fileName: "src/components/RestaurantCard.js",
-                                                lineNumber: 35,
-                                                columnNumber: 45
-                                            }, undefined),
-                                            " ",
-                                            avgRating
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "src/components/RestaurantCard.js",
-                                        lineNumber: 35,
-                                        columnNumber: 38
-                                    }, undefined)
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 35,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "dot",
-                                    children: "."
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 36,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "time",
-                                    children: slaString
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 37,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "dot",
-                                    children: "."
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 38,
-                                    columnNumber: 13
-                                }, undefined),
-                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "price",
-                                    children: costForTwo
-                                }, void 0, false, {
-                                    fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 39,
-                                    columnNumber: 13
-                                }, undefined)
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 33,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "address",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                className: "sNAfh",
-                                children: [
-                                    locality,
-                                    " | ",
-                                    areaName
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 43,
-                                columnNumber: 13
-                            }, undefined)
-                        }, void 0, false, {
-                            fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 41,
-                            columnNumber: 11
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 20,
-                    columnNumber: 11
-                }, undefined)
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 19,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
-            fileName: "src/components/RestaurantCard.js",
-            lineNumber: 18,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/RestaurantCard.js",
-        lineNumber: 17,
-        columnNumber: 5
-    }, undefined);
-};
-_c = RestaurantCard;
-// Exporting the RestaurantCard component
-exports.default = RestaurantCard;
-const withPromotedLabel = (RestaurantCard)=>{
-    return (props)=>{
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _displayPromotedDefault.default), {}, void 0, false, {
-                    fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 63,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
-                    ...props
-                }, void 0, false, {
-                    fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 65,
-                    columnNumber: 1
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/RestaurantCard.js",
-            lineNumber: 61,
-            columnNumber: 1
-        }, undefined);
-    };
-};
-var _c;
-$RefreshReg$(_c, "RestaurantCard");
-
-  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","./DisplayPromoted":"6Mt7E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6Mt7E":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d5c8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d5c8.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _displayVegLogo = require("./DisplayVegLogo");
-var _displayVegLogoDefault = parcelHelpers.interopDefault(_displayVegLogo);
-const DisplayPromoted = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "display-veg-only",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "promo-status",
-                children: "Promoted"
-            }, void 0, false, {
-                fileName: "src/components/DisplayPromoted.js",
-                lineNumber: 6,
-                columnNumber: 1
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _displayVegLogoDefault.default), {}, void 0, false, {
-                fileName: "src/components/DisplayPromoted.js",
-                lineNumber: 7,
-                columnNumber: 1
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/DisplayPromoted.js",
-        lineNumber: 5,
-        columnNumber: 5
-    }, undefined);
-};
-_c = DisplayPromoted;
-exports.default = DisplayPromoted;
-var _c;
-$RefreshReg$(_c, "DisplayPromoted");
-
-  $parcel$ReactRefreshHelpers$d5c8.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./DisplayVegLogo":"6RbAz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6RbAz":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$3dec = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$3dec.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _purevegLogoOnePng = require("/src/assets/Images/pureveg-logo-one.png");
-var _purevegLogoOnePngDefault = parcelHelpers.interopDefault(_purevegLogoOnePng);
-const DisplayVegLogo = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            className: "green-trademark",
-            src: (0, _purevegLogoOnePngDefault.default)
-        }, void 0, false, {
-            fileName: "src/components/DisplayVegLogo.js",
-            lineNumber: 6,
-            columnNumber: 1
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/DisplayVegLogo.js",
-        lineNumber: 5,
-        columnNumber: 1
-    }, undefined);
-};
-_c = DisplayVegLogo;
-exports.default = DisplayVegLogo;
-var _c;
-$RefreshReg$(_c, "DisplayVegLogo");
-
-  $parcel$ReactRefreshHelpers$3dec.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","/src/assets/Images/pureveg-logo-one.png":"lxBe9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lxBe9":[function(require,module,exports) {
-module.exports = require("4d32cec8e11c3388").getBundleURL("aXMci") + "pureveg-logo-one.4f949672.png" + "?" + Date.now();
-
-},{"4d32cec8e11c3388":"lgJ39"}],"lgJ39":[function(require,module,exports) {
-"use strict";
-var bundleURL = {};
-function getBundleURLCached(id) {
-    var value = bundleURL[id];
-    if (!value) {
-        value = getBundleURL();
-        bundleURL[id] = value;
-    }
-    return value;
-}
-function getBundleURL() {
-    try {
-        throw new Error();
-    } catch (err) {
-        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
-        if (matches) // The first two stack frames will be this function and getBundleURLCached.
-        // Use the 3rd one, which will be a runtime in the original bundle.
-        return getBaseURL(matches[2]);
-    }
-    return "/";
-}
-function getBaseURL(url) {
-    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
-}
-// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
-function getOrigin(url) {
-    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
-    if (!matches) throw new Error("Origin not found");
-    return matches[0];
-}
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-exports.getOrigin = getOrigin;
-
-},{}],"g6ZGj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0b04.prelude(module);
-
-try {
-// Importing ShimmerCard component
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _shimmerCard = require("./ShimmerCard");
-var _shimmerCardDefault = parcelHelpers.interopDefault(_shimmerCard);
-// Defining the Shimmer component
-const Shimmer = ()=>{
-    return(// JSX structure for the Shimmer component
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-container",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "shimmer-cards",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 11,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 12,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 13,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 14,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 15,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 16,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 17,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 18,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 19,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 21,
-                    columnNumber: 9
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
-                    fileName: "src/components/Shimmer.js",
-                    lineNumber: 22,
-                    columnNumber: 9
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/Shimmer.js",
-            lineNumber: 9,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/Shimmer.js",
-        lineNumber: 8,
-        columnNumber: 5
-    }, undefined));
-};
-_c = Shimmer;
-// Exporting the Shimmer component
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$0b04.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./ShimmerCard":"9TeFE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9TeFE":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$7869 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$7869.prelude(module);
-
-try {
-// Defining the ShimmerCard component
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const ShimmerCard = ()=>{
-    return(// JSX structure for the ShimmerCard component
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-card stroke animate",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                className: "loading-spinner",
-                src: "https://i.pinimg.com/originals/c4/cb/9a/c4cb9abc7c69713e7e816e6a624ce7f8.gif"
-            }, void 0, false, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 6,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-inner",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "div2"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 10,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "div1main",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "div1left"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 13,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "div1mid"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 14,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "div1right"
-                            }, void 0, false, {
-                                fileName: "src/components/ShimmerCard.js",
-                                lineNumber: 15,
-                                columnNumber: 11
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "div2"
-                    }, void 0, false, {
-                        fileName: "src/components/ShimmerCard.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/ShimmerCard.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/ShimmerCard.js",
-        lineNumber: 5,
-        columnNumber: 5
-    }, undefined));
-};
-_c = ShimmerCard;
-// Exporting the ShimmerCard component
-exports.default = ShimmerCard;
-var _c;
-$RefreshReg$(_c, "ShimmerCard");
-
-  $parcel$ReactRefreshHelpers$7869.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8zILp":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$97ae = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$97ae.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _config = require("./config");
-var _react = require("react");
-var _s = $RefreshSig$();
-const useRestaurantList = ()=>{
-    _s();
-    // State variables using the useState hook
-    const [listOfRestaurants, setlistOfRestaurants] = (0, _react.useState)([]);
-    // useEffect hook to fetch data when the component mounts
-    (0, _react.useEffect)(()=>{
-        fetchData();
-    }, []);
-    // Async function to fetch restaurant data
-    const fetchData = async ()=>{
-        // Fetching data from the specified API
-        const data = await fetch((0, _config.CORS_URL) + (0, _config.API_URL));
-        const json = await data.json();
-        // Setting the state variables with restaurant data
-        setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    };
-    return listOfRestaurants;
-};
-_s(useRestaurantList, "kMT43ODGki7ra3lA5UXdz9Z/TR8=");
-exports.default = useRestaurantList;
-
-  $parcel$ReactRefreshHelpers$97ae.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"./config":"di7hi","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"boI62":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$8a9a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$8a9a.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _s = $RefreshSig$();
-const useOnlineStatus = ()=>{
-    _s();
-    const [onlineStatus, setOnlineStatus] = (0, _react.useState)(true);
-    //Lets add an useEffect hook it renders after the component and it will be render only at once intial render.
-    (0, _react.useEffect)(()=>{
-        //Lets add an eventlistener when the user an `offline` event  status there will be  `false` value.
-        //The offline event of the Window interface is fired when the browser has lost access to the network and the value of Navigator.
-        window.addEventListener("offline", ()=>{
-            setOnlineStatus(false);
-        });
-        //Likewise,When the user an online status there will be `true` value.
-        //The online event of the Window interface is fired when the browser has gained access to the network and the value of Navigator.
-        window.addEventListener("online", ()=>{
-            setOnlineStatus(true);
-        });
-    }, []);
-    return onlineStatus;
-};
-_s(useOnlineStatus, "MuRHT4nbzkgOPnMMlqOE75+HU4c=");
-exports.default = useOnlineStatus;
-
-  $parcel$ReactRefreshHelpers$8a9a.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fg9LP":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$a0bb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$a0bb.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _networkerrorimagePng = require("/src/assets/Images/networkerrorimage.png");
-var _networkerrorimagePngDefault = parcelHelpers.interopDefault(_networkerrorimagePng);
-const NetworkStatus = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "nDVxx",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "_3vspF",
-            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "hFjjz",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        src: (0, _networkerrorimagePngDefault.default),
-                        alt: "Network Error"
-                    }, void 0, false, {
-                        fileName: "src/components/NetworkStatus.js",
-                        lineNumber: 8,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "_3Ognu",
-                        children: "Connection Error"
-                    }, void 0, false, {
-                        fileName: "src/components/NetworkStatus.js",
-                        lineNumber: 9,
-                        columnNumber: 11
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "_1CN4Y",
-                        children: "Please check your internet connection and try again."
-                    }, void 0, false, {
-                        fileName: "src/components/NetworkStatus.js",
-                        lineNumber: 10,
-                        columnNumber: 11
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/NetworkStatus.js",
-                lineNumber: 7,
-                columnNumber: 9
-            }, undefined)
-        }, void 0, false, {
-            fileName: "src/components/NetworkStatus.js",
-            lineNumber: 6,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/NetworkStatus.js",
-        lineNumber: 5,
-        columnNumber: 5
-    }, undefined);
-};
-_c = NetworkStatus;
-exports.default = NetworkStatus;
-var _c;
-$RefreshReg$(_c, "NetworkStatus");
-
-  $parcel$ReactRefreshHelpers$a0bb.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/assets/Images/networkerrorimage.png":"c21PL"}],"c21PL":[function(require,module,exports) {
-module.exports = require("dd0c5b56d5d72d21").getBundleURL("aXMci") + "networkerrorimage.aecf35e7.png" + "?" + Date.now();
-
-},{"dd0c5b56d5d72d21":"lgJ39"}],"8pPOA":[function(require,module,exports) {
+},{"8b38fc6c74f16e20":"21dqq"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37047,7 +36101,206 @@ $RefreshReg$(_c, "RestaurantInfo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","./Shimmer":"g6ZGj","./RestaurantCategory":"K7XHe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"K7XHe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","./Shimmer":"g6ZGj","./RestaurantCategory":"K7XHe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+// Importing ShimmerCard component
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _shimmerCard = require("./ShimmerCard");
+var _shimmerCardDefault = parcelHelpers.interopDefault(_shimmerCard);
+// Defining the Shimmer component
+const Shimmer = ()=>{
+    return(// JSX structure for the Shimmer component
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "shimmer-cards",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 13,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 15,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 17,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 19,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 21,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardDefault.default), {}, void 0, false, {
+                    fileName: "src/components/Shimmer.js",
+                    lineNumber: 22,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Shimmer.js",
+            lineNumber: 9,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 8,
+        columnNumber: 5
+    }, undefined));
+};
+_c = Shimmer;
+// Exporting the Shimmer component
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./ShimmerCard":"9TeFE","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9TeFE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$7869 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$7869.prelude(module);
+
+try {
+// Defining the ShimmerCard component
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerCard = ()=>{
+    return(// JSX structure for the ShimmerCard component
+    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-card stroke animate",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                className: "loading-spinner",
+                src: "https://i.pinimg.com/originals/c4/cb/9a/c4cb9abc7c69713e7e816e6a624ce7f8.gif"
+            }, void 0, false, {
+                fileName: "src/components/ShimmerCard.js",
+                lineNumber: 6,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-inner",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "div2"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerCard.js",
+                        lineNumber: 10,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "div1main",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "div1left"
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerCard.js",
+                                lineNumber: 13,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "div1mid"
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerCard.js",
+                                lineNumber: 14,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "div1right"
+                            }, void 0, false, {
+                                fileName: "src/components/ShimmerCard.js",
+                                lineNumber: 15,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/ShimmerCard.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "div2"
+                    }, void 0, false, {
+                        fileName: "src/components/ShimmerCard.js",
+                        lineNumber: 18,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/ShimmerCard.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/ShimmerCard.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined));
+};
+_c = ShimmerCard;
+// Exporting the ShimmerCard component
+exports.default = ShimmerCard;
+var _c;
+$RefreshReg$(_c, "ShimmerCard");
+
+  $parcel$ReactRefreshHelpers$7869.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"K7XHe":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b1f7 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -37184,6 +36437,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _reactRedux = require("react-redux");
 var _config = require("../utilities/config");
 var _cartSlice = require("../utilities/cartSlice");
+var _reactToastify = require("react-toastify");
+var _reactToastifyCss = require("react-toastify/dist/ReactToastify.css");
 var _s = $RefreshSig$();
 const ItemsList = (props)=>{
     _s();
@@ -37196,6 +36451,7 @@ const ItemsList = (props)=>{
         // updatedCounts[item.card.info.id] = (updatedCounts[item.card.info.id] || 0) + 1;
         // setItemCounts(updatedCounts);
         dispatch((0, _cartSlice.addItem)(item));
+        (0, _reactToastify.toast).success(`Added ${item.card.info.name}`);
     };
     // const handleRemoveItem = (item) => {
     //   if (itemCounts[item.card.info.id] === 0 || !itemCounts[item.card.info.id]) {
@@ -37218,7 +36474,7 @@ const ItemsList = (props)=>{
                                 children: item.card.info.name
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 39,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -37229,20 +36485,20 @@ const ItemsList = (props)=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 40,
+                                lineNumber: 42,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: item.card.info.description
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 41,
+                                lineNumber: 43,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ItemsList.js",
-                        lineNumber: 38,
+                        lineNumber: 40,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37253,7 +36509,7 @@ const ItemsList = (props)=>{
                                 alt: "Item"
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 44,
+                                lineNumber: 46,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -37263,29 +36519,29 @@ const ItemsList = (props)=>{
                                     children: "Add"
                                 }, void 0, false, {
                                     fileName: "src/components/ItemsList.js",
-                                    lineNumber: 48,
+                                    lineNumber: 50,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 45,
+                                lineNumber: 47,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ItemsList.js",
-                        lineNumber: 43,
+                        lineNumber: 45,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, item.card.info.id, true, {
                 fileName: "src/components/ItemsList.js",
-                lineNumber: 37,
+                lineNumber: 39,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/ItemsList.js",
-        lineNumber: 35,
+        lineNumber: 37,
         columnNumber: 5
     }, undefined);
 };
@@ -37304,7 +36560,7 @@ $RefreshReg$(_c, "ItemsList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cc8Uj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-toastify":"kSvyQ","react-toastify/dist/ReactToastify.css":"gJP2Y"}],"cc8Uj":[function(require,module,exports) {
 // cartSlice.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -37312,6 +36568,7 @@ parcelHelpers.export(exports, "addItem", ()=>addItem);
 parcelHelpers.export(exports, "removeItem", ()=>removeItem);
 parcelHelpers.export(exports, "decrementQty", ()=>decrementQty);
 parcelHelpers.export(exports, "clearCart", ()=>clearCart);
+parcelHelpers.export(exports, "incrementQty", ()=>incrementQty);
 var _toolkit = require("@reduxjs/toolkit");
 const cartSlice = (0, _toolkit.createSlice)({
     name: "cart",
@@ -37337,13 +36594,19 @@ const cartSlice = (0, _toolkit.createSlice)({
             const itemToDecrement = state.items.find((item)=>item.card.info.id === itemIdToDecrement);
             if (itemToDecrement && itemToDecrement.quantity > 1) itemToDecrement.quantity -= 1;
         },
+        incrementQty: (state, action)=>{
+            state.items = state.items.map((item)=>item.id === action.payload.id ? {
+                    ...item,
+                    qty: item.qty + 1
+                } : item);
+        },
         clearCart: (state)=>{
             state.items.length = 0 //[for an empty array]
             ;
         }
     }
 });
-const { addItem, removeItem, decrementQty, clearCart } = cartSlice.actions;
+const { addItem, removeItem, decrementQty, clearCart, incrementQty } = cartSlice.actions;
 exports.default = cartSlice.reducer; /// We can write in this way as well:-
  // export const addItem = cartSlice.actions.addItem;
  // export const clearCart = cartSlice.actions.clearCart;
@@ -41238,7 +40501,661 @@ function createThunkMiddleware(extraArgument) {
 var thunk = createThunkMiddleware();
 var withExtraArgument = createThunkMiddleware;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"mxqQc":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kSvyQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Bounce", ()=>H);
+parcelHelpers.export(exports, "Flip", ()=>Y);
+parcelHelpers.export(exports, "Icons", ()=>z);
+parcelHelpers.export(exports, "Slide", ()=>F);
+parcelHelpers.export(exports, "ToastContainer", ()=>Q);
+parcelHelpers.export(exports, "Zoom", ()=>X);
+parcelHelpers.export(exports, "collapseToast", ()=>f);
+parcelHelpers.export(exports, "cssTransition", ()=>g);
+parcelHelpers.export(exports, "toast", ()=>B);
+parcelHelpers.export(exports, "useToast", ()=>N);
+parcelHelpers.export(exports, "useToastContainer", ()=>L);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _clsx = require("clsx");
+var _clsxDefault = parcelHelpers.interopDefault(_clsx);
+"use client";
+const c = (e)=>"number" == typeof e && !isNaN(e), d = (e)=>"string" == typeof e, u = (e)=>"function" == typeof e, p = (e)=>d(e) || u(e) ? e : null, m = (e)=>(0, _react.isValidElement)(e) || d(e) || u(e) || c(e);
+function f(e, t, n) {
+    void 0 === n && (n = 300);
+    const { scrollHeight: o, style: s } = e;
+    requestAnimationFrame(()=>{
+        s.minHeight = "initial", s.height = o + "px", s.transition = `all ${n}ms`, requestAnimationFrame(()=>{
+            s.height = "0", s.padding = "0", s.margin = "0", setTimeout(t, n);
+        });
+    });
+}
+function g(t) {
+    let { enter: a, exit: r, appendPosition: i = !1, collapse: l = !0, collapseDuration: c = 300 } = t;
+    return function(t) {
+        let { children: d, position: u, preventExitTransition: p, done: m, nodeRef: g, isIn: y, playToast: v } = t;
+        const h = i ? `${a}--${u}` : a, T = i ? `${r}--${u}` : r, E = (0, _react.useRef)(0);
+        return (0, _react.useLayoutEffect)(()=>{
+            const e = g.current, t = h.split(" "), n = (o)=>{
+                o.target === g.current && (v(), e.removeEventListener("animationend", n), e.removeEventListener("animationcancel", n), 0 === E.current && "animationcancel" !== o.type && e.classList.remove(...t));
+            };
+            e.classList.add(...t), e.addEventListener("animationend", n), e.addEventListener("animationcancel", n);
+        }, []), (0, _react.useEffect)(()=>{
+            const e = g.current, t = ()=>{
+                e.removeEventListener("animationend", t), l ? f(e, m, c) : m();
+            };
+            y || (p ? t() : (E.current = 1, e.className += ` ${T}`, e.addEventListener("animationend", t)));
+        }, [
+            y
+        ]), (0, _reactDefault.default).createElement((0, _reactDefault.default).Fragment, null, d);
+    };
+}
+function y(e, t) {
+    return null != e ? {
+        content: e.content,
+        containerId: e.props.containerId,
+        id: e.props.toastId,
+        theme: e.props.theme,
+        type: e.props.type,
+        data: e.props.data || {},
+        isLoading: e.props.isLoading,
+        icon: e.props.icon,
+        status: t
+    } : {};
+}
+const v = new Map;
+let h = [];
+const T = new Set, E = (e)=>T.forEach((t)=>t(e)), b = ()=>v.size > 0;
+function I(e, t) {
+    var n;
+    if (t) return !(null == (n = v.get(t)) || !n.isToastActive(e));
+    let o = !1;
+    return v.forEach((t)=>{
+        t.isToastActive(e) && (o = !0);
+    }), o;
+}
+function _(e, t) {
+    m(e) && (b() || h.push({
+        content: e,
+        options: t
+    }), v.forEach((n)=>{
+        n.buildToast(e, t);
+    }));
+}
+function C(e, t) {
+    v.forEach((n)=>{
+        null != t && null != t && t.containerId ? (null == t ? void 0 : t.containerId) === n.id && n.toggle(e, null == t ? void 0 : t.id) : n.toggle(e, null == t ? void 0 : t.id);
+    });
+}
+function L(e) {
+    const { subscribe: o, getSnapshot: s, setProps: i } = (0, _react.useRef)(function(e) {
+        const n = e.containerId || 1;
+        return {
+            subscribe (o) {
+                const s = function(e, n, o) {
+                    let s = 1, r = 0, i = [], l = [], f = [], g = n;
+                    const v = new Map, h = new Set, T = ()=>{
+                        f = Array.from(v.values()), h.forEach((e)=>e());
+                    }, E = (e)=>{
+                        l = null == e ? [] : l.filter((t)=>t !== e), T();
+                    }, b = (e)=>{
+                        const { toastId: n, onOpen: s, updateId: a, children: r } = e.props, i = null == a;
+                        e.staleId && v.delete(e.staleId), v.set(n, e), l = [
+                            ...l,
+                            e.props.toastId
+                        ].filter((t)=>t !== e.staleId), T(), o(y(e, i ? "added" : "updated")), i && u(s) && s((0, _react.isValidElement)(r) && r.props);
+                    };
+                    return {
+                        id: e,
+                        props: g,
+                        observe: (e)=>(h.add(e), ()=>h.delete(e)),
+                        toggle: (e, t)=>{
+                            v.forEach((n)=>{
+                                null != t && t !== n.props.toastId || u(n.toggle) && n.toggle(e);
+                            });
+                        },
+                        removeToast: E,
+                        toasts: v,
+                        clearQueue: ()=>{
+                            r -= i.length, i = [];
+                        },
+                        buildToast: (n, l)=>{
+                            if (((t)=>{
+                                let { containerId: n, toastId: o, updateId: s } = t;
+                                const a = n ? n !== e : 1 !== e, r = v.has(o) && null == s;
+                                return a || r;
+                            })(l)) return;
+                            const { toastId: f, updateId: h, data: I, staleId: _, delay: C } = l, L = ()=>{
+                                E(f);
+                            }, N = null == h;
+                            N && r++;
+                            const $ = {
+                                ...g,
+                                style: g.toastStyle,
+                                key: s++,
+                                ...Object.fromEntries(Object.entries(l).filter((e)=>{
+                                    let [t, n] = e;
+                                    return null != n;
+                                })),
+                                toastId: f,
+                                updateId: h,
+                                data: I,
+                                closeToast: L,
+                                isIn: !1,
+                                className: p(l.className || g.toastClassName),
+                                bodyClassName: p(l.bodyClassName || g.bodyClassName),
+                                progressClassName: p(l.progressClassName || g.progressClassName),
+                                autoClose: !l.isLoading && (w = l.autoClose, k = g.autoClose, !1 === w || c(w) && w > 0 ? w : k),
+                                deleteToast () {
+                                    const e = v.get(f), { onClose: n, children: s } = e.props;
+                                    u(n) && n((0, _react.isValidElement)(s) && s.props), o(y(e, "removed")), v.delete(f), r--, r < 0 && (r = 0), i.length > 0 ? b(i.shift()) : T();
+                                }
+                            };
+                            var w, k;
+                            $.closeButton = g.closeButton, !1 === l.closeButton || m(l.closeButton) ? $.closeButton = l.closeButton : !0 === l.closeButton && ($.closeButton = !m(g.closeButton) || g.closeButton);
+                            let P = n;
+                            (0, _react.isValidElement)(n) && !d(n.type) ? P = (0, _react.cloneElement)(n, {
+                                closeToast: L,
+                                toastProps: $,
+                                data: I
+                            }) : u(n) && (P = n({
+                                closeToast: L,
+                                toastProps: $,
+                                data: I
+                            }));
+                            const M = {
+                                content: P,
+                                props: $,
+                                staleId: _
+                            };
+                            g.limit && g.limit > 0 && r > g.limit && N ? i.push(M) : c(C) ? setTimeout(()=>{
+                                b(M);
+                            }, C) : b(M);
+                        },
+                        setProps (e) {
+                            g = e;
+                        },
+                        setToggle: (e, t)=>{
+                            v.get(e).toggle = t;
+                        },
+                        isToastActive: (e)=>l.some((t)=>t === e),
+                        getSnapshot: ()=>g.newestOnTop ? f.reverse() : f
+                    };
+                }(n, e, E);
+                v.set(n, s);
+                const r = s.observe(o);
+                return h.forEach((e)=>_(e.content, e.options)), h = [], ()=>{
+                    r(), v.delete(n);
+                };
+            },
+            setProps (e) {
+                var t;
+                null == (t = v.get(n)) || t.setProps(e);
+            },
+            getSnapshot () {
+                var e;
+                return null == (e = v.get(n)) ? void 0 : e.getSnapshot();
+            }
+        };
+    }(e)).current;
+    i(e);
+    const l = (0, _react.useSyncExternalStore)(o, s, s);
+    return {
+        getToastToRender: function(e) {
+            if (!l) return [];
+            const t = new Map;
+            return l.forEach((e)=>{
+                const { position: n } = e.props;
+                t.has(n) || t.set(n, []), t.get(n).push(e);
+            }), Array.from(t, (t)=>e(t[0], t[1]));
+        },
+        isToastActive: I,
+        count: null == l ? void 0 : l.length
+    };
+}
+function N(e) {
+    const [t, o] = (0, _react.useState)(!1), [a, r] = (0, _react.useState)(!1), l = (0, _react.useRef)(null), c = (0, _react.useRef)({
+        start: 0,
+        delta: 0,
+        removalDistance: 0,
+        canCloseOnClick: !0,
+        canDrag: !1,
+        didMove: !1
+    }).current, { autoClose: d, pauseOnHover: u, closeToast: p, onClick: m, closeOnClick: f } = e;
+    var g, y;
+    function h() {
+        o(!0);
+    }
+    function T() {
+        o(!1);
+    }
+    function E(n) {
+        const o = l.current;
+        c.canDrag && o && (c.didMove = !0, t && T(), c.delta = "x" === e.draggableDirection ? n.clientX - c.start : n.clientY - c.start, c.start !== n.clientX && (c.canCloseOnClick = !1), o.style.transform = `translate3d(${"x" === e.draggableDirection ? `${c.delta}px, var(--y)` : `0, calc(${c.delta}px + var(--y))`},0)`, o.style.opacity = "" + (1 - Math.abs(c.delta / c.removalDistance)));
+    }
+    function b() {
+        document.removeEventListener("pointermove", E), document.removeEventListener("pointerup", b);
+        const t = l.current;
+        if (c.canDrag && c.didMove && t) {
+            if (c.canDrag = !1, Math.abs(c.delta) > c.removalDistance) return r(!0), e.closeToast(), void e.collapseAll();
+            t.style.transition = "transform 0.2s, opacity 0.2s", t.style.removeProperty("transform"), t.style.removeProperty("opacity");
+        }
+    }
+    null == (y = v.get((g = {
+        id: e.toastId,
+        containerId: e.containerId,
+        fn: o
+    }).containerId || 1)) || y.setToggle(g.id, g.fn), (0, _react.useEffect)(()=>{
+        if (e.pauseOnFocusLoss) return document.hasFocus() || T(), window.addEventListener("focus", h), window.addEventListener("blur", T), ()=>{
+            window.removeEventListener("focus", h), window.removeEventListener("blur", T);
+        };
+    }, [
+        e.pauseOnFocusLoss
+    ]);
+    const I = {
+        onPointerDown: function(t) {
+            if (!0 === e.draggable || e.draggable === t.pointerType) {
+                c.didMove = !1, document.addEventListener("pointermove", E), document.addEventListener("pointerup", b);
+                const n = l.current;
+                c.canCloseOnClick = !0, c.canDrag = !0, n.style.transition = "none", "x" === e.draggableDirection ? (c.start = t.clientX, c.removalDistance = n.offsetWidth * (e.draggablePercent / 100)) : (c.start = t.clientY, c.removalDistance = n.offsetHeight * (80 === e.draggablePercent ? 1.5 * e.draggablePercent : e.draggablePercent) / 100);
+            }
+        },
+        onPointerUp: function(t) {
+            const { top: n, bottom: o, left: s, right: a } = l.current.getBoundingClientRect();
+            "touchend" !== t.nativeEvent.type && e.pauseOnHover && t.clientX >= s && t.clientX <= a && t.clientY >= n && t.clientY <= o ? T() : h();
+        }
+    };
+    return d && u && (I.onMouseEnter = T, e.stacked || (I.onMouseLeave = h)), f && (I.onClick = (e)=>{
+        m && m(e), c.canCloseOnClick && p();
+    }), {
+        playToast: h,
+        pauseToast: T,
+        isRunning: t,
+        preventExitTransition: a,
+        toastRef: l,
+        eventHandlers: I
+    };
+}
+function $(t) {
+    let { delay: n, isRunning: o, closeToast: s, type: a = "default", hide: r, className: i, style: c, controlledProgress: d, progress: p, rtl: m, isIn: f, theme: g } = t;
+    const y = r || d && 0 === p, v = {
+        ...c,
+        animationDuration: `${n}ms`,
+        animationPlayState: o ? "running" : "paused"
+    };
+    d && (v.transform = `scaleX(${p})`);
+    const h = (0, _clsxDefault.default)("Toastify__progress-bar", d ? "Toastify__progress-bar--controlled" : "Toastify__progress-bar--animated", `Toastify__progress-bar-theme--${g}`, `Toastify__progress-bar--${a}`, {
+        "Toastify__progress-bar--rtl": m
+    }), T = u(i) ? i({
+        rtl: m,
+        type: a,
+        defaultClassName: h
+    }) : (0, _clsxDefault.default)(h, i), E = {
+        [d && p >= 1 ? "onTransitionEnd" : "onAnimationEnd"]: d && p < 1 ? null : ()=>{
+            f && s();
+        }
+    };
+    return (0, _reactDefault.default).createElement("div", {
+        className: "Toastify__progress-bar--wrp",
+        "data-hidden": y
+    }, (0, _reactDefault.default).createElement("div", {
+        className: `Toastify__progress-bar--bg Toastify__progress-bar-theme--${g} Toastify__progress-bar--${a}`
+    }), (0, _reactDefault.default).createElement("div", {
+        role: "progressbar",
+        "aria-hidden": y ? "true" : "false",
+        "aria-label": "notification timer",
+        className: T,
+        style: v,
+        ...E
+    }));
+}
+let w = 1;
+const k = ()=>"" + w++;
+function P(e) {
+    return e && (d(e.toastId) || c(e.toastId)) ? e.toastId : k();
+}
+function M(e, t) {
+    return _(e, t), t.toastId;
+}
+function x(e, t) {
+    return {
+        ...t,
+        type: t && t.type || e,
+        toastId: P(t)
+    };
+}
+function A(e) {
+    return (t, n)=>M(t, x(e, n));
+}
+function B(e, t) {
+    return M(e, x("default", t));
+}
+B.loading = (e, t)=>M(e, x("default", {
+        isLoading: !0,
+        autoClose: !1,
+        closeOnClick: !1,
+        closeButton: !1,
+        draggable: !1,
+        ...t
+    })), B.promise = function(e, t, n) {
+    let o, { pending: s, error: a, success: r } = t;
+    s && (o = d(s) ? B.loading(s, n) : B.loading(s.render, {
+        ...n,
+        ...s
+    }));
+    const i = {
+        isLoading: null,
+        autoClose: null,
+        closeOnClick: null,
+        closeButton: null,
+        draggable: null
+    }, l = (e, t, s)=>{
+        if (null == t) return void B.dismiss(o);
+        const a = {
+            type: e,
+            ...i,
+            ...n,
+            data: s
+        }, r = d(t) ? {
+            render: t
+        } : t;
+        return o ? B.update(o, {
+            ...a,
+            ...r
+        }) : B(r.render, {
+            ...a,
+            ...r
+        }), s;
+    }, c = u(e) ? e() : e;
+    return c.then((e)=>l("success", r, e)).catch((e)=>l("error", a, e)), c;
+}, B.success = A("success"), B.info = A("info"), B.error = A("error"), B.warning = A("warning"), B.warn = B.warning, B.dark = (e, t)=>M(e, x("default", {
+        theme: "dark",
+        ...t
+    })), B.dismiss = function(e) {
+    !function(e) {
+        var t;
+        if (b()) {
+            if (null == e || d(t = e) || c(t)) v.forEach((t)=>{
+                t.removeToast(e);
+            });
+            else if (e && ("containerId" in e || "id" in e)) {
+                var n;
+                (null == (n = v.get(e.containerId)) ? void 0 : n.removeToast(e.id)) || v.forEach((t)=>{
+                    t.removeToast(e.id);
+                });
+            }
+        } else h = h.filter((t)=>null != e && t.options.toastId !== e);
+    }(e);
+}, B.clearWaitingQueue = function(e) {
+    void 0 === e && (e = {}), v.forEach((t)=>{
+        !t.props.limit || e.containerId && t.id !== e.containerId || t.clearQueue();
+    });
+}, B.isActive = I, B.update = function(e, t) {
+    void 0 === t && (t = {});
+    const n = ((e, t)=>{
+        var n;
+        let { containerId: o } = t;
+        return null == (n = v.get(o || 1)) ? void 0 : n.toasts.get(e);
+    })(e, t);
+    if (n) {
+        const { props: o, content: s } = n, a = {
+            delay: 100,
+            ...o,
+            ...t,
+            toastId: t.toastId || e,
+            updateId: k()
+        };
+        a.toastId !== e && (a.staleId = e);
+        const r = a.render || s;
+        delete a.render, M(r, a);
+    }
+}, B.done = (e)=>{
+    B.update(e, {
+        progress: 1
+    });
+}, B.onChange = function(e) {
+    return T.add(e), ()=>{
+        T.delete(e);
+    };
+}, B.play = (e)=>C(!0, e), B.pause = (e)=>C(!1, e);
+const O = "undefined" != typeof window ? (0, _react.useLayoutEffect) : (0, _react.useEffect), D = (t)=>{
+    let { theme: n, type: o, isLoading: s, ...a } = t;
+    return (0, _reactDefault.default).createElement("svg", {
+        viewBox: "0 0 24 24",
+        width: "100%",
+        height: "100%",
+        fill: "colored" === n ? "currentColor" : `var(--toastify-icon-color-${o})`,
+        ...a
+    });
+}, z = {
+    info: function(t) {
+        return (0, _reactDefault.default).createElement(D, {
+            ...t
+        }, (0, _reactDefault.default).createElement("path", {
+            d: "M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0zm.25 5a1.5 1.5 0 11-1.5 1.5 1.5 1.5 0 011.5-1.5zm2.25 13.5h-4a1 1 0 010-2h.75a.25.25 0 00.25-.25v-4.5a.25.25 0 00-.25-.25h-.75a1 1 0 010-2h1a2 2 0 012 2v4.75a.25.25 0 00.25.25h.75a1 1 0 110 2z"
+        }));
+    },
+    warning: function(t) {
+        return (0, _reactDefault.default).createElement(D, {
+            ...t
+        }, (0, _reactDefault.default).createElement("path", {
+            d: "M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"
+        }));
+    },
+    success: function(t) {
+        return (0, _reactDefault.default).createElement(D, {
+            ...t
+        }, (0, _reactDefault.default).createElement("path", {
+            d: "M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+        }));
+    },
+    error: function(t) {
+        return (0, _reactDefault.default).createElement(D, {
+            ...t
+        }, (0, _reactDefault.default).createElement("path", {
+            d: "M11.983 0a12.206 12.206 0 00-8.51 3.653A11.8 11.8 0 000 12.207 11.779 11.779 0 0011.8 24h.214A12.111 12.111 0 0024 11.791 11.766 11.766 0 0011.983 0zM10.5 16.542a1.476 1.476 0 011.449-1.53h.027a1.527 1.527 0 011.523 1.47 1.475 1.475 0 01-1.449 1.53h-.027a1.529 1.529 0 01-1.523-1.47zM11 12.5v-6a1 1 0 012 0v6a1 1 0 11-2 0z"
+        }));
+    },
+    spinner: function() {
+        return (0, _reactDefault.default).createElement("div", {
+            className: "Toastify__spinner"
+        });
+    }
+}, R = (n)=>{
+    const { isRunning: o, preventExitTransition: s, toastRef: r, eventHandlers: i, playToast: c } = N(n), { closeButton: d, children: p, autoClose: m, onClick: f, type: g, hideProgressBar: y, closeToast: v, transition: h, position: T, className: E, style: b, bodyClassName: I, bodyStyle: _, progressClassName: C, progressStyle: L, updateId: w, role: k, progress: P, rtl: M, toastId: x, deleteToast: A, isIn: B, isLoading: O, closeOnClick: D, theme: R } = n, S = (0, _clsxDefault.default)("Toastify__toast", `Toastify__toast-theme--${R}`, `Toastify__toast--${g}`, {
+        "Toastify__toast--rtl": M
+    }, {
+        "Toastify__toast--close-on-click": D
+    }), H = u(E) ? E({
+        rtl: M,
+        position: T,
+        type: g,
+        defaultClassName: S
+    }) : (0, _clsxDefault.default)(S, E), F = function(e) {
+        let { theme: n, type: o, isLoading: s, icon: r } = e, i = null;
+        const l = {
+            theme: n,
+            type: o
+        };
+        return !1 === r || (u(r) ? i = r({
+            ...l,
+            isLoading: s
+        }) : (0, _react.isValidElement)(r) ? i = (0, _react.cloneElement)(r, l) : s ? i = z.spinner() : ((e)=>e in z)(o) && (i = z[o](l))), i;
+    }(n), X = !!P || !m, Y = {
+        closeToast: v,
+        type: g,
+        theme: R
+    };
+    let q = null;
+    return !1 === d || (q = u(d) ? d(Y) : (0, _react.isValidElement)(d) ? (0, _react.cloneElement)(d, Y) : function(t) {
+        let { closeToast: n, theme: o, ariaLabel: s = "close" } = t;
+        return (0, _reactDefault.default).createElement("button", {
+            className: `Toastify__close-button Toastify__close-button--${o}`,
+            type: "button",
+            onClick: (e)=>{
+                e.stopPropagation(), n(e);
+            },
+            "aria-label": s
+        }, (0, _reactDefault.default).createElement("svg", {
+            "aria-hidden": "true",
+            viewBox: "0 0 14 16"
+        }, (0, _reactDefault.default).createElement("path", {
+            fillRule: "evenodd",
+            d: "M7.71 8.23l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75L1 11.98l3.75-3.75L1 4.48 2.48 3l3.75 3.75L9.98 3l1.48 1.48-3.75 3.75z"
+        })));
+    }(Y)), (0, _reactDefault.default).createElement(h, {
+        isIn: B,
+        done: A,
+        position: T,
+        preventExitTransition: s,
+        nodeRef: r,
+        playToast: c
+    }, (0, _reactDefault.default).createElement("div", {
+        id: x,
+        onClick: f,
+        "data-in": B,
+        className: H,
+        ...i,
+        style: b,
+        ref: r
+    }, (0, _reactDefault.default).createElement("div", {
+        ...B && {
+            role: k
+        },
+        className: u(I) ? I({
+            type: g
+        }) : (0, _clsxDefault.default)("Toastify__toast-body", I),
+        style: _
+    }, null != F && (0, _reactDefault.default).createElement("div", {
+        className: (0, _clsxDefault.default)("Toastify__toast-icon", {
+            "Toastify--animate-icon Toastify__zoom-enter": !O
+        })
+    }, F), (0, _reactDefault.default).createElement("div", null, p)), q, (0, _reactDefault.default).createElement($, {
+        ...w && !X ? {
+            key: `pb-${w}`
+        } : {},
+        rtl: M,
+        theme: R,
+        delay: m,
+        isRunning: o,
+        isIn: B,
+        closeToast: v,
+        hide: y,
+        type: g,
+        style: L,
+        className: C,
+        controlledProgress: X,
+        progress: P || 0
+    })));
+}, S = function(e, t) {
+    return void 0 === t && (t = !1), {
+        enter: `Toastify--animate Toastify__${e}-enter`,
+        exit: `Toastify--animate Toastify__${e}-exit`,
+        appendPosition: t
+    };
+}, H = g(S("bounce", !0)), F = g(S("slide", !0)), X = g(S("zoom")), Y = g(S("flip")), q = {
+    position: "top-right",
+    transition: H,
+    autoClose: 5e3,
+    closeButton: !0,
+    pauseOnHover: !0,
+    pauseOnFocusLoss: !0,
+    draggable: "touch",
+    draggablePercent: 80,
+    draggableDirection: "x",
+    role: "alert",
+    theme: "light"
+};
+function Q(t) {
+    let o = {
+        ...q,
+        ...t
+    };
+    const s = t.stacked, [a, r] = (0, _react.useState)(!0), c = (0, _react.useRef)(null), { getToastToRender: d, isToastActive: m, count: f } = L(o), { className: g, style: y, rtl: v, containerId: h } = o;
+    function T(e) {
+        const t = (0, _clsxDefault.default)("Toastify__toast-container", `Toastify__toast-container--${e}`, {
+            "Toastify__toast-container--rtl": v
+        });
+        return u(g) ? g({
+            position: e,
+            rtl: v,
+            defaultClassName: t
+        }) : (0, _clsxDefault.default)(t, p(g));
+    }
+    function E() {
+        s && (r(!0), B.play());
+    }
+    return O(()=>{
+        if (s) {
+            var e;
+            const t = c.current.querySelectorAll('[data-in="true"]'), n = 12, s = null == (e = o.position) ? void 0 : e.includes("top");
+            let r = 0, i = 0;
+            Array.from(t).reverse().forEach((e, t)=>{
+                const o = e;
+                o.classList.add("Toastify__toast--stacked"), t > 0 && (o.dataset.collapsed = `${a}`), o.dataset.pos || (o.dataset.pos = s ? "top" : "bot");
+                const l = r * (a ? .2 : 1) + (a ? 0 : n * t);
+                o.style.setProperty("--y", `${s ? l : -1 * l}px`), o.style.setProperty("--g", `${n}`), o.style.setProperty("--s", "" + (1 - (a ? i : 0))), r += o.offsetHeight, i += .025;
+            });
+        }
+    }, [
+        a,
+        f,
+        s
+    ]), (0, _reactDefault.default).createElement("div", {
+        ref: c,
+        className: "Toastify",
+        id: h,
+        onMouseEnter: ()=>{
+            s && (r(!1), B.pause());
+        },
+        onMouseLeave: E
+    }, d((t, n)=>{
+        const o = n.length ? {
+            ...y
+        } : {
+            ...y,
+            pointerEvents: "none"
+        };
+        return (0, _reactDefault.default).createElement("div", {
+            className: T(t),
+            style: o,
+            key: `container-${t}`
+        }, n.map((t)=>{
+            let { content: n, props: o } = t;
+            return (0, _reactDefault.default).createElement(R, {
+                ...o,
+                stacked: s,
+                collapseAll: E,
+                isIn: m(o.toastId, o.containerId),
+                style: o.style,
+                key: `toast-${o.key}`
+            }, n);
+        }));
+    }));
+}
+
+},{"react":"21dqq","clsx":"gocd3","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gocd3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "clsx", ()=>clsx);
+function r(e) {
+    var t, f, n = "";
+    if ("string" == typeof e || "number" == typeof e) n += e;
+    else if ("object" == typeof e) {
+        if (Array.isArray(e)) {
+            var o = e.length;
+            for(t = 0; t < o; t++)e[t] && (f = r(e[t])) && (n && (n += " "), n += f);
+        } else for(f in e)e[f] && (n && (n += " "), n += f);
+    }
+    return n;
+}
+function clsx() {
+    for(var e, t, f = 0, n = "", o = arguments.length; f < o; f++)(e = arguments[f]) && (t = r(e)) && (n && (n += " "), n += t);
+    return n;
+}
+exports.default = clsx;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gJP2Y":[function() {},{}],"mxqQc":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _toolkit = require("@reduxjs/toolkit");
@@ -41461,7 +41378,7 @@ const CartList = ({ items })=>{
                                                 lineNumber: 45,
                                                 columnNumber: 19
                                             }, undefined),
-                                            itemCounts[item.card.info.id] === 0 ? "Add" : itemCounts[item.card.info.id],
+                                            itemCounts[item.card.info.id] > 0 && itemCounts[item.card.info.id],
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                                 onClick: ()=>handleAddItem(item),
                                                 id: "addBtn",
@@ -41621,98 +41538,7 @@ $RefreshReg$(_c, "EmptyCart");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4iQHT":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$9c32 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$9c32.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _userContext = require("../utilities/UserContext");
-var _userContextDefault = parcelHelpers.interopDefault(_userContext);
-var _s = $RefreshSig$();
-const User = ()=>{
-    _s();
-    const { loggedInUser, setUserName } = (0, _react.useContext)((0, _userContextDefault.default));
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "user-container",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "login-box",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    children: "Login"
-                }, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 14,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 16,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    placeholder: "Username",
-                    value: loggedInUser,
-                    onChange: (event)=>setUserName(event.target.value)
-                }, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 17,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 21,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 25,
-                    columnNumber: 1
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                        class: "ri-user-3-fill",
-                        children: "Continue with Username"
-                    }, void 0, false, {
-                        fileName: "src/components/User.js",
-                        lineNumber: 26,
-                        columnNumber: 9
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/User.js",
-                    lineNumber: 26,
-                    columnNumber: 1
-                }, undefined)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/User.js",
-            lineNumber: 13,
-            columnNumber: 1
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/User.js",
-        lineNumber: 12,
-        columnNumber: 1
-    }, undefined);
-};
-_s(User, "ba0mkcKLzYfA8tPjvyaii+zlt10=");
-_c = User;
-exports.default = User;
-var _c;
-$RefreshReg$(_c, "User");
-
-  $parcel$ReactRefreshHelpers$9c32.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utilities/UserContext":"3DxXm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6jcNq":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6jcNq":[function(require,module,exports) {
 module.exports = require("8277cd54fe2f6c03")(require("42ddae464752f086").getBundleURL("aXMci") + "About.84db8bad.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
@@ -41780,15 +41606,747 @@ module.exports = function(loader, type) {
     };
 };
 
+},{}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
 },{}],"5TZGn":[function(require,module,exports) {
 module.exports = require("1d7cbb87e72a4f84")(require("560c4fdb29cce04a").getBundleURL("aXMci") + "Contact.78c3f0c5.js" + "?" + Date.now()).catch((err)=>{
     delete module.bundle.cache[module.id];
     throw err;
 }).then(()=>module.bundle.root("cgAOG"));
 
-},{"1d7cbb87e72a4f84":"61B45","560c4fdb29cce04a":"lgJ39"}],"anljH":[function(require,module,exports) {
-module.exports = Promise.resolve(module.bundle.root("4iQHT"));
+},{"1d7cbb87e72a4f84":"61B45","560c4fdb29cce04a":"lgJ39"}],"8bpBh":[function(require,module,exports) {
+module.exports = require("75f800abe4bb604")(require("c2315f37653f6977").getBundleURL("aXMci") + "User.f7dc37f3.js" + "?" + Date.now()).catch((err)=>{
+    delete module.bundle.cache[module.id];
+    throw err;
+}).then(()=>module.bundle.root("4iQHT"));
 
-},{}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequirea702")
+},{"75f800abe4bb604":"61B45","c2315f37653f6977":"lgJ39"}],"fg9LP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$a0bb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$a0bb.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _networkerrorimagePng = require("/src/assets/Images/networkerrorimage.png");
+var _networkerrorimagePngDefault = parcelHelpers.interopDefault(_networkerrorimagePng);
+const NetworkStatus = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "nDVxx",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "_3vspF",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "hFjjz",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _networkerrorimagePngDefault.default),
+                        alt: "Network Error"
+                    }, void 0, false, {
+                        fileName: "src/components/NetworkStatus.js",
+                        lineNumber: 8,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "_3Ognu",
+                        children: "Connection Error"
+                    }, void 0, false, {
+                        fileName: "src/components/NetworkStatus.js",
+                        lineNumber: 9,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "_1CN4Y",
+                        children: "Please check your internet connection and try again."
+                    }, void 0, false, {
+                        fileName: "src/components/NetworkStatus.js",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/NetworkStatus.js",
+                lineNumber: 7,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/NetworkStatus.js",
+            lineNumber: 6,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/NetworkStatus.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = NetworkStatus;
+exports.default = NetworkStatus;
+var _c;
+$RefreshReg$(_c, "NetworkStatus");
+
+  $parcel$ReactRefreshHelpers$a0bb.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","/src/assets/Images/networkerrorimage.png":"c21PL"}],"c21PL":[function(require,module,exports) {
+module.exports = require("dd0c5b56d5d72d21").getBundleURL("aXMci") + "networkerrorimage.aecf35e7.png" + "?" + Date.now();
+
+},{"dd0c5b56d5d72d21":"lgJ39"}],"boI62":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$8a9a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$8a9a.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _s = $RefreshSig$();
+const useOnlineStatus = ()=>{
+    _s();
+    const [onlineStatus, setOnlineStatus] = (0, _react.useState)(true);
+    //Lets add an useEffect hook it renders after the component and it will be render only at once intial render.
+    (0, _react.useEffect)(()=>{
+        //Lets add an eventlistener when the user an `offline` event  status there will be  `false` value.
+        //The offline event of the Window interface is fired when the browser has lost access to the network and the value of Navigator.
+        window.addEventListener("offline", ()=>{
+            setOnlineStatus(false);
+        });
+        //Likewise,When the user an online status there will be `true` value.
+        //The online event of the Window interface is fired when the browser has gained access to the network and the value of Navigator.
+        window.addEventListener("online", ()=>{
+            setOnlineStatus(true);
+        });
+    }, []);
+    return onlineStatus;
+};
+_s(useOnlineStatus, "MuRHT4nbzkgOPnMMlqOE75+HU4c=");
+exports.default = useOnlineStatus;
+
+  $parcel$ReactRefreshHelpers$8a9a.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _useRestaurantList = require("../utilities/useRestaurantList");
+var _useRestaurantListDefault = parcelHelpers.interopDefault(_useRestaurantList);
+var _useOnlineStatus = require("../utilities/useOnlineStatus");
+var _useOnlineStatusDefault = parcelHelpers.interopDefault(_useOnlineStatus);
+var _networkStatus = require("./NetworkStatus");
+var _networkStatusDefault = parcelHelpers.interopDefault(_networkStatus);
+var _s = $RefreshSig$();
+const Body = ()=>{
+    _s();
+    const [filterRestaurants, setFilterRestaurants] = (0, _react.useState)([]);
+    const [searchText, setSearchText] = (0, _react.useState)("");
+    const listOfRestaurants = (0, _useRestaurantListDefault.default)();
+    const onlineStatus = (0, _useOnlineStatusDefault.default)();
+    //This is a higher order component that we passed in the RestaurantCard which returns a new component.
+    const RestaurantPromotedLabel = (0, _restaurantCard.withPromotedLabel)((0, _restaurantCardDefault.default));
+    (0, _react.useEffect)(()=>{
+        setFilterRestaurants(listOfRestaurants);
+    }, [
+        listOfRestaurants
+    ]);
+    const handleSearch = ()=>{
+        let filterSearch = listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()) || res.info.cuisines.includes(searchText));
+        if (filterSearch.length === 0) ;
+        else setFilterRestaurants(filterSearch);
+    };
+    if (!onlineStatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 39,
+        columnNumber: 12
+    }, undefined);
+    if (!filterRestaurants?.length) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 43,
+        columnNumber: 12
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "description",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 50,
+                        columnNumber: 5
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Explore the finest food and drinks in the city of PUNE"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 51,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 49,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "search-bar",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                            className: "input-bar",
+                            autocomplete: "false",
+                            name: "hidden",
+                            type: "text",
+                            placeholder: "Satisfy your hunger now !",
+                            id: "searchInp",
+                            value: searchText,
+                            onChange: (event)=>{
+                                setSearchText(event.target.value);
+                                handleSearch(); // Trigger the search on every change.
+                            },
+                            onKeyDown: (event)=>{
+                                if (event.key === "Enter") handleSearch(); // You can keep this for users who prefer to press Enter.
+                            }
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 55,
+                            columnNumber: 3
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "button-container",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                "data-testid": "clickSearchButton",
+                                id: "searchBtn",
+                                onClick: handleSearch,
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    height: "16",
+                                    width: "16",
+                                    viewBox: "0 0 512 512",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("path", {
+                                        fill: "#fc9a01",
+                                        d: "M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Body.js",
+                                        lineNumber: 74,
+                                        columnNumber: 17
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/Body.js",
+                                    lineNumber: 73,
+                                    columnNumber: 15
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/Body.js",
+                                lineNumber: 72,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 71,
+                            columnNumber: 1
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 54,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 53,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "filter-Buttons rounded-lg hover:ring-offset-zinc-900 ",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "finder-btns",
+                        onClick: ()=>{
+                            const filteredLists = listOfRestaurants.filter((res)=>res.info.avgRating > 4);
+                            setFilterRestaurants(filteredLists);
+                        },
+                        children: "Top Rated Restaurants"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 82,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "finder-btns",
+                        onClick: ()=>{
+                            const findVegRestaurants = listOfRestaurants.filter((res)=>res.info.veg === true);
+                            setFilterRestaurants(findVegRestaurants);
+                        },
+                        children: "Pure Veg"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 92,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "finder-btns",
+                        onClick: ()=>{
+                            const fastestDeliveryTime = listOfRestaurants.filter((res)=>res.info.sla.deliveryTime <= 20);
+                            setFilterRestaurants(fastestDeliveryTime);
+                        },
+                        children: "Fastest Delivery"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 102,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 81,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restaurant-container",
+                children: filterRestaurants?.map((restaurant)=>// Linking each restaurant card to its details page
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/restaurants/" + restaurant.info.id,
+                        children: restaurant.info.veg ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantPromotedLabel, {
+                            restaurantData: restaurant
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 124,
+                            columnNumber: 3
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
+                            restaurantData: restaurant
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 126,
+                            columnNumber: 9
+                        }, undefined)
+                    }, restaurant.info.id, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 117,
+                        columnNumber: 11
+                    }, undefined))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 114,
+                columnNumber: 6
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Body.js",
+        lineNumber: 48,
+        columnNumber: 5
+    }, undefined);
+};
+_s(Body, "tWF16JyOoEcJ2RCkLT+/mRGROq4=", false, function() {
+    return [
+        (0, _useRestaurantListDefault.default),
+        (0, _useOnlineStatusDefault.default)
+    ];
+});
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","./RestaurantCard":"bMboU","./Shimmer":"g6ZGj","../utilities/useRestaurantList":"8zILp","../utilities/useOnlineStatus":"boI62","./NetworkStatus":"fg9LP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bMboU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ffb1.prelude(module);
+
+try {
+// Importing necessary dependencies
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "withPromotedLabel", ()=>withPromotedLabel);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _config = require("../utilities/config");
+var _displayPromoted = require("./DisplayPromoted");
+var _displayPromotedDefault = parcelHelpers.interopDefault(_displayPromoted);
+// Defining the RestaurantCard component
+const RestaurantCard = (props)=>{
+    // Destructuring the props to get the restaurantData object
+    const { restaurantData } = props;
+    // Destructuring values from the restaurantData object
+    const { name, cloudinaryImageId, avgRating, costForTwo, areaName, cuisines, locality } = restaurantData?.info;
+    const { slaString } = restaurantData?.info.sla;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restaurant-list",
+        "data-testid": "restaurantList",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "place",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "list-item",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "item-content",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "top-image",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "res-img",
+                                alt: "Res-image",
+                                src: (0, _config.CDN_URL) + cloudinaryImageId
+                            }, void 0, false, {
+                                fileName: "src/components/RestaurantCard.js",
+                                lineNumber: 23,
+                                columnNumber: 15
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantCard.js",
+                            lineNumber: 21,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "place-name-div",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "name",
+                                    children: name
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 26,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "food-list",
+                                    children: cuisines.slice(0, 4).join(" , ")
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 31,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/RestaurantCard.js",
+                            lineNumber: 25,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "info-div",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "ratings",
+                                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                        children: [
+                                            " ",
+                                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                                className: "ri-star-fill"
+                                            }, void 0, false, {
+                                                fileName: "src/components/RestaurantCard.js",
+                                                lineNumber: 35,
+                                                columnNumber: 45
+                                            }, undefined),
+                                            " ",
+                                            avgRating
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/RestaurantCard.js",
+                                        lineNumber: 35,
+                                        columnNumber: 38
+                                    }, undefined)
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "dot",
+                                    children: "."
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 36,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "time",
+                                    children: slaString
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 37,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "dot",
+                                    children: "."
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 38,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "price",
+                                    children: costForTwo
+                                }, void 0, false, {
+                                    fileName: "src/components/RestaurantCard.js",
+                                    lineNumber: 39,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/RestaurantCard.js",
+                            lineNumber: 33,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "address",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                className: "sNAfh",
+                                children: [
+                                    locality,
+                                    " | ",
+                                    areaName
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/RestaurantCard.js",
+                                lineNumber: 43,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/RestaurantCard.js",
+                            lineNumber: 41,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 20,
+                    columnNumber: 11
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 19,
+                columnNumber: 9
+            }, undefined)
+        }, void 0, false, {
+            fileName: "src/components/RestaurantCard.js",
+            lineNumber: 18,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 17,
+        columnNumber: 5
+    }, undefined);
+};
+_c = RestaurantCard;
+// Exporting the RestaurantCard component
+exports.default = RestaurantCard;
+const withPromotedLabel = (RestaurantCard)=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _displayPromotedDefault.default), {}, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 63,
+                    columnNumber: 1
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "src/components/RestaurantCard.js",
+                    lineNumber: 65,
+                    columnNumber: 1
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/RestaurantCard.js",
+            lineNumber: 61,
+            columnNumber: 1
+        }, undefined);
+    };
+};
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","./DisplayPromoted":"6Mt7E","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6Mt7E":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d5c8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d5c8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _displayVegLogo = require("./DisplayVegLogo");
+var _displayVegLogoDefault = parcelHelpers.interopDefault(_displayVegLogo);
+const DisplayPromoted = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "display-veg-only",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "promo-status",
+                children: "Promoted"
+            }, void 0, false, {
+                fileName: "src/components/DisplayPromoted.js",
+                lineNumber: 6,
+                columnNumber: 1
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _displayVegLogoDefault.default), {}, void 0, false, {
+                fileName: "src/components/DisplayPromoted.js",
+                lineNumber: 7,
+                columnNumber: 1
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/DisplayPromoted.js",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = DisplayPromoted;
+exports.default = DisplayPromoted;
+var _c;
+$RefreshReg$(_c, "DisplayPromoted");
+
+  $parcel$ReactRefreshHelpers$d5c8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","./DisplayVegLogo":"6RbAz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"6RbAz":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$3dec = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$3dec.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _purevegLogoOnePng = require("/src/assets/Images/pureveg-logo-one.png");
+var _purevegLogoOnePngDefault = parcelHelpers.interopDefault(_purevegLogoOnePng);
+const DisplayVegLogo = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            className: "green-trademark",
+            src: (0, _purevegLogoOnePngDefault.default)
+        }, void 0, false, {
+            fileName: "src/components/DisplayVegLogo.js",
+            lineNumber: 6,
+            columnNumber: 1
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/DisplayVegLogo.js",
+        lineNumber: 5,
+        columnNumber: 1
+    }, undefined);
+};
+_c = DisplayVegLogo;
+exports.default = DisplayVegLogo;
+var _c;
+$RefreshReg$(_c, "DisplayVegLogo");
+
+  $parcel$ReactRefreshHelpers$3dec.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","/src/assets/Images/pureveg-logo-one.png":"lxBe9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lxBe9":[function(require,module,exports) {
+module.exports = require("4d32cec8e11c3388").getBundleURL("aXMci") + "pureveg-logo-one.4f949672.png" + "?" + Date.now();
+
+},{"4d32cec8e11c3388":"lgJ39"}],"8zILp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$97ae = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$97ae.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _config = require("./config");
+var _react = require("react");
+var _s = $RefreshSig$();
+const useRestaurantList = ()=>{
+    _s();
+    // State variables using the useState hook
+    const [listOfRestaurants, setlistOfRestaurants] = (0, _react.useState)([]);
+    // useEffect hook to fetch data when the component mounts
+    (0, _react.useEffect)(()=>{
+        fetchData();
+    }, []);
+    // Async function to fetch restaurant data
+    const fetchData = async ()=>{
+        // Fetching data from the specified API
+        const data = await fetch((0, _config.CORS_URL) + (0, _config.API_URL));
+        const json = await data.json();
+        // Setting the state variables with restaurant data
+        setlistOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    };
+    return listOfRestaurants;
+};
+_s(useRestaurantList, "kMT43ODGki7ra3lA5UXdz9Z/TR8=");
+exports.default = useRestaurantList;
+
+  $parcel$ReactRefreshHelpers$97ae.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"./config":"di7hi","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gJP2Y":[function() {},{}]},["9A7zD","1xC6H","2kQhy"], "2kQhy", "parcelRequirea702")
 
 //# sourceMappingURL=index.7271efb6.js.map

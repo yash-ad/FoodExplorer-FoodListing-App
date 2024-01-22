@@ -1,71 +1,59 @@
-import React, { useEffect, useState } from "react";
-import ReactDOM from "react-dom/client";
+import React, { useEffect, useState, lazy, Suspense } from "react";
+import ReactDOM from "react-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
-import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import { lazy,Suspense } from "react";
 import Error from "./components/Error";
 import RestaurantInfo from "./components/RestaurantInfo";
 import UserContext from "./utilities/UserContext";
-import { Provider } from "react-redux";
 import appStore from "./utilities/appStore";
 import CartStore from "./components/CartStore";
 import EmptyCart from "./components/EmptyCart";
-import User from "./components/User";
 import Shimmer from "./components/Shimmer";
 import NetworkStatus from "./components/NetworkStatus";
 import useOnlineStatus from "./utilities/useOnlineStatus";
 
-
-
 // Define the layout of the entire application
 const AppLayout = () => {
-  const[userName,setUserName] = useState();
+  const [userName, setUserName] = useState();
   const appNetworkStatus = useOnlineStatus();
 
-
-  //For-Authentication
-useEffect(()=>{
-const data = {
-  Name:"",
-}
-setUserName(data.Name)
-},[])
-
+  // For Authentication
+  useEffect(() => {
+    const data = {
+      Name: "",
+    };
+    setUserName(data.Name);
+  }, []);
 
   return (
-
-    // React-redux
-<Provider store={appStore}>
-    {/* //React-context */}
-    <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
-    <div className="App-container">
-      {appNetworkStatus ?
-       (
-
-        //Wrapped into the React fragment syntax
-        <>
-      <Header />
-      <Outlet />
-      <Footer />
-      </>
-      ) : (
-      <NetworkStatus/>
-      )
-      }
-    </div>
-    </UserContext.Provider>
+    <Provider store={appStore}>
+      <UserContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <ToastContainer />
+        <div className="App-container">
+          {appNetworkStatus ? (
+            <>
+              <Header />
+              <Outlet />
+              <Footer />
+            </>
+          ) : (
+            <NetworkStatus />
+          )}
+        </div>
+      </UserContext.Provider>
     </Provider>
   );
 };
 
-//In React, the lazy function is used to dynamically import a component. 
-const About = lazy(()=> import("./components/About"));
-
-const Contact = lazy(()=> import("./components/Contact"));
-
-const User = lazy(()=> import("./components/User"));
+const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"));
+const UserLazy = lazy(() => import("./components/User"));
 
 // Create a router for the application using react-router-dom
 const appRouter = createBrowserRouter([
@@ -74,14 +62,13 @@ const appRouter = createBrowserRouter([
     element: <AppLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/", element: <Body />}, 
+      { path: "/", element: <Body /> },
       { path: "/restaurants/:resId", element: <RestaurantInfo /> },
-      //<Suspense> is a React component that is used for handling components with asynchronous behavior, such as lazy-loaded components or data fetching.
-      { path: "/about", element: <Suspense fallback={<Shimmer/>}><About/></Suspense> },
-      { path: "/contact", element:<Suspense fallback={<Shimmer/>}><Contact/></Suspense>},
-      { path: "/cart", element: <CartStore/>},
-      { path: "/", element: <EmptyCart/>},
-      { path: "/user", element: <Suspense fallback={<Shimmer/>}><User/></Suspense>},
+      { path: "/about", element: <Suspense fallback={<Shimmer />}><About /></Suspense> },
+      { path: "/contact", element: <Suspense fallback={<Shimmer />}><Contact /></Suspense> },
+      { path: "/cart", element: <CartStore /> },
+      { path: "/empty-cart", element: <EmptyCart /> },
+      { path: "/user", element: <Suspense fallback={<Shimmer />}><UserLazy /></Suspense> },
     ],
   },
 ]);

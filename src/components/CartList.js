@@ -1,7 +1,7 @@
 // CartList component
 import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
-import { addItem, removeItem, decrementQty } from "../utilities/cartSlice";
+import { addItem, removeItem, decrementQty ,incrementQty} from "../utilities/cartSlice";
 import { useState } from "react";
 
 const CartList = ({ items }) => {
@@ -12,7 +12,7 @@ const CartList = ({ items }) => {
     setItemCounts((prevCounts)=>{
       const updatedCounts = { ...prevCounts };
       updatedCounts[item.card.info.id] = updatedCounts[item.card.info.id] - 1;
-      dispatch(decrementQty({ id: item.card.info.id }));
+      dispatch(decrementQty({ id: item.card.info.id }))
       return updatedCounts;
     })
   };
@@ -43,14 +43,14 @@ const CartList = ({ items }) => {
               <div className="menu-right">
                 <div>
                   <button onClick={() => handleLessItem(item)}>-</button>
-                  {itemCounts[item.card.info.id] === 0 ? "Add" : itemCounts[item.card.info.id]}
+                  {itemCounts[item.card.info.id] > 0 && itemCounts[item.card.info.id]}
                   <button onClick={() => handleAddItem(item)} id="addBtn">+</button>
                 </div>
               </div>
             </div>
             <div className="cart-menu-crossButton">
               <div className="buttons">
-                <button onClick={() => dispatch(removeItem({ id: item.card.info.id }))}>
+                <button onClick={() =>  dispatch(removeItem({ id: item.card.info.id }))}>
                 <span class="material-symbols-outlined">
 close
 </span>
