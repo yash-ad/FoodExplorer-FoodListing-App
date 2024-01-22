@@ -1,7 +1,7 @@
 // CartList component
 import { useDispatch } from "react-redux";
 import { IMG_URL } from "../utilities/config";
-import { addItem, removeItem, decrementQty ,incrementQty} from "../utilities/cartSlice";
+import { addItem, removeItem, decrementQty} from "../utilities/cartSlice";
 import { useState } from "react";
 
 const CartList = ({ items }) => {

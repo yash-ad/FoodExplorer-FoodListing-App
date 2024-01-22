@@ -6,6 +6,8 @@ import useRestaurantList from "../utilities/useRestaurantList";
 import useOnlineStatus from "../utilities/useOnlineStatus";
 import NetworkStatus from "./NetworkStatus";
 import { withPromotedLabel } from "./RestaurantCard";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Body = () => {
   const [filterRestaurants, setFilterRestaurants] = useState([]);
@@ -15,8 +17,6 @@ const Body = () => {
 
 //This is a higher order component that we passed in the RestaurantCard which returns a new component.
 const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
-
-
 
   useEffect(() => {
     setFilterRestaurants(listOfRestaurants);
@@ -34,6 +34,12 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
       setFilterRestaurants(filterSearch);
     }
   };
+
+const handleFastDeliveryCheck = ()=>{
+  const fastDeliveryTime = listOfRestaurants.filter((res) => res.info.sla.deliveryTime <= 20);
+
+  fastDeliveryTime.length > 0 ? setFilterRestaurants(fastDeliveryTime) : toast.error("No restaurants with fast delivery available")
+}
 
   if (!onlineStatus) {
     return <NetworkStatus />;
@@ -101,10 +107,7 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
 
         <button
 className="finder-btns"
-onClick={() => {
-  const fastestDeliveryTime = listOfRestaurants.filter((res) => res.info.sla.deliveryTime <= 20);
-  setFilterRestaurants(fastestDeliveryTime);
-}}
+onClick={handleFastDeliveryCheck}
 >
 Fast Delivery
 </button>

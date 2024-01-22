@@ -14,6 +14,13 @@ const CartStore = () => {
     dispatch(clearCart());
   };
 
+  // Calculate total price and quantity
+  const totalQuantity = cartItems.reduce((totalQty, item) => totalQty + (item.quantity || 1), 0);
+  const totalPrice = cartItems.reduce((totalQty, item) => {
+    const price = item.card.info.price || item.card.info.defaultPrice || 0;
+    return totalQty + price * (item.quantity || 1);
+  }, 0);
+
   return (
     <div className="cart-container">
       <div className="cart-items">
@@ -24,6 +31,7 @@ const CartStore = () => {
             <CartList items={cartItems} />
             <div className="total-price-quantity">
               {/* Add content related to total price and quantity */}
+              <span class="styles_mainTitle__2eRLR">{totalQuantity} Items | ₹{totalPrice /100}</span>
             </div>
             <button className="clear-cart-button rounded" onClick={handleClearCart}>
               Clear Cart

@@ -1546,10 +1546,12 @@ object-fit: cover;
 }
 
 .total-price-quantity{
-  background-color: #fff;
+  background-color: #60b246;;
     border-bottom: 1px solid #d3d3d3;
     width: 100%;
-    padding: 2vw 5vw;
+    padding: 1vw 4vw;
     display: flex;
+    color: #fff;
  justify-content: center;
+ font-size: 1.3rem;
 }

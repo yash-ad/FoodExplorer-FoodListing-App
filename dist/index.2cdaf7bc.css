@@ -1721,11 +1721,13 @@ img, video {
 }
 
 .total-price-quantity {
-  background-color: #fff;
+  color: #fff;
+  background-color: #60b246;
   border-bottom: 1px solid #d3d3d3;
   justify-content: center;
   width: 100%;
-  padding: 2vw 5vw;
+  padding: 1vw 4vw;
+  font-size: 1.3rem;
   display: flex;
 }
 

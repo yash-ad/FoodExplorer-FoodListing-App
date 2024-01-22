@@ -10,28 +10,13 @@ const ItemsList = (props) => {
 
   const dispatch = useDispatch();
 
-  // Maintain a separate count for each item
-  // const [itemCounts, setItemCounts] = useState({});
+ 
 
   const handleAddItem = (item) => {
-    // const updatedCounts = { ...itemCounts };
-    // updatedCounts[item.card.info.id] = (updatedCounts[item.card.info.id] || 0) + 1;
-    // setItemCounts(updatedCounts);
     dispatch(addItem(item));
    toast.success(`Added ${item.card.info.name}`);
   };
 
-  // const handleRemoveItem = (item) => {
-  //   if (itemCounts[item.card.info.id] === 0 || !itemCounts[item.card.info.id]) {
-  //     return;
-  //   }
-
-  //   const updatedCounts = { ...itemCounts };
-  //   updatedCounts[item.card.info.id] = updatedCounts[item.card.info.id] - 1;
-  //   setItemCounts(updatedCounts);
-
-  //   dispatch(removeItem(item));
-  // };
 
   return (
     <div>
