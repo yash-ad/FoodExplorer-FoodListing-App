@@ -28,17 +28,17 @@ const CartStore = () => {
           <EmptyCart />
         ) : (
           <div>
+            <button className="clear-cart-button" onClick={handleClearCart}>
+              Clear Cart
+              {<span id="trash-bin" className="material-symbols-outlined">
+                delete
+              </span>}
+            </button>
             <CartList items={cartItems} />
             <div className="total-price-quantity">
               {/* Add content related to total price and quantity */}
               <span class="styles_mainTitle__2eRLR">{totalQuantity} Items | ₹{totalPrice /100}</span>
             </div>
-            <button className="clear-cart-button rounded" onClick={handleClearCart}>
-              Clear Cart
-              <span id="trash-bin" className="material-symbols-outlined">
-                delete
-              </span>
-            </button>
           </div>
         )}
       </div>

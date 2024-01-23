@@ -41198,11 +41198,31 @@ const CartStore = ()=>{
                 columnNumber: 11
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "clear-cart-button",
+                        onClick: handleClearCart,
+                        children: [
+                            "Clear Cart",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                id: "trash-bin",
+                                className: "material-symbols-outlined",
+                                children: "delete"
+                            }, void 0, false, {
+                                fileName: "src/components/CartStore.js",
+                                lineNumber: 33,
+                                columnNumber: 16
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CartStore.js",
+                        lineNumber: 31,
+                        columnNumber: 13
+                    }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartListDefault.default), {
                         items: cartItems
                     }, void 0, false, {
                         fileName: "src/components/CartStore.js",
-                        lineNumber: 31,
+                        lineNumber: 37,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41216,32 +41236,12 @@ const CartStore = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CartStore.js",
-                            lineNumber: 34,
+                            lineNumber: 40,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/CartStore.js",
-                        lineNumber: 32,
-                        columnNumber: 13
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "clear-cart-button rounded",
-                        onClick: handleClearCart,
-                        children: [
-                            "Clear Cart",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                                id: "trash-bin",
-                                className: "material-symbols-outlined",
-                                children: "delete"
-                            }, void 0, false, {
-                                fileName: "src/components/CartStore.js",
-                                lineNumber: 38,
-                                columnNumber: 15
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/CartStore.js",
-                        lineNumber: 36,
+                        lineNumber: 38,
                         columnNumber: 13
                     }, undefined)
                 ]
@@ -41814,7 +41814,7 @@ const Body = ()=>{
     };
     const handleFastDeliveryCheck = ()=>{
         const fastDeliveryTime = listOfRestaurants.filter((res)=>res.info.sla.deliveryTime <= 20);
-        fastDeliveryTime.length > 0 ? setFilterRestaurants(fastDeliveryTime) : (0, _reactToastify.toast).error("No restaurants with fast delivery available");
+        fastDeliveryTime.length > 0 ? setFilterRestaurants(fastDeliveryTime) : (0, _reactToastify.toast).error("Sorry, no fast delivery restaurants available right now. Please check again later.");
     };
     if (!onlineStatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",

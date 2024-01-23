@@ -289,10 +289,6 @@ img, video {
   display: none;
 }
 
-.rounded {
-  border-radius: .25rem;
-}
-
 .rounded-lg {
   border-radius: .5rem;
 }
@@ -1277,10 +1273,11 @@ img, video {
   background-color: #000;
   border-radius: 1vw;
   outline: none;
-  margin-top: 10px;
   margin-left: 750px;
   padding: .9vw 1vw;
   font-size: 1vw;
+  position: relative;
+  top: -20px;
 }
 
 .clear-cart-button:hover {
@@ -1652,9 +1649,9 @@ img, video {
 
 #contact h1 {
   color: #e7e7e7;
-  margin-top: 8vw;
+  margin-top: 4vw;
   margin-left: -40px;
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-weight: 600;
 }
 
@@ -1664,7 +1661,7 @@ img, video {
   margin-top: 1vw;
   margin-left: -40px;
   padding: 1.5px;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
 }
 
 #contact-right {
@@ -1683,12 +1680,14 @@ img, video {
 }
 
 #contact-right .name-label {
+  color: #fff;
   margin-top: 6vw;
   font-size: 1.7vw;
   font-weight: 600;
 }
 
 #contact-right .email-label, #contact-right label {
+  color: #fff;
   margin-top: 1.2vw;
   font-size: 1.7vw;
   font-weight: 600;
@@ -1709,7 +1708,7 @@ img, video {
 #contact button {
   color: #fff;
   cursor: pointer;
-  background-color: #000;
+  background-color: #ff5900;
   border: 1.6px solid #0000;
   width: 50%;
   margin-top: 1.5vw;

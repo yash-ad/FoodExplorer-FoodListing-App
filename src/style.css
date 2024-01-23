@@ -1036,7 +1036,8 @@ color: orangered;
 }
 .clear-cart-button{
  /* text-align: center; */
-  margin-top: 10px;
+  /* margin-top: 1px; */
+  position: relative;
   background-color: black;
   color: white;
  margin-left: 750px;
@@ -1045,7 +1046,7 @@ color: orangered;
     outline: none;
     padding: 0.9vw 1vw;
     font-size: 1vw;
-
+    top: -20;
 }
 
 .clear-cart-button:hover{
@@ -1466,17 +1467,17 @@ object-fit: cover;
 }
 
 #contact h1 {
-    font-size: 2.5vw;
+    font-size: 3vw;
     font-weight: 600;
     margin-left: -40px;
-    margin-top: 8vw;
+    margin-top: 4vw;
     color: #e7e7e7;
 }
 
 #contact p {
     width: 80%;
     margin-top: 1vw;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     margin-left: -40px;
     color:#c7c8ca ;
     padding: 1.5px;
@@ -1506,18 +1507,21 @@ object-fit: cover;
   margin-top: 6vw;
   font-size: 1.7vw;
   font-weight: 600;
+  color: #fff;
 }
 
 #contact-right .email-label{
   margin-top: 1.2vw;
   font-size: 1.7vw;
   font-weight: 600;
+  color: #fff;
 }
 
 #contact-right label {
     margin-top: 1.2vw;
     font-size: 1.7vw;
     font-weight: 600;
+    color: #fff;
 }
 
 #contact-right input {
@@ -1530,11 +1534,12 @@ object-fit: cover;
     margin-top: 0.4vw;
     padding: 0.4vw 0.70vw 1vw 1vw;
     font-size: 1vw;
+    
 }
 #contact button {
   color: #fff;
   cursor: pointer;
-  background-color: #000000 ;
+  background-color: rgb(255, 89, 0) ;
   border: 1.6px solid #0000;
   margin-top: 1.5vw;
   padding: 1vw 0;
