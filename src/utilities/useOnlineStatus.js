@@ -1,6 +1,7 @@
 import {useState, useEffect } from "react";
 
 const useOnlineStatus = ()=>{
+    
 const[onlineStatus,setOnlineStatus]= useState(true);
 
 //Lets add an useEffect hook it renders after the component and it will be render only at once intial render.

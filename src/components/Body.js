@@ -38,7 +38,7 @@ const RestaurantPromotedLabel = withPromotedLabel(RestaurantCard);
 const handleFastDeliveryCheck = ()=>{
   const fastDeliveryTime = listOfRestaurants.filter((res) => res.info.sla.deliveryTime <= 20);
 
-  fastDeliveryTime.length > 0 ? setFilterRestaurants(fastDeliveryTime) : toast.error("Sorry, no fast delivery restaurants available right now. Please check again later.")
+  fastDeliveryTime.length > 0 ? setFilterRestaurants(fastDeliveryTime) : toast.error("Sorry,no fast delivery restaurants available right now. Please check again later.")
 }
 
   if (!onlineStatus) {

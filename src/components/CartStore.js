@@ -28,6 +28,7 @@ const CartStore = () => {
           <EmptyCart />
         ) : (
           <div>
+          
             <button className="clear-cart-button" onClick={handleClearCart}>
               Clear Cart
               {<span id="trash-bin" className="material-symbols-outlined">
