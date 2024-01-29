@@ -35192,6 +35192,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _config = require("../utilities/config");
 // Defining the Footer component
 const Footer = ()=>{
     return(// JSX structure for the Footer component
@@ -35201,14 +35202,7 @@ const Footer = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "top",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    id: "top-left",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        children: "FOODEXPLORER"
-                    }, void 0, false, {
-                        fileName: "src/components/Footer.js",
-                        lineNumber: 13,
-                        columnNumber: 1
-                    }, undefined)
+                    id: "top-left"
                 }, void 0, false, {
                     fileName: "src/components/Footer.js",
                     lineNumber: 11,
@@ -35223,68 +35217,130 @@ const Footer = ()=>{
                 id: "bottom",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        id: "fifth-section",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "logo",
+                                src: (0, _config.LOGO_URL),
+                                alt: ""
+                            }, void 0, false, {
+                                fileName: "src/components/Footer.js",
+                                lineNumber: 17,
+                                columnNumber: 1
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                id: "fifth-section-top",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-linkedin"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Footer.js",
+                                        lineNumber: 19,
+                                        columnNumber: 1
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-instagram"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Footer.js",
+                                        lineNumber: 20,
+                                        columnNumber: 1
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-twitter"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Footer.js",
+                                        lineNumber: 21,
+                                        columnNumber: 1
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-youtube"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Footer.js",
+                                        lineNumber: 22,
+                                        columnNumber: 1
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
+                                        class: "fa-brands fa-facebook"
+                                    }, void 0, false, {
+                                        fileName: "src/components/Footer.js",
+                                        lineNumber: 23,
+                                        columnNumber: 1
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/Footer.js",
+                                lineNumber: 18,
+                                columnNumber: 1
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/Footer.js",
+                        lineNumber: 15,
+                        columnNumber: 1
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "first-section",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                 children: "COMPANY"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 18,
+                                lineNumber: 27,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 19,
+                                lineNumber: 28,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Team"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 20,
+                                lineNumber: 29,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer Blog"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 21,
+                                lineNumber: 30,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Bug Bounty"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 22,
+                                lineNumber: 31,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer One"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 23,
+                                lineNumber: 32,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer Corporate"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 24,
+                                lineNumber: 33,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer Instamart"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 25,
+                                lineNumber: 34,
                                 columnNumber: 1
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 17,
+                        lineNumber: 26,
                         columnNumber: 1
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35294,41 +35350,41 @@ const Footer = ()=>{
                                 children: "CONTACT"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 28,
+                                lineNumber: 37,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Help & Support"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 29,
+                                lineNumber: 38,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Feeding India"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 30,
+                                lineNumber: 39,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Hyperpure"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 31,
+                                lineNumber: 40,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Ride with us"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 32,
+                                lineNumber: 41,
                                 columnNumber: 1
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 27,
+                        lineNumber: 36,
                         columnNumber: 1
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35341,20 +35397,20 @@ const Footer = ()=>{
                                         children: "FOR RESTAURANTS"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 36,
+                                        lineNumber: 45,
                                         columnNumber: 1
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                         children: "Partner With Us"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 37,
+                                        lineNumber: 46,
                                         columnNumber: 1
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 35,
+                                lineNumber: 44,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35364,26 +35420,26 @@ const Footer = ()=>{
                                         children: "FOR ENTERPRISES"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 40,
+                                        lineNumber: 49,
                                         columnNumber: 1
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                         children: "FoodExplorer For Enterprise"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 41,
+                                        lineNumber: 50,
                                         columnNumber: 1
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 39,
+                                lineNumber: 48,
                                 columnNumber: 1
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 34,
+                        lineNumber: 43,
                         columnNumber: 1
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35393,114 +35449,54 @@ const Footer = ()=>{
                                 children: "LEARN MORE"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 45,
+                                lineNumber: 54,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Privacy"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 46,
+                                lineNumber: 55,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Security"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 47,
+                                lineNumber: 56,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Terms"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 48,
+                                lineNumber: 57,
                                 columnNumber: 1
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Sitemap"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 49,
+                                lineNumber: 58,
                                 columnNumber: 1
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 44,
-                        columnNumber: 1
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        id: "fifth-section",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "SOCIAL LINKS"
-                            }, void 0, false, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 52,
-                                columnNumber: 1
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "fifth-section-top",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-linkedin"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 54,
-                                        columnNumber: 1
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-instagram"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 55,
-                                        columnNumber: 1
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-twitter"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 56,
-                                        columnNumber: 1
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-youtube"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 57,
-                                        columnNumber: 1
-                                    }, undefined),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-facebook"
-                                    }, void 0, false, {
-                                        fileName: "src/components/Footer.js",
-                                        lineNumber: 58,
-                                        columnNumber: 1
-                                    }, undefined)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/Footer.js",
-                                lineNumber: 53,
-                                columnNumber: 1
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/Footer.js",
-                        lineNumber: 51,
+                        lineNumber: 53,
                         columnNumber: 1
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 16,
+                lineNumber: 14,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "line"
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 62,
+                lineNumber: 61,
                 columnNumber: 1
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35509,12 +35505,12 @@ const Footer = ()=>{
                     children: " All rights reserved., Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2023-2024 \xa9 FoodExplorer\u2122 Ltd."
                 }, void 0, false, {
                     fileName: "src/components/Footer.js",
-                    lineNumber: 63,
+                    lineNumber: 62,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 63,
+                lineNumber: 62,
                 columnNumber: 1
             }, undefined)
         ]
@@ -35535,7 +35531,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utilities/config":"di7hi"}],"kvula":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

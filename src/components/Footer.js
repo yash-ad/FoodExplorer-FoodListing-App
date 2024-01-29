@@ -1,6 +1,6 @@
 // Importing React library
 import React from "react";
-
+import { LOGO_URL } from "../utilities/config";
 
 // Defining the Footer component
 const Footer = () => {
@@ -9,11 +9,20 @@ const Footer = () => {
     <div className="footer">
 <div id="top">
 <div id="top-left">
-{/* <img className="logo" src={appLogo} alt=""/> */}
-<h3>FOODEXPLORER</h3>
 </div>
 </div>
 <div id="bottom">
+<div id="fifth-section">
+
+<img className="logo" src={LOGO_URL} alt=""/>
+<div id="fifth-section-top">
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-twitter"></i>
+<i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-facebook"></i>
+</div>
+</div>
 <div id="first-section">
 <h3>COMPANY</h3>
 <h4>About</h4>
@@ -47,16 +56,6 @@ const Footer = () => {
 <h4>Security</h4>
 <h4>Terms</h4>
 <h4>Sitemap</h4>
-</div>
-<div id="fifth-section">
-<h3>SOCIAL LINKS</h3>
-<div id="fifth-section-top">
-<i class="fa-brands fa-linkedin"></i>
-<i class="fa-brands fa-instagram"></i>
-<i class="fa-brands fa-twitter"></i>
-<i class="fa-brands fa-youtube"></i>
-<i class="fa-brands fa-facebook"></i>
-</div>
 </div>
 </div>
 <div id="line"></div>
