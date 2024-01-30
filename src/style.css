@@ -1560,3 +1560,12 @@ object-fit: cover;
  justify-content: center;
  font-size: 1.3rem;
 }
+
+.logoTwo{
+  display: flex;
+  align-items: center;
+  width: 130px;
+  margin-left: 10px;   
+  border-radius: 15px;
+ pointer-events: none;
+}

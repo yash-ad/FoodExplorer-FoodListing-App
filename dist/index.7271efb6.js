@@ -35220,7 +35220,7 @@ const Footer = ()=>{
                         id: "fifth-section",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                className: "logo",
+                                className: "logoTwo",
                                 src: (0, _config.LOGO_URL),
                                 alt: ""
                             }, void 0, false, {

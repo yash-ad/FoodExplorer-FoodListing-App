@@ -1730,6 +1730,15 @@ img, video {
   display: flex;
 }
 
+.logoTwo {
+  pointer-events: none;
+  border-radius: 15px;
+  align-items: center;
+  width: 130px;
+  margin-left: 10px;
+  display: flex;
+}
+
 .hover\:ring-offset-zinc-900:hover {
   --tw-ring-offset-color: #18181b;
 }

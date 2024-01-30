@@ -14,7 +14,7 @@ const Footer = () => {
 <div id="bottom">
 <div id="fifth-section">
 
-<img className="logo" src={LOGO_URL} alt=""/>
+<img className="logoTwo" src={LOGO_URL} alt=""/>
 <div id="fifth-section-top">
 <i class="fa-brands fa-linkedin"></i>
 <i class="fa-brands fa-instagram"></i>
