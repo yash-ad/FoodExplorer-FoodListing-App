@@ -110,21 +110,11 @@ align-items: center;
   font-weight: 500;
     position: relative;
  }
-.nav-items h2 span{
-  color: #fff;
-    background-color:#48b726 ;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    width: 1.2vw;
-    height: 1.2vw;
-    padding: 2px;
+/* .nav-items h2 span{
+
     font-size: .9.0vw;
-    display: flex;
-    position: absolute;
-    top: -20%;
-    right: -25%;
-}
+  
+} */
 .toggleBtn{
   background-color:#FC9A01;
   color: #fff;
@@ -1569,3 +1559,4 @@ object-fit: cover;
   border-radius: 15px;
  pointer-events: none;
 }
+

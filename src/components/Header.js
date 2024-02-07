@@ -47,7 +47,7 @@ const cartItems = useSelector((store)=> store.cart.items)
           <h2>
           Cart  
  <i class="ri-shopping-cart-2-fill"></i>
- <span>{`${cartLength}`}</span>
+ <span>({`${cartLength}`})</span>
           </h2>
           </Link>
           </li>

@@ -5,7 +5,7 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {  REST_INFO_API_URL } from "../utilities/config";
 import RestaurantCategory from "./RestaurantCategory";
-import { CORS_URL } from "../utilities/config";
+
 
 
 // Defining the RestaurantInfo component
@@ -34,7 +34,7 @@ fetchInfo();
 //Async function to fetch restaurant information
 const fetchInfo =  async () => {
   try {
-    const data =  await fetch(CORS_URL + REST_INFO_API_URL + resId);
+    const data =  await fetch(REST_INFO_API_URL + resId);
     const json = await data.json();
     console.log(json);
     //Setting state variables with fetched data

@@ -442,22 +442,6 @@ img, video {
   position: relative;
 }
 
-.nav-items h2 span {
-  color: #fff;
-  font-size: .90vw;
-  background-color: #48b726;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  width: 1.2vw;
-  height: 1.2vw;
-  padding: 2px;
-  display: flex;
-  position: absolute;
-  top: -20%;
-  right: -25%;
-}
-
 .toggleBtn {
   color: #fff;
   cursor: pointer;
