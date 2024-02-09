@@ -620,15 +620,15 @@ const Contact = ()=>{
                     alt: ""
                 }, void 0, false, {
                     fileName: "src/components/Contact.js",
-                    lineNumber: 8,
-                    columnNumber: 5
+                    lineNumber: 7,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     id: "overlay"
                 }, void 0, false, {
                     fileName: "src/components/Contact.js",
-                    lineNumber: 9,
-                    columnNumber: 5
+                    lineNumber: 8,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     id: "contact-left",
@@ -637,96 +637,102 @@ const Contact = ()=>{
                             children: "Reach out to us"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 11,
-                            columnNumber: 5
+                            lineNumber: 10,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: "Require help or have inquiries? Reach out to our approachable team for prompt and supportive assistance."
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 12,
-                            columnNumber: 5
+                            lineNumber: 11,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Contact.js",
-                    lineNumber: 10,
-                    columnNumber: 5
+                    lineNumber: 9,
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     id: "contact-right",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "name",
                             className: "name-label",
                             children: "Name"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 15,
-                            columnNumber: 5
+                            lineNumber: 14,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                             type: "text",
-                            placeholder: "Eg:Yash Dandnaik"
+                            id: "name",
+                            placeholder: "Eg: Yash Dandnaik"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 16,
-                            columnNumber: 5
+                            lineNumber: 15,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "email",
                             className: "email-label",
                             children: "Email"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 17,
-                            columnNumber: 5
+                            lineNumber: 16,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                             type: "email",
+                            id: "email",
                             placeholder: "abc@gmail.com"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 18,
-                            columnNumber: 5
+                            lineNumber: 17,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                            htmlFor: "message",
                             children: "Tell Us More"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 19,
-                            columnNumber: 5
+                            lineNumber: 18,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("textarea", {
+                            id: "message",
                             placeholder: "Message",
                             cols: "20",
                             rows: "10"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 20,
-                            columnNumber: 5
+                            lineNumber: 19,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                             children: "Send Message"
                         }, void 0, false, {
                             fileName: "src/components/Contact.js",
-                            lineNumber: 21,
-                            columnNumber: 5
+                            lineNumber: 20,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Contact.js",
-                    lineNumber: 14,
-                    columnNumber: 5
+                    lineNumber: 13,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Contact.js",
-            lineNumber: 7,
-            columnNumber: 5
+            lineNumber: 6,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Contact.js",
-        lineNumber: 6,
-        columnNumber: 1
+        lineNumber: 5,
+        columnNumber: 5
     }, undefined);
 };
 _c = Contact;

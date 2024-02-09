@@ -5890,34 +5890,24 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$bfed.prelude(module);
 
 try {
-// Importing necessary dependencies and configuration
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _config = require("../utilities/config");
 var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
 var _reactRouterDom = require("react-router-dom");
+var _config = require("../utilities/config");
 var _userContext = require("../utilities/UserContext");
 var _userContextDefault = parcelHelpers.interopDefault(_userContext);
-var _reactRedux = require("react-redux");
 var _s = $RefreshSig$();
-// Defining the Header component
 const Header = ()=>{
     _s();
-    // Using the useState hook to manage the state of the toggle button
     const [toggleButton] = (0, _react.useState)("Login");
-    //Introduced `useContext` hook:-
-    // const data = useContext(UserContext);
     const { loggedInUser } = (0, _react.useContext)((0, _userContextDefault.default));
-    // console.log(loggedInUser);
-    //Introduced `useSelector` hook to subscribing to the store using Selector.
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
-    // after executing this line of code, cartItems will hold the value of store.cart.items, and it will automatically re-render the component whenever the items property in the cart slice changes.
-    // console.log(cartItems);
-    // Calculate the total number of items in the cart
     const cartLength = cartItems.reduce((total, item)=>total + item.quantity, 0);
-    return(// JSX representing the structure of the Header component
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header shadow-lg",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5930,17 +5920,17 @@ const Header = ()=>{
                         src: (0, _config.LOGO_URL)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 34,
+                        lineNumber: 19,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 33,
+                    lineNumber: 18,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 31,
+                lineNumber: 17,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -5953,12 +5943,12 @@ const Header = ()=>{
                                 children: "Home"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 43,
+                                lineNumber: 25,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 43,
+                            lineNumber: 25,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -5967,12 +5957,12 @@ const Header = ()=>{
                                 children: "About Us"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 44,
+                                lineNumber: 26,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 44,
+                            lineNumber: 26,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -5981,12 +5971,12 @@ const Header = ()=>{
                                 children: "Contact Us"
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 45,
+                                lineNumber: 27,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 45,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -5997,11 +5987,11 @@ const Header = ()=>{
                                     children: [
                                         "Cart",
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                            class: "ri-shopping-cart-2-fill"
+                                            className: "ri-shopping-cart-2-fill"
                                         }, void 0, false, {
                                             fileName: "src/components/Header.js",
-                                            lineNumber: 49,
-                                            columnNumber: 2
+                                            lineNumber: 32,
+                                            columnNumber: 17
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                             children: [
@@ -6011,89 +6001,94 @@ const Header = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/Header.js",
-                                            lineNumber: 50,
-                                            columnNumber: 2
+                                            lineNumber: 33,
+                                            columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 47,
-                                    columnNumber: 11
+                                    lineNumber: 30,
+                                    columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 46,
-                                columnNumber: 15
+                                lineNumber: 29,
+                                columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 46,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             className: "user",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                    class: "ri-user-3-fill"
+                                    className: "ri-user-3-fill"
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 56,
-                                    columnNumber: 11
+                                    lineNumber: 39,
+                                    columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                     className: "user-text",
                                     children: loggedInUser
                                 }, void 0, false, {
                                     fileName: "src/components/Header.js",
-                                    lineNumber: 58,
-                                    columnNumber: 11
+                                    lineNumber: 40,
+                                    columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 55,
+                            lineNumber: 38,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                            to: "/user",
-                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "toggleBtn",
-                                children: toggleButton
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                                to: "/user",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                    className: "toggleBtn",
+                                    children: toggleButton
+                                }, void 0, false, {
+                                    fileName: "src/components/Header.js",
+                                    lineNumber: 45,
+                                    columnNumber: 15
+                                }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Header.js",
-                                lineNumber: 61,
-                                columnNumber: 18
+                                lineNumber: 44,
+                                columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 61,
-                            columnNumber: 1
+                            lineNumber: 43,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 41,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 40,
+                lineNumber: 23,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 30,
+        lineNumber: 16,
         columnNumber: 5
-    }, undefined));
+    }, undefined);
 };
-_s(Header, "B+rrH0PI8+0NrYNIXd+ZWepaGH8=", false, function() {
+_s(Header, "0ARITmiGljpRxGQV3IjniqVw4CE=", false, function() {
     return [
         (0, _reactRedux.useSelector)
     ];
 });
 _c = Header;
-// Exporting the Header component to make it available for other parts of the application
 exports.default = Header;
 var _c;
 $RefreshReg$(_c, "Header");
@@ -6103,23 +6098,1072 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","react":"21dqq","react-router-dom":"9xmpe","../utilities/UserContext":"3DxXm","react-redux":"62sf7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"di7hi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","react-router-dom":"9xmpe","../utilities/config":"di7hi","../utilities/UserContext":"3DxXm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"62sf7":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
-parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
-parcelHelpers.export(exports, "API_URL", ()=>API_URL);
-parcelHelpers.export(exports, "REST_INFO_API_URL", ()=>REST_INFO_API_URL);
-parcelHelpers.export(exports, "IMG_URL", ()=>IMG_URL);
-parcelHelpers.export(exports, "CORS_URL", ()=>CORS_URL);
-const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const LOGO_URL = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-app-icon-food-explorer-design-template-8ae900e41ccbc0a2e1b48a85d239e389_screen.jpg?ts=1585237320";
-const API_URL = "https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D18.4833358%26lng%3D73.812767%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING";
-const REST_INFO_API_URL = "https://corsproxy.org/?" + encodeURIComponent("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4833358&lng=73.812767&restaurantId=");
-const IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
-const CORS_URL = "https://corsproxy.org/?";
+parcelHelpers.export(exports, "Provider", ()=>Provider_default);
+parcelHelpers.export(exports, "ReactReduxContext", ()=>ReactReduxContext);
+parcelHelpers.export(exports, "batch", ()=>batch);
+parcelHelpers.export(exports, "connect", ()=>connect_default);
+parcelHelpers.export(exports, "createDispatchHook", ()=>createDispatchHook);
+parcelHelpers.export(exports, "createSelectorHook", ()=>createSelectorHook);
+parcelHelpers.export(exports, "createStoreHook", ()=>createStoreHook);
+parcelHelpers.export(exports, "shallowEqual", ()=>shallowEqual);
+parcelHelpers.export(exports, "useDispatch", ()=>useDispatch);
+parcelHelpers.export(exports, "useSelector", ()=>useSelector);
+parcelHelpers.export(exports, "useStore", ()=>useStore);
+// src/index.ts
+var _react = require("react");
+var _withSelectorJs = require("use-sync-external-store/with-selector.js");
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value)=>key in obj ? __defProp(obj, key, {
+        enumerable: true,
+        configurable: true,
+        writable: true,
+        value
+    }) : obj[key] = value;
+var __spreadValues = (a, b)=>{
+    for(var prop in b || (b = {}))if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]);
+    if (__getOwnPropSymbols) {
+        for (var prop of __getOwnPropSymbols(b))if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]);
+    }
+    return a;
+};
+var __spreadProps = (a, b)=>__defProps(a, __getOwnPropDescs(b));
+var __objRest = (source, exclude)=>{
+    var target = {};
+    for(var prop in source)if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0) target[prop] = source[prop];
+    if (source != null && __getOwnPropSymbols) {
+        for (var prop of __getOwnPropSymbols(source))if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop)) target[prop] = source[prop];
+    }
+    return target;
+};
+var React = // prettier-ignore
+// @ts-ignore
+"default" in _react ? _react["default"] : _react;
+// src/components/Context.ts
+var ContextKey = Symbol.for(`react-redux-context`);
+var gT = typeof globalThis !== "undefined" ? globalThis : /* fall back to a per-module scope (pre-8.1 behaviour) if `globalThis` is not available */ {};
+function getContext() {
+    var _a;
+    if (!React.createContext) return {};
+    const contextMap = (_a = gT[ContextKey]) != null ? _a : gT[ContextKey] = /* @__PURE__ */ new Map();
+    let realContext = contextMap.get(React.createContext);
+    if (!realContext) {
+        realContext = React.createContext(null);
+        realContext.displayName = "ReactRedux";
+        contextMap.set(React.createContext, realContext);
+    }
+    return realContext;
+}
+var ReactReduxContext = /* @__PURE__ */ getContext();
+// src/utils/useSyncExternalStore.ts
+var notInitialized = ()=>{
+    throw new Error("uSES not initialized!");
+};
+// src/hooks/useReduxContext.ts
+function createReduxContextHook(context = ReactReduxContext) {
+    return function useReduxContext2() {
+        const contextValue = React.useContext(context);
+        if (!contextValue) throw new Error("could not find react-redux context value; please ensure the component is wrapped in a <Provider>");
+        return contextValue;
+    };
+}
+var useReduxContext = /* @__PURE__ */ createReduxContextHook();
+// src/hooks/useSelector.ts
+var useSyncExternalStoreWithSelector = notInitialized;
+var initializeUseSelector = (fn)=>{
+    useSyncExternalStoreWithSelector = fn;
+};
+var refEquality = (a, b)=>a === b;
+function createSelectorHook(context = ReactReduxContext) {
+    const useReduxContext2 = context === ReactReduxContext ? useReduxContext : createReduxContextHook(context);
+    return function useSelector2(selector, equalityFnOrOptions = {}) {
+        const { equalityFn = refEquality, devModeChecks = {} } = typeof equalityFnOrOptions === "function" ? {
+            equalityFn: equalityFnOrOptions
+        } : equalityFnOrOptions;
+        if (!selector) throw new Error(`You must pass a selector to useSelector`);
+        if (typeof selector !== "function") throw new Error(`You must pass a function as a selector to useSelector`);
+        if (typeof equalityFn !== "function") throw new Error(`You must pass a function as an equality function to useSelector`);
+        const { store, subscription, getServerState, stabilityCheck, identityFunctionCheck } = useReduxContext2();
+        const firstRun = React.useRef(true);
+        const wrappedSelector = React.useCallback({
+            [selector.name] (state) {
+                const selected = selector(state);
+                {
+                    const { identityFunctionCheck: finalIdentityFunctionCheck, stabilityCheck: finalStabilityCheck } = __spreadValues({
+                        stabilityCheck,
+                        identityFunctionCheck
+                    }, devModeChecks);
+                    if (finalStabilityCheck === "always" || finalStabilityCheck === "once" && firstRun.current) {
+                        const toCompare = selector(state);
+                        if (!equalityFn(selected, toCompare)) {
+                            let stack = void 0;
+                            try {
+                                throw new Error();
+                            } catch (e) {
+                                ({ stack } = e);
+                            }
+                            console.warn("Selector " + (selector.name || "unknown") + " returned a different result when called with the same parameters. This can lead to unnecessary rerenders.\nSelectors that return a new reference (such as an object or an array) should be memoized: https://redux.js.org/usage/deriving-data-selectors#optimizing-selectors-with-memoization", {
+                                state,
+                                selected,
+                                selected2: toCompare,
+                                stack
+                            });
+                        }
+                    }
+                    if (finalIdentityFunctionCheck === "always" || finalIdentityFunctionCheck === "once" && firstRun.current) {
+                        if (selected === state) {
+                            let stack = void 0;
+                            try {
+                                throw new Error();
+                            } catch (e) {
+                                ({ stack } = e);
+                            }
+                            console.warn("Selector " + (selector.name || "unknown") + " returned the root state when called. This can lead to unnecessary rerenders.\nSelectors that return the entire state are almost certainly a mistake, as they will cause a rerender whenever *anything* in state changes.", {
+                                stack
+                            });
+                        }
+                    }
+                    if (firstRun.current) firstRun.current = false;
+                }
+                return selected;
+            }
+        }[selector.name], [
+            selector,
+            stabilityCheck,
+            devModeChecks.stabilityCheck
+        ]);
+        const selectedState = useSyncExternalStoreWithSelector(subscription.addNestedSub, store.getState, getServerState || store.getState, wrappedSelector, equalityFn);
+        React.useDebugValue(selectedState);
+        return selectedState;
+    };
+}
+var useSelector = /* @__PURE__ */ createSelectorHook();
+// src/utils/react-is.ts
+var REACT_ELEMENT_TYPE = Symbol.for("react.element");
+var REACT_PORTAL_TYPE = Symbol.for("react.portal");
+var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
+var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
+var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
+var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
+var REACT_CONTEXT_TYPE = Symbol.for("react.context");
+var REACT_SERVER_CONTEXT_TYPE = Symbol.for("react.server_context");
+var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
+var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
+var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
+var REACT_MEMO_TYPE = Symbol.for("react.memo");
+var REACT_LAZY_TYPE = Symbol.for("react.lazy");
+var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
+var REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference");
+var ForwardRef = REACT_FORWARD_REF_TYPE;
+var Memo = REACT_MEMO_TYPE;
+function isValidElementType(type) {
+    if (typeof type === "string" || typeof type === "function") return true;
+    if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_OFFSCREEN_TYPE) return true;
+    if (typeof type === "object" && type !== null) {
+        if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
+        // types supported by any Flight configuration anywhere since
+        // we don't know which Flight build this will end up being used
+        // with.
+        type.$$typeof === REACT_CLIENT_REFERENCE || type.getModuleId !== void 0) return true;
+    }
+    return false;
+}
+function typeOf(object) {
+    if (typeof object === "object" && object !== null) {
+        const $$typeof = object.$$typeof;
+        switch($$typeof){
+            case REACT_ELEMENT_TYPE:
+                {
+                    const type = object.type;
+                    switch(type){
+                        case REACT_FRAGMENT_TYPE:
+                        case REACT_PROFILER_TYPE:
+                        case REACT_STRICT_MODE_TYPE:
+                        case REACT_SUSPENSE_TYPE:
+                        case REACT_SUSPENSE_LIST_TYPE:
+                            return type;
+                        default:
+                            {
+                                const $$typeofType = type && type.$$typeof;
+                                switch($$typeofType){
+                                    case REACT_SERVER_CONTEXT_TYPE:
+                                    case REACT_CONTEXT_TYPE:
+                                    case REACT_FORWARD_REF_TYPE:
+                                    case REACT_LAZY_TYPE:
+                                    case REACT_MEMO_TYPE:
+                                    case REACT_PROVIDER_TYPE:
+                                        return $$typeofType;
+                                    default:
+                                        return $$typeof;
+                                }
+                            }
+                    }
+                }
+            case REACT_PORTAL_TYPE:
+                return $$typeof;
+        }
+    }
+    return void 0;
+}
+function isContextConsumer(object) {
+    return typeOf(object) === REACT_CONTEXT_TYPE;
+}
+function isMemo(object) {
+    return typeOf(object) === REACT_MEMO_TYPE;
+}
+// src/utils/warning.ts
+function warning(message) {
+    if (typeof console !== "undefined" && typeof console.error === "function") console.error(message);
+    try {
+        throw new Error(message);
+    } catch (e) {}
+}
+// src/connect/verifySubselectors.ts
+function verify(selector, methodName) {
+    if (!selector) throw new Error(`Unexpected value for ${methodName} in connect.`);
+    else if (methodName === "mapStateToProps" || methodName === "mapDispatchToProps") {
+        if (!Object.prototype.hasOwnProperty.call(selector, "dependsOnOwnProps")) warning(`The selector for ${methodName} of connect did not specify a value for dependsOnOwnProps.`);
+    }
+}
+function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps) {
+    verify(mapStateToProps, "mapStateToProps");
+    verify(mapDispatchToProps, "mapDispatchToProps");
+    verify(mergeProps, "mergeProps");
+}
+// src/connect/selectorFactory.ts
+function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, { areStatesEqual, areOwnPropsEqual, areStatePropsEqual }) {
+    let hasRunAtLeastOnce = false;
+    let state;
+    let ownProps;
+    let stateProps;
+    let dispatchProps;
+    let mergedProps;
+    function handleFirstCall(firstState, firstOwnProps) {
+        state = firstState;
+        ownProps = firstOwnProps;
+        stateProps = mapStateToProps(state, ownProps);
+        dispatchProps = mapDispatchToProps(dispatch, ownProps);
+        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        hasRunAtLeastOnce = true;
+        return mergedProps;
+    }
+    function handleNewPropsAndNewState() {
+        stateProps = mapStateToProps(state, ownProps);
+        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        return mergedProps;
+    }
+    function handleNewProps() {
+        if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
+        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
+        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        return mergedProps;
+    }
+    function handleNewState() {
+        const nextStateProps = mapStateToProps(state, ownProps);
+        const statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
+        stateProps = nextStateProps;
+        if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+        return mergedProps;
+    }
+    function handleSubsequentCalls(nextState, nextOwnProps) {
+        const propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
+        const stateChanged = !areStatesEqual(nextState, state, nextOwnProps, ownProps);
+        state = nextState;
+        ownProps = nextOwnProps;
+        if (propsChanged && stateChanged) return handleNewPropsAndNewState();
+        if (propsChanged) return handleNewProps();
+        if (stateChanged) return handleNewState();
+        return mergedProps;
+    }
+    return function pureFinalPropsSelector(nextState, nextOwnProps) {
+        return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
+    };
+}
+function finalPropsSelectorFactory(dispatch, _a) {
+    var _b = _a, { initMapStateToProps, initMapDispatchToProps, initMergeProps } = _b, options = __objRest(_b, [
+        "initMapStateToProps",
+        "initMapDispatchToProps",
+        "initMergeProps"
+    ]);
+    const mapStateToProps = initMapStateToProps(dispatch, options);
+    const mapDispatchToProps = initMapDispatchToProps(dispatch, options);
+    const mergeProps = initMergeProps(dispatch, options);
+    verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps);
+    return pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
+}
+// src/utils/bindActionCreators.ts
+function bindActionCreators(actionCreators, dispatch) {
+    const boundActionCreators = {};
+    for(const key in actionCreators){
+        const actionCreator = actionCreators[key];
+        if (typeof actionCreator === "function") boundActionCreators[key] = (...args)=>dispatch(actionCreator(...args));
+    }
+    return boundActionCreators;
+}
+// src/utils/isPlainObject.ts
+function isPlainObject(obj) {
+    if (typeof obj !== "object" || obj === null) return false;
+    let proto = Object.getPrototypeOf(obj);
+    if (proto === null) return true;
+    let baseProto = proto;
+    while(Object.getPrototypeOf(baseProto) !== null)baseProto = Object.getPrototypeOf(baseProto);
+    return proto === baseProto;
+}
+// src/utils/verifyPlainObject.ts
+function verifyPlainObject(value, displayName, methodName) {
+    if (!isPlainObject(value)) warning(`${methodName}() in ${displayName} must return a plain object. Instead received ${value}.`);
+}
+// src/connect/wrapMapToProps.ts
+function wrapMapToPropsConstant(getConstant) {
+    return function initConstantSelector(dispatch) {
+        const constant = getConstant(dispatch);
+        function constantSelector() {
+            return constant;
+        }
+        constantSelector.dependsOnOwnProps = false;
+        return constantSelector;
+    };
+}
+function getDependsOnOwnProps(mapToProps) {
+    return mapToProps.dependsOnOwnProps ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
+}
+function wrapMapToPropsFunc(mapToProps, methodName) {
+    return function initProxySelector(dispatch, { displayName }) {
+        const proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+            return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch, void 0);
+        };
+        proxy.dependsOnOwnProps = true;
+        proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
+            proxy.mapToProps = mapToProps;
+            proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
+            let props = proxy(stateOrDispatch, ownProps);
+            if (typeof props === "function") {
+                proxy.mapToProps = props;
+                proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
+                props = proxy(stateOrDispatch, ownProps);
+            }
+            verifyPlainObject(props, displayName, methodName);
+            return props;
+        };
+        return proxy;
+    };
+}
+// src/connect/invalidArgFactory.ts
+function createInvalidArgFactory(arg, name) {
+    return (dispatch, options)=>{
+        throw new Error(`Invalid value of type ${typeof arg} for ${name} argument when connecting component ${options.wrappedComponentName}.`);
+    };
+}
+// src/connect/mapDispatchToProps.ts
+function mapDispatchToPropsFactory(mapDispatchToProps) {
+    return mapDispatchToProps && typeof mapDispatchToProps === "object" ? wrapMapToPropsConstant((dispatch)=>// @ts-ignore
+        bindActionCreators(mapDispatchToProps, dispatch)) : !mapDispatchToProps ? wrapMapToPropsConstant((dispatch)=>({
+            dispatch
+        })) : typeof mapDispatchToProps === "function" ? // @ts-ignore
+    wrapMapToPropsFunc(mapDispatchToProps, "mapDispatchToProps") : createInvalidArgFactory(mapDispatchToProps, "mapDispatchToProps");
+}
+// src/connect/mapStateToProps.ts
+function mapStateToPropsFactory(mapStateToProps) {
+    return !mapStateToProps ? wrapMapToPropsConstant(()=>({})) : typeof mapStateToProps === "function" ? // @ts-ignore
+    wrapMapToPropsFunc(mapStateToProps, "mapStateToProps") : createInvalidArgFactory(mapStateToProps, "mapStateToProps");
+}
+// src/connect/mergeProps.ts
+function defaultMergeProps(stateProps, dispatchProps, ownProps) {
+    return __spreadValues(__spreadValues(__spreadValues({}, ownProps), stateProps), dispatchProps);
+}
+function wrapMergePropsFunc(mergeProps) {
+    return function initMergePropsProxy(dispatch, { displayName, areMergedPropsEqual }) {
+        let hasRunOnce = false;
+        let mergedProps;
+        return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+            const nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
+            if (hasRunOnce) {
+                if (!areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
+            } else {
+                hasRunOnce = true;
+                mergedProps = nextMergedProps;
+                verifyPlainObject(mergedProps, displayName, "mergeProps");
+            }
+            return mergedProps;
+        };
+    };
+}
+function mergePropsFactory(mergeProps) {
+    return !mergeProps ? ()=>defaultMergeProps : typeof mergeProps === "function" ? wrapMergePropsFunc(mergeProps) : createInvalidArgFactory(mergeProps, "mergeProps");
+}
+// src/utils/batch.ts
+function defaultNoopBatch(callback) {
+    callback();
+}
+// src/utils/Subscription.ts
+function createListenerCollection() {
+    let first = null;
+    let last = null;
+    return {
+        clear () {
+            first = null;
+            last = null;
+        },
+        notify () {
+            defaultNoopBatch(()=>{
+                let listener = first;
+                while(listener){
+                    listener.callback();
+                    listener = listener.next;
+                }
+            });
+        },
+        get () {
+            let listeners = [];
+            let listener = first;
+            while(listener){
+                listeners.push(listener);
+                listener = listener.next;
+            }
+            return listeners;
+        },
+        subscribe (callback) {
+            let isSubscribed = true;
+            let listener = last = {
+                callback,
+                next: null,
+                prev: last
+            };
+            if (listener.prev) listener.prev.next = listener;
+            else first = listener;
+            return function unsubscribe() {
+                if (!isSubscribed || first === null) return;
+                isSubscribed = false;
+                if (listener.next) listener.next.prev = listener.prev;
+                else last = listener.prev;
+                if (listener.prev) listener.prev.next = listener.next;
+                else first = listener.next;
+            };
+        }
+    };
+}
+var nullListeners = {
+    notify () {},
+    get: ()=>[]
+};
+function createSubscription(store, parentSub) {
+    let unsubscribe;
+    let listeners = nullListeners;
+    let subscriptionsAmount = 0;
+    let selfSubscribed = false;
+    function addNestedSub(listener) {
+        trySubscribe();
+        const cleanupListener = listeners.subscribe(listener);
+        let removed = false;
+        return ()=>{
+            if (!removed) {
+                removed = true;
+                cleanupListener();
+                tryUnsubscribe();
+            }
+        };
+    }
+    function notifyNestedSubs() {
+        listeners.notify();
+    }
+    function handleChangeWrapper() {
+        if (subscription.onStateChange) subscription.onStateChange();
+    }
+    function isSubscribed() {
+        return selfSubscribed;
+    }
+    function trySubscribe() {
+        subscriptionsAmount++;
+        if (!unsubscribe) {
+            unsubscribe = parentSub ? parentSub.addNestedSub(handleChangeWrapper) : store.subscribe(handleChangeWrapper);
+            listeners = createListenerCollection();
+        }
+    }
+    function tryUnsubscribe() {
+        subscriptionsAmount--;
+        if (unsubscribe && subscriptionsAmount === 0) {
+            unsubscribe();
+            unsubscribe = void 0;
+            listeners.clear();
+            listeners = nullListeners;
+        }
+    }
+    function trySubscribeSelf() {
+        if (!selfSubscribed) {
+            selfSubscribed = true;
+            trySubscribe();
+        }
+    }
+    function tryUnsubscribeSelf() {
+        if (selfSubscribed) {
+            selfSubscribed = false;
+            tryUnsubscribe();
+        }
+    }
+    const subscription = {
+        addNestedSub,
+        notifyNestedSubs,
+        handleChangeWrapper,
+        isSubscribed,
+        trySubscribe: trySubscribeSelf,
+        tryUnsubscribe: tryUnsubscribeSelf,
+        getListeners: ()=>listeners
+    };
+    return subscription;
+}
+// src/utils/useIsomorphicLayoutEffect.ts
+var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
+var useIsomorphicLayoutEffect = canUseDOM ? React.useLayoutEffect : React.useEffect;
+// src/utils/shallowEqual.ts
+function is(x, y) {
+    if (x === y) return x !== 0 || y !== 0 || 1 / x === 1 / y;
+    else return x !== x && y !== y;
+}
+function shallowEqual(objA, objB) {
+    if (is(objA, objB)) return true;
+    if (typeof objA !== "object" || objA === null || typeof objB !== "object" || objB === null) return false;
+    const keysA = Object.keys(objA);
+    const keysB = Object.keys(objB);
+    if (keysA.length !== keysB.length) return false;
+    for(let i = 0; i < keysA.length; i++){
+        if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) return false;
+    }
+    return true;
+}
+// src/utils/hoistStatics.ts
+var REACT_STATICS = {
+    childContextTypes: true,
+    contextType: true,
+    contextTypes: true,
+    defaultProps: true,
+    displayName: true,
+    getDefaultProps: true,
+    getDerivedStateFromError: true,
+    getDerivedStateFromProps: true,
+    mixins: true,
+    propTypes: true,
+    type: true
+};
+var KNOWN_STATICS = {
+    name: true,
+    length: true,
+    prototype: true,
+    caller: true,
+    callee: true,
+    arguments: true,
+    arity: true
+};
+var FORWARD_REF_STATICS = {
+    $$typeof: true,
+    render: true,
+    defaultProps: true,
+    displayName: true,
+    propTypes: true
+};
+var MEMO_STATICS = {
+    $$typeof: true,
+    compare: true,
+    defaultProps: true,
+    displayName: true,
+    propTypes: true,
+    type: true
+};
+var TYPE_STATICS = {
+    [ForwardRef]: FORWARD_REF_STATICS,
+    [Memo]: MEMO_STATICS
+};
+function getStatics(component) {
+    if (isMemo(component)) return MEMO_STATICS;
+    return TYPE_STATICS[component["$$typeof"]] || REACT_STATICS;
+}
+var defineProperty = Object.defineProperty;
+var getOwnPropertyNames = Object.getOwnPropertyNames;
+var getOwnPropertySymbols = Object.getOwnPropertySymbols;
+var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+var getPrototypeOf = Object.getPrototypeOf;
+var objectPrototype = Object.prototype;
+function hoistNonReactStatics(targetComponent, sourceComponent) {
+    if (typeof sourceComponent !== "string") {
+        if (objectPrototype) {
+            const inheritedComponent = getPrototypeOf(sourceComponent);
+            if (inheritedComponent && inheritedComponent !== objectPrototype) hoistNonReactStatics(targetComponent, inheritedComponent);
+        }
+        let keys = getOwnPropertyNames(sourceComponent);
+        if (getOwnPropertySymbols) keys = keys.concat(getOwnPropertySymbols(sourceComponent));
+        const targetStatics = getStatics(targetComponent);
+        const sourceStatics = getStatics(sourceComponent);
+        for(let i = 0; i < keys.length; ++i){
+            const key = keys[i];
+            if (!KNOWN_STATICS[key] && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
+                const descriptor = getOwnPropertyDescriptor(sourceComponent, key);
+                try {
+                    defineProperty(targetComponent, key, descriptor);
+                } catch (e) {}
+            }
+        }
+    }
+    return targetComponent;
+}
+// src/components/connect.tsx
+var useSyncExternalStore = notInitialized;
+var initializeConnect = (fn)=>{
+    useSyncExternalStore = fn;
+};
+var NO_SUBSCRIPTION_ARRAY = [
+    null,
+    null
+];
+var stringifyComponent = (Comp)=>{
+    try {
+        return JSON.stringify(Comp);
+    } catch (err) {
+        return String(Comp);
+    }
+};
+function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
+    useIsomorphicLayoutEffect(()=>effectFunc(...effectArgs), dependencies);
+}
+function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, childPropsFromStoreUpdate, notifyNestedSubs) {
+    lastWrapperProps.current = wrapperProps;
+    renderIsScheduled.current = false;
+    if (childPropsFromStoreUpdate.current) {
+        childPropsFromStoreUpdate.current = null;
+        notifyNestedSubs();
+    }
+}
+function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, additionalSubscribeListener) {
+    if (!shouldHandleStateChanges) return ()=>{};
+    let didUnsubscribe = false;
+    let lastThrownError = null;
+    const checkForUpdates = ()=>{
+        if (didUnsubscribe || !isMounted.current) return;
+        const latestStoreState = store.getState();
+        let newChildProps, error;
+        try {
+            newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
+        } catch (e) {
+            error = e;
+            lastThrownError = e;
+        }
+        if (!error) lastThrownError = null;
+        if (newChildProps === lastChildProps.current) {
+            if (!renderIsScheduled.current) notifyNestedSubs();
+        } else {
+            lastChildProps.current = newChildProps;
+            childPropsFromStoreUpdate.current = newChildProps;
+            renderIsScheduled.current = true;
+            additionalSubscribeListener();
+        }
+    };
+    subscription.onStateChange = checkForUpdates;
+    subscription.trySubscribe();
+    checkForUpdates();
+    const unsubscribeWrapper = ()=>{
+        didUnsubscribe = true;
+        subscription.tryUnsubscribe();
+        subscription.onStateChange = null;
+        if (lastThrownError) throw lastThrownError;
+    };
+    return unsubscribeWrapper;
+}
+function strictEqual(a, b) {
+    return a === b;
+}
+var hasWarnedAboutDeprecatedPureOption = false;
+function connect(mapStateToProps, mapDispatchToProps, mergeProps, { // The `pure` option has been removed, so TS doesn't like us destructuring this to check its existence.
+// @ts-ignore
+pure, areStatesEqual = strictEqual, areOwnPropsEqual = shallowEqual, areStatePropsEqual = shallowEqual, areMergedPropsEqual = shallowEqual, // use React's forwardRef to expose a ref of the wrapped component
+forwardRef = false, // the context consumer to use
+context = ReactReduxContext } = {}) {
+    if (pure !== void 0 && !hasWarnedAboutDeprecatedPureOption) {
+        hasWarnedAboutDeprecatedPureOption = true;
+        warning('The `pure` option has been removed. `connect` is now always a "pure/memoized" component');
+    }
+    const Context = context;
+    const initMapStateToProps = mapStateToPropsFactory(mapStateToProps);
+    const initMapDispatchToProps = mapDispatchToPropsFactory(mapDispatchToProps);
+    const initMergeProps = mergePropsFactory(mergeProps);
+    const shouldHandleStateChanges = Boolean(mapStateToProps);
+    const wrapWithConnect = (WrappedComponent)=>{
+        {
+            const isValid = /* @__PURE__ */ isValidElementType(WrappedComponent);
+            if (!isValid) throw new Error(`You must pass a component to the function returned by connect. Instead received ${stringifyComponent(WrappedComponent)}`);
+        }
+        const wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || "Component";
+        const displayName = `Connect(${wrappedComponentName})`;
+        const selectorFactoryOptions = {
+            shouldHandleStateChanges,
+            displayName,
+            wrappedComponentName,
+            WrappedComponent,
+            // @ts-ignore
+            initMapStateToProps,
+            // @ts-ignore
+            initMapDispatchToProps,
+            initMergeProps,
+            areStatesEqual,
+            areStatePropsEqual,
+            areOwnPropsEqual,
+            areMergedPropsEqual
+        };
+        function ConnectFunction(props) {
+            const [propsContext, reactReduxForwardedRef, wrapperProps] = React.useMemo(()=>{
+                const _a = props, { reactReduxForwardedRef: reactReduxForwardedRef2 } = _a, wrapperProps2 = __objRest(_a, [
+                    "reactReduxForwardedRef"
+                ]);
+                return [
+                    props.context,
+                    reactReduxForwardedRef2,
+                    wrapperProps2
+                ];
+            }, [
+                props
+            ]);
+            const ContextToUse = React.useMemo(()=>{
+                let ResultContext = Context;
+                if (propsContext == null ? void 0 : propsContext.Consumer) {
+                    const isValid = /* @__PURE__ */ isContextConsumer(// @ts-ignore
+                    /* @__PURE__ */ React.createElement(propsContext.Consumer, null));
+                    if (!isValid) throw new Error("You must pass a valid React context consumer as `props.context`");
+                    ResultContext = propsContext;
+                }
+                return ResultContext;
+            }, [
+                propsContext,
+                Context
+            ]);
+            const contextValue = React.useContext(ContextToUse);
+            const didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
+            const didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
+            if (!didStoreComeFromProps && !didStoreComeFromContext) throw new Error(`Could not find "store" in the context of "${displayName}". Either wrap the root component in a <Provider>, or pass a custom React context provider to <Provider> and the corresponding React context consumer to ${displayName} in connect options.`);
+            const store = didStoreComeFromProps ? props.store : contextValue.store;
+            const getServerState = didStoreComeFromContext ? contextValue.getServerState : store.getState;
+            const childPropsSelector = React.useMemo(()=>{
+                return finalPropsSelectorFactory(store.dispatch, selectorFactoryOptions);
+            }, [
+                store
+            ]);
+            const [subscription, notifyNestedSubs] = React.useMemo(()=>{
+                if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY;
+                const subscription2 = createSubscription(store, didStoreComeFromProps ? void 0 : contextValue.subscription);
+                const notifyNestedSubs2 = subscription2.notifyNestedSubs.bind(subscription2);
+                return [
+                    subscription2,
+                    notifyNestedSubs2
+                ];
+            }, [
+                store,
+                didStoreComeFromProps,
+                contextValue
+            ]);
+            const overriddenContextValue = React.useMemo(()=>{
+                if (didStoreComeFromProps) return contextValue;
+                return __spreadProps(__spreadValues({}, contextValue), {
+                    subscription
+                });
+            }, [
+                didStoreComeFromProps,
+                contextValue,
+                subscription
+            ]);
+            const lastChildProps = React.useRef();
+            const lastWrapperProps = React.useRef(wrapperProps);
+            const childPropsFromStoreUpdate = React.useRef();
+            const renderIsScheduled = React.useRef(false);
+            const isProcessingDispatch = React.useRef(false);
+            const isMounted = React.useRef(false);
+            const latestSubscriptionCallbackError = React.useRef();
+            useIsomorphicLayoutEffect(()=>{
+                isMounted.current = true;
+                return ()=>{
+                    isMounted.current = false;
+                };
+            }, []);
+            const actualChildPropsSelector = React.useMemo(()=>{
+                const selector = ()=>{
+                    if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) return childPropsFromStoreUpdate.current;
+                    return childPropsSelector(store.getState(), wrapperProps);
+                };
+                return selector;
+            }, [
+                store,
+                wrapperProps
+            ]);
+            const subscribeForReact = React.useMemo(()=>{
+                const subscribe = (reactListener)=>{
+                    if (!subscription) return ()=>{};
+                    return subscribeUpdates(shouldHandleStateChanges, store, subscription, // @ts-ignore
+                    childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, reactListener);
+                };
+                return subscribe;
+            }, [
+                subscription
+            ]);
+            useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [
+                lastWrapperProps,
+                lastChildProps,
+                renderIsScheduled,
+                wrapperProps,
+                childPropsFromStoreUpdate,
+                notifyNestedSubs
+            ]);
+            let actualChildProps;
+            try {
+                actualChildProps = useSyncExternalStore(// TODO We're passing through a big wrapper that does a bunch of extra side effects besides subscribing
+                subscribeForReact, // TODO This is incredibly hacky. We've already processed the store update and calculated new child props,
+                // TODO and we're just passing that through so it triggers a re-render for us rather than relying on `uSES`.
+                actualChildPropsSelector, getServerState ? ()=>childPropsSelector(getServerState(), wrapperProps) : actualChildPropsSelector);
+            } catch (err) {
+                if (latestSubscriptionCallbackError.current) err.message += `
+The error may be correlated with this previous error:
+${latestSubscriptionCallbackError.current.stack}
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+`;
+                throw err;
+            }
+            useIsomorphicLayoutEffect(()=>{
+                latestSubscriptionCallbackError.current = void 0;
+                childPropsFromStoreUpdate.current = void 0;
+                lastChildProps.current = actualChildProps;
+            });
+            const renderedWrappedComponent = React.useMemo(()=>{
+                return(// @ts-ignore
+                /* @__PURE__ */ React.createElement(WrappedComponent, __spreadProps(__spreadValues({}, actualChildProps), {
+                    ref: reactReduxForwardedRef
+                })));
+            }, [
+                reactReduxForwardedRef,
+                WrappedComponent,
+                actualChildProps
+            ]);
+            const renderedChild = React.useMemo(()=>{
+                if (shouldHandleStateChanges) return /* @__PURE__ */ React.createElement(ContextToUse.Provider, {
+                    value: overriddenContextValue
+                }, renderedWrappedComponent);
+                return renderedWrappedComponent;
+            }, [
+                ContextToUse,
+                renderedWrappedComponent,
+                overriddenContextValue
+            ]);
+            return renderedChild;
+        }
+        const _Connect = React.memo(ConnectFunction);
+        const Connect = _Connect;
+        Connect.WrappedComponent = WrappedComponent;
+        Connect.displayName = ConnectFunction.displayName = displayName;
+        if (forwardRef) {
+            const _forwarded = React.forwardRef(function forwardConnectRef(props, ref) {
+                return /* @__PURE__ */ React.createElement(Connect, __spreadProps(__spreadValues({}, props), {
+                    reactReduxForwardedRef: ref
+                }));
+            });
+            const forwarded = _forwarded;
+            forwarded.displayName = displayName;
+            forwarded.WrappedComponent = WrappedComponent;
+            return /* @__PURE__ */ hoistNonReactStatics(forwarded, WrappedComponent);
+        }
+        return /* @__PURE__ */ hoistNonReactStatics(Connect, WrappedComponent);
+    };
+    return wrapWithConnect;
+}
+var connect_default = connect;
+// src/components/Provider.tsx
+function Provider({ store, context, children, serverState, stabilityCheck = "once", identityFunctionCheck = "once" }) {
+    const contextValue = React.useMemo(()=>{
+        const subscription = createSubscription(store);
+        return {
+            store,
+            subscription,
+            getServerState: serverState ? ()=>serverState : void 0,
+            stabilityCheck,
+            identityFunctionCheck
+        };
+    }, [
+        store,
+        serverState,
+        stabilityCheck,
+        identityFunctionCheck
+    ]);
+    const previousState = React.useMemo(()=>store.getState(), [
+        store
+    ]);
+    useIsomorphicLayoutEffect(()=>{
+        const { subscription } = contextValue;
+        subscription.onStateChange = subscription.notifyNestedSubs;
+        subscription.trySubscribe();
+        if (previousState !== store.getState()) subscription.notifyNestedSubs();
+        return ()=>{
+            subscription.tryUnsubscribe();
+            subscription.onStateChange = void 0;
+        };
+    }, [
+        contextValue,
+        previousState
+    ]);
+    const Context = context || ReactReduxContext;
+    return /* @__PURE__ */ React.createElement(Context.Provider, {
+        value: contextValue
+    }, children);
+}
+var Provider_default = Provider;
+// src/hooks/useStore.ts
+function createStoreHook(context = ReactReduxContext) {
+    const useReduxContext2 = // @ts-ignore
+    context === ReactReduxContext ? useReduxContext : // @ts-ignore
+    createReduxContextHook(context);
+    return function useStore2() {
+        const { store } = useReduxContext2();
+        return store;
+    };
+}
+var useStore = /* @__PURE__ */ createStoreHook();
+// src/hooks/useDispatch.ts
+function createDispatchHook(context = ReactReduxContext) {
+    const useStore2 = // @ts-ignore
+    context === ReactReduxContext ? useStore : createStoreHook(context);
+    return function useDispatch2() {
+        const store = useStore2();
+        return store.dispatch;
+    };
+}
+var useDispatch = /* @__PURE__ */ createDispatchHook();
+// src/exports.ts
+var batch = defaultNoopBatch;
+// src/index.ts
+initializeUseSelector((0, _withSelectorJs.useSyncExternalStoreWithSelector));
+initializeConnect(_react.useSyncExternalStore);
+
+},{"react":"21dqq","use-sync-external-store/with-selector.js":"3eYnG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3eYnG":[function(require,module,exports) {
+"use strict";
+module.exports = require("374a059340689e89");
+
+},{"374a059340689e89":"1Ag9Q"}],"1Ag9Q":[function(require,module,exports) {
+/**
+ * @license React
+ * use-sync-external-store-with-selector.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */ "use strict";
+(function() {
+    "use strict";
+    /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
+    var React = require("8b38fc6c74f16e20");
+    /**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */ function is(x, y) {
+        return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+        ;
+    }
+    var objectIs = typeof Object.is === "function" ? Object.is : is;
+    var useSyncExternalStore = React.useSyncExternalStore;
+    // for CommonJS interop.
+    var useRef = React.useRef, useEffect = React.useEffect, useMemo = React.useMemo, useDebugValue = React.useDebugValue; // Same as useSyncExternalStore, but supports selector and isEqual arguments.
+    function useSyncExternalStoreWithSelector(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
+        // Use this to track the rendered snapshot.
+        var instRef = useRef(null);
+        var inst;
+        if (instRef.current === null) {
+            inst = {
+                hasValue: false,
+                value: null
+            };
+            instRef.current = inst;
+        } else inst = instRef.current;
+        var _useMemo = useMemo(function() {
+            // Track the memoized state using closure variables that are local to this
+            // memoized instance of a getSnapshot function. Intentionally not using a
+            // useRef hook, because that state would be shared across all concurrent
+            // copies of the hook/component.
+            var hasMemo = false;
+            var memoizedSnapshot;
+            var memoizedSelection;
+            var memoizedSelector = function(nextSnapshot) {
+                if (!hasMemo) {
+                    // The first time the hook is called, there is no memoized result.
+                    hasMemo = true;
+                    memoizedSnapshot = nextSnapshot;
+                    var _nextSelection = selector(nextSnapshot);
+                    if (isEqual !== undefined) // Even if the selector has changed, the currently rendered selection
+                    // may be equal to the new selection. We should attempt to reuse the
+                    // current value if possible, to preserve downstream memoizations.
+                    {
+                        if (inst.hasValue) {
+                            var currentSelection = inst.value;
+                            if (isEqual(currentSelection, _nextSelection)) {
+                                memoizedSelection = currentSelection;
+                                return currentSelection;
+                            }
+                        }
+                    }
+                    memoizedSelection = _nextSelection;
+                    return _nextSelection;
+                } // We may be able to reuse the previous invocation's result.
+                // We may be able to reuse the previous invocation's result.
+                var prevSnapshot = memoizedSnapshot;
+                var prevSelection = memoizedSelection;
+                if (objectIs(prevSnapshot, nextSnapshot)) // The snapshot is the same as last time. Reuse the previous selection.
+                return prevSelection;
+                 // The snapshot has changed, so we need to compute a new selection.
+                // The snapshot has changed, so we need to compute a new selection.
+                var nextSelection = selector(nextSnapshot); // If a custom isEqual function is provided, use that to check if the data
+                // has changed. If it hasn't, return the previous selection. That signals
+                // to React that the selections are conceptually equal, and we can bail
+                // out of rendering.
+                // If a custom isEqual function is provided, use that to check if the data
+                // has changed. If it hasn't, return the previous selection. That signals
+                // to React that the selections are conceptually equal, and we can bail
+                // out of rendering.
+                if (isEqual !== undefined && isEqual(prevSelection, nextSelection)) return prevSelection;
+                memoizedSnapshot = nextSnapshot;
+                memoizedSelection = nextSelection;
+                return nextSelection;
+            }; // Assigning this to a constant so that Flow knows it can't change.
+            // Assigning this to a constant so that Flow knows it can't change.
+            var maybeGetServerSnapshot = getServerSnapshot === undefined ? null : getServerSnapshot;
+            var getSnapshotWithSelector = function() {
+                return memoizedSelector(getSnapshot());
+            };
+            var getServerSnapshotWithSelector = maybeGetServerSnapshot === null ? undefined : function() {
+                return memoizedSelector(maybeGetServerSnapshot());
+            };
+            return [
+                getSnapshotWithSelector,
+                getServerSnapshotWithSelector
+            ];
+        }, [
+            getSnapshot,
+            getServerSnapshot,
+            selector,
+            isEqual
+        ]), getSelection = _useMemo[0], getServerSelection = _useMemo[1];
+        var value = useSyncExternalStore(subscribe, getSelection, getServerSelection);
+        useEffect(function() {
+            inst.hasValue = true;
+            inst.value = value;
+        }, [
+            value
+        ]);
+        useDebugValue(value);
+        return value;
+    }
+    exports.useSyncExternalStoreWithSelector = useSyncExternalStoreWithSelector;
+    /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
+})();
+
+},{"8b38fc6c74f16e20":"21dqq"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -33960,6 +35004,22 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"di7hi":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
+parcelHelpers.export(exports, "LOGO_URL", ()=>LOGO_URL);
+parcelHelpers.export(exports, "API_URL", ()=>API_URL);
+parcelHelpers.export(exports, "REST_INFO_API_URL", ()=>REST_INFO_API_URL);
+parcelHelpers.export(exports, "IMG_URL", ()=>IMG_URL);
+parcelHelpers.export(exports, "CORS_URL", ()=>CORS_URL);
+const CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const LOGO_URL = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/food-app-icon-food-explorer-design-template-8ae900e41ccbc0a2e1b48a85d239e389_screen.jpg?ts=1585237320";
+const API_URL = "https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Frestaurants%2Flist%2Fv5%3Flat%3D18.4833358%26lng%3D73.812767%26is-seo-homepage-enabled%3Dtrue%26page_type%3DDESKTOP_WEB_LISTING";
+const REST_INFO_API_URL = "https://corsproxy.org/?" + encodeURIComponent("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4833358&lng=73.812767&restaurantId=");
+const IMG_URL = "https://media-assets.swiggy.com/swiggy/image/upload/";
+const CORS_URL = "https://corsproxy.org/?";
+
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3DxXm":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$205d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
@@ -34118,1089 +35178,21 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"62sf7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "Provider", ()=>Provider_default);
-parcelHelpers.export(exports, "ReactReduxContext", ()=>ReactReduxContext);
-parcelHelpers.export(exports, "batch", ()=>batch);
-parcelHelpers.export(exports, "connect", ()=>connect_default);
-parcelHelpers.export(exports, "createDispatchHook", ()=>createDispatchHook);
-parcelHelpers.export(exports, "createSelectorHook", ()=>createSelectorHook);
-parcelHelpers.export(exports, "createStoreHook", ()=>createStoreHook);
-parcelHelpers.export(exports, "shallowEqual", ()=>shallowEqual);
-parcelHelpers.export(exports, "useDispatch", ()=>useDispatch);
-parcelHelpers.export(exports, "useSelector", ()=>useSelector);
-parcelHelpers.export(exports, "useStore", ()=>useStore);
-// src/index.ts
-var _react = require("react");
-var _withSelectorJs = require("use-sync-external-store/with-selector.js");
-var __defProp = Object.defineProperty;
-var __defProps = Object.defineProperties;
-var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols = Object.getOwnPropertySymbols;
-var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __propIsEnum = Object.prototype.propertyIsEnumerable;
-var __defNormalProp = (obj, key, value)=>key in obj ? __defProp(obj, key, {
-        enumerable: true,
-        configurable: true,
-        writable: true,
-        value
-    }) : obj[key] = value;
-var __spreadValues = (a, b)=>{
-    for(var prop in b || (b = {}))if (__hasOwnProp.call(b, prop)) __defNormalProp(a, prop, b[prop]);
-    if (__getOwnPropSymbols) {
-        for (var prop of __getOwnPropSymbols(b))if (__propIsEnum.call(b, prop)) __defNormalProp(a, prop, b[prop]);
-    }
-    return a;
-};
-var __spreadProps = (a, b)=>__defProps(a, __getOwnPropDescs(b));
-var __objRest = (source, exclude)=>{
-    var target = {};
-    for(var prop in source)if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0) target[prop] = source[prop];
-    if (source != null && __getOwnPropSymbols) {
-        for (var prop of __getOwnPropSymbols(source))if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop)) target[prop] = source[prop];
-    }
-    return target;
-};
-var React = // prettier-ignore
-// @ts-ignore
-"default" in _react ? _react["default"] : _react;
-// src/components/Context.ts
-var ContextKey = Symbol.for(`react-redux-context`);
-var gT = typeof globalThis !== "undefined" ? globalThis : /* fall back to a per-module scope (pre-8.1 behaviour) if `globalThis` is not available */ {};
-function getContext() {
-    var _a;
-    if (!React.createContext) return {};
-    const contextMap = (_a = gT[ContextKey]) != null ? _a : gT[ContextKey] = /* @__PURE__ */ new Map();
-    let realContext = contextMap.get(React.createContext);
-    if (!realContext) {
-        realContext = React.createContext(null);
-        realContext.displayName = "ReactRedux";
-        contextMap.set(React.createContext, realContext);
-    }
-    return realContext;
-}
-var ReactReduxContext = /* @__PURE__ */ getContext();
-// src/utils/useSyncExternalStore.ts
-var notInitialized = ()=>{
-    throw new Error("uSES not initialized!");
-};
-// src/hooks/useReduxContext.ts
-function createReduxContextHook(context = ReactReduxContext) {
-    return function useReduxContext2() {
-        const contextValue = React.useContext(context);
-        if (!contextValue) throw new Error("could not find react-redux context value; please ensure the component is wrapped in a <Provider>");
-        return contextValue;
-    };
-}
-var useReduxContext = /* @__PURE__ */ createReduxContextHook();
-// src/hooks/useSelector.ts
-var useSyncExternalStoreWithSelector = notInitialized;
-var initializeUseSelector = (fn)=>{
-    useSyncExternalStoreWithSelector = fn;
-};
-var refEquality = (a, b)=>a === b;
-function createSelectorHook(context = ReactReduxContext) {
-    const useReduxContext2 = context === ReactReduxContext ? useReduxContext : createReduxContextHook(context);
-    return function useSelector2(selector, equalityFnOrOptions = {}) {
-        const { equalityFn = refEquality, devModeChecks = {} } = typeof equalityFnOrOptions === "function" ? {
-            equalityFn: equalityFnOrOptions
-        } : equalityFnOrOptions;
-        if (!selector) throw new Error(`You must pass a selector to useSelector`);
-        if (typeof selector !== "function") throw new Error(`You must pass a function as a selector to useSelector`);
-        if (typeof equalityFn !== "function") throw new Error(`You must pass a function as an equality function to useSelector`);
-        const { store, subscription, getServerState, stabilityCheck, identityFunctionCheck } = useReduxContext2();
-        const firstRun = React.useRef(true);
-        const wrappedSelector = React.useCallback({
-            [selector.name] (state) {
-                const selected = selector(state);
-                {
-                    const { identityFunctionCheck: finalIdentityFunctionCheck, stabilityCheck: finalStabilityCheck } = __spreadValues({
-                        stabilityCheck,
-                        identityFunctionCheck
-                    }, devModeChecks);
-                    if (finalStabilityCheck === "always" || finalStabilityCheck === "once" && firstRun.current) {
-                        const toCompare = selector(state);
-                        if (!equalityFn(selected, toCompare)) {
-                            let stack = void 0;
-                            try {
-                                throw new Error();
-                            } catch (e) {
-                                ({ stack } = e);
-                            }
-                            console.warn("Selector " + (selector.name || "unknown") + " returned a different result when called with the same parameters. This can lead to unnecessary rerenders.\nSelectors that return a new reference (such as an object or an array) should be memoized: https://redux.js.org/usage/deriving-data-selectors#optimizing-selectors-with-memoization", {
-                                state,
-                                selected,
-                                selected2: toCompare,
-                                stack
-                            });
-                        }
-                    }
-                    if (finalIdentityFunctionCheck === "always" || finalIdentityFunctionCheck === "once" && firstRun.current) {
-                        if (selected === state) {
-                            let stack = void 0;
-                            try {
-                                throw new Error();
-                            } catch (e) {
-                                ({ stack } = e);
-                            }
-                            console.warn("Selector " + (selector.name || "unknown") + " returned the root state when called. This can lead to unnecessary rerenders.\nSelectors that return the entire state are almost certainly a mistake, as they will cause a rerender whenever *anything* in state changes.", {
-                                stack
-                            });
-                        }
-                    }
-                    if (firstRun.current) firstRun.current = false;
-                }
-                return selected;
-            }
-        }[selector.name], [
-            selector,
-            stabilityCheck,
-            devModeChecks.stabilityCheck
-        ]);
-        const selectedState = useSyncExternalStoreWithSelector(subscription.addNestedSub, store.getState, getServerState || store.getState, wrappedSelector, equalityFn);
-        React.useDebugValue(selectedState);
-        return selectedState;
-    };
-}
-var useSelector = /* @__PURE__ */ createSelectorHook();
-// src/utils/react-is.ts
-var REACT_ELEMENT_TYPE = Symbol.for("react.element");
-var REACT_PORTAL_TYPE = Symbol.for("react.portal");
-var REACT_FRAGMENT_TYPE = Symbol.for("react.fragment");
-var REACT_STRICT_MODE_TYPE = Symbol.for("react.strict_mode");
-var REACT_PROFILER_TYPE = Symbol.for("react.profiler");
-var REACT_PROVIDER_TYPE = Symbol.for("react.provider");
-var REACT_CONTEXT_TYPE = Symbol.for("react.context");
-var REACT_SERVER_CONTEXT_TYPE = Symbol.for("react.server_context");
-var REACT_FORWARD_REF_TYPE = Symbol.for("react.forward_ref");
-var REACT_SUSPENSE_TYPE = Symbol.for("react.suspense");
-var REACT_SUSPENSE_LIST_TYPE = Symbol.for("react.suspense_list");
-var REACT_MEMO_TYPE = Symbol.for("react.memo");
-var REACT_LAZY_TYPE = Symbol.for("react.lazy");
-var REACT_OFFSCREEN_TYPE = Symbol.for("react.offscreen");
-var REACT_CLIENT_REFERENCE = Symbol.for("react.client.reference");
-var ForwardRef = REACT_FORWARD_REF_TYPE;
-var Memo = REACT_MEMO_TYPE;
-function isValidElementType(type) {
-    if (typeof type === "string" || typeof type === "function") return true;
-    if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_OFFSCREEN_TYPE) return true;
-    if (typeof type === "object" && type !== null) {
-        if (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || // This needs to include all possible module reference object
-        // types supported by any Flight configuration anywhere since
-        // we don't know which Flight build this will end up being used
-        // with.
-        type.$$typeof === REACT_CLIENT_REFERENCE || type.getModuleId !== void 0) return true;
-    }
-    return false;
-}
-function typeOf(object) {
-    if (typeof object === "object" && object !== null) {
-        const $$typeof = object.$$typeof;
-        switch($$typeof){
-            case REACT_ELEMENT_TYPE:
-                {
-                    const type = object.type;
-                    switch(type){
-                        case REACT_FRAGMENT_TYPE:
-                        case REACT_PROFILER_TYPE:
-                        case REACT_STRICT_MODE_TYPE:
-                        case REACT_SUSPENSE_TYPE:
-                        case REACT_SUSPENSE_LIST_TYPE:
-                            return type;
-                        default:
-                            {
-                                const $$typeofType = type && type.$$typeof;
-                                switch($$typeofType){
-                                    case REACT_SERVER_CONTEXT_TYPE:
-                                    case REACT_CONTEXT_TYPE:
-                                    case REACT_FORWARD_REF_TYPE:
-                                    case REACT_LAZY_TYPE:
-                                    case REACT_MEMO_TYPE:
-                                    case REACT_PROVIDER_TYPE:
-                                        return $$typeofType;
-                                    default:
-                                        return $$typeof;
-                                }
-                            }
-                    }
-                }
-            case REACT_PORTAL_TYPE:
-                return $$typeof;
-        }
-    }
-    return void 0;
-}
-function isContextConsumer(object) {
-    return typeOf(object) === REACT_CONTEXT_TYPE;
-}
-function isMemo(object) {
-    return typeOf(object) === REACT_MEMO_TYPE;
-}
-// src/utils/warning.ts
-function warning(message) {
-    if (typeof console !== "undefined" && typeof console.error === "function") console.error(message);
-    try {
-        throw new Error(message);
-    } catch (e) {}
-}
-// src/connect/verifySubselectors.ts
-function verify(selector, methodName) {
-    if (!selector) throw new Error(`Unexpected value for ${methodName} in connect.`);
-    else if (methodName === "mapStateToProps" || methodName === "mapDispatchToProps") {
-        if (!Object.prototype.hasOwnProperty.call(selector, "dependsOnOwnProps")) warning(`The selector for ${methodName} of connect did not specify a value for dependsOnOwnProps.`);
-    }
-}
-function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps) {
-    verify(mapStateToProps, "mapStateToProps");
-    verify(mapDispatchToProps, "mapDispatchToProps");
-    verify(mergeProps, "mergeProps");
-}
-// src/connect/selectorFactory.ts
-function pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, { areStatesEqual, areOwnPropsEqual, areStatePropsEqual }) {
-    let hasRunAtLeastOnce = false;
-    let state;
-    let ownProps;
-    let stateProps;
-    let dispatchProps;
-    let mergedProps;
-    function handleFirstCall(firstState, firstOwnProps) {
-        state = firstState;
-        ownProps = firstOwnProps;
-        stateProps = mapStateToProps(state, ownProps);
-        dispatchProps = mapDispatchToProps(dispatch, ownProps);
-        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        hasRunAtLeastOnce = true;
-        return mergedProps;
-    }
-    function handleNewPropsAndNewState() {
-        stateProps = mapStateToProps(state, ownProps);
-        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        return mergedProps;
-    }
-    function handleNewProps() {
-        if (mapStateToProps.dependsOnOwnProps) stateProps = mapStateToProps(state, ownProps);
-        if (mapDispatchToProps.dependsOnOwnProps) dispatchProps = mapDispatchToProps(dispatch, ownProps);
-        mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        return mergedProps;
-    }
-    function handleNewState() {
-        const nextStateProps = mapStateToProps(state, ownProps);
-        const statePropsChanged = !areStatePropsEqual(nextStateProps, stateProps);
-        stateProps = nextStateProps;
-        if (statePropsChanged) mergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-        return mergedProps;
-    }
-    function handleSubsequentCalls(nextState, nextOwnProps) {
-        const propsChanged = !areOwnPropsEqual(nextOwnProps, ownProps);
-        const stateChanged = !areStatesEqual(nextState, state, nextOwnProps, ownProps);
-        state = nextState;
-        ownProps = nextOwnProps;
-        if (propsChanged && stateChanged) return handleNewPropsAndNewState();
-        if (propsChanged) return handleNewProps();
-        if (stateChanged) return handleNewState();
-        return mergedProps;
-    }
-    return function pureFinalPropsSelector(nextState, nextOwnProps) {
-        return hasRunAtLeastOnce ? handleSubsequentCalls(nextState, nextOwnProps) : handleFirstCall(nextState, nextOwnProps);
-    };
-}
-function finalPropsSelectorFactory(dispatch, _a) {
-    var _b = _a, { initMapStateToProps, initMapDispatchToProps, initMergeProps } = _b, options = __objRest(_b, [
-        "initMapStateToProps",
-        "initMapDispatchToProps",
-        "initMergeProps"
-    ]);
-    const mapStateToProps = initMapStateToProps(dispatch, options);
-    const mapDispatchToProps = initMapDispatchToProps(dispatch, options);
-    const mergeProps = initMergeProps(dispatch, options);
-    verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps);
-    return pureFinalPropsSelectorFactory(mapStateToProps, mapDispatchToProps, mergeProps, dispatch, options);
-}
-// src/utils/bindActionCreators.ts
-function bindActionCreators(actionCreators, dispatch) {
-    const boundActionCreators = {};
-    for(const key in actionCreators){
-        const actionCreator = actionCreators[key];
-        if (typeof actionCreator === "function") boundActionCreators[key] = (...args)=>dispatch(actionCreator(...args));
-    }
-    return boundActionCreators;
-}
-// src/utils/isPlainObject.ts
-function isPlainObject(obj) {
-    if (typeof obj !== "object" || obj === null) return false;
-    let proto = Object.getPrototypeOf(obj);
-    if (proto === null) return true;
-    let baseProto = proto;
-    while(Object.getPrototypeOf(baseProto) !== null)baseProto = Object.getPrototypeOf(baseProto);
-    return proto === baseProto;
-}
-// src/utils/verifyPlainObject.ts
-function verifyPlainObject(value, displayName, methodName) {
-    if (!isPlainObject(value)) warning(`${methodName}() in ${displayName} must return a plain object. Instead received ${value}.`);
-}
-// src/connect/wrapMapToProps.ts
-function wrapMapToPropsConstant(getConstant) {
-    return function initConstantSelector(dispatch) {
-        const constant = getConstant(dispatch);
-        function constantSelector() {
-            return constant;
-        }
-        constantSelector.dependsOnOwnProps = false;
-        return constantSelector;
-    };
-}
-function getDependsOnOwnProps(mapToProps) {
-    return mapToProps.dependsOnOwnProps ? Boolean(mapToProps.dependsOnOwnProps) : mapToProps.length !== 1;
-}
-function wrapMapToPropsFunc(mapToProps, methodName) {
-    return function initProxySelector(dispatch, { displayName }) {
-        const proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
-            return proxy.dependsOnOwnProps ? proxy.mapToProps(stateOrDispatch, ownProps) : proxy.mapToProps(stateOrDispatch, void 0);
-        };
-        proxy.dependsOnOwnProps = true;
-        proxy.mapToProps = function detectFactoryAndVerify(stateOrDispatch, ownProps) {
-            proxy.mapToProps = mapToProps;
-            proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps);
-            let props = proxy(stateOrDispatch, ownProps);
-            if (typeof props === "function") {
-                proxy.mapToProps = props;
-                proxy.dependsOnOwnProps = getDependsOnOwnProps(props);
-                props = proxy(stateOrDispatch, ownProps);
-            }
-            verifyPlainObject(props, displayName, methodName);
-            return props;
-        };
-        return proxy;
-    };
-}
-// src/connect/invalidArgFactory.ts
-function createInvalidArgFactory(arg, name) {
-    return (dispatch, options)=>{
-        throw new Error(`Invalid value of type ${typeof arg} for ${name} argument when connecting component ${options.wrappedComponentName}.`);
-    };
-}
-// src/connect/mapDispatchToProps.ts
-function mapDispatchToPropsFactory(mapDispatchToProps) {
-    return mapDispatchToProps && typeof mapDispatchToProps === "object" ? wrapMapToPropsConstant((dispatch)=>// @ts-ignore
-        bindActionCreators(mapDispatchToProps, dispatch)) : !mapDispatchToProps ? wrapMapToPropsConstant((dispatch)=>({
-            dispatch
-        })) : typeof mapDispatchToProps === "function" ? // @ts-ignore
-    wrapMapToPropsFunc(mapDispatchToProps, "mapDispatchToProps") : createInvalidArgFactory(mapDispatchToProps, "mapDispatchToProps");
-}
-// src/connect/mapStateToProps.ts
-function mapStateToPropsFactory(mapStateToProps) {
-    return !mapStateToProps ? wrapMapToPropsConstant(()=>({})) : typeof mapStateToProps === "function" ? // @ts-ignore
-    wrapMapToPropsFunc(mapStateToProps, "mapStateToProps") : createInvalidArgFactory(mapStateToProps, "mapStateToProps");
-}
-// src/connect/mergeProps.ts
-function defaultMergeProps(stateProps, dispatchProps, ownProps) {
-    return __spreadValues(__spreadValues(__spreadValues({}, ownProps), stateProps), dispatchProps);
-}
-function wrapMergePropsFunc(mergeProps) {
-    return function initMergePropsProxy(dispatch, { displayName, areMergedPropsEqual }) {
-        let hasRunOnce = false;
-        let mergedProps;
-        return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
-            const nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps);
-            if (hasRunOnce) {
-                if (!areMergedPropsEqual(nextMergedProps, mergedProps)) mergedProps = nextMergedProps;
-            } else {
-                hasRunOnce = true;
-                mergedProps = nextMergedProps;
-                verifyPlainObject(mergedProps, displayName, "mergeProps");
-            }
-            return mergedProps;
-        };
-    };
-}
-function mergePropsFactory(mergeProps) {
-    return !mergeProps ? ()=>defaultMergeProps : typeof mergeProps === "function" ? wrapMergePropsFunc(mergeProps) : createInvalidArgFactory(mergeProps, "mergeProps");
-}
-// src/utils/batch.ts
-function defaultNoopBatch(callback) {
-    callback();
-}
-// src/utils/Subscription.ts
-function createListenerCollection() {
-    let first = null;
-    let last = null;
-    return {
-        clear () {
-            first = null;
-            last = null;
-        },
-        notify () {
-            defaultNoopBatch(()=>{
-                let listener = first;
-                while(listener){
-                    listener.callback();
-                    listener = listener.next;
-                }
-            });
-        },
-        get () {
-            let listeners = [];
-            let listener = first;
-            while(listener){
-                listeners.push(listener);
-                listener = listener.next;
-            }
-            return listeners;
-        },
-        subscribe (callback) {
-            let isSubscribed = true;
-            let listener = last = {
-                callback,
-                next: null,
-                prev: last
-            };
-            if (listener.prev) listener.prev.next = listener;
-            else first = listener;
-            return function unsubscribe() {
-                if (!isSubscribed || first === null) return;
-                isSubscribed = false;
-                if (listener.next) listener.next.prev = listener.prev;
-                else last = listener.prev;
-                if (listener.prev) listener.prev.next = listener.next;
-                else first = listener.next;
-            };
-        }
-    };
-}
-var nullListeners = {
-    notify () {},
-    get: ()=>[]
-};
-function createSubscription(store, parentSub) {
-    let unsubscribe;
-    let listeners = nullListeners;
-    let subscriptionsAmount = 0;
-    let selfSubscribed = false;
-    function addNestedSub(listener) {
-        trySubscribe();
-        const cleanupListener = listeners.subscribe(listener);
-        let removed = false;
-        return ()=>{
-            if (!removed) {
-                removed = true;
-                cleanupListener();
-                tryUnsubscribe();
-            }
-        };
-    }
-    function notifyNestedSubs() {
-        listeners.notify();
-    }
-    function handleChangeWrapper() {
-        if (subscription.onStateChange) subscription.onStateChange();
-    }
-    function isSubscribed() {
-        return selfSubscribed;
-    }
-    function trySubscribe() {
-        subscriptionsAmount++;
-        if (!unsubscribe) {
-            unsubscribe = parentSub ? parentSub.addNestedSub(handleChangeWrapper) : store.subscribe(handleChangeWrapper);
-            listeners = createListenerCollection();
-        }
-    }
-    function tryUnsubscribe() {
-        subscriptionsAmount--;
-        if (unsubscribe && subscriptionsAmount === 0) {
-            unsubscribe();
-            unsubscribe = void 0;
-            listeners.clear();
-            listeners = nullListeners;
-        }
-    }
-    function trySubscribeSelf() {
-        if (!selfSubscribed) {
-            selfSubscribed = true;
-            trySubscribe();
-        }
-    }
-    function tryUnsubscribeSelf() {
-        if (selfSubscribed) {
-            selfSubscribed = false;
-            tryUnsubscribe();
-        }
-    }
-    const subscription = {
-        addNestedSub,
-        notifyNestedSubs,
-        handleChangeWrapper,
-        isSubscribed,
-        trySubscribe: trySubscribeSelf,
-        tryUnsubscribe: tryUnsubscribeSelf,
-        getListeners: ()=>listeners
-    };
-    return subscription;
-}
-// src/utils/useIsomorphicLayoutEffect.ts
-var canUseDOM = !!(typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined");
-var useIsomorphicLayoutEffect = canUseDOM ? React.useLayoutEffect : React.useEffect;
-// src/utils/shallowEqual.ts
-function is(x, y) {
-    if (x === y) return x !== 0 || y !== 0 || 1 / x === 1 / y;
-    else return x !== x && y !== y;
-}
-function shallowEqual(objA, objB) {
-    if (is(objA, objB)) return true;
-    if (typeof objA !== "object" || objA === null || typeof objB !== "object" || objB === null) return false;
-    const keysA = Object.keys(objA);
-    const keysB = Object.keys(objB);
-    if (keysA.length !== keysB.length) return false;
-    for(let i = 0; i < keysA.length; i++){
-        if (!Object.prototype.hasOwnProperty.call(objB, keysA[i]) || !is(objA[keysA[i]], objB[keysA[i]])) return false;
-    }
-    return true;
-}
-// src/utils/hoistStatics.ts
-var REACT_STATICS = {
-    childContextTypes: true,
-    contextType: true,
-    contextTypes: true,
-    defaultProps: true,
-    displayName: true,
-    getDefaultProps: true,
-    getDerivedStateFromError: true,
-    getDerivedStateFromProps: true,
-    mixins: true,
-    propTypes: true,
-    type: true
-};
-var KNOWN_STATICS = {
-    name: true,
-    length: true,
-    prototype: true,
-    caller: true,
-    callee: true,
-    arguments: true,
-    arity: true
-};
-var FORWARD_REF_STATICS = {
-    $$typeof: true,
-    render: true,
-    defaultProps: true,
-    displayName: true,
-    propTypes: true
-};
-var MEMO_STATICS = {
-    $$typeof: true,
-    compare: true,
-    defaultProps: true,
-    displayName: true,
-    propTypes: true,
-    type: true
-};
-var TYPE_STATICS = {
-    [ForwardRef]: FORWARD_REF_STATICS,
-    [Memo]: MEMO_STATICS
-};
-function getStatics(component) {
-    if (isMemo(component)) return MEMO_STATICS;
-    return TYPE_STATICS[component["$$typeof"]] || REACT_STATICS;
-}
-var defineProperty = Object.defineProperty;
-var getOwnPropertyNames = Object.getOwnPropertyNames;
-var getOwnPropertySymbols = Object.getOwnPropertySymbols;
-var getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-var getPrototypeOf = Object.getPrototypeOf;
-var objectPrototype = Object.prototype;
-function hoistNonReactStatics(targetComponent, sourceComponent) {
-    if (typeof sourceComponent !== "string") {
-        if (objectPrototype) {
-            const inheritedComponent = getPrototypeOf(sourceComponent);
-            if (inheritedComponent && inheritedComponent !== objectPrototype) hoistNonReactStatics(targetComponent, inheritedComponent);
-        }
-        let keys = getOwnPropertyNames(sourceComponent);
-        if (getOwnPropertySymbols) keys = keys.concat(getOwnPropertySymbols(sourceComponent));
-        const targetStatics = getStatics(targetComponent);
-        const sourceStatics = getStatics(sourceComponent);
-        for(let i = 0; i < keys.length; ++i){
-            const key = keys[i];
-            if (!KNOWN_STATICS[key] && !(sourceStatics && sourceStatics[key]) && !(targetStatics && targetStatics[key])) {
-                const descriptor = getOwnPropertyDescriptor(sourceComponent, key);
-                try {
-                    defineProperty(targetComponent, key, descriptor);
-                } catch (e) {}
-            }
-        }
-    }
-    return targetComponent;
-}
-// src/components/connect.tsx
-var useSyncExternalStore = notInitialized;
-var initializeConnect = (fn)=>{
-    useSyncExternalStore = fn;
-};
-var NO_SUBSCRIPTION_ARRAY = [
-    null,
-    null
-];
-var stringifyComponent = (Comp)=>{
-    try {
-        return JSON.stringify(Comp);
-    } catch (err) {
-        return String(Comp);
-    }
-};
-function useIsomorphicLayoutEffectWithArgs(effectFunc, effectArgs, dependencies) {
-    useIsomorphicLayoutEffect(()=>effectFunc(...effectArgs), dependencies);
-}
-function captureWrapperProps(lastWrapperProps, lastChildProps, renderIsScheduled, wrapperProps, childPropsFromStoreUpdate, notifyNestedSubs) {
-    lastWrapperProps.current = wrapperProps;
-    renderIsScheduled.current = false;
-    if (childPropsFromStoreUpdate.current) {
-        childPropsFromStoreUpdate.current = null;
-        notifyNestedSubs();
-    }
-}
-function subscribeUpdates(shouldHandleStateChanges, store, subscription, childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, additionalSubscribeListener) {
-    if (!shouldHandleStateChanges) return ()=>{};
-    let didUnsubscribe = false;
-    let lastThrownError = null;
-    const checkForUpdates = ()=>{
-        if (didUnsubscribe || !isMounted.current) return;
-        const latestStoreState = store.getState();
-        let newChildProps, error;
-        try {
-            newChildProps = childPropsSelector(latestStoreState, lastWrapperProps.current);
-        } catch (e) {
-            error = e;
-            lastThrownError = e;
-        }
-        if (!error) lastThrownError = null;
-        if (newChildProps === lastChildProps.current) {
-            if (!renderIsScheduled.current) notifyNestedSubs();
-        } else {
-            lastChildProps.current = newChildProps;
-            childPropsFromStoreUpdate.current = newChildProps;
-            renderIsScheduled.current = true;
-            additionalSubscribeListener();
-        }
-    };
-    subscription.onStateChange = checkForUpdates;
-    subscription.trySubscribe();
-    checkForUpdates();
-    const unsubscribeWrapper = ()=>{
-        didUnsubscribe = true;
-        subscription.tryUnsubscribe();
-        subscription.onStateChange = null;
-        if (lastThrownError) throw lastThrownError;
-    };
-    return unsubscribeWrapper;
-}
-function strictEqual(a, b) {
-    return a === b;
-}
-var hasWarnedAboutDeprecatedPureOption = false;
-function connect(mapStateToProps, mapDispatchToProps, mergeProps, { // The `pure` option has been removed, so TS doesn't like us destructuring this to check its existence.
-// @ts-ignore
-pure, areStatesEqual = strictEqual, areOwnPropsEqual = shallowEqual, areStatePropsEqual = shallowEqual, areMergedPropsEqual = shallowEqual, // use React's forwardRef to expose a ref of the wrapped component
-forwardRef = false, // the context consumer to use
-context = ReactReduxContext } = {}) {
-    if (pure !== void 0 && !hasWarnedAboutDeprecatedPureOption) {
-        hasWarnedAboutDeprecatedPureOption = true;
-        warning('The `pure` option has been removed. `connect` is now always a "pure/memoized" component');
-    }
-    const Context = context;
-    const initMapStateToProps = mapStateToPropsFactory(mapStateToProps);
-    const initMapDispatchToProps = mapDispatchToPropsFactory(mapDispatchToProps);
-    const initMergeProps = mergePropsFactory(mergeProps);
-    const shouldHandleStateChanges = Boolean(mapStateToProps);
-    const wrapWithConnect = (WrappedComponent)=>{
-        {
-            const isValid = /* @__PURE__ */ isValidElementType(WrappedComponent);
-            if (!isValid) throw new Error(`You must pass a component to the function returned by connect. Instead received ${stringifyComponent(WrappedComponent)}`);
-        }
-        const wrappedComponentName = WrappedComponent.displayName || WrappedComponent.name || "Component";
-        const displayName = `Connect(${wrappedComponentName})`;
-        const selectorFactoryOptions = {
-            shouldHandleStateChanges,
-            displayName,
-            wrappedComponentName,
-            WrappedComponent,
-            // @ts-ignore
-            initMapStateToProps,
-            // @ts-ignore
-            initMapDispatchToProps,
-            initMergeProps,
-            areStatesEqual,
-            areStatePropsEqual,
-            areOwnPropsEqual,
-            areMergedPropsEqual
-        };
-        function ConnectFunction(props) {
-            const [propsContext, reactReduxForwardedRef, wrapperProps] = React.useMemo(()=>{
-                const _a = props, { reactReduxForwardedRef: reactReduxForwardedRef2 } = _a, wrapperProps2 = __objRest(_a, [
-                    "reactReduxForwardedRef"
-                ]);
-                return [
-                    props.context,
-                    reactReduxForwardedRef2,
-                    wrapperProps2
-                ];
-            }, [
-                props
-            ]);
-            const ContextToUse = React.useMemo(()=>{
-                let ResultContext = Context;
-                if (propsContext == null ? void 0 : propsContext.Consumer) {
-                    const isValid = /* @__PURE__ */ isContextConsumer(// @ts-ignore
-                    /* @__PURE__ */ React.createElement(propsContext.Consumer, null));
-                    if (!isValid) throw new Error("You must pass a valid React context consumer as `props.context`");
-                    ResultContext = propsContext;
-                }
-                return ResultContext;
-            }, [
-                propsContext,
-                Context
-            ]);
-            const contextValue = React.useContext(ContextToUse);
-            const didStoreComeFromProps = Boolean(props.store) && Boolean(props.store.getState) && Boolean(props.store.dispatch);
-            const didStoreComeFromContext = Boolean(contextValue) && Boolean(contextValue.store);
-            if (!didStoreComeFromProps && !didStoreComeFromContext) throw new Error(`Could not find "store" in the context of "${displayName}". Either wrap the root component in a <Provider>, or pass a custom React context provider to <Provider> and the corresponding React context consumer to ${displayName} in connect options.`);
-            const store = didStoreComeFromProps ? props.store : contextValue.store;
-            const getServerState = didStoreComeFromContext ? contextValue.getServerState : store.getState;
-            const childPropsSelector = React.useMemo(()=>{
-                return finalPropsSelectorFactory(store.dispatch, selectorFactoryOptions);
-            }, [
-                store
-            ]);
-            const [subscription, notifyNestedSubs] = React.useMemo(()=>{
-                if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY;
-                const subscription2 = createSubscription(store, didStoreComeFromProps ? void 0 : contextValue.subscription);
-                const notifyNestedSubs2 = subscription2.notifyNestedSubs.bind(subscription2);
-                return [
-                    subscription2,
-                    notifyNestedSubs2
-                ];
-            }, [
-                store,
-                didStoreComeFromProps,
-                contextValue
-            ]);
-            const overriddenContextValue = React.useMemo(()=>{
-                if (didStoreComeFromProps) return contextValue;
-                return __spreadProps(__spreadValues({}, contextValue), {
-                    subscription
-                });
-            }, [
-                didStoreComeFromProps,
-                contextValue,
-                subscription
-            ]);
-            const lastChildProps = React.useRef();
-            const lastWrapperProps = React.useRef(wrapperProps);
-            const childPropsFromStoreUpdate = React.useRef();
-            const renderIsScheduled = React.useRef(false);
-            const isProcessingDispatch = React.useRef(false);
-            const isMounted = React.useRef(false);
-            const latestSubscriptionCallbackError = React.useRef();
-            useIsomorphicLayoutEffect(()=>{
-                isMounted.current = true;
-                return ()=>{
-                    isMounted.current = false;
-                };
-            }, []);
-            const actualChildPropsSelector = React.useMemo(()=>{
-                const selector = ()=>{
-                    if (childPropsFromStoreUpdate.current && wrapperProps === lastWrapperProps.current) return childPropsFromStoreUpdate.current;
-                    return childPropsSelector(store.getState(), wrapperProps);
-                };
-                return selector;
-            }, [
-                store,
-                wrapperProps
-            ]);
-            const subscribeForReact = React.useMemo(()=>{
-                const subscribe = (reactListener)=>{
-                    if (!subscription) return ()=>{};
-                    return subscribeUpdates(shouldHandleStateChanges, store, subscription, // @ts-ignore
-                    childPropsSelector, lastWrapperProps, lastChildProps, renderIsScheduled, isMounted, childPropsFromStoreUpdate, notifyNestedSubs, reactListener);
-                };
-                return subscribe;
-            }, [
-                subscription
-            ]);
-            useIsomorphicLayoutEffectWithArgs(captureWrapperProps, [
-                lastWrapperProps,
-                lastChildProps,
-                renderIsScheduled,
-                wrapperProps,
-                childPropsFromStoreUpdate,
-                notifyNestedSubs
-            ]);
-            let actualChildProps;
-            try {
-                actualChildProps = useSyncExternalStore(// TODO We're passing through a big wrapper that does a bunch of extra side effects besides subscribing
-                subscribeForReact, // TODO This is incredibly hacky. We've already processed the store update and calculated new child props,
-                // TODO and we're just passing that through so it triggers a re-render for us rather than relying on `uSES`.
-                actualChildPropsSelector, getServerState ? ()=>childPropsSelector(getServerState(), wrapperProps) : actualChildPropsSelector);
-            } catch (err) {
-                if (latestSubscriptionCallbackError.current) err.message += `
-The error may be correlated with this previous error:
-${latestSubscriptionCallbackError.current.stack}
-
-`;
-                throw err;
-            }
-            useIsomorphicLayoutEffect(()=>{
-                latestSubscriptionCallbackError.current = void 0;
-                childPropsFromStoreUpdate.current = void 0;
-                lastChildProps.current = actualChildProps;
-            });
-            const renderedWrappedComponent = React.useMemo(()=>{
-                return(// @ts-ignore
-                /* @__PURE__ */ React.createElement(WrappedComponent, __spreadProps(__spreadValues({}, actualChildProps), {
-                    ref: reactReduxForwardedRef
-                })));
-            }, [
-                reactReduxForwardedRef,
-                WrappedComponent,
-                actualChildProps
-            ]);
-            const renderedChild = React.useMemo(()=>{
-                if (shouldHandleStateChanges) return /* @__PURE__ */ React.createElement(ContextToUse.Provider, {
-                    value: overriddenContextValue
-                }, renderedWrappedComponent);
-                return renderedWrappedComponent;
-            }, [
-                ContextToUse,
-                renderedWrappedComponent,
-                overriddenContextValue
-            ]);
-            return renderedChild;
-        }
-        const _Connect = React.memo(ConnectFunction);
-        const Connect = _Connect;
-        Connect.WrappedComponent = WrappedComponent;
-        Connect.displayName = ConnectFunction.displayName = displayName;
-        if (forwardRef) {
-            const _forwarded = React.forwardRef(function forwardConnectRef(props, ref) {
-                return /* @__PURE__ */ React.createElement(Connect, __spreadProps(__spreadValues({}, props), {
-                    reactReduxForwardedRef: ref
-                }));
-            });
-            const forwarded = _forwarded;
-            forwarded.displayName = displayName;
-            forwarded.WrappedComponent = WrappedComponent;
-            return /* @__PURE__ */ hoistNonReactStatics(forwarded, WrappedComponent);
-        }
-        return /* @__PURE__ */ hoistNonReactStatics(Connect, WrappedComponent);
-    };
-    return wrapWithConnect;
-}
-var connect_default = connect;
-// src/components/Provider.tsx
-function Provider({ store, context, children, serverState, stabilityCheck = "once", identityFunctionCheck = "once" }) {
-    const contextValue = React.useMemo(()=>{
-        const subscription = createSubscription(store);
-        return {
-            store,
-            subscription,
-            getServerState: serverState ? ()=>serverState : void 0,
-            stabilityCheck,
-            identityFunctionCheck
-        };
-    }, [
-        store,
-        serverState,
-        stabilityCheck,
-        identityFunctionCheck
-    ]);
-    const previousState = React.useMemo(()=>store.getState(), [
-        store
-    ]);
-    useIsomorphicLayoutEffect(()=>{
-        const { subscription } = contextValue;
-        subscription.onStateChange = subscription.notifyNestedSubs;
-        subscription.trySubscribe();
-        if (previousState !== store.getState()) subscription.notifyNestedSubs();
-        return ()=>{
-            subscription.tryUnsubscribe();
-            subscription.onStateChange = void 0;
-        };
-    }, [
-        contextValue,
-        previousState
-    ]);
-    const Context = context || ReactReduxContext;
-    return /* @__PURE__ */ React.createElement(Context.Provider, {
-        value: contextValue
-    }, children);
-}
-var Provider_default = Provider;
-// src/hooks/useStore.ts
-function createStoreHook(context = ReactReduxContext) {
-    const useReduxContext2 = // @ts-ignore
-    context === ReactReduxContext ? useReduxContext : // @ts-ignore
-    createReduxContextHook(context);
-    return function useStore2() {
-        const { store } = useReduxContext2();
-        return store;
-    };
-}
-var useStore = /* @__PURE__ */ createStoreHook();
-// src/hooks/useDispatch.ts
-function createDispatchHook(context = ReactReduxContext) {
-    const useStore2 = // @ts-ignore
-    context === ReactReduxContext ? useStore : createStoreHook(context);
-    return function useDispatch2() {
-        const store = useStore2();
-        return store.dispatch;
-    };
-}
-var useDispatch = /* @__PURE__ */ createDispatchHook();
-// src/exports.ts
-var batch = defaultNoopBatch;
-// src/index.ts
-initializeUseSelector((0, _withSelectorJs.useSyncExternalStoreWithSelector));
-initializeConnect(_react.useSyncExternalStore);
-
-},{"react":"21dqq","use-sync-external-store/with-selector.js":"3eYnG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3eYnG":[function(require,module,exports) {
-"use strict";
-module.exports = require("374a059340689e89");
-
-},{"374a059340689e89":"1Ag9Q"}],"1Ag9Q":[function(require,module,exports) {
-/**
- * @license React
- * use-sync-external-store-with-selector.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */ "use strict";
-(function() {
-    "use strict";
-    /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-    var React = require("8b38fc6c74f16e20");
-    /**
- * inlined Object.is polyfill to avoid requiring consumers ship their own
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
- */ function is(x, y) {
-        return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
-        ;
-    }
-    var objectIs = typeof Object.is === "function" ? Object.is : is;
-    var useSyncExternalStore = React.useSyncExternalStore;
-    // for CommonJS interop.
-    var useRef = React.useRef, useEffect = React.useEffect, useMemo = React.useMemo, useDebugValue = React.useDebugValue; // Same as useSyncExternalStore, but supports selector and isEqual arguments.
-    function useSyncExternalStoreWithSelector(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
-        // Use this to track the rendered snapshot.
-        var instRef = useRef(null);
-        var inst;
-        if (instRef.current === null) {
-            inst = {
-                hasValue: false,
-                value: null
-            };
-            instRef.current = inst;
-        } else inst = instRef.current;
-        var _useMemo = useMemo(function() {
-            // Track the memoized state using closure variables that are local to this
-            // memoized instance of a getSnapshot function. Intentionally not using a
-            // useRef hook, because that state would be shared across all concurrent
-            // copies of the hook/component.
-            var hasMemo = false;
-            var memoizedSnapshot;
-            var memoizedSelection;
-            var memoizedSelector = function(nextSnapshot) {
-                if (!hasMemo) {
-                    // The first time the hook is called, there is no memoized result.
-                    hasMemo = true;
-                    memoizedSnapshot = nextSnapshot;
-                    var _nextSelection = selector(nextSnapshot);
-                    if (isEqual !== undefined) // Even if the selector has changed, the currently rendered selection
-                    // may be equal to the new selection. We should attempt to reuse the
-                    // current value if possible, to preserve downstream memoizations.
-                    {
-                        if (inst.hasValue) {
-                            var currentSelection = inst.value;
-                            if (isEqual(currentSelection, _nextSelection)) {
-                                memoizedSelection = currentSelection;
-                                return currentSelection;
-                            }
-                        }
-                    }
-                    memoizedSelection = _nextSelection;
-                    return _nextSelection;
-                } // We may be able to reuse the previous invocation's result.
-                // We may be able to reuse the previous invocation's result.
-                var prevSnapshot = memoizedSnapshot;
-                var prevSelection = memoizedSelection;
-                if (objectIs(prevSnapshot, nextSnapshot)) // The snapshot is the same as last time. Reuse the previous selection.
-                return prevSelection;
-                 // The snapshot has changed, so we need to compute a new selection.
-                // The snapshot has changed, so we need to compute a new selection.
-                var nextSelection = selector(nextSnapshot); // If a custom isEqual function is provided, use that to check if the data
-                // has changed. If it hasn't, return the previous selection. That signals
-                // to React that the selections are conceptually equal, and we can bail
-                // out of rendering.
-                // If a custom isEqual function is provided, use that to check if the data
-                // has changed. If it hasn't, return the previous selection. That signals
-                // to React that the selections are conceptually equal, and we can bail
-                // out of rendering.
-                if (isEqual !== undefined && isEqual(prevSelection, nextSelection)) return prevSelection;
-                memoizedSnapshot = nextSnapshot;
-                memoizedSelection = nextSelection;
-                return nextSelection;
-            }; // Assigning this to a constant so that Flow knows it can't change.
-            // Assigning this to a constant so that Flow knows it can't change.
-            var maybeGetServerSnapshot = getServerSnapshot === undefined ? null : getServerSnapshot;
-            var getSnapshotWithSelector = function() {
-                return memoizedSelector(getSnapshot());
-            };
-            var getServerSnapshotWithSelector = maybeGetServerSnapshot === null ? undefined : function() {
-                return memoizedSelector(maybeGetServerSnapshot());
-            };
-            return [
-                getSnapshotWithSelector,
-                getServerSnapshotWithSelector
-            ];
-        }, [
-            getSnapshot,
-            getServerSnapshot,
-            selector,
-            isEqual
-        ]), getSelection = _useMemo[0], getServerSelection = _useMemo[1];
-        var value = useSyncExternalStore(subscribe, getSelection, getServerSelection);
-        useEffect(function() {
-            inst.hasValue = true;
-            inst.value = value;
-        }, [
-            value
-        ]);
-        useDebugValue(value);
-        return value;
-    }
-    exports.useSyncExternalStoreWithSelector = useSyncExternalStoreWithSelector;
-    /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
-})();
-
-},{"8b38fc6c74f16e20":"21dqq"}],"8pPOA":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$bc7c.prelude(module);
 
 try {
-// Importing React library
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _config = require("../utilities/config");
-// Defining the Footer component
 const Footer = ()=>{
-    return(// JSX structure for the Footer component
-    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "footer",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35209,13 +35201,13 @@ const Footer = ()=>{
                     id: "top-left"
                 }, void 0, false, {
                     fileName: "src/components/Footer.js",
-                    lineNumber: 11,
-                    columnNumber: 1
+                    lineNumber: 8,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 10,
-                columnNumber: 1
+                lineNumber: 7,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "bottom",
@@ -35229,58 +35221,58 @@ const Footer = ()=>{
                                 alt: ""
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 17,
-                                columnNumber: 1
+                                lineNumber: 12,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 id: "fifth-section-top",
                                 children: [
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-linkedin"
+                                        className: "fab fa-linkedin"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 19,
-                                        columnNumber: 1
+                                        lineNumber: 14,
+                                        columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-instagram"
+                                        className: "fab fa-instagram"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 20,
-                                        columnNumber: 1
+                                        lineNumber: 15,
+                                        columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-twitter"
+                                        className: "fab fa-twitter"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 21,
-                                        columnNumber: 1
+                                        lineNumber: 16,
+                                        columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-youtube"
+                                        className: "fab fa-youtube"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 22,
-                                        columnNumber: 1
+                                        lineNumber: 17,
+                                        columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {
-                                        class: "fa-brands fa-facebook"
+                                        className: "fab fa-facebook"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 23,
-                                        columnNumber: 1
+                                        lineNumber: 18,
+                                        columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 18,
-                                columnNumber: 1
+                                lineNumber: 13,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 15,
-                        columnNumber: 1
+                        lineNumber: 11,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "first-section",
@@ -35289,63 +35281,63 @@ const Footer = ()=>{
                                 children: "COMPANY"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 27,
-                                columnNumber: 1
+                                lineNumber: 22,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "About"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 28,
-                                columnNumber: 1
+                                lineNumber: 23,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Team"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 29,
-                                columnNumber: 1
+                                lineNumber: 24,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer Blog"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 30,
-                                columnNumber: 1
+                                lineNumber: 25,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Bug Bounty"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 31,
-                                columnNumber: 1
+                                lineNumber: 26,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer One"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 32,
-                                columnNumber: 1
+                                lineNumber: 27,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer Corporate"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 33,
-                                columnNumber: 1
+                                lineNumber: 28,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "FoodExplorer Instamart"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 34,
-                                columnNumber: 1
+                                lineNumber: 29,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 26,
-                        columnNumber: 1
+                        lineNumber: 21,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "second-section",
@@ -35354,42 +35346,42 @@ const Footer = ()=>{
                                 children: "CONTACT"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 37,
-                                columnNumber: 1
+                                lineNumber: 32,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Help & Support"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 38,
-                                columnNumber: 1
+                                lineNumber: 33,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Feeding India"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 39,
-                                columnNumber: 1
+                                lineNumber: 34,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Hyperpure"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 40,
-                                columnNumber: 1
+                                lineNumber: 35,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Ride with us"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 41,
-                                columnNumber: 1
+                                lineNumber: 36,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 36,
-                        columnNumber: 1
+                        lineNumber: 31,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "third-section",
@@ -35401,21 +35393,21 @@ const Footer = ()=>{
                                         children: "FOR RESTAURANTS"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 45,
-                                        columnNumber: 1
+                                        lineNumber: 40,
+                                        columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                         children: "Partner With Us"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 46,
-                                        columnNumber: 1
+                                        lineNumber: 41,
+                                        columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 44,
-                                columnNumber: 1
+                                lineNumber: 39,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                 id: "third-section-bottom",
@@ -35424,27 +35416,27 @@ const Footer = ()=>{
                                         children: "FOR ENTERPRISES"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 49,
-                                        columnNumber: 1
+                                        lineNumber: 44,
+                                        columnNumber: 13
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                         children: "FoodExplorer For Enterprise"
                                     }, void 0, false, {
                                         fileName: "src/components/Footer.js",
-                                        lineNumber: 50,
-                                        columnNumber: 1
+                                        lineNumber: 45,
+                                        columnNumber: 13
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 48,
-                                columnNumber: 1
+                                lineNumber: 43,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 43,
-                        columnNumber: 1
+                        lineNumber: 38,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         id: "fourth-section",
@@ -35453,79 +35445,78 @@ const Footer = ()=>{
                                 children: "LEARN MORE"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 54,
-                                columnNumber: 1
+                                lineNumber: 49,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Privacy"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 55,
-                                columnNumber: 1
+                                lineNumber: 50,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Security"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 56,
-                                columnNumber: 1
+                                lineNumber: 51,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Terms"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 57,
-                                columnNumber: 1
+                                lineNumber: 52,
+                                columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                 children: "Sitemap"
                             }, void 0, false, {
                                 fileName: "src/components/Footer.js",
-                                lineNumber: 58,
-                                columnNumber: 1
+                                lineNumber: 53,
+                                columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Footer.js",
-                        lineNumber: 53,
-                        columnNumber: 1
+                        lineNumber: 48,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 14,
-                columnNumber: 1
+                lineNumber: 10,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "line"
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 61,
-                columnNumber: 1
+                lineNumber: 56,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 id: "terms",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                    children: " All rights reserved., Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2023-2024 \xa9 FoodExplorer\u2122 Ltd."
+                    children: "All rights reserved., Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2023-2024 \xa9 FoodExplorer\u2122 Ltd."
                 }, void 0, false, {
                     fileName: "src/components/Footer.js",
-                    lineNumber: 62,
-                    columnNumber: 17
+                    lineNumber: 58,
+                    columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Footer.js",
-                lineNumber: 62,
-                columnNumber: 1
+                lineNumber: 57,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Footer.js",
-        lineNumber: 9,
+        lineNumber: 6,
         columnNumber: 5
-    }, undefined));
+    }, undefined);
 };
 _c = Footer;
-// Exporting the Footer component
 exports.default = Footer;
 var _c;
 $RefreshReg$(_c, "Footer");
@@ -35535,7 +35526,7 @@ $RefreshReg$(_c, "Footer");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utilities/config":"di7hi"}],"kvula":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utilities/config":"di7hi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35545,52 +35536,54 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const Error = ()=>{
     _s();
     const error = (0, _reactRouterDom.useRouteError)();
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        class: "GenericError__container",
+        className: "GenericError__container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            class: "GenericError__content",
+            className: "GenericError__content",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    class: "GenericError__image"
-                }, void 0, false, {
-                    fileName: "src/components/Error.js",
-                    lineNumber: 9,
-                    columnNumber: 11
-                }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    class: "GenericError__title",
-                    children: "Oops something went wrong!!"
+                    className: "GenericError__image"
                 }, void 0, false, {
                     fileName: "src/components/Error.js",
                     lineNumber: 10,
-                    columnNumber: 11
+                    columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    class: "GenericError__description",
+                    className: "GenericError__title",
+                    children: "Oops, something went wrong!"
+                }, void 0, false, {
+                    fileName: "src/components/Error.js",
+                    lineNumber: 11,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "GenericError__description",
                     children: [
                         error.status,
-                        ":We can't seem to find the page you're looking for...Sorry for the inconvenience."
+                        ": We can't seem to find the page you're looking for... Sorry for the inconvenience."
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Error.js",
-                    lineNumber: 11,
-                    columnNumber: 11
+                    lineNumber: 12,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Error.js",
-            lineNumber: 8,
-            columnNumber: 9
+            lineNumber: 9,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Error.js",
-        lineNumber: 7,
-        columnNumber: 1
+        lineNumber: 8,
+        columnNumber: 5
     }, undefined);
 };
 _s(Error, "oAgjgbJzsRXlB89+MoVumxMQqKM=", false, function() {
@@ -35608,48 +35601,41 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l2Zp9":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"l2Zp9":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5c60 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$5c60.prelude(module);
 
 try {
-// Importing necessary dependencies and components
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _config = require("../utilities/config");
 var _shimmer = require("./Shimmer");
 var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _restaurantCategory = require("./RestaurantCategory");
 var _restaurantCategoryDefault = parcelHelpers.interopDefault(_restaurantCategory);
 var _s = $RefreshSig$();
-// Defining the RestaurantInfo component
 const RestaurantInfo = ()=>{
     _s();
-    // State variables using the useState hook to hold and update data
     const [resInfo, setResInfo] = (0, _react.useState)(null);
     const [resMenu, setResMenu] = (0, _react.useState)(null);
     const [resNewInfo, setResNewInfo] = (0, _react.useState)(null);
     const [resCategory, setResCategory] = (0, _react.useState)(null);
     const [showIndex, setShowIndex] = (0, _react.useState)(null);
     const [searchText, setSearchText] = (0, _react.useState)("");
-    // useParams hook to fetch dynamic parameters from the router child.
     const { resId } = (0, _reactRouterDom.useParams)();
-    // useEffect() hook to fetch the API after the component will load with a dependency array, it will render only once at the initial phase.
     (0, _react.useEffect)(()=>{
         fetchInfo();
     }, []);
-    //Async function to fetch restaurant information
     const fetchInfo = async ()=>{
         try {
             const data = await fetch((0, _config.REST_INFO_API_URL) + resId);
             const json = await data.json();
-            console.log(json);
-            //Setting state variables with fetched data
             setResMenu(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards);
             setResNewInfo(json?.data?.cards[0]?.card?.card?.info?.labels[1]);
             setResInfo(json?.data?.cards[0]?.card?.card?.info);
@@ -35658,32 +35644,24 @@ const RestaurantInfo = ()=>{
             console.error("Error fetching restaurant information:", error);
         }
     };
-    // Before destructuring the data, we need to fetch it as we don't know how long it will take to fetch, and it will return undefined otherwise.
     if (resMenu === null) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/RestaurantInfo.js",
-        lineNumber: 57,
+        lineNumber: 36,
         columnNumber: 12
     }, undefined);
-    // Destructuring values from the fetched data
     const { name, cuisines, avgRating, costForTwoMessage, cloudinaryImageId, locality, totalRatingsString, avgRatingString } = resInfo;
     const { lastMileTravelString, maxDeliveryTime } = resInfo?.sla;
     const { message } = resNewInfo;
-    //To find the Item categories from Swiggys API and stored in the variable.
     const categories = resCategory;
-    // console.log("categories",categories);
-    //Defined a function to handle only for browse search menu.It can be invoked or called whenever the function is needed.
     const handleBrowseSearch = ()=>{
         if (!searchText) {
             setShowIndex(null);
             return;
         }
-        // Filter categories browse on search text.
         let filteredCategories = categories.filter((category)=>category.card?.card?.title.toLowerCase().includes(searchText.toLowerCase()));
-        // If there are matching categories, show the first one; otherwise, hide all accordions
         if (filteredCategories.length > 0) setShowIndex(categories.indexOf(filteredCategories[0]));
         else setShowIndex(null);
     };
-    // Rendering the JSX structure
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "pages-container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35699,12 +35677,12 @@ const RestaurantInfo = ()=>{
                                 alt: "Restaurant"
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantInfo.js",
-                                lineNumber: 102,
+                                lineNumber: 67,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/RestaurantInfo.js",
-                            lineNumber: 100,
+                            lineNumber: 66,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35714,14 +35692,14 @@ const RestaurantInfo = ()=>{
                                     children: name
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 105,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                     children: cuisines.join(" , ")
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 106,
+                                    lineNumber: 71,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35732,7 +35710,7 @@ const RestaurantInfo = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 107,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35749,21 +35727,21 @@ const RestaurantInfo = ()=>{
                                                     className: "ri-star-fill"
                                                 }, void 0, false, {
                                                     fileName: "src/components/RestaurantInfo.js",
-                                                    lineNumber: 111,
+                                                    lineNumber: 75,
                                                     columnNumber: 17
                                                 }, undefined),
                                                 avgRating
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 110,
+                                            lineNumber: 74,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                             children: "|"
                                         }, void 0, false, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 114,
+                                            lineNumber: 78,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35773,33 +35751,33 @@ const RestaurantInfo = ()=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 115,
+                                            lineNumber: 79,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                             children: "|"
                                         }, void 0, false, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 116,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                             children: costForTwoMessage
                                         }, void 0, false, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 117,
+                                            lineNumber: 81,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 108,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantInfo.js",
-                            lineNumber: 104,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35814,7 +35792,7 @@ const RestaurantInfo = ()=>{
                                                 className: "icon-star"
                                             }, void 0, false, {
                                                 fileName: "src/components/RestaurantInfo.js",
-                                                lineNumber: 124,
+                                                lineNumber: 87,
                                                 columnNumber: 17
                                             }, undefined),
                                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -35823,20 +35801,20 @@ const RestaurantInfo = ()=>{
                                                         className: "ri-star-fill"
                                                     }, void 0, false, {
                                                         fileName: "src/components/RestaurantInfo.js",
-                                                        lineNumber: 125,
+                                                        lineNumber: 88,
                                                         columnNumber: 23
                                                     }, undefined),
                                                     avgRatingString
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "src/components/RestaurantInfo.js",
-                                                lineNumber: 125,
+                                                lineNumber: 88,
                                                 columnNumber: 17
                                             }, undefined)
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/RestaurantInfo.js",
-                                        lineNumber: 123,
+                                        lineNumber: 86,
                                         columnNumber: 15
                                     }, undefined),
                                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
@@ -35844,24 +35822,24 @@ const RestaurantInfo = ()=>{
                                         children: totalRatingsString
                                     }, void 0, false, {
                                         fileName: "src/components/RestaurantInfo.js",
-                                        lineNumber: 127,
+                                        lineNumber: 90,
                                         columnNumber: 15
                                     }, undefined)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/RestaurantInfo.js",
-                                lineNumber: 122,
+                                lineNumber: 85,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/RestaurantInfo.js",
-                            lineNumber: 120,
+                            lineNumber: 84,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RestaurantInfo.js",
-                    lineNumber: 99,
+                    lineNumber: 65,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35884,13 +35862,12 @@ const RestaurantInfo = ()=>{
                                         handleBrowseSearch();
                                     },
                                     onKeyDown: (event)=>{
-                                        if (event.key === "Enter") handleBrowseSearch() // You can keep this for users who prefer to press Enter.
-                                        ;
+                                        if (event.key === "Enter") handleBrowseSearch();
                                     }
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 135,
-                                    columnNumber: 3
+                                    lineNumber: 97,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "button-container",
@@ -35907,60 +35884,50 @@ const RestaurantInfo = ()=>{
                                                 d: "M416 0C400 0 288 32 288 176V288c0 35.3 28.7 64 64 64h32V480c0 17.7 14.3 32 32 32s32-14.3 32-32V352 240 32c0-17.7-14.3-32-32-32zM64 16C64 7.8 57.9 1 49.7 .1S34.2 4.6 32.4 12.5L2.1 148.8C.7 155.1 0 161.5 0 167.9c0 45.9 35.1 83.6 80 87.7V480c0 17.7 14.3 32 32 32s32-14.3 32-32V255.6c44.9-4.1 80-41.8 80-87.7c0-6.4-.7-12.8-2.1-19.1L191.6 12.5c-1.8-8-9.3-13.3-17.4-12.4S160 7.8 160 16V150.2c0 5.4-4.4 9.8-9.8 9.8c-5.1 0-9.3-3.9-9.8-9L127.9 14.6C127.2 6.3 120.3 0 112 0s-15.2 6.3-15.9 14.6L83.7 151c-.5 5.1-4.7 9-9.8 9c-5.4 0-9.8-4.4-9.8-9.8V16zm48.3 152l-.3 0-.3 0 .3-.7 .3 .7z"
                                             }, void 0, false, {
                                                 fileName: "src/components/RestaurantInfo.js",
-                                                lineNumber: 155,
-                                                columnNumber: 13
+                                                lineNumber: 108,
+                                                columnNumber: 21
                                             }, undefined)
                                         }, void 0, false, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 154,
-                                            columnNumber: 13
+                                            lineNumber: 107,
+                                            columnNumber: 19
                                         }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/components/RestaurantInfo.js",
-                                        lineNumber: 153,
-                                        columnNumber: 13
+                                        lineNumber: 106,
+                                        columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 152,
-                                    columnNumber: 1
+                                    lineNumber: 105,
+                                    columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantInfo.js",
-                            lineNumber: 134,
-                            columnNumber: 9
+                            lineNumber: 96,
+                            columnNumber: 13
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/RestaurantInfo.js",
-                        lineNumber: 133,
-                        columnNumber: 9
+                        lineNumber: 95,
+                        columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/RestaurantInfo.js",
-                    lineNumber: 132,
+                    lineNumber: 94,
                     columnNumber: 9
                 }, undefined),
-                categories.map((category, index)=>//Controlled component:-
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
+                categories.map((category, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCategoryDefault.default), {
                         data: category?.card?.card,
                         showItems: index === showIndex ? true : false,
-                        //`showTheIndex` is a prop that you pass to the RestaurantCategory component. It is a function that presumably handles the toggling of the accordion's visibility.
-                        //`showTheIndex` function uses the callback version of setShowIndex to toggle the state based on the current state. 
-                        //This ensures that clicking on an already expanded accordion collapses it. 
                         showTheIndex: ()=>{
-                            //`setShowIndex()` This is the state-setting function which is provided by `React hooks` `useState` hook,It is used to update the state .
-                            //`prevIndex` This is a parameter of the arrow function,representing the current value of `showIndex` state
-                            //This expression determines the new state value for showIndex based on the current state (prevIndex) and the index of the accordion.
-                            //This is a conditionally ternary expression. if the current accordion index `prevIndex` is equal to the index clicked accordion `index`
-                            //it means the accordion is already open, so set the state to null (close the accordion).
-                            //if they are not equal, set the state to the index of the clicked accordion (open the accordion).
                             setShowIndex((prevIndex)=>prevIndex === index ? null : index);
                         }
                     }, category?.card?.card?.title, false, {
                         fileName: "src/components/RestaurantInfo.js",
-                        lineNumber: 166,
-                        columnNumber: 3
+                        lineNumber: 116,
+                        columnNumber: 11
                     }, undefined)),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "bottom-menu",
@@ -35977,23 +35944,23 @@ const RestaurantInfo = ()=>{
                                         className: "RestaurantLicence_image__2-5G_"
                                     }, void 0, false, {
                                         fileName: "src/components/RestaurantInfo.js",
-                                        lineNumber: 188,
+                                        lineNumber: 128,
                                         columnNumber: 15
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 186,
+                                    lineNumber: 127,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {}, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 190,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantInfo.js",
-                            lineNumber: 185,
+                            lineNumber: 126,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36005,12 +35972,12 @@ const RestaurantInfo = ()=>{
                                     children: name
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 193,
+                                    lineNumber: 133,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 193,
+                                    lineNumber: 133,
                                     columnNumber: 74
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -36020,12 +35987,12 @@ const RestaurantInfo = ()=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 194,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 194,
+                                    lineNumber: 134,
                                     columnNumber: 38
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36035,53 +36002,52 @@ const RestaurantInfo = ()=>{
                                             className: "icon-markerDark RestaurantFooterAddress_icon__2Kjdg"
                                         }, void 0, false, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 196,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, undefined),
                                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                             children: message
                                         }, void 0, false, {
                                             fileName: "src/components/RestaurantInfo.js",
-                                            lineNumber: 197,
+                                            lineNumber: 137,
                                             columnNumber: 15
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RestaurantInfo.js",
-                                    lineNumber: 195,
+                                    lineNumber: 135,
                                     columnNumber: 13
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantInfo.js",
-                            lineNumber: 192,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RestaurantInfo.js",
-                    lineNumber: 184,
+                    lineNumber: 125,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/RestaurantInfo.js",
-            lineNumber: 96,
-            columnNumber: 1
+            lineNumber: 64,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/RestaurantInfo.js",
-        lineNumber: 94,
+        lineNumber: 63,
         columnNumber: 5
     }, undefined);
 };
-_s(RestaurantInfo, "pjnLfmn4UaHBcn2KJ2k9Ez9YXXw=", false, function() {
+_s(RestaurantInfo, "WgXGZOQWoZ2H0rSD0qGAB9jNZFg=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
 });
 _c = RestaurantInfo;
-// Exporting the RestaurantInfo component
 exports.default = RestaurantInfo;
 var _c;
 $RefreshReg$(_c, "RestaurantInfo");
@@ -36091,7 +36057,7 @@ $RefreshReg$(_c, "RestaurantInfo");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utilities/config":"di7hi","./Shimmer":"g6ZGj","./RestaurantCategory":"K7XHe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","react-router-dom":"9xmpe"}],"g6ZGj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utilities/config":"di7hi","./Shimmer":"g6ZGj","react-router-dom":"9xmpe","./RestaurantCategory":"K7XHe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36213,7 +36179,8 @@ const ShimmerCard = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                 className: "loading-spinner",
-                src: "https://i.pinimg.com/originals/c4/cb/9a/c4cb9abc7c69713e7e816e6a624ce7f8.gif"
+                src: "https://i.pinimg.com/originals/c4/cb/9a/c4cb9abc7c69713e7e816e6a624ce7f8.gif",
+                alt: "gif"
             }, void 0, false, {
                 fileName: "src/components/ShimmerCard.js",
                 lineNumber: 6,
@@ -36300,20 +36267,14 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _itemsList = require("./ItemsList");
 var _itemsListDefault = parcelHelpers.interopDefault(_itemsList);
 const RestaurantCategory = (props)=>{
-    // Destructuring the props.
     const { data, showItems, showTheIndex } = props;
-    //Whenever the state variables update,react triggers a reconciliation process or cycle it re-renders the components or component.
-    // const [showItems,setShowItems] = useState(false);
-    //Defined `handleClick()` function to enabling and closing accordions
     const handleClick = ()=>{
-        // console.log("Clicked");
         showTheIndex();
-    //The `Javascript !` operator is the logical not operator which returns the true if its operand is false and false if its operand its true.
-    // setShowItems(true);
-    // setShowItems(!showItems);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -36338,14 +36299,14 @@ const RestaurantCategory = (props)=>{
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/components/RestaurantCategory.js",
-                                            lineNumber: 34,
-                                            columnNumber: 15
+                                            lineNumber: 19,
+                                            columnNumber: 17
                                         }, undefined)
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/RestaurantCategory.js",
-                                    lineNumber: 32,
-                                    columnNumber: 1
+                                    lineNumber: 17,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                     className: "arrow-symbol",
@@ -36354,19 +36315,19 @@ const RestaurantCategory = (props)=>{
                                         children: "expand_more"
                                     }, void 0, false, {
                                         fileName: "src/components/RestaurantCategory.js",
-                                        lineNumber: 36,
-                                        columnNumber: 34
+                                        lineNumber: 22,
+                                        columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCategory.js",
-                                    lineNumber: 36,
-                                    columnNumber: 3
+                                    lineNumber: 21,
+                                    columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantCategory.js",
-                            lineNumber: 31,
-                            columnNumber: 1
+                            lineNumber: 16,
+                            columnNumber: 13
                         }, undefined),
                         showItems && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "Accordions-body",
@@ -36374,34 +36335,34 @@ const RestaurantCategory = (props)=>{
                                 items: data.itemCards
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantCategory.js",
-                                lineNumber: 46,
-                                columnNumber: 1
+                                lineNumber: 29,
+                                columnNumber: 17
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/RestaurantCategory.js",
-                            lineNumber: 45,
+                            lineNumber: 28,
                             columnNumber: 15
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RestaurantCategory.js",
-                    lineNumber: 29,
-                    columnNumber: 1
+                    lineNumber: 15,
+                    columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/RestaurantCategory.js",
-                lineNumber: 28,
-                columnNumber: 11
+                lineNumber: 14,
+                columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/RestaurantCategory.js",
-            lineNumber: 27,
-            columnNumber: 10
+            lineNumber: 13,
+            columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/RestaurantCategory.js",
-        lineNumber: 25,
-        columnNumber: 9
+        lineNumber: 12,
+        columnNumber: 5
     }, undefined);
 };
 _c = RestaurantCategory;
@@ -36414,7 +36375,7 @@ $RefreshReg$(_c, "RestaurantCategory");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./ItemsList":"lU2pt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lU2pt":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ItemsList":"lU2pt","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lU2pt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$7e0d = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36424,6 +36385,8 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRedux = require("react-redux");
 var _config = require("../utilities/config");
 var _cartSlice = require("../utilities/cartSlice");
@@ -36450,31 +36413,31 @@ const ItemsList = (props)=>{
                                 children: item.card.info.name
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 26,
+                                lineNumber: 22,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 className: "font-semibold",
                                 children: [
                                     "\u20B9",
-                                    item.card.info.price ? item.card.info.price / 100 : item.card.info.defaultPrice / 100
+                                    (item.card.info.price || item.card.info.defaultPrice) / 100
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 27,
+                                lineNumber: 23,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                                 children: item.card.info.description
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 28,
+                                lineNumber: 24,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ItemsList.js",
-                        lineNumber: 25,
+                        lineNumber: 21,
                         columnNumber: 11
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36485,7 +36448,7 @@ const ItemsList = (props)=>{
                                 alt: "Item"
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 31,
+                                lineNumber: 27,
                                 columnNumber: 13
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -36495,29 +36458,29 @@ const ItemsList = (props)=>{
                                     children: "Add"
                                 }, void 0, false, {
                                     fileName: "src/components/ItemsList.js",
-                                    lineNumber: 35,
+                                    lineNumber: 29,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/ItemsList.js",
-                                lineNumber: 32,
+                                lineNumber: 28,
                                 columnNumber: 13
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/ItemsList.js",
-                        lineNumber: 30,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, undefined)
                 ]
             }, item.card.info.id, true, {
                 fileName: "src/components/ItemsList.js",
-                lineNumber: 24,
+                lineNumber: 20,
                 columnNumber: 9
             }, undefined))
     }, void 0, false, {
         fileName: "src/components/ItemsList.js",
-        lineNumber: 22,
+        lineNumber: 18,
         columnNumber: 5
     }, undefined);
 };
@@ -36536,7 +36499,7 @@ $RefreshReg$(_c, "ItemsList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-toastify":"kSvyQ","react-toastify/dist/ReactToastify.css":"gJP2Y"}],"cc8Uj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"62sf7","../utilities/config":"di7hi","../utilities/cartSlice":"cc8Uj","react-toastify":"kSvyQ","react-toastify/dist/ReactToastify.css":"gJP2Y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cc8Uj":[function(require,module,exports) {
 // cartSlice.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -41159,13 +41122,11 @@ var _emptyCartDefault = parcelHelpers.interopDefault(_emptyCart);
 var _s = $RefreshSig$();
 const CartStore = ()=>{
     _s();
-    // To read from the cart-store, We need to subscribe to the store using Selector.
     const cartItems = (0, _reactRedux.useSelector)((store)=>store.cart.items);
     const dispatch = (0, _reactRedux.useDispatch)();
     const handleClearCart = ()=>{
         dispatch((0, _cartSlice.clearCart)());
     };
-    // Calculate total price and quantity
     const totalQuantity = cartItems.reduce((totalQty, item)=>totalQty + (item.quantity || 1), 0);
     const totalPrice = cartItems.reduce((totalQty, item)=>{
         const price = item.card.info.price || item.card.info.defaultPrice || 0;
@@ -41177,7 +41138,7 @@ const CartStore = ()=>{
             className: "cart-items",
             children: cartItems.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _emptyCartDefault.default), {}, void 0, false, {
                 fileName: "src/components/CartStore.js",
-                lineNumber: 28,
+                lineNumber: 24,
                 columnNumber: 11
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
@@ -41192,26 +41153,26 @@ const CartStore = ()=>{
                                 children: "delete"
                             }, void 0, false, {
                                 fileName: "src/components/CartStore.js",
-                                lineNumber: 34,
-                                columnNumber: 16
+                                lineNumber: 29,
+                                columnNumber: 15
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/CartStore.js",
-                        lineNumber: 32,
+                        lineNumber: 27,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartListDefault.default), {
                         items: cartItems
                     }, void 0, false, {
                         fileName: "src/components/CartStore.js",
-                        lineNumber: 38,
+                        lineNumber: 33,
                         columnNumber: 13
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "total-price-quantity",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                            class: "styles_mainTitle__2eRLR",
+                            className: "styles_mainTitle__2eRLR",
                             children: [
                                 totalQuantity,
                                 " Items | \u20B9",
@@ -41219,28 +41180,28 @@ const CartStore = ()=>{
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CartStore.js",
-                            lineNumber: 41,
+                            lineNumber: 35,
                             columnNumber: 15
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/CartStore.js",
-                        lineNumber: 39,
+                        lineNumber: 34,
                         columnNumber: 13
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CartStore.js",
-                lineNumber: 30,
+                lineNumber: 26,
                 columnNumber: 11
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/CartStore.js",
-            lineNumber: 26,
+            lineNumber: 22,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/CartStore.js",
-        lineNumber: 25,
+        lineNumber: 21,
         columnNumber: 5
     }, undefined);
 };
@@ -41777,7 +41738,6 @@ const Body = ()=>{
     const [searchText, setSearchText] = (0, _react.useState)("");
     const listOfRestaurants = (0, _useRestaurantListDefault.default)();
     const onlineStatus = (0, _useOnlineStatusDefault.default)();
-    //This is a higher order component that we passed in the RestaurantCard which returns a new component.
     const RestaurantPromotedLabel = (0, _restaurantCard.withPromotedLabel)((0, _restaurantCardDefault.default));
     (0, _react.useEffect)(()=>{
         setFilterRestaurants(listOfRestaurants);
@@ -41785,22 +41745,23 @@ const Body = ()=>{
         listOfRestaurants
     ]);
     const handleSearch = ()=>{
-        let filterSearch = listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()) || res.info.cuisines.includes(searchText));
+        const filterSearch = listOfRestaurants.filter((res)=>res.info.name.toLowerCase().includes(searchText.toLowerCase()) || res.info.cuisines.includes(searchText));
         if (filterSearch.length === 0) ;
         else setFilterRestaurants(filterSearch);
     };
     const handleFastDeliveryCheck = ()=>{
         const fastDeliveryTime = listOfRestaurants.filter((res)=>res.info.sla.deliveryTime <= 20);
-        fastDeliveryTime.length > 0 ? setFilterRestaurants(fastDeliveryTime) : (0, _reactToastify.toast).error("Sorry,no fast delivery restaurants available right now. Please check again later.");
+        if (fastDeliveryTime.length > 0) setFilterRestaurants(fastDeliveryTime);
+        else (0, _reactToastify.toast).error("Sorry, no fast delivery restaurants available right now. Please check again later.");
     };
     if (!onlineStatus) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _networkStatusDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 45,
+        lineNumber: 48,
         columnNumber: 12
     }, undefined);
     if (!filterRestaurants?.length) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 49,
+        lineNumber: 52,
         columnNumber: 12
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -41811,21 +41772,21 @@ const Body = ()=>{
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 56,
-                        columnNumber: 5
+                        lineNumber: 58,
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                         children: "Explore the finest food and drinks in the city of PUNE"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 57,
-                        columnNumber: 7
+                        lineNumber: 59,
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 55,
-                columnNumber: 5
+                lineNumber: 57,
+                columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "search-container",
@@ -41834,7 +41795,7 @@ const Body = ()=>{
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                             className: "input-bar",
-                            autocomplete: "false",
+                            autoComplete: "false",
                             name: "hidden",
                             type: "text",
                             placeholder: "Satisfy your hunger now !",
@@ -41842,15 +41803,15 @@ const Body = ()=>{
                             value: searchText,
                             onChange: (event)=>{
                                 setSearchText(event.target.value);
-                                handleSearch(); // Trigger the search on every change.
+                                handleSearch();
                             },
                             onKeyDown: (event)=>{
-                                if (event.key === "Enter") handleSearch(); // You can keep this for users who prefer to press Enter.
+                                if (event.key === "Enter") handleSearch();
                             }
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 61,
-                            columnNumber: 3
+                            lineNumber: 64,
+                            columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "button-container",
@@ -41868,37 +41829,37 @@ const Body = ()=>{
                                         d: "M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"
                                     }, void 0, false, {
                                         fileName: "src/components/Body.js",
-                                        lineNumber: 80,
+                                        lineNumber: 85,
                                         columnNumber: 17
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 79,
+                                    lineNumber: 84,
                                     columnNumber: 15
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 78,
+                                lineNumber: 83,
                                 columnNumber: 13
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 77,
-                            columnNumber: 1
+                            lineNumber: 82,
+                            columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 60,
+                    lineNumber: 63,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 59,
+                lineNumber: 62,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "filter-Buttons rounded-lg hover:ring-offset-zinc-900 ",
+                className: "filter-Buttons rounded-lg hover:ring-offset-zinc-900",
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "finder-btns",
@@ -41909,7 +41870,7 @@ const Body = ()=>{
                         children: "Top Rated Restaurants"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 88,
+                        lineNumber: 93,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41921,7 +41882,7 @@ const Body = ()=>{
                         children: "Pure Veg"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 98,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -41930,32 +41891,31 @@ const Body = ()=>{
                         children: "Fast Delivery"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 108,
+                        lineNumber: 113,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 87,
+                lineNumber: 92,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restaurant-container",
-                children: filterRestaurants?.map((restaurant)=>// Linking each restaurant card to its details page
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                children: filterRestaurants?.map((restaurant)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/restaurants/" + restaurant.info.id,
                         children: restaurant.info.veg ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantPromotedLabel, {
                             restaurantData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 127,
-                            columnNumber: 3
+                            lineNumber: 122,
+                            columnNumber: 15
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _restaurantCardDefault.default), {
                             restaurantData: restaurant
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 129,
-                            columnNumber: 9
+                            lineNumber: 124,
+                            columnNumber: 15
                         }, undefined)
                     }, restaurant.info.id, false, {
                         fileName: "src/components/Body.js",
@@ -41964,13 +41924,13 @@ const Body = ()=>{
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 117,
-                columnNumber: 6
+                lineNumber: 118,
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 54,
+        lineNumber: 56,
         columnNumber: 5
     }, undefined);
 };
@@ -41997,7 +41957,6 @@ var prevRefreshSig = window.$RefreshSig$;
 $parcel$ReactRefreshHelpers$ffb1.prelude(module);
 
 try {
-// Importing necessary dependencies
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "withPromotedLabel", ()=>withPromotedLabel);
@@ -42005,11 +41964,8 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _config = require("../utilities/config");
 var _displayPromoted = require("./DisplayPromoted");
 var _displayPromotedDefault = parcelHelpers.interopDefault(_displayPromoted);
-// Defining the RestaurantCard component
 const RestaurantCard = (props)=>{
-    // Destructuring the props to get the restaurantData object
     const { restaurantData } = props;
-    // Destructuring values from the restaurantData object
     const { name, cloudinaryImageId, avgRating, costForTwo, areaName, cuisines, locality } = restaurantData?.info;
     const { slaString } = restaurantData?.info.sla;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42030,12 +41986,12 @@ const RestaurantCard = (props)=>{
                                 src: (0, _config.CDN_URL) + cloudinaryImageId
                             }, void 0, false, {
                                 fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 23,
+                                lineNumber: 15,
                                 columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 21,
+                            lineNumber: 14,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42046,21 +42002,21 @@ const RestaurantCard = (props)=>{
                                     children: name
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 26,
-                                    columnNumber: 13
+                                    lineNumber: 18,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "food-list",
                                     children: cuisines.slice(0, 4).join(" , ")
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 31,
-                                    columnNumber: 13
+                                    lineNumber: 19,
+                                    columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 25,
+                            lineNumber: 17,
                             columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42075,59 +42031,59 @@ const RestaurantCard = (props)=>{
                                                 className: "ri-star-fill"
                                             }, void 0, false, {
                                                 fileName: "src/components/RestaurantCard.js",
-                                                lineNumber: 35,
-                                                columnNumber: 45
+                                                lineNumber: 22,
+                                                columnNumber: 47
                                             }, undefined),
                                             " ",
                                             avgRating
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/RestaurantCard.js",
-                                        lineNumber: 35,
-                                        columnNumber: 38
+                                        lineNumber: 22,
+                                        columnNumber: 40
                                     }, undefined)
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 35,
-                                    columnNumber: 13
+                                    lineNumber: 22,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "dot",
                                     children: "."
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 36,
-                                    columnNumber: 13
+                                    lineNumber: 23,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "time",
                                     children: slaString
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 37,
-                                    columnNumber: 13
+                                    lineNumber: 24,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "dot",
                                     children: "."
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 38,
-                                    columnNumber: 13
+                                    lineNumber: 25,
+                                    columnNumber: 15
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     className: "price",
                                     children: costForTwo
                                 }, void 0, false, {
                                     fileName: "src/components/RestaurantCard.js",
-                                    lineNumber: 39,
-                                    columnNumber: 13
+                                    lineNumber: 26,
+                                    columnNumber: 15
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 33,
-                            columnNumber: 11
+                            lineNumber: 21,
+                            columnNumber: 13
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "address",
@@ -42140,60 +42096,59 @@ const RestaurantCard = (props)=>{
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/RestaurantCard.js",
-                                lineNumber: 43,
-                                columnNumber: 13
+                                lineNumber: 29,
+                                columnNumber: 15
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/RestaurantCard.js",
-                            lineNumber: 41,
-                            columnNumber: 11
+                            lineNumber: 28,
+                            columnNumber: 13
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 20,
+                    lineNumber: 13,
                     columnNumber: 11
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 19,
+                lineNumber: 12,
                 columnNumber: 9
             }, undefined)
         }, void 0, false, {
             fileName: "src/components/RestaurantCard.js",
-            lineNumber: 18,
+            lineNumber: 11,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/RestaurantCard.js",
-        lineNumber: 17,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
 _c = RestaurantCard;
-// Exporting the RestaurantCard component
 exports.default = RestaurantCard;
-const withPromotedLabel = (RestaurantCard)=>{
+const withPromotedLabel = (OriginalComponent)=>{
     return (props)=>{
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _displayPromotedDefault.default), {}, void 0, false, {
                     fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 63,
-                    columnNumber: 1
+                    lineNumber: 44,
+                    columnNumber: 9
                 }, undefined),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(OriginalComponent, {
                     ...props
                 }, void 0, false, {
                     fileName: "src/components/RestaurantCard.js",
-                    lineNumber: 65,
-                    columnNumber: 1
+                    lineNumber: 45,
+                    columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/RestaurantCard.js",
-            lineNumber: 61,
-            columnNumber: 1
+            lineNumber: 43,
+            columnNumber: 7
         }, undefined);
     };
 };
