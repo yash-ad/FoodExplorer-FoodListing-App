@@ -1,6 +1,6 @@
 🚀 FoodExplorer | Gastro Guide
 FoodExplorer
-Introducing FoodExplorer, a food ordering app powered by React.js that effortlessly links users with their favorite dishes. What sets it apart? Integration with the live Swiggy API With Redux handling state, React Router DOM ensures easy navigation and CSS crafting a visually appealing interface, alongside Lazy Loading. Also, it utilizes Parcel for efficient bundling. Explore the features below.
+Introducing FoodExplorer, a food listing app powered by React.js that effortlessly links users with their favorite dishes. What sets it apart? Integration with the live Swiggy API With Redux handling state, React Router DOM ensures easy navigation and CSS crafting a visually appealing interface, alongside Lazy Loading. Also, it utilizes Parcel for efficient bundling. Explore the features below.
 
 🎯 Key Features
 🌏 Real-time Swiggy API Integration: FoodExplorer provides users with up-to-the-minute information on menus, availability, and promotions, ensuring accurate and reliable details for informed dining choices.
